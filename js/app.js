@@ -913,6 +913,7 @@ function switchTab(tab) {
     dashboard: 'panelDashboard',
     club: 'panelClub',
     national: 'panelNational',
+    training: 'panelTraining',
     county: 'panelCounty',
     region: 'panelRegion',
   };
@@ -922,6 +923,7 @@ function switchTab(tab) {
   // Render tab content
   if (tab === 'club') renderClubTab();
   if (tab === 'national') renderNationalTab();
+  if (tab === 'training' && typeof renderTrainingTab === 'function') renderTrainingTab();
 }
 
 // ── Club Tab ─────────────────────────────────────────────

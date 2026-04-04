@@ -28,6 +28,7 @@
       <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
       <button class="tab-btn" data-tab="club">Club</button>
       <button class="tab-btn" data-tab="national">National</button>
+      <button class="tab-btn" data-tab="training">Training</button>
       <button class="tab-btn" data-tab="county">County</button>
       <button class="tab-btn" data-tab="region">Region</button>
     </div>
@@ -262,6 +263,269 @@
       </div>
     </div>
 
+    <!-- ═══ TRAINING TAB ═══ -->
+    <div class="tab-panel" id="panelTraining">
+
+      <!-- Training nav: sub-tabs -->
+      <div class="training-nav">
+        <button class="training-nav-btn active" data-view="log" onclick="switchTrainingView('log')">Log Session</button>
+        <button class="training-nav-btn" data-view="history" onclick="switchTrainingView('history')">History</button>
+        <button class="training-nav-btn" data-view="goals" onclick="switchTrainingView('goals')">Goals</button>
+        <button class="training-nav-btn" data-view="stats" onclick="switchTrainingView('stats')">Stats</button>
+      </div>
+
+      <!-- ── LOG SESSION VIEW ── -->
+      <div class="training-view active" id="trainingLog">
+
+        <!-- Session setup -->
+        <div class="card t-setup-card">
+          <div class="t-row">
+            <div class="t-field">
+              <label class="t-label">Date</label>
+              <input type="date" id="tDate" class="t-input">
+            </div>
+            <div class="t-field">
+              <label class="t-label">Pool</label>
+              <div class="t-toggle-group">
+                <button class="t-toggle active" data-pool="25" onclick="setPool(25)">25m</button>
+                <button class="t-toggle" data-pool="50" onclick="setPool(50)">50m</button>
+              </div>
+            </div>
+            <div class="t-field">
+              <label class="t-label">Duration</label>
+              <div class="t-toggle-group">
+                <button class="t-toggle" onclick="setDuration(45)">45m</button>
+                <button class="t-toggle active" onclick="setDuration(60)">60m</button>
+                <button class="t-toggle" onclick="setDuration(75)">75m</button>
+                <button class="t-toggle" onclick="setDuration(90)">90m</button>
+                <input type="number" id="tDurationCustom" class="t-mini-input" placeholder="min" min="10" max="300" onchange="setDuration(this.value)">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick templates -->
+        <div class="t-templates">
+          <span class="t-templates-label">Quick start:</span>
+          <button class="t-template-btn" onclick="applyTemplate('warmup')">+ Warm Up</button>
+          <button class="t-template-btn" onclick="applyTemplate('main_free')">+ Main (Free)</button>
+          <button class="t-template-btn" onclick="applyTemplate('main_im')">+ Main (IM)</button>
+          <button class="t-template-btn" onclick="applyTemplate('kick')">+ Kick Set</button>
+          <button class="t-template-btn" onclick="applyTemplate('sprint')">+ Sprints</button>
+          <button class="t-template-btn" onclick="applyTemplate('cooldown')">+ Cool Down</button>
+        </div>
+
+        <!-- Set builder -->
+        <div class="card t-builder-card">
+          <div class="t-builder-title">Build a Set</div>
+
+          <div class="t-builder-row">
+            <div class="t-builder-field">
+              <label class="t-label">Reps</label>
+              <div class="t-stepper">
+                <button class="t-stepper-btn" onclick="stepReps(-1)">-</button>
+                <span class="t-stepper-val" id="tReps">1</span>
+                <button class="t-stepper-btn" onclick="stepReps(1)">+</button>
+              </div>
+              <div class="t-presets">
+                <button class="t-preset" onclick="setReps(1)">1</button>
+                <button class="t-preset" onclick="setReps(2)">2</button>
+                <button class="t-preset" onclick="setReps(4)">4</button>
+                <button class="t-preset" onclick="setReps(6)">6</button>
+                <button class="t-preset" onclick="setReps(8)">8</button>
+                <button class="t-preset" onclick="setReps(10)">10</button>
+                <button class="t-preset" onclick="setReps(16)">16</button>
+              </div>
+            </div>
+
+            <div class="t-builder-x">x</div>
+
+            <div class="t-builder-field">
+              <label class="t-label">Distance</label>
+              <div class="t-presets t-presets-dist">
+                <button class="t-preset active" onclick="setDistance(25)">25</button>
+                <button class="t-preset" onclick="setDistance(50)">50</button>
+                <button class="t-preset" onclick="setDistance(100)">100</button>
+                <button class="t-preset" onclick="setDistance(200)">200</button>
+                <button class="t-preset" onclick="setDistance(400)">400</button>
+                <button class="t-preset" onclick="setDistance(800)">800</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-builder-row">
+            <div class="t-builder-field t-builder-wide">
+              <label class="t-label">Stroke</label>
+              <div class="t-stroke-chips">
+                <button class="t-stroke active" data-stroke="free" onclick="setStroke('free')">Freestyle</button>
+                <button class="t-stroke" data-stroke="back" onclick="setStroke('back')">Backstroke</button>
+                <button class="t-stroke" data-stroke="breast" onclick="setStroke('breast')">Breaststroke</button>
+                <button class="t-stroke" data-stroke="fly" onclick="setStroke('fly')">Butterfly</button>
+                <button class="t-stroke" data-stroke="im" onclick="setStroke('im')">IM</button>
+                <button class="t-stroke" data-stroke="kick" onclick="setStroke('kick')">Kick</button>
+                <button class="t-stroke" data-stroke="pull" onclick="setStroke('pull')">Pull</button>
+                <button class="t-stroke" data-stroke="choice" onclick="setStroke('choice')">Choice</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-builder-row">
+            <div class="t-builder-field">
+              <label class="t-label">Intensity</label>
+              <div class="t-intensity-chips">
+                <button class="t-intensity active" data-int="easy" onclick="setIntensity('easy')"><span class="t-int-dot easy"></span>Easy</button>
+                <button class="t-intensity" data-int="moderate" onclick="setIntensity('moderate')"><span class="t-int-dot moderate"></span>Moderate</button>
+                <button class="t-intensity" data-int="hard" onclick="setIntensity('hard')"><span class="t-int-dot hard"></span>Hard</button>
+                <button class="t-intensity" data-int="sprint" onclick="setIntensity('sprint')"><span class="t-int-dot sprint"></span>Sprint</button>
+              </div>
+            </div>
+            <div class="t-builder-field">
+              <label class="t-label">Interval / Rest</label>
+              <input type="text" id="tInterval" class="t-input t-input-sm" placeholder="e.g. 1:30 or 15s rest">
+            </div>
+          </div>
+
+          <div class="t-builder-row">
+            <div class="t-builder-field t-builder-wide">
+              <label class="t-label">Set type</label>
+              <div class="t-type-chips">
+                <button class="t-type" data-type="" onclick="setType('')">Normal</button>
+                <button class="t-type" data-type="warmup" onclick="setType('warmup')">Warm Up</button>
+                <button class="t-type" data-type="main" onclick="setType('main')">Main Set</button>
+                <button class="t-type" data-type="cooldown" onclick="setType('cooldown')">Cool Down</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="t-add-btn" onclick="addSet()">+ Add Set</button>
+        </div>
+
+        <!-- Session sets list -->
+        <div class="card" id="tSessionCard" style="display:none">
+          <div class="card-title">
+            <span>Your Session</span>
+            <span class="t-total-distance" id="tTotalDist">0m</span>
+          </div>
+          <div id="tSetsList"></div>
+
+          <!-- Free text notes -->
+          <div class="t-notes-section">
+            <label class="t-label">Notes</label>
+            <textarea id="tNotes" class="t-textarea" placeholder="How was the session? Anything to remember?" rows="2"></textarea>
+          </div>
+
+          <!-- Feeling -->
+          <div class="t-feeling-section">
+            <label class="t-label">How did you feel?</label>
+            <div class="t-feeling-scale">
+              <button class="t-feeling" data-feel="1" onclick="setFeeling(1)">&#128553;<br><span>Awful</span></button>
+              <button class="t-feeling" data-feel="2" onclick="setFeeling(2)">&#128531;<br><span>Tough</span></button>
+              <button class="t-feeling" data-feel="3" onclick="setFeeling(3)">&#128522;<br><span>OK</span></button>
+              <button class="t-feeling" data-feel="4" onclick="setFeeling(4)">&#128170;<br><span>Strong</span></button>
+              <button class="t-feeling" data-feel="5" onclick="setFeeling(5)">&#128293;<br><span>On Fire!</span></button>
+            </div>
+          </div>
+
+          <button class="t-save-btn" onclick="saveSession()">Save Session</button>
+        </div>
+
+        <!-- Save success message -->
+        <div class="t-save-success" id="tSaveSuccess" style="display:none">
+          <span class="t-save-icon">&#10003;</span>
+          <span>Session saved!</span>
+          <button class="t-save-link" onclick="switchTrainingView('history')">View history</button>
+        </div>
+      </div>
+
+      <!-- ── HISTORY VIEW ── -->
+      <div class="training-view" id="trainingHistory">
+        <div class="card">
+          <div class="card-title">Session History</div>
+          <div id="tHistoryList">
+            <div class="club-empty-state">No sessions recorded yet. Start logging!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── GOALS VIEW ── -->
+      <div class="training-view" id="trainingGoals">
+        <div class="card">
+          <div class="card-title">
+            <span>My Goals</span>
+            <button class="t-small-btn" onclick="showGoalForm()">+ New Goal</button>
+          </div>
+
+          <!-- Goal form (hidden) -->
+          <div id="tGoalForm" style="display:none">
+            <div class="t-goal-form">
+              <div class="t-field">
+                <label class="t-label">What's your goal?</label>
+                <select id="tGoalType" class="t-input" onchange="updateGoalForm()">
+                  <option value="pb">Hit a PB time</option>
+                  <option value="distance">Weekly training distance</option>
+                  <option value="sessions">Sessions per week</option>
+                  <option value="custom">Custom goal</option>
+                </select>
+              </div>
+              <div id="tGoalFields"></div>
+              <div class="t-field">
+                <label class="t-label">Target date</label>
+                <input type="date" id="tGoalDeadline" class="t-input">
+              </div>
+              <div class="t-goal-actions">
+                <button class="t-save-btn t-save-sm" onclick="saveGoal()">Save Goal</button>
+                <button class="t-cancel-btn" onclick="hideGoalForm()">Cancel</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="tGoalsList">
+            <div class="club-empty-state">No goals set yet. Set your first goal!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── STATS VIEW ── -->
+      <div class="training-view" id="trainingStats">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">This Week</div>
+            <div class="stat-value cyan" id="tsWeekDist">0m</div>
+            <div class="stat-detail" id="tsWeekSessions">0 sessions</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">This Month</div>
+            <div class="stat-value gold" id="tsMonthDist">0m</div>
+            <div class="stat-detail" id="tsMonthSessions">0 sessions</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Total Distance</div>
+            <div class="stat-value purple" id="tsTotalDist">0m</div>
+            <div class="stat-detail" id="tsTotalSessions">0 sessions</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Avg Feeling</div>
+            <div class="stat-value green" id="tsAvgFeel">-</div>
+            <div class="stat-detail" id="tsStreak">-</div>
+          </div>
+        </div>
+        <div class="two-col">
+          <div class="col-left">
+            <div class="card">
+              <div class="card-title">Weekly Distance</div>
+              <div class="chart-container"><canvas id="tsWeeklyChart"></canvas></div>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="card">
+              <div class="card-title">Training Breakdown</div>
+              <div class="chart-container chart-short"><canvas id="tsBreakdownChart"></canvas></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ═══ COUNTY TAB ═══ -->
     <div class="tab-panel" id="panelCounty">
       <div class="coming-soon-panel">
@@ -317,5 +581,6 @@
   <script src="js/utils.js?v=5"></script>
   <script src="js/charts.js?v=5"></script>
   <script src="js/app.js?v=5"></script>
+  <script src="js/training.js?v=1"></script>
 </body>
 </html>
