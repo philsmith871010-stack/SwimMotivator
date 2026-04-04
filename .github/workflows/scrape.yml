@@ -7,17 +7,17 @@ on:
       mode:
         description: 'What to scrape'
         required: true
-        default: 'weekly-update'
+        default: 'daily-update'
         type: choice
         options:
-          - weekly-update   # Current year rankings + meets (fast, ~1-2 hours)
+          - daily-update    # Current year rankings + new meets (~30-60 min)
           - rankings-full   # All years national rankings (~3 hours)
           - meets-full      # All years meet results (~8 hours, resumable)
           - export          # Just re-export JSON from existing DB
 
-  # Weekly schedule: every Monday at 2am UTC
+  # Daily at 2am UTC
   schedule:
-    - cron: '0 2 * * 1'
+    - cron: '0 2 * * *'
 
 permissions:
   contents: write
@@ -26,10 +26,13 @@ concurrency:
   group: scraper
   cancel-in-progress: false
 
+env:
+  DB_RELEASE_TAG: swim-database
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 360  # 6 hour max
+    timeout-minutes: 360
 
     steps:
       - uses: actions/checkout@v4
@@ -41,41 +44,45 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Restore database from cache
-        uses: actions/cache/restore@v4
-        with:
-          path: data/swimmotivator.db
-          key: swim-db-${{ github.run_id }}
-          restore-keys: |
-            swim-db-
+      # Download database from latest release (bulletproof persistence)
+      - name: Download database from release
+        run: |
+          mkdir -p data
+          gh release download "$DB_RELEASE_TAG" \
+            --pattern "swimmotivator.db" \
+            --dir data/ \
+            --clobber 2>/dev/null || echo "No existing database release found — starting fresh"
+          if [ -f data/swimmotivator.db ]; then
+            echo "Database restored: $(du -h data/swimmotivator.db | cut -f1)"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run scraper
         run: |
-          MODE="${{ github.event.inputs.mode || 'weekly-update' }}"
+          MODE="${{ github.event.inputs.mode || 'daily-update' }}"
           CURRENT_YEAR=$(date +%Y)
-          LAST_YEAR=$((CURRENT_YEAR - 1))
 
           echo "Mode: $MODE"
           echo "Current year: $CURRENT_YEAR"
 
           case "$MODE" in
-            weekly-update)
-              echo "=== Weekly update: current year rankings + meets ==="
+            daily-update)
+              echo "=== Daily update: new meets + current year rankings ==="
 
-              # Rankings for current + last year only (resumable)
+              # Current year rankings (resumable, skips already-scraped combos)
               python -c "
           from scraper.scrape_rankings import scrape_event_rankings
-          scrape_event_rankings(years=[$LAST_YEAR, $CURRENT_YEAR], force=False)
+          scrape_event_rankings(years=[$CURRENT_YEAR], force=False)
           " || true
 
               # Derive swimmer ranks
               python -m scraper.scrape_swimmer_ranks || true
 
-              # Meets for current + last year (resumable)
+              # Current year meets (resumable, skips already-scraped meets)
               python -c "
           from scraper.scrape_meets import scrape_year
           scrape_year($CURRENT_YEAR)
-          scrape_year($LAST_YEAR)
           " || true
 
               # Export
@@ -107,12 +114,26 @@ jobs:
       - name: Show database status
         run: python bulk_load.py --status || true
 
-      - name: Save database to cache
-        uses: actions/cache/save@v4
+      # Upload database to a release (persists forever, up to 2GB free)
+      - name: Upload database to release
         if: always()
-        with:
-          path: data/swimmotivator.db
-          key: swim-db-${{ github.run_id }}
+        run: |
+          # Create the release if it doesn't exist
+          gh release view "$DB_RELEASE_TAG" >/dev/null 2>&1 || \
+            gh release create "$DB_RELEASE_TAG" \
+              --title "Swimming Database" \
+              --notes "Auto-updated database for the scraper pipeline. Do not delete." \
+              --latest=false
+
+          # Upload/overwrite the database file
+          if [ -f data/swimmotivator.db ]; then
+            gh release upload "$DB_RELEASE_TAG" \
+              data/swimmotivator.db \
+              --clobber
+            echo "Database uploaded: $(du -h data/swimmotivator.db | cut -f1)"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and push updated JSON
         run: |
