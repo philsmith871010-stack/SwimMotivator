@@ -69,24 +69,49 @@ def export_ranks(conn: sqlite3.Connection) -> None:
 
 
 def export_squad(conn: sqlite3.Connection) -> None:
-    """Export female Costa swimmers' best times per event for club standings."""
-    rows = _dict_rows(conn, """
-        SELECT
-            mr.tiref,
-            mr.swimmer_name,
-            mr.yob,
-            mr.event,
-            MIN(mr.time) as best_time,
-            MAX(CAST(mr.wa_points AS INTEGER)) as best_wa,
-            mr.meet_date
+    """Export female Costa swimmers' best times per event from history data."""
+    # Build squad from swimmer_history for all Costa female swimmers
+    # First get the Costa female swimmer list
+    costa_females = conn.execute("""
+        SELECT DISTINCT mr.tiref, mr.swimmer_name, mr.yob
         FROM meet_results mr
-        WHERE mr.club LIKE '%St Albans%'
-          AND mr.sex = 'F'
-          AND mr.time IS NOT NULL
-          AND TRIM(mr.time) <> ''
-        GROUP BY mr.tiref, mr.event
-        ORDER BY mr.event, best_time
-    """)
+        WHERE mr.club LIKE '%St Albans%' AND mr.sex = 'F'
+          AND mr.swimmer_name IS NOT NULL
+        GROUP BY mr.tiref
+    """).fetchall()
+
+    tiref_info = {}
+    for tiref, name, yob in costa_females:
+        tiref_info[str(tiref)] = {"name": name, "yob": yob}
+
+    # Also add from swimmers table
+    for row in conn.execute("SELECT tiref, name, yob FROM swimmers WHERE sex = 'F' AND club LIKE '%St Albans%'").fetchall():
+        t = str(row[0])
+        if t not in tiref_info:
+            tiref_info[t] = {"name": row[1], "yob": row[2]}
+
+    stroke_map = {str(k): v for k, v in STROKE_NAMES.items()}
+
+    # Get best times from history for these swimmers (SC only for simplicity)
+    rows = []
+    for tiref, info in tiref_info.items():
+        hist = conn.execute("""
+            SELECT stroke_code, MIN(time) as best_time, MAX(CAST(wa_points AS INTEGER)) as best_wa
+            FROM swimmer_history
+            WHERE tiref = ? AND course = 'S' AND time IS NOT NULL AND TRIM(time) <> ''
+            GROUP BY stroke_code
+        """, (tiref,)).fetchall()
+        for stroke_code, best_time, best_wa in hist:
+            event_name = stroke_map.get(str(stroke_code))
+            if event_name:
+                rows.append({
+                    "tiref": tiref,
+                    "swimmer_name": info["name"],
+                    "yob": info["yob"],
+                    "event": event_name,
+                    "best_time": best_time,
+                    "best_wa": best_wa,
+                })
     (JSON_DIR / "squad.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
     unique = len(set(r["tiref"] for r in rows))
     print(f"  squad.json: {len(rows)} entries, {unique} swimmers")
