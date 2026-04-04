@@ -7,24 +7,20 @@ on:
       mode:
         description: 'What to scrape'
         required: true
-        default: 'full'
+        default: 'weekly-update'
         type: choice
         options:
-          - full          # Full pipeline: PBs, meets, rankings, history, export
-          - rankings      # Just national rankings (bulk, ~2-3 hours)
-          - meets         # Just meet results for current + last year
-          - export        # Just re-export JSON from existing DB
-      meet_years:
-        description: 'Years to scrape meets for (comma-separated, e.g. 2025,2026)'
-        required: false
-        default: '2025,2026'
+          - weekly-update   # Current year rankings + meets (fast, ~1-2 hours)
+          - rankings-full   # All years national rankings (~3 hours)
+          - meets-full      # All years meet results (~8 hours, resumable)
+          - export          # Just re-export JSON from existing DB
 
   # Weekly schedule: every Monday at 2am UTC
   schedule:
     - cron: '0 2 * * 1'
 
 permissions:
-  contents: write   # needed to push updated JSON files
+  contents: write
 
 concurrency:
   group: scraper
@@ -55,48 +51,47 @@ jobs:
 
       - name: Run scraper
         run: |
-          MODE="${{ github.event.inputs.mode || 'full' }}"
-          MEET_YEARS="${{ github.event.inputs.meet_years || '2025,2026' }}"
+          MODE="${{ github.event.inputs.mode || 'weekly-update' }}"
+          CURRENT_YEAR=$(date +%Y)
+          LAST_YEAR=$((CURRENT_YEAR - 1))
 
           echo "Mode: $MODE"
-          echo "Meet years: $MEET_YEARS"
+          echo "Current year: $CURRENT_YEAR"
 
           case "$MODE" in
-            full)
-              echo "=== Running full pipeline ==="
-              # Step 1: Personal bests for CoSA swimmers
-              python -m scraper.scrape_personal_bests || true
+            weekly-update)
+              echo "=== Weekly update: current year rankings + meets ==="
 
-              # Step 2: Scrape PB meets
-              python -m scraper.scrape_meets || true
+              # Rankings for current + last year only (resumable)
+              python -c "
+          from scraper.scrape_rankings import scrape_event_rankings
+          scrape_event_rankings(years=[$LAST_YEAR, $CURRENT_YEAR], force=False)
+          " || true
 
-              # Step 3: Find peer swimmers
-              python -m scraper.scrape_peers || true
-
-              # Step 4: Scrape swimmer history
-              python -m scraper.scrape_history || true
-
-              # Step 5: National rankings (bulk)
-              python -m scraper.scrape_rankings || true
-
-              # Step 6: Derive per-swimmer ranks
+              # Derive swimmer ranks
               python -m scraper.scrape_swimmer_ranks || true
 
-              # Step 7: Export JSON
+              # Meets for current + last year (resumable)
+              python -c "
+          from scraper.scrape_meets import scrape_year
+          scrape_year($CURRENT_YEAR)
+          scrape_year($LAST_YEAR)
+          " || true
+
+              # Export
               python -m scraper.export_json
               ;;
 
-            rankings)
-              echo "=== Scraping national rankings ==="
+            rankings-full)
+              echo "=== Full national rankings (all years) ==="
               python -m scraper.scrape_rankings
               python -m scraper.scrape_swimmer_ranks
               python -m scraper.export_json
               ;;
 
-            meets)
-              echo "=== Scraping meet results ==="
-              IFS=',' read -ra YEARS <<< "$MEET_YEARS"
-              for y in "${YEARS[@]}"; do
+            meets-full)
+              echo "=== Full meet results (all years, resumable) ==="
+              for y in $(seq 2022 $CURRENT_YEAR); do
                 echo "--- Year: $y ---"
                 python -c "from scraper.scrape_meets import scrape_year; scrape_year($y)" || true
               done
@@ -108,6 +103,9 @@ jobs:
               python -m scraper.export_json
               ;;
           esac
+
+      - name: Show database status
+        run: python bulk_load.py --status || true
 
       - name: Save database to cache
         uses: actions/cache/save@v4
