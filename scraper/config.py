@@ -40,11 +40,11 @@ PEER_MAX_YOB = 2014
 
 # Stroke code → event name mapping
 STROKE_NAMES = {
-    1: "50 Free", 2: "100 Free", 3: "200 Free", 4: "400 Free",
-    5: "800 Free", 6: "1500 Free", 7: "50 Breast", 8: "100 Breast",
-    9: "200 Breast", 10: "50 Fly", 11: "100 Fly", 12: "200 Fly",
-    13: "50 Back", 14: "100 Back", 15: "200 Back",
-    16: "200 IM", 17: "400 IM", 18: "100 IM",
+    1: "50 Freestyle", 2: "100 Freestyle", 3: "200 Freestyle", 4: "400 Freestyle",
+    5: "800 Freestyle", 6: "1500 Freestyle", 7: "50 Breaststroke", 8: "100 Breaststroke",
+    9: "200 Breaststroke", 10: "50 Butterfly", 11: "100 Butterfly", 12: "200 Butterfly",
+    13: "50 Backstroke", 14: "100 Backstroke", 15: "200 Backstroke",
+    16: "200 Individual Medley", 17: "400 Individual Medley", 18: "100 Individual Medley",
 }
 
 # Stroke codes used when scraping meet event pages

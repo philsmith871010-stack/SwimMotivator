@@ -121,8 +121,8 @@ function populateSelects() {
   if ([...s2.options].some(o => o.value === String(CONFIG.target_tirefs.amber)))
     s2.value = String(CONFIG.target_tirefs.amber);
 
-  // Event selects
-  ['perfEvent', 'peerEvent'].forEach(id => {
+  // Event selects (including club rankings)
+  ['perfEvent', 'peerEvent', 'clubEvent'].forEach(id => {
     const sel = document.getElementById(id);
     sel.innerHTML = '';
     Object.entries(strokeNames).forEach(([code, name]) => {
