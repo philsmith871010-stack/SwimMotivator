@@ -135,13 +135,25 @@
           </div>
         </div>
       </div>
+
+      <!-- Leaderboard -->
       <div class="card">
-        <div class="card-title">
-          Bella &amp; Amber vs Peers
-          <span style="font-weight:400;color:var(--text-muted);margin-left:0.5rem">
-            (<span id="peerCount">0</span> peers shown)
+        <div class="card-title" style="display:flex;justify-content:space-between;align-items:center">
+          <span>Leaderboard <span style="font-weight:400;color:var(--text-muted)">(<span id="peerCount">0</span> swimmers)</span></span>
+          <span class="peer-actions">
+            <button class="peer-action-btn" id="selectTop5Btn">Top 5</button>
+            <button class="peer-action-btn" id="selectTop10Btn">Top 10</button>
+            <button class="peer-action-btn" id="clearSelectionBtn">Clear</button>
           </span>
         </div>
+        <div class="leaderboard-wrap" id="leaderboardContainer">
+          <div class="loading"><div class="loading-spinner"></div> Loading...</div>
+        </div>
+      </div>
+
+      <!-- Chart -->
+      <div class="card">
+        <div class="card-title">Performance Chart</div>
         <div class="chart-container"><canvas id="peerChart"></canvas></div>
       </div>
     </div>

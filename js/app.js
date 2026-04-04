@@ -178,14 +178,26 @@ async function loadPerformanceTab() {
 }
 
 // ── Peer Comparison Tab ──────────────────────────────────
+const PEER_PALETTE = [
+  '#00e5ff', '#ff4081', '#ffd740', '#b388ff', '#69f0ae',
+  '#ff6e40', '#40c4ff', '#eeff41', '#e040fb', '#64ffda',
+];
+let peerSelectedTirefs = new Set();
+let peerLeaderboard = [];    // current filtered leaderboard data
+let peerGroupsCache = null;  // current peer groups Map
+let bellaFilteredCache = [];
+let amberFilteredCache = [];
+
+function getPeerColor(index) {
+  return PEER_PALETTE[index % PEER_PALETTE.length];
+}
+
 async function loadPeerTab() {
   const strokeCode = document.getElementById('peerEvent').value;
   const course = document.getElementById('peerCourse').value;
   const yobFilter = document.getElementById('peerYob').value;
   const sexFilter = document.getElementById('peerSex').value;
-
-  const strokeName = CONFIG.stroke_names?.[strokeCode] || '50 Free';
-  const courseMap = { S: 'S', L: 'L' };
+  const strokeName = CONFIG.stroke_names?.[strokeCode] || '50 Freestyle';
 
   // Load Bella & Amber history
   let bellaRows = [], amberRows = [];
@@ -202,10 +214,10 @@ async function loadPeerTab() {
     .filter(r => r.time && Number.isFinite(parseTimeToSeconds(r.time)))
     .sort(sortByDate);
 
-  const bellaFiltered = filterHistory(bellaRows);
-  const amberFiltered = filterHistory(amberRows);
+  bellaFilteredCache = filterHistory(bellaRows);
+  amberFilteredCache = filterHistory(amberRows);
 
-  // Get peer data from meet results matching event name
+  // Get peer data from meet results
   let peerResults = ALL_MEET_RESULTS.filter(r => r.event === strokeName);
   if (course) {
     const courseLabel = course === 'S' ? 'Short' : 'Long';
@@ -214,44 +226,188 @@ async function loadPeerTab() {
   }
   if (yobFilter) peerResults = peerResults.filter(r => String(r.yob) === yobFilter);
   if (sexFilter) peerResults = peerResults.filter(r => r.sex === sexFilter);
-  peerResults = peerResults.filter(r =>
-    String(r.tiref) !== String(CONFIG.target_tirefs.bella) &&
-    String(r.tiref) !== String(CONFIG.target_tirefs.amber));
   peerResults = peerResults.filter(r => r.time && Number.isFinite(parseTimeToSeconds(r.time)));
 
-  // Group peers by tiref
+  // Group by tiref — build leaderboard
   const peerGroups = new Map();
   peerResults.forEach(r => {
-    if (!peerGroups.has(r.tiref)) peerGroups.set(r.tiref, []);
-    peerGroups.get(r.tiref).push({
-      ...r, date: r.meet_date || r.date,
+    if (!peerGroups.has(String(r.tiref))) peerGroups.set(String(r.tiref), []);
+    peerGroups.get(String(r.tiref)).push({ ...r, date: r.meet_date || r.date });
+  });
+  peerGroupsCache = peerGroups;
+
+  // Build leaderboard: best time per swimmer
+  peerLeaderboard = [];
+  for (const [tiref, rows] of peerGroups.entries()) {
+    let bestTime = Infinity, bestRow = null;
+    rows.forEach(r => {
+      const secs = parseTimeToSeconds(r.time);
+      if (secs !== null && secs < bestTime) { bestTime = secs; bestRow = r; }
     });
+    if (bestRow) {
+      peerLeaderboard.push({
+        tiref,
+        name: bestRow.swimmer_name || `Swimmer ${tiref}`,
+        club: bestRow.club || '-',
+        yob: bestRow.yob || '-',
+        sex: bestRow.sex || '-',
+        bestTime,
+        bestTimeStr: bestRow.time,
+        waPoints: bestRow.wa_points || '-',
+        date: bestRow.meet_date || bestRow.date || '-',
+        swimCount: rows.length,
+      });
+    }
+  }
+  peerLeaderboard.sort((a, b) => a.bestTime - b.bestTime);
+
+  // Clean up selections that are no longer in filtered results
+  const validTirefs = new Set(peerLeaderboard.map(p => p.tiref));
+  for (const t of peerSelectedTirefs) {
+    if (!validTirefs.has(t)) peerSelectedTirefs.delete(t);
+  }
+
+  renderLeaderboard();
+  renderPeerChart();
+
+  document.getElementById('peerCount').textContent = peerLeaderboard.length;
+}
+
+function renderLeaderboard() {
+  const container = document.getElementById('leaderboardContainer');
+  const bellaId = String(CONFIG.target_tirefs?.bella);
+  const amberId = String(CONFIG.target_tirefs?.amber);
+  const selectedArr = [...peerSelectedTirefs];
+
+  let html = '<table class="data-table"><thead><tr>';
+  html += '<th style="width:2.5rem">#</th><th></th><th>Swimmer</th><th>Club</th><th>YoB</th><th>Best Time</th><th>WA</th><th>Swims</th>';
+  html += '</tr></thead><tbody>';
+
+  peerLeaderboard.forEach((p, i) => {
+    const isBella = p.tiref === bellaId;
+    const isAmber = p.tiref === amberId;
+    const isSelected = peerSelectedTirefs.has(p.tiref);
+    const selIdx = selectedArr.indexOf(p.tiref);
+    const color = isBella ? CHART_COLORS.bella : isAmber ? CHART_COLORS.amber : isSelected ? getPeerColor(selIdx) : null;
+
+    const rowCls = isSelected ? ' class="peer-selected"' : '';
+    const nameCls = isBella ? ' class="highlight-bella"' : isAmber ? ' class="highlight-amber"' : isSelected ? ` style="color:${color};font-weight:600"` : '';
+    const rankCls = i < 3 ? ` rank-${i + 1}` : '';
+    const dot = color ? `<span class="peer-color-dot" style="background:${color}"></span>` : '';
+
+    html += `<tr${rowCls} data-tiref="${p.tiref}" onclick="togglePeerSelection('${p.tiref}')">`;
+    html += `<td><span class="rank-num${rankCls}">${i + 1}</span></td>`;
+    html += `<td>${dot}</td>`;
+    html += `<td${nameCls}>${p.name}</td>`;
+    html += `<td>${p.club}</td>`;
+    html += `<td>${p.yob}</td>`;
+    html += `<td>${p.bestTimeStr}</td>`;
+    html += `<td>${p.waPoints}</td>`;
+    html += `<td>${p.swimCount}</td>`;
+    html += `</tr>`;
   });
 
+  html += '</tbody></table>';
+  container.innerHTML = html;
+}
+
+function togglePeerSelection(tiref) {
+  const bellaId = String(CONFIG.target_tirefs?.bella);
+  const amberId = String(CONFIG.target_tirefs?.amber);
+  if (tiref === bellaId || tiref === amberId) return; // always shown
+
+  if (peerSelectedTirefs.has(tiref)) {
+    peerSelectedTirefs.delete(tiref);
+  } else {
+    peerSelectedTirefs.add(tiref);
+  }
+  renderLeaderboard();
+  renderPeerChart();
+}
+
+function selectTopN(n) {
+  peerSelectedTirefs.clear();
+  const bellaId = String(CONFIG.target_tirefs?.bella);
+  const amberId = String(CONFIG.target_tirefs?.amber);
+  let count = 0;
+  for (const p of peerLeaderboard) {
+    if (p.tiref === bellaId || p.tiref === amberId) continue;
+    peerSelectedTirefs.add(p.tiref);
+    count++;
+    if (count >= n) break;
+  }
+  renderLeaderboard();
+  renderPeerChart();
+}
+
+function clearPeerSelection() {
+  peerSelectedTirefs.clear();
+  renderLeaderboard();
+  renderPeerChart();
+}
+
+function renderPeerChart() {
+  if (!peerGroupsCache) return;
+  const bellaId = String(CONFIG.target_tirefs?.bella);
+  const amberId = String(CONFIG.target_tirefs?.amber);
+  const selectedArr = [...peerSelectedTirefs];
+
   const datasets = [];
-  for (const [peerId, swimmerRows] of peerGroups.entries()) {
-    const sorted = swimmerRows.sort(sortByDate);
+
+  // Unselected peers as faint lines
+  for (const [tiref, rows] of peerGroupsCache.entries()) {
+    if (tiref === bellaId || tiref === amberId) continue;
+    if (peerSelectedTirefs.has(tiref)) continue;
+    const sorted = rows.sort(sortByDate);
     const data = sorted
       .map(r => ({ x: parseDate(r.date), y: parseTimeToSeconds(r.time) }))
       .filter(p => p.x && Number.isFinite(p.y));
     if (!data.length) continue;
     datasets.push({
-      label: swimmerRows[0].swimmer_name || `Swimmer ${peerId}`,
+      label: rows[0].swimmer_name || `Swimmer ${tiref}`,
       data,
-      borderColor: CHART_COLORS.peerLine,
-      backgroundColor: CHART_COLORS.peerLine,
+      borderColor: 'rgba(138, 150, 180, 0.08)',
+      backgroundColor: 'rgba(138, 150, 180, 0.08)',
       borderWidth: 1,
       pointRadius: 0,
-      pointHoverRadius: 3,
+      pointHoverRadius: 2,
       tension: 0.3,
       spanGaps: true,
       showInLegend: false,
     });
   }
 
-  // Add Bella & Amber on top
-  datasets.push(buildSwimmerDataset(bellaFiltered, 'Bella', CHART_COLORS.bella, CHART_COLORS.bellaGlow));
-  datasets.push(buildSwimmerDataset(amberFiltered, 'Amber', CHART_COLORS.amber, CHART_COLORS.amberGlow));
+  // Selected peers with bright colours
+  selectedArr.forEach((tiref, idx) => {
+    const rows = peerGroupsCache.get(tiref);
+    if (!rows) return;
+    const color = getPeerColor(idx);
+    const sorted = rows.sort(sortByDate);
+    const data = sorted
+      .map(r => ({
+        x: parseDate(r.date), y: parseTimeToSeconds(r.time),
+        meetName: r.meet_name || 'N/A', rawDate: r.date || 'N/A',
+      }))
+      .filter(p => p.x && Number.isFinite(p.y));
+    if (!data.length) return;
+    datasets.push({
+      label: rows[0].swimmer_name || `Swimmer ${tiref}`,
+      data,
+      borderColor: color,
+      backgroundColor: color,
+      borderWidth: 2.5,
+      pointRadius: 4,
+      pointHoverRadius: 7,
+      pointBackgroundColor: color,
+      tension: 0.3,
+      spanGaps: true,
+      showInLegend: true,
+    });
+  });
+
+  // Bella & Amber always on top
+  datasets.push(buildSwimmerDataset(bellaFilteredCache, 'Bella', CHART_COLORS.bella, CHART_COLORS.bellaGlow));
+  datasets.push(buildSwimmerDataset(amberFilteredCache, 'Amber', CHART_COLORS.amber, CHART_COLORS.amberGlow));
 
   destroyChart('peer');
   chartInstances.peer = new Chart(document.getElementById('peerChart'), {
@@ -268,21 +424,11 @@ async function loadPeerTab() {
         tooltip: {
           mode: 'nearest',
           intersect: true,
-          callbacks: {
-            title: ctx => ctx.length ? ctx[0].dataset.label : '',
-            label: ctx => {
-              const y = ctx.parsed?.y;
-              return y != null ? formatSeconds(y) : '';
-            },
-          },
+          callbacks: swimTooltipCallbacks(),
         },
       },
     },
   });
-
-  // Update peer count
-  const peerCountEl = document.getElementById('peerCount');
-  if (peerCountEl) peerCountEl.textContent = peerGroups.size;
 }
 
 // ── Meet Results Tab ─────────────────────────────────────
@@ -436,6 +582,10 @@ document.getElementById('meetSearch')?.addEventListener('input', () => {
 });
 
 document.getElementById('clubEvent')?.addEventListener('change', loadClubTab);
+
+document.getElementById('selectTop5Btn')?.addEventListener('click', () => selectTopN(5));
+document.getElementById('selectTop10Btn')?.addEventListener('click', () => selectTopN(10));
+document.getElementById('clearSelectionBtn')?.addEventListener('click', clearPeerSelection);
 
 // ── Start ────────────────────────────────────────────────
 init();
