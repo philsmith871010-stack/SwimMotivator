@@ -376,15 +376,15 @@ function updateSquad() {
   const container = document.getElementById('squadContainer');
   const titleEl = document.getElementById('clubEventTitle');
   const swimmer = getSwimmer();
+  const swimmerYob = swimmer.yob;
 
-  titleEl.textContent = formatEventName(selectedEvent.stroke, selectedEvent.course);
+  titleEl.textContent = `${formatEventName(selectedEvent.stroke, selectedEvent.course)} (YoB ${swimmerYob - 1}-${swimmerYob + 1})`;
 
-  // Filter squad data for this event
+  // Filter squad data for this event + age group peers (±1 year)
   const eventName = selectedEvent.stroke;
   let squadRows = ALL_SQUAD.filter(r => r.event === eventName);
-
-  // Sort by best time
   squadRows = squadRows
+    .filter(r => r.yob && Math.abs(r.yob - swimmerYob) <= 1)
     .filter(r => r.best_time && Number.isFinite(parseTimeToSeconds(r.best_time)))
     .sort((a, b) => parseTimeToSeconds(a.best_time) - parseTimeToSeconds(b.best_time));
 
@@ -415,10 +415,15 @@ function updateSquad() {
 
   container.innerHTML = html;
 
-  // Scroll target into view
+  // Scroll target into view within the squad list only (not the whole page)
   setTimeout(() => {
     const target = container.querySelector('.is-target');
-    if (target) target.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    if (target) {
+      const containerRect = container.getBoundingClientRect();
+      const targetRect = target.getBoundingClientRect();
+      const offset = targetRect.top - containerRect.top - containerRect.height / 2;
+      container.scrollTop += offset;
+    }
   }, 100);
 }
 
