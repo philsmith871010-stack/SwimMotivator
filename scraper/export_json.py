@@ -45,16 +45,31 @@ def export_personal_bests(conn: sqlite3.Connection) -> None:
 
 
 def export_history(conn: sqlite3.Connection) -> None:
-    """Export history for Bella & Amber only (the chart needs it)."""
+    """Export history for Bella, Amber, and all female Costa swimmers with history."""
     history_dir = JSON_DIR / "history"
     history_dir.mkdir(parents=True, exist_ok=True)
-    for tiref in [BELLA_TIREF, AMBER_TIREF]:
+
+    # Get all female Costa swimmer tirefs that have history
+    costa_tirefs = set()
+    for row in conn.execute("""
+        SELECT DISTINCT mr.tiref FROM meet_results mr
+        WHERE mr.club LIKE '%St Albans%' AND mr.sex = 'F'
+    """).fetchall():
+        costa_tirefs.add(str(row[0]))
+    # Always include Bella & Amber
+    costa_tirefs.add(str(BELLA_TIREF))
+    costa_tirefs.add(str(AMBER_TIREF))
+
+    exported = 0
+    for tiref in sorted(costa_tirefs):
         rows = _dict_rows(conn, """
-            SELECT stroke_code, course, date, time, is_pb, meet_name, venue, wa_points, round, level
+            SELECT stroke_code, course, date, time, is_pb, meet_name, wa_points
             FROM swimmer_history WHERE tiref = ? ORDER BY stroke_code, course, date
-        """, (str(tiref),))
-        (history_dir / f"{tiref}.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
-        print(f"  history/{tiref}.json: {len(rows)} swims")
+        """, (tiref,))
+        if rows:
+            (history_dir / f"{tiref}.json").write_text(json.dumps(rows), encoding="utf-8")
+            exported += 1
+    print(f"  history/: {exported} swimmer files")
 
 
 def export_ranks(conn: sqlite3.Connection) -> None:

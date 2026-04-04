@@ -270,18 +270,67 @@ body {
 .goal-drop { color: var(--amber); font-size: 0.75rem; }
 .goal-achieved { color: var(--green); font-weight: 600; }
 
+/* PB Celebration Banner */
+.pb-banner {
+  background: linear-gradient(135deg, rgba(255, 215, 64, 0.08), rgba(255, 64, 129, 0.06));
+  border: 1px solid rgba(255, 215, 64, 0.2);
+  border-radius: 12px;
+  padding: 0.875rem 1.25rem;
+  margin-bottom: 1.25rem;
+  animation: pbGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pbGlow {
+  from { box-shadow: 0 0 8px rgba(255, 215, 64, 0.1); }
+  to { box-shadow: 0 0 20px rgba(255, 215, 64, 0.2); }
+}
+
+.pb-banner-inner { display: flex; align-items: center; gap: 0.75rem; }
+.pb-icon { font-size: 1.5rem; color: var(--gold); }
+.pb-headline { font-size: 0.9rem; font-weight: 700; color: var(--gold); }
+.pb-detail { font-size: 0.8rem; color: var(--text-2); }
+
+/* Season Summary */
+.season-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.8rem;
+  color: var(--text-2);
+}
+
+.season-chip {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.season-chip strong { color: var(--text); font-weight: 600; }
+.season-chip .highlight { color: var(--green); font-weight: 700; }
+
 /* Squad List */
 .squad-list { max-height: 400px; overflow-y: auto; }
+.squad-hint { font-size: 0.7rem; color: var(--text-3); margin-bottom: 0.5rem; }
 
 .squad-row {
   display: grid;
-  grid-template-columns: 1.5rem 1fr auto;
+  grid-template-columns: 1.5rem auto 1fr auto;
   gap: 0.5rem;
   align-items: center;
   padding: 0.4rem 0.5rem;
   font-size: 0.8rem;
-  border-radius: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
 }
+
+.squad-row:hover { background: var(--bg-card-hover); }
 
 .squad-row.is-target {
   background: rgba(0, 229, 255, 0.06);
@@ -290,6 +339,18 @@ body {
 
 .squad-row.is-target.bella { color: var(--bella); }
 .squad-row.is-target.amber { color: var(--amber); }
+
+.squad-row.is-compared {
+  border-color: rgba(138, 150, 180, 0.3);
+  background: rgba(138, 150, 180, 0.05);
+}
+
+.squad-color-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
 
 .squad-pos {
   font-weight: 700;
@@ -304,6 +365,51 @@ body {
 
 .squad-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .squad-time { font-variant-numeric: tabular-nums; color: var(--text-2); }
+
+/* Comparison Info */
+.compare-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  font-size: 0.75rem;
+  color: var(--text-3);
+  flex-wrap: wrap;
+}
+
+.compare-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  color: var(--text);
+}
+
+.compare-chip .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.compare-clear {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-3);
+  font-family: inherit;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.compare-clear:hover { border-color: var(--red); color: var(--red); }
+
+/* Goal projections */
+.goal-date { color: var(--green); font-size: 0.7rem; font-style: italic; }
 
 /* Loading */
 .loading {

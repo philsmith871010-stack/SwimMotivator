@@ -25,17 +25,28 @@
   <div class="container">
     <div class="status-bar"><span id="statusText">Loading...</span></div>
 
+    <!-- PB Celebration Banner (hidden by default) -->
+    <div class="pb-banner" id="pbBanner" style="display:none">
+      <div class="pb-banner-inner">
+        <span class="pb-icon">&#9733;</span>
+        <div class="pb-text">
+          <div class="pb-headline" id="pbHeadline">NEW PB!</div>
+          <div class="pb-detail" id="pbDetail"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- Row 1: Hero Stats -->
-    <div class="stats-grid" id="heroStats">
+    <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-label">Best Event</div>
         <div class="stat-value cyan" id="statBestEvent">-</div>
         <div class="stat-detail" id="statBestRank">-</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Best WA Points</div>
-        <div class="stat-value gold" id="statBestWA">-</div>
-        <div class="stat-detail" id="statBestWAEvent">-</div>
+        <div class="stat-label">Season PBs</div>
+        <div class="stat-value gold" id="statPBCount">-</div>
+        <div class="stat-detail" id="statPBStreak">-</div>
       </div>
       <div class="stat-card">
         <div class="stat-label">Events Ranked</div>
@@ -43,11 +54,14 @@
         <div class="stat-detail" id="statAvgRank">-</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Year Progress</div>
+        <div class="stat-label">Ranks Improved</div>
         <div class="stat-value green" id="statTrend">-</div>
         <div class="stat-detail" id="statTrendDetail">-</div>
       </div>
     </div>
+
+    <!-- Season Summary -->
+    <div class="season-summary" id="seasonSummary"></div>
 
     <!-- Row 2: Rankings + Chart -->
     <div class="two-col">
@@ -70,25 +84,27 @@
             </select>
           </div>
           <div class="chart-container"><canvas id="progressChart"></canvas></div>
+          <div class="compare-info" id="compareInfo" style="display:none">
+            <span class="compare-label">Comparing with:</span>
+            <span id="compareChips"></span>
+            <button class="compare-clear" onclick="clearComparators()">Clear all</button>
+          </div>
         </div>
         <div class="card goals-card">
-          <div class="card-title">Goals</div>
+          <div class="card-title">Goals &amp; Projections</div>
           <div id="goalsContainer">Select an event from My Rankings</div>
         </div>
       </div>
     </div>
 
-    <!-- Row 3: Club Standings + Year on Year -->
+    <!-- Row 3: Club Standings + Rank Progression -->
     <div class="two-col">
       <div class="col-left">
         <div class="card">
           <div class="card-title">
             Club Standings — <span id="clubEventTitle">Select Event</span>
-            <select id="ageGroupMode" class="inline-select">
-              <option value="exact">My Year</option>
-              <option value="close">Close Ages (±1yr)</option>
-            </select>
           </div>
+          <div class="squad-hint">Click a swimmer to compare on the chart above</div>
           <div class="squad-list" id="squadContainer">
             <div class="loading"><div class="loading-spinner"></div></div>
           </div>
@@ -105,8 +121,8 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
-  <script src="js/utils.js?v=3"></script>
-  <script src="js/charts.js?v=3"></script>
-  <script src="js/app.js?v=3"></script>
+  <script src="js/utils.js?v=4"></script>
+  <script src="js/charts.js?v=4"></script>
+  <script src="js/app.js?v=4"></script>
 </body>
 </html>
