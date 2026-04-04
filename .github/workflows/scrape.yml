@@ -1,0 +1,129 @@
+name: Scrape Swimming Data
+
+on:
+  # Run manually from GitHub Actions tab
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'What to scrape'
+        required: true
+        default: 'full'
+        type: choice
+        options:
+          - full          # Full pipeline: PBs, meets, rankings, history, export
+          - rankings      # Just national rankings (bulk, ~2-3 hours)
+          - meets         # Just meet results for current + last year
+          - export        # Just re-export JSON from existing DB
+      meet_years:
+        description: 'Years to scrape meets for (comma-separated, e.g. 2025,2026)'
+        required: false
+        default: '2025,2026'
+
+  # Weekly schedule: every Monday at 2am UTC
+  schedule:
+    - cron: '0 2 * * 1'
+
+permissions:
+  contents: write   # needed to push updated JSON files
+
+concurrency:
+  group: scraper
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360  # 6 hour max
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Restore database from cache
+        uses: actions/cache/restore@v4
+        with:
+          path: data/swimmotivator.db
+          key: swim-db-${{ github.run_id }}
+          restore-keys: |
+            swim-db-
+
+      - name: Run scraper
+        run: |
+          MODE="${{ github.event.inputs.mode || 'full' }}"
+          MEET_YEARS="${{ github.event.inputs.meet_years || '2025,2026' }}"
+
+          echo "Mode: $MODE"
+          echo "Meet years: $MEET_YEARS"
+
+          case "$MODE" in
+            full)
+              echo "=== Running full pipeline ==="
+              # Step 1: Personal bests for CoSA swimmers
+              python -m scraper.scrape_personal_bests || true
+
+              # Step 2: Scrape PB meets
+              python -m scraper.scrape_meets || true
+
+              # Step 3: Find peer swimmers
+              python -m scraper.scrape_peers || true
+
+              # Step 4: Scrape swimmer history
+              python -m scraper.scrape_history || true
+
+              # Step 5: National rankings (bulk)
+              python -m scraper.scrape_rankings || true
+
+              # Step 6: Derive per-swimmer ranks
+              python -m scraper.scrape_swimmer_ranks || true
+
+              # Step 7: Export JSON
+              python -m scraper.export_json
+              ;;
+
+            rankings)
+              echo "=== Scraping national rankings ==="
+              python -m scraper.scrape_rankings
+              python -m scraper.scrape_swimmer_ranks
+              python -m scraper.export_json
+              ;;
+
+            meets)
+              echo "=== Scraping meet results ==="
+              IFS=',' read -ra YEARS <<< "$MEET_YEARS"
+              for y in "${YEARS[@]}"; do
+                echo "--- Year: $y ---"
+                python -c "from scraper.scrape_meets import scrape_year; scrape_year($y)" || true
+              done
+              python -m scraper.export_json
+              ;;
+
+            export)
+              echo "=== Re-exporting JSON ==="
+              python -m scraper.export_json
+              ;;
+          esac
+
+      - name: Save database to cache
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: data/swimmotivator.db
+          key: swim-db-${{ github.run_id }}
+
+      - name: Commit and push updated JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/json/
+          if git diff --staged --quiet; then
+            echo "No JSON changes to commit"
+          else
+            git commit -m "Update swimming data ($(date -u +%Y-%m-%d))"
+            git push
+          fi
