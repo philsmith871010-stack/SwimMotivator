@@ -22,114 +22,300 @@
     </div>
   </div>
 
+  <!-- Tab Navigation -->
+  <div class="tab-bar">
+    <div class="tab-bar-inner">
+      <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
+      <button class="tab-btn" data-tab="club">Club</button>
+      <button class="tab-btn" data-tab="national">National</button>
+      <button class="tab-btn" data-tab="county">County</button>
+      <button class="tab-btn" data-tab="region">Region</button>
+    </div>
+  </div>
+
   <div class="container">
     <div class="status-bar"><span id="statusText">Loading...</span></div>
 
-    <!-- PB Celebration Banner (hidden by default) -->
-    <div class="pb-banner" id="pbBanner" style="display:none">
-      <div class="pb-banner-inner">
-        <span class="pb-icon">&#9733;</span>
-        <div class="pb-text">
-          <div class="pb-headline" id="pbHeadline">NEW PB!</div>
-          <div class="pb-detail" id="pbDetail"></div>
-        </div>
-      </div>
-    </div>
+    <!-- ═══ DASHBOARD TAB ═══ -->
+    <div class="tab-panel active" id="panelDashboard">
 
-    <!-- Row 1: Hero Stats -->
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-label">Best Event</div>
-        <div class="stat-value cyan" id="statBestEvent">-</div>
-        <div class="stat-detail" id="statBestRank">-</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Season PBs</div>
-        <div class="stat-value gold" id="statPBCount">-</div>
-        <div class="stat-detail" id="statPBStreak">-</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Events Ranked</div>
-        <div class="stat-value purple" id="statEventsRanked">-</div>
-        <div class="stat-detail" id="statAvgRank">-</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Ranks Improved</div>
-        <div class="stat-value green" id="statTrend">-</div>
-        <div class="stat-detail" id="statTrendDetail">-</div>
-      </div>
-    </div>
-
-    <!-- Season Summary -->
-    <div class="season-summary" id="seasonSummary"></div>
-
-    <!-- Row 2: Rankings + Chart -->
-    <div class="two-col">
-      <div class="col-left">
-        <div class="card">
-          <div class="card-title">My Rankings — England</div>
-          <div class="rankings-list" id="rankingsList">
-            <div class="loading"><div class="loading-spinner"></div></div>
+      <!-- PB Celebration Banner (hidden by default) -->
+      <div class="pb-banner" id="pbBanner" style="display:none">
+        <div class="pb-banner-inner">
+          <span class="pb-icon">&#9733;</span>
+          <div class="pb-text">
+            <div class="pb-headline" id="pbHeadline">NEW PB!</div>
+            <div class="pb-detail" id="pbDetail"></div>
           </div>
         </div>
       </div>
-      <div class="col-right">
-        <div class="card">
-          <div class="card-title">
-            <span id="chartTitle">My Progress</span>
-            <select id="chartCourse" class="inline-select">
-              <option value="">All Courses</option>
-              <option value="S">Short Course</option>
-              <option value="L">Long Course</option>
-            </select>
-          </div>
-          <div class="chart-container"><canvas id="progressChart"></canvas></div>
-          <div class="compare-info" id="compareInfo" style="display:none">
-            <span class="compare-label">Comparing with:</span>
-            <span id="compareChips"></span>
-            <button class="compare-clear" onclick="clearComparators()">Clear all</button>
-          </div>
-          <div class="swimmer-picker" id="swimmerPicker" style="display:none">
-            <div class="picker-header" onclick="togglePickerOpen()">
-              <span class="picker-label">Add / Remove Swimmers</span>
-              <span class="picker-toggle" id="pickerToggle">&#9660;</span>
+
+      <!-- Row 1: Hero Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Best Event</div>
+          <div class="stat-value cyan" id="statBestEvent">-</div>
+          <div class="stat-detail" id="statBestRank">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Season PBs</div>
+          <div class="stat-value gold" id="statPBCount">-</div>
+          <div class="stat-detail" id="statPBStreak">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Events Ranked</div>
+          <div class="stat-value purple" id="statEventsRanked">-</div>
+          <div class="stat-detail" id="statAvgRank">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Ranks Improved</div>
+          <div class="stat-value green" id="statTrend">-</div>
+          <div class="stat-detail" id="statTrendDetail">-</div>
+        </div>
+      </div>
+
+      <!-- Season Summary -->
+      <div class="season-summary" id="seasonSummary"></div>
+
+      <!-- Row 2: Rankings + Chart -->
+      <div class="two-col">
+        <div class="col-left">
+          <div class="card">
+            <div class="card-title">My Rankings — England</div>
+            <div class="rankings-list" id="rankingsList">
+              <div class="loading"><div class="loading-spinner"></div></div>
             </div>
-            <div class="picker-list" id="pickerList"></div>
           </div>
         </div>
-        <div class="card goals-card">
-          <div class="card-title">Goals &amp; Projections</div>
-          <div id="goalsContainer">Select an event from My Rankings</div>
+        <div class="col-right">
+          <div class="card">
+            <div class="card-title">
+              <span id="chartTitle">My Progress</span>
+              <select id="chartCourse" class="inline-select">
+                <option value="">All Courses</option>
+                <option value="S">Short Course</option>
+                <option value="L">Long Course</option>
+              </select>
+            </div>
+            <div class="chart-container"><canvas id="progressChart"></canvas></div>
+            <div class="compare-info" id="compareInfo" style="display:none">
+              <span class="compare-label">Comparing with:</span>
+              <span id="compareChips"></span>
+              <button class="compare-clear" onclick="clearComparators()">Clear all</button>
+            </div>
+            <div class="swimmer-picker" id="swimmerPicker" style="display:none">
+              <div class="picker-header" onclick="togglePickerOpen()">
+                <span class="picker-label">Add / Remove Swimmers</span>
+                <span class="picker-toggle" id="pickerToggle">&#9660;</span>
+              </div>
+              <div class="picker-list" id="pickerList"></div>
+            </div>
+          </div>
+          <div class="card goals-card">
+            <div class="card-title">Goals &amp; Projections</div>
+            <div id="goalsContainer">Select an event from My Rankings</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Club Standings + Rank Progression -->
+      <div class="two-col">
+        <div class="col-left">
+          <div class="card">
+            <div class="card-title">
+              Club Standings — <span id="clubEventTitle">Select Event</span>
+            </div>
+            <div class="squad-hint">Click a swimmer to compare on the chart above</div>
+            <div class="squad-list" id="squadContainer">
+              <div class="loading"><div class="loading-spinner"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="card">
+            <div class="card-title">Rank Progression</div>
+            <div class="chart-container chart-short"><canvas id="rankChart"></canvas></div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Row 3: Club Standings + Rank Progression -->
-    <div class="two-col">
-      <div class="col-left">
-        <div class="card">
-          <div class="card-title">
-            Club Standings — <span id="clubEventTitle">Select Event</span>
-          </div>
-          <div class="squad-hint">Click a swimmer to compare on the chart above</div>
-          <div class="squad-list" id="squadContainer">
-            <div class="loading"><div class="loading-spinner"></div></div>
-          </div>
+    <!-- ═══ CLUB TAB ═══ -->
+    <div class="tab-panel" id="panelClub">
+      <!-- Club summary stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Swimmers</div>
+          <div class="stat-value cyan" id="clubStatSwimmers">-</div>
+          <div class="stat-detail" id="clubStatSwimmersDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Club PBs This Season</div>
+          <div class="stat-value gold" id="clubStatPBs">-</div>
+          <div class="stat-detail" id="clubStatPBsDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Events Covered</div>
+          <div class="stat-value purple" id="clubStatEvents">-</div>
+          <div class="stat-detail" id="clubStatEventsDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Top WA Points</div>
+          <div class="stat-value green" id="clubStatTopWA">-</div>
+          <div class="stat-detail" id="clubStatTopWADetail">-</div>
         </div>
       </div>
-      <div class="col-right">
-        <div class="card">
-          <div class="card-title">Rank Progression</div>
-          <div class="chart-container chart-short"><canvas id="rankChart"></canvas></div>
+
+      <!-- Filters -->
+      <div class="club-filters">
+        <select id="clubEventFilter" class="filter-select">
+          <option value="">Select Event</option>
+        </select>
+        <select id="clubCourseFilter" class="filter-select">
+          <option value="">All Courses</option>
+          <option value="SC">Short Course</option>
+          <option value="LC">Long Course</option>
+        </select>
+        <select id="clubAgeFilter" class="filter-select">
+          <option value="">All Ages</option>
+        </select>
+        <select id="clubSexFilter" class="filter-select">
+          <option value="">All</option>
+          <option value="F">Girls</option>
+          <option value="M">Boys</option>
+        </select>
+      </div>
+
+      <!-- Club leaderboard -->
+      <div class="card">
+        <div class="card-title">
+          Club Leaderboard — <span id="clubLeaderboardTitle">Select an event</span>
+        </div>
+        <div class="club-leaderboard" id="clubLeaderboard">
+          <div class="club-empty-state">Select an event above to see club rankings</div>
+        </div>
+      </div>
+
+      <!-- Club top performers chart -->
+      <div class="card">
+        <div class="card-title">Top 5 Progression</div>
+        <div class="chart-container"><canvas id="clubChart"></canvas></div>
+      </div>
+    </div>
+
+    <!-- ═══ NATIONAL TAB ═══ -->
+    <div class="tab-panel" id="panelNational">
+      <!-- National overview for selected swimmer -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Best National Rank</div>
+          <div class="stat-value gold" id="natStatBestRank">-</div>
+          <div class="stat-detail" id="natStatBestRankDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Events Ranked</div>
+          <div class="stat-value cyan" id="natStatEventsRanked">-</div>
+          <div class="stat-detail" id="natStatEventsRankedDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Avg National Rank</div>
+          <div class="stat-value purple" id="natStatAvgRank">-</div>
+          <div class="stat-detail" id="natStatAvgRankDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Ranks Improved</div>
+          <div class="stat-value green" id="natStatImproved">-</div>
+          <div class="stat-detail" id="natStatImprovedDetail">-</div>
+        </div>
+      </div>
+
+      <!-- National rankings table -->
+      <div class="two-col">
+        <div class="col-left">
+          <div class="card">
+            <div class="card-title">
+              National Rankings — <span id="natSwimmerName">Select Swimmer</span>
+              <select id="natYearFilter" class="inline-select">
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <div class="national-rankings-list" id="nationalRankingsList">
+              <div class="club-empty-state">Select a swimmer to view national rankings</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="card">
+            <div class="card-title">National Rank Progression</div>
+            <div class="chart-container"><canvas id="nationalRankChart"></canvas></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Year-on-Year Comparison</div>
+            <div id="natYoyContainer" class="national-yoy">
+              <div class="club-empty-state">Rankings data will appear here</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- ═══ COUNTY TAB ═══ -->
+    <div class="tab-panel" id="panelCounty">
+      <div class="coming-soon-panel">
+        <div class="coming-soon-icon">&#127942;</div>
+        <h2 class="coming-soon-title">County Rankings</h2>
+        <p class="coming-soon-text">County-level rankings are coming soon.</p>
+        <p class="coming-soon-text">Once the overnight data load completes, you'll be able to see how swimmers rank within their county, track county championship qualifying times, and compare across clubs in your area.</p>
+        <div class="coming-soon-features">
+          <div class="coming-soon-feature">
+            <span class="coming-soon-dot"></span>
+            County ranking positions by event and age group
+          </div>
+          <div class="coming-soon-feature">
+            <span class="coming-soon-dot"></span>
+            County championship qualifying time targets
+          </div>
+          <div class="coming-soon-feature">
+            <span class="coming-soon-dot"></span>
+            Compare with swimmers from other clubs in county
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ REGION TAB ═══ -->
+    <div class="tab-panel" id="panelRegion">
+      <div class="coming-soon-panel">
+        <div class="coming-soon-icon">&#127757;</div>
+        <h2 class="coming-soon-title">Regional Rankings</h2>
+        <p class="coming-soon-text">Regional-level rankings are coming soon.</p>
+        <p class="coming-soon-text">See how swimmers perform at regional level, track regional championship qualifying times, and identify the strongest competitors across your region.</p>
+        <div class="coming-soon-features">
+          <div class="coming-soon-feature">
+            <span class="coming-soon-dot"></span>
+            Regional ranking positions by event and age group
+          </div>
+          <div class="coming-soon-feature">
+            <span class="coming-soon-dot"></span>
+            Regional championship qualifying time tracker
+          </div>
+          <div class="coming-soon-feature">
+            <span class="coming-soon-dot"></span>
+            Cross-club comparison within region
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
-  <script src="js/utils.js?v=4"></script>
-  <script src="js/charts.js?v=4"></script>
-  <script src="js/app.js?v=4"></script>
+  <script src="js/utils.js?v=5"></script>
+  <script src="js/charts.js?v=5"></script>
+  <script src="js/app.js?v=5"></script>
 </body>
 </html>
