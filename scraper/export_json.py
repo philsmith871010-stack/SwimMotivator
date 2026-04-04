@@ -92,16 +92,30 @@ def export_squad(conn: sqlite3.Connection) -> None:
 
     stroke_map = {str(k): v for k, v in STROKE_NAMES.items()}
 
-    # Get best times from history for these swimmers (SC only for simplicity)
+    from .parsers import parse_time_seconds
+
+    # Get best times from history for these swimmers (SC only)
     rows = []
     for tiref, info in tiref_info.items():
         hist = conn.execute("""
-            SELECT stroke_code, MIN(time) as best_time, MAX(CAST(wa_points AS INTEGER)) as best_wa
+            SELECT stroke_code, time, wa_points
             FROM swimmer_history
             WHERE tiref = ? AND course = 'S' AND time IS NOT NULL AND TRIM(time) <> ''
-            GROUP BY stroke_code
         """, (tiref,)).fetchall()
-        for stroke_code, best_time, best_wa in hist:
+
+        # Group by stroke and find actual fastest time (numeric comparison)
+        by_stroke: dict[int, tuple[float, str, int]] = {}
+        for stroke_code, time_str, wa in hist:
+            secs = parse_time_seconds(time_str)
+            if secs is None:
+                continue
+            wa_int = int(wa) if wa and str(wa).strip().isdigit() else 0
+            if stroke_code not in by_stroke or secs < by_stroke[stroke_code][0]:
+                by_stroke[stroke_code] = (secs, time_str, wa_int)
+            elif wa_int > by_stroke[stroke_code][2]:
+                by_stroke[stroke_code] = (by_stroke[stroke_code][0], by_stroke[stroke_code][1], wa_int)
+
+        for stroke_code, (_, best_time, best_wa) in by_stroke.items():
             event_name = stroke_map.get(str(stroke_code))
             if event_name:
                 rows.append({
