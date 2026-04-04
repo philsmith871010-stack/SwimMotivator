@@ -75,6 +75,21 @@ def export_clubs(conn: sqlite3.Connection) -> None:
     print(f"  clubs.json: {len(rows)} clubs")
 
 
+def export_rankings(conn: sqlite3.Connection) -> None:
+    # Check if table exists
+    tables = [r[0] for r in conn.execute(
+        "SELECT name FROM sqlite_master WHERE type='table' AND name='event_rankings'").fetchall()]
+    if "event_rankings" not in tables:
+        print("  event_rankings.json: table not found, skipping")
+        return
+    rows = _dict_rows(conn, """
+        SELECT * FROM event_rankings ORDER BY event, course, age_group, rank
+    """)
+    (JSON_DIR / "event_rankings.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
+    unique = len(set(r["tiref"] for r in rows))
+    print(f"  event_rankings.json: {len(rows)} records, {unique} unique swimmers")
+
+
 def export_config(conn: sqlite3.Connection) -> None:
     """Export a config file with stroke names, target tirefs, etc."""
     config = {
@@ -95,6 +110,7 @@ def main() -> None:
         export_personal_bests(conn)
         export_history(conn)
         export_meet_results(conn)
+        export_rankings(conn)
         export_clubs(conn)
         print("[Export] Done!")
     finally:

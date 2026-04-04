@@ -26,11 +26,15 @@ def main() -> None:
     from .scrape_history import main as scrape_history
     scrape_history()
 
-    print("\n[5/6] Downloading club metadata...")
+    print("\n[5/6] Scraping event rankings (East region)...")
+    from .scrape_rankings import main as scrape_rankings
+    scrape_rankings()
+
+    print("\n[6/7] Downloading club metadata...")
     from .scrape_clubs import main as scrape_clubs
     scrape_clubs()
 
-    print("\n[6/6] Exporting to JSON...")
+    print("\n[7/7] Exporting to JSON...")
     from .export_json import main as export_json
     export_json()
 

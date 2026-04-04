@@ -4,6 +4,7 @@ let CONFIG = {};
 let ALL_SWIMMERS = [];
 let ALL_PBs = [];
 let ALL_MEET_RESULTS = [];
+let ALL_RANKINGS = [];
 let HISTORY_INDEX = [];
 let ALL_CLUBS = [];
 
@@ -21,11 +22,12 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 async function init() {
   try {
     setStatus('Loading data...');
-    [CONFIG, ALL_SWIMMERS, ALL_PBs, ALL_MEET_RESULTS, HISTORY_INDEX, ALL_CLUBS] = await Promise.all([
+    [CONFIG, ALL_SWIMMERS, ALL_PBs, ALL_MEET_RESULTS, ALL_RANKINGS, HISTORY_INDEX, ALL_CLUBS] = await Promise.all([
       fetchJSON('config.json'),
       fetchJSON('swimmers.json'),
       fetchJSON('personal_bests.json'),
       fetchJSON('meet_results.json'),
+      fetchJSON('event_rankings.json').catch(() => []),
       fetchJSON('history_index.json'),
       fetchJSON('clubs.json'),
     ]);
@@ -217,15 +219,26 @@ async function loadPeerTab() {
   bellaFilteredCache = filterHistory(bellaRows);
   amberFilteredCache = filterHistory(amberRows);
 
-  // Get peer data from meet results
-  let peerResults = ALL_MEET_RESULTS.filter(r => r.event === strokeName);
-  if (course) {
-    const courseLabel = course === 'S' ? 'Short' : 'Long';
-    peerResults = peerResults.filter(r =>
-      r.course && r.course.toLowerCase().includes(courseLabel.toLowerCase()));
+  // Get peer data — prefer rankings if available, fall back to meet_results
+  const courseLabel = course === 'S' ? 'SC' : course === 'L' ? 'LC' : '';
+  const hasRankings = ALL_RANKINGS.length > 0;
+
+  let peerResults;
+  if (hasRankings) {
+    peerResults = ALL_RANKINGS.filter(r => r.event === strokeName);
+    if (courseLabel) peerResults = peerResults.filter(r => r.course === courseLabel);
+    if (yobFilter) peerResults = peerResults.filter(r => String(r.yob) === yobFilter);
+    if (sexFilter) peerResults = peerResults.filter(r => r.sex === sexFilter);
+  } else {
+    peerResults = ALL_MEET_RESULTS.filter(r => r.event === strokeName);
+    if (course) {
+      const cLabel = course === 'S' ? 'Short' : 'Long';
+      peerResults = peerResults.filter(r =>
+        r.course && r.course.toLowerCase().includes(cLabel.toLowerCase()));
+    }
+    if (yobFilter) peerResults = peerResults.filter(r => String(r.yob) === yobFilter);
+    if (sexFilter) peerResults = peerResults.filter(r => r.sex === sexFilter);
   }
-  if (yobFilter) peerResults = peerResults.filter(r => String(r.yob) === yobFilter);
-  if (sexFilter) peerResults = peerResults.filter(r => r.sex === sexFilter);
   peerResults = peerResults.filter(r => r.time && Number.isFinite(parseTimeToSeconds(r.time)));
 
   // Group by tiref — build leaderboard
@@ -236,7 +249,7 @@ async function loadPeerTab() {
   });
   peerGroupsCache = peerGroups;
 
-  // Build leaderboard: best time per swimmer
+  // Build leaderboard: best time per swimmer (rankings already have rank)
   peerLeaderboard = [];
   for (const [tiref, rows] of peerGroups.entries()) {
     let bestTime = Infinity, bestRow = null;
@@ -253,8 +266,8 @@ async function loadPeerTab() {
         sex: bestRow.sex || '-',
         bestTime,
         bestTimeStr: bestRow.time,
-        waPoints: bestRow.wa_points || '-',
-        date: bestRow.meet_date || bestRow.date || '-',
+        waPoints: bestRow.wa_points || bestRow.rank || '-',
+        date: bestRow.date || '-',
         swimCount: rows.length,
       });
     }
