@@ -377,14 +377,17 @@ function updateSquad() {
   const titleEl = document.getElementById('clubEventTitle');
   const swimmer = getSwimmer();
   const swimmerYob = swimmer.yob;
+  const ageMode = document.getElementById('ageGroupMode')?.value || 'exact';
+  const range = ageMode === 'close' ? 1 : 0;
+  const yobLabel = range ? `YoB ${swimmerYob - range}-${swimmerYob + range}` : `YoB ${swimmerYob}`;
 
-  titleEl.textContent = `${formatEventName(selectedEvent.stroke, selectedEvent.course)} (YoB ${swimmerYob - 1}-${swimmerYob + 1})`;
+  titleEl.textContent = `${formatEventName(selectedEvent.stroke, selectedEvent.course)} (${yobLabel})`;
 
-  // Filter squad data for this event + age group peers (±1 year)
+  // Filter squad data for this event + age group peers
   const eventName = selectedEvent.stroke;
   let squadRows = ALL_SQUAD.filter(r => r.event === eventName);
   squadRows = squadRows
-    .filter(r => r.yob && Math.abs(r.yob - swimmerYob) <= 1)
+    .filter(r => r.yob && Math.abs(r.yob - swimmerYob) <= range)
     .filter(r => r.best_time && Number.isFinite(parseTimeToSeconds(r.best_time)))
     .sort((a, b) => parseTimeToSeconds(a.best_time) - parseTimeToSeconds(b.best_time));
 
@@ -504,6 +507,7 @@ function updateRankProgression(ranks) {
 
 // ── Event Listeners ──────────────────────────────────────
 document.getElementById('chartCourse')?.addEventListener('change', updateProgressChart);
+document.getElementById('ageGroupMode')?.addEventListener('change', updateSquad);
 
 // ── Start ────────────────────────────────────────────────
 init();

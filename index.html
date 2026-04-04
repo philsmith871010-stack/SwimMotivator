@@ -82,7 +82,13 @@
     <div class="two-col">
       <div class="col-left">
         <div class="card">
-          <div class="card-title">Club Standings — <span id="clubEventTitle">Select Event</span></div>
+          <div class="card-title">
+            Club Standings — <span id="clubEventTitle">Select Event</span>
+            <select id="ageGroupMode" class="inline-select">
+              <option value="exact">My Year</option>
+              <option value="close">Close Ages (±1yr)</option>
+            </select>
+          </div>
           <div class="squad-list" id="squadContainer">
             <div class="loading"><div class="loading-spinner"></div></div>
           </div>
