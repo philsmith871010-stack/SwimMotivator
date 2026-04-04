@@ -20,8 +20,14 @@ REQUEST_TIMEOUT = 30
 
 # Target swimmers
 BELLA_TIREF = 1373165
+BELLA_YOB = 2011
 AMBER_TIREF = 1479966
+AMBER_YOB = 2012
 TARGET_TIREFS = {BELLA_TIREF, AMBER_TIREF}
+TARGET_SWIMMERS = {
+    BELLA_TIREF: {"name": "Bella", "yob": BELLA_YOB},
+    AMBER_TIREF: {"name": "Amber", "yob": AMBER_YOB},
+}
 
 # Co St Albans full squad tirefs
 COSTA_TIREFS = [

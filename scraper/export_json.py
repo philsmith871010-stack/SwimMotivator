@@ -1,11 +1,11 @@
-"""Export SQLite data to JSON files for the static dashboard."""
+"""Export SQLite data to JSON files for the motivational dashboard."""
 
 from __future__ import annotations
 
 import json
 import sqlite3
 
-from .config import BELLA_TIREF, AMBER_TIREF, DB_PATH, JSON_DIR, STROKE_NAMES, TARGET_TIREFS
+from .config import BELLA_TIREF, BELLA_YOB, AMBER_TIREF, AMBER_YOB, DB_PATH, JSON_DIR, STROKE_NAMES, TARGET_SWIMMERS
 
 
 def _dict_rows(conn: sqlite3.Connection, sql: str, params: tuple = ()) -> list[dict]:
@@ -13,91 +13,83 @@ def _dict_rows(conn: sqlite3.Connection, sql: str, params: tuple = ()) -> list[d
     return [dict(r) for r in conn.execute(sql, params).fetchall()]
 
 
-def export_swimmers(conn: sqlite3.Connection) -> None:
-    rows = _dict_rows(conn, "SELECT * FROM swimmers ORDER BY name")
-    (JSON_DIR / "swimmers.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
-    print(f"  swimmers.json: {len(rows)} swimmers")
+def _table_exists(conn: sqlite3.Connection, name: str) -> bool:
+    return conn.execute(
+        "SELECT 1 FROM sqlite_master WHERE type='table' AND name=?", (name,)
+    ).fetchone() is not None
+
+
+def export_config(conn: sqlite3.Connection) -> None:
+    config = {
+        "swimmers": {
+            "bella": {"tiref": BELLA_TIREF, "name": "Bella", "yob": BELLA_YOB},
+            "amber": {"tiref": AMBER_TIREF, "name": "Amber", "yob": AMBER_YOB},
+        },
+        "stroke_names": {str(k): v for k, v in STROKE_NAMES.items()},
+    }
+    (JSON_DIR / "config.json").write_text(json.dumps(config, indent=2), encoding="utf-8")
+    print("  config.json")
 
 
 def export_personal_bests(conn: sqlite3.Connection) -> None:
     rows = _dict_rows(conn, """
-        SELECT pb.*, s.name as swimmer_name, s.yob, s.sex, s.club
+        SELECT pb.tiref, pb.course, pb.stroke, pb.time, pb.wa_points, pb.date, pb.meet,
+               s.name as swimmer_name, s.yob
         FROM personal_bests pb
         JOIN swimmers s ON pb.tiref = s.tiref
-        ORDER BY s.name, pb.course, pb.stroke
-    """)
+        WHERE pb.tiref IN (?, ?)
+        ORDER BY pb.wa_points DESC
+    """, (BELLA_TIREF, AMBER_TIREF))
     (JSON_DIR / "personal_bests.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
     print(f"  personal_bests.json: {len(rows)} PBs")
 
 
 def export_history(conn: sqlite3.Connection) -> None:
+    """Export history for Bella & Amber only (the chart needs it)."""
     history_dir = JSON_DIR / "history"
     history_dir.mkdir(parents=True, exist_ok=True)
-
-    tirefs = conn.execute("SELECT DISTINCT tiref FROM swimmer_history").fetchall()
-    for (tiref,) in tirefs:
+    for tiref in [BELLA_TIREF, AMBER_TIREF]:
         rows = _dict_rows(conn, """
-            SELECT * FROM swimmer_history WHERE tiref = ? ORDER BY stroke_code, course, date
-        """, (tiref,))
+            SELECT stroke_code, course, date, time, is_pb, meet_name, venue, wa_points, round, level
+            FROM swimmer_history WHERE tiref = ? ORDER BY stroke_code, course, date
+        """, (str(tiref),))
         (history_dir / f"{tiref}.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
-
-    # Also export a combined index of who has history
-    index = _dict_rows(conn, """
-        SELECT DISTINCT h.tiref,
-            COALESCE(s.name, mr.swimmer_name, 'Swimmer ' || h.tiref) as swimmer_name,
-            COALESCE(s.yob, mr.yob) as yob,
-            COALESCE(s.sex, mr.sex) as sex,
-            COALESCE(s.club, mr.club) as club
-        FROM swimmer_history h
-        LEFT JOIN swimmers s ON CAST(h.tiref AS INTEGER) = s.tiref
-        LEFT JOIN (
-            SELECT tiref, swimmer_name, yob, sex, club,
-                   ROW_NUMBER() OVER (PARTITION BY tiref ORDER BY id) as rn
-            FROM meet_results
-        ) mr ON h.tiref = mr.tiref AND mr.rn = 1
-        ORDER BY swimmer_name
-    """)
-    (JSON_DIR / "history_index.json").write_text(json.dumps(index, indent=2), encoding="utf-8")
-    print(f"  history/: {len(tirefs)} swimmer files, {len(index)} in index")
+        print(f"  history/{tiref}.json: {len(rows)} swims")
 
 
-def export_meet_results(conn: sqlite3.Connection) -> None:
-    rows = _dict_rows(conn, """
-        SELECT * FROM meet_results ORDER BY meet_date DESC, meet_name, event
-    """)
-    (JSON_DIR / "meet_results.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
-    print(f"  meet_results.json: {len(rows)} results")
-
-
-def export_clubs(conn: sqlite3.Connection) -> None:
-    rows = _dict_rows(conn, "SELECT * FROM clubs ORDER BY club_name")
-    (JSON_DIR / "clubs.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
-    print(f"  clubs.json: {len(rows)} clubs")
-
-
-def export_rankings(conn: sqlite3.Connection) -> None:
-    # Check if table exists
-    tables = [r[0] for r in conn.execute(
-        "SELECT name FROM sqlite_master WHERE type='table' AND name='event_rankings'").fetchall()]
-    if "event_rankings" not in tables:
-        print("  event_rankings.json: table not found, skipping")
+def export_ranks(conn: sqlite3.Connection) -> None:
+    if not _table_exists(conn, "swimmer_ranks"):
+        print("  ranks.json: table not found, skipping")
         return
     rows = _dict_rows(conn, """
-        SELECT * FROM event_rankings ORDER BY event, course, age_group, rank
+        SELECT * FROM swimmer_ranks ORDER BY tiref, event, course, year
     """)
-    (JSON_DIR / "event_rankings.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
+    (JSON_DIR / "ranks.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
+    print(f"  ranks.json: {len(rows)} ranking entries")
+
+
+def export_squad(conn: sqlite3.Connection) -> None:
+    """Export female Costa swimmers' best times per event for club standings."""
+    rows = _dict_rows(conn, """
+        SELECT
+            mr.tiref,
+            mr.swimmer_name,
+            mr.yob,
+            mr.event,
+            MIN(mr.time) as best_time,
+            MAX(CAST(mr.wa_points AS INTEGER)) as best_wa,
+            mr.meet_date
+        FROM meet_results mr
+        WHERE mr.club LIKE '%St Albans%'
+          AND mr.sex = 'F'
+          AND mr.time IS NOT NULL
+          AND TRIM(mr.time) <> ''
+        GROUP BY mr.tiref, mr.event
+        ORDER BY mr.event, best_time
+    """)
+    (JSON_DIR / "squad.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
     unique = len(set(r["tiref"] for r in rows))
-    print(f"  event_rankings.json: {len(rows)} records, {unique} unique swimmers")
-
-
-def export_config(conn: sqlite3.Connection) -> None:
-    """Export a config file with stroke names, target tirefs, etc."""
-    config = {
-        "target_tirefs": {"bella": BELLA_TIREF, "amber": AMBER_TIREF},
-        "stroke_names": {str(k): v for k, v in STROKE_NAMES.items()},
-    }
-    (JSON_DIR / "config.json").write_text(json.dumps(config, indent=2), encoding="utf-8")
-    print("  config.json: exported")
+    print(f"  squad.json: {len(rows)} entries, {unique} swimmers")
 
 
 def main() -> None:
@@ -106,12 +98,10 @@ def main() -> None:
     try:
         print("[Export] Writing JSON files...")
         export_config(conn)
-        export_swimmers(conn)
         export_personal_bests(conn)
         export_history(conn)
-        export_meet_results(conn)
-        export_rankings(conn)
-        export_clubs(conn)
+        export_ranks(conn)
+        export_squad(conn)
         print("[Export] Done!")
     finally:
         conn.close()

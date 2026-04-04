@@ -1,0 +1,3719 @@
+[
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "100 Backstroke",
+    "best_time": "1:11.38",
+    "best_wa": 433,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:11.45",
+    "best_wa": 432,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:11.97",
+    "best_wa": 422,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "100 Backstroke",
+    "best_time": "1:13.07",
+    "best_wa": 404,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "100 Backstroke",
+    "best_time": "1:13.08",
+    "best_wa": 403,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:13.11",
+    "best_wa": 403,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "100 Backstroke",
+    "best_time": "1:13.16",
+    "best_wa": 402,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:14.82",
+    "best_wa": 376,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "100 Backstroke",
+    "best_time": "1:15.17",
+    "best_wa": 371,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "100 Backstroke",
+    "best_time": "1:15.75",
+    "best_wa": 362,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:15.83",
+    "best_wa": 361,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "100 Backstroke",
+    "best_time": "1:16.20",
+    "best_wa": 356,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "100 Backstroke",
+    "best_time": "1:17.19",
+    "best_wa": 342,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "100 Backstroke",
+    "best_time": "1:18.62",
+    "best_wa": 324,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:20.32",
+    "best_wa": 304,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:21.31",
+    "best_wa": 293,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:22.06",
+    "best_wa": 285,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:22.28",
+    "best_wa": 282,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:24.07",
+    "best_wa": 265,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "100 Backstroke",
+    "best_time": "1:26.24",
+    "best_wa": 245,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "100 Backstroke",
+    "best_time": "1:29.69",
+    "best_wa": 218,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "100 Backstroke",
+    "best_time": "1:32.09",
+    "best_wa": 201,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:33.06",
+    "best_wa": 195,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "100 Backstroke",
+    "best_time": "1:33.74",
+    "best_wa": 191,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:34.94",
+    "best_wa": 184,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "100 Backstroke",
+    "best_time": "1:37.32",
+    "best_wa": 171,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:37.87",
+    "best_wa": 168,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:39.02",
+    "best_wa": 162,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:41.68",
+    "best_wa": 149,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:41.74",
+    "best_wa": 149,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "100 Breaststroke",
+    "best_time": "1:14.79",
+    "best_wa": 579,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:18.12",
+    "best_wa": 508,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "100 Breaststroke",
+    "best_time": "1:18.83",
+    "best_wa": 495,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:22.10",
+    "best_wa": 438,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1390590",
+    "swimmer_name": "Alice Azzopardi",
+    "yob": 2009,
+    "event": "100 Breaststroke",
+    "best_time": "1:25.24",
+    "best_wa": 391,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "100 Breaststroke",
+    "best_time": "1:26.58",
+    "best_wa": 373,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:27.26",
+    "best_wa": 364,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:27.27",
+    "best_wa": 364,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "100 Breaststroke",
+    "best_time": "1:29.02",
+    "best_wa": 343,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:29.14",
+    "best_wa": 342,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:29.61",
+    "best_wa": 337,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "100 Breaststroke",
+    "best_time": "1:30.47",
+    "best_wa": 327,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "100 Breaststroke",
+    "best_time": "1:31.30",
+    "best_wa": 318,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:31.90",
+    "best_wa": 312,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "100 Breaststroke",
+    "best_time": "1:32.01",
+    "best_wa": 311,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:32.37",
+    "best_wa": 307,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:32.42",
+    "best_wa": 307,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:32.81",
+    "best_wa": 303,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:33.49",
+    "best_wa": 296,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:35.44",
+    "best_wa": 278,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:35.60",
+    "best_wa": 277,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:36.31",
+    "best_wa": 271,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:38.74",
+    "best_wa": 251,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:38.87",
+    "best_wa": 250,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1452576",
+    "swimmer_name": "India Park",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:39.55",
+    "best_wa": 245,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "100 Breaststroke",
+    "best_time": "1:40.05",
+    "best_wa": 242,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:43.73",
+    "best_wa": 217,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "100 Breaststroke",
+    "best_time": "1:45.72",
+    "best_wa": 205,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "100 Breaststroke",
+    "best_time": "1:46.44",
+    "best_wa": 201,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:46.82",
+    "best_wa": 198,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:47.05",
+    "best_wa": 197,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "100 Butterfly",
+    "best_time": "1:10.00",
+    "best_wa": 426,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "100 Butterfly",
+    "best_time": "1:11.66",
+    "best_wa": 397,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "100 Butterfly",
+    "best_time": "1:12.61",
+    "best_wa": 382,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "100 Butterfly",
+    "best_time": "1:14.19",
+    "best_wa": 358,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "100 Butterfly",
+    "best_time": "1:15.12",
+    "best_wa": 345,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "100 Butterfly",
+    "best_time": "1:17.55",
+    "best_wa": 314,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "100 Butterfly",
+    "best_time": "1:18.86",
+    "best_wa": 298,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "100 Butterfly",
+    "best_time": "1:18.97",
+    "best_wa": 297,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "100 Butterfly",
+    "best_time": "1:19.51",
+    "best_wa": 291,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "100 Butterfly",
+    "best_time": "1:20.13",
+    "best_wa": 284,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "100 Butterfly",
+    "best_time": "1:21.26",
+    "best_wa": 272,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "100 Butterfly",
+    "best_time": "1:21.86",
+    "best_wa": 266,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "100 Butterfly",
+    "best_time": "1:23.88",
+    "best_wa": 248,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "100 Butterfly",
+    "best_time": "1:24.50",
+    "best_wa": 242,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "100 Butterfly",
+    "best_time": "1:25.06",
+    "best_wa": 237,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "100 Butterfly",
+    "best_time": "1:27.17",
+    "best_wa": 221,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "100 Butterfly",
+    "best_time": "1:28.47",
+    "best_wa": 211,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "100 Butterfly",
+    "best_time": "1:31.06",
+    "best_wa": 193,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "100 Butterfly",
+    "best_time": "1:35.09",
+    "best_wa": 170,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "100 Butterfly",
+    "best_time": "1:35.21",
+    "best_wa": 169,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "100 Butterfly",
+    "best_time": "1:41.92",
+    "best_wa": 138,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "100 Butterfly",
+    "best_time": "2:01.69",
+    "best_wa": 81,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "100 Butterfly",
+    "best_time": "2:11.54",
+    "best_wa": 64,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "100 Butterfly",
+    "best_time": "2:15.48",
+    "best_wa": 58,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "100 Freestyle",
+    "best_time": "1:01.75",
+    "best_wa": 538,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "100 Freestyle",
+    "best_time": "1:02.04",
+    "best_wa": 531,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "100 Freestyle",
+    "best_time": "1:02.64",
+    "best_wa": 516,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:03.32",
+    "best_wa": 499,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:03.36",
+    "best_wa": 498,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:03.43",
+    "best_wa": 497,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:04.50",
+    "best_wa": 472,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "100 Freestyle",
+    "best_time": "1:04.93",
+    "best_wa": 463,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "100 Freestyle",
+    "best_time": "1:04.93",
+    "best_wa": 463,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:05.59",
+    "best_wa": 449,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "100 Freestyle",
+    "best_time": "1:07.56",
+    "best_wa": 411,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:07.80",
+    "best_wa": 407,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "100 Freestyle",
+    "best_time": "1:08.16",
+    "best_wa": 400,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "100 Freestyle",
+    "best_time": "59.67",
+    "best_wa": 597,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:10.75",
+    "best_wa": 472,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "100 Individual Medley",
+    "best_time": "1:11.20",
+    "best_wa": 463,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "100 Individual Medley",
+    "best_time": "1:11.27",
+    "best_wa": 462,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "100 Individual Medley",
+    "best_time": "1:13.49",
+    "best_wa": 421,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:13.83",
+    "best_wa": 415,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "100 Individual Medley",
+    "best_time": "1:15.05",
+    "best_wa": 395,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "100 Individual Medley",
+    "best_time": "1:16.92",
+    "best_wa": 367,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:19.33",
+    "best_wa": 335,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:20.35",
+    "best_wa": 322,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "100 Individual Medley",
+    "best_time": "1:20.40",
+    "best_wa": 322,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "100 Individual Medley",
+    "best_time": "1:20.70",
+    "best_wa": 318,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:20.77",
+    "best_wa": 317,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:21.00",
+    "best_wa": 314,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "100 Individual Medley",
+    "best_time": "1:21.01",
+    "best_wa": 314,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:21.87",
+    "best_wa": 305,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:21.93",
+    "best_wa": 304,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:22.45",
+    "best_wa": 298,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "100 Individual Medley",
+    "best_time": "1:22.66",
+    "best_wa": 296,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:23.72",
+    "best_wa": 285,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "100 Individual Medley",
+    "best_time": "1:24.58",
+    "best_wa": 276,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "100 Individual Medley",
+    "best_time": "1:25.68",
+    "best_wa": 266,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:25.93",
+    "best_wa": 263,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "100 Individual Medley",
+    "best_time": "1:28.10",
+    "best_wa": 244,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:29.61",
+    "best_wa": 232,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "100 Individual Medley",
+    "best_time": "1:29.81",
+    "best_wa": 231,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:30.27",
+    "best_wa": 227,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "100 Individual Medley",
+    "best_time": "1:30.46",
+    "best_wa": 226,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1615091",
+    "swimmer_name": "Ffion McKillop Paley",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:31.60",
+    "best_wa": 217,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:34.35",
+    "best_wa": 199,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "100 Individual Medley",
+    "best_time": "1:34.80",
+    "best_wa": 196,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1660443",
+    "swimmer_name": "Zoe Hrstic",
+    "yob": 2013,
+    "event": "100 Individual Medley",
+    "best_time": "1:34.90",
+    "best_wa": 195,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:36.69",
+    "best_wa": 185,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:37.74",
+    "best_wa": 179,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:37.82",
+    "best_wa": 178,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:38.51",
+    "best_wa": 175,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1716439",
+    "swimmer_name": "Amelie Burger",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:41.62",
+    "best_wa": 159,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1693584",
+    "swimmer_name": "Elodie Franklin-Smith",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:44.25",
+    "best_wa": 147,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:46.40",
+    "best_wa": 138,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:46.53",
+    "best_wa": 138,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:48.67",
+    "best_wa": 130,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1716440",
+    "swimmer_name": "Lila Nazeri",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:49.09",
+    "best_wa": 128,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:49.40",
+    "best_wa": 127,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:50.01",
+    "best_wa": 125,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:54.55",
+    "best_wa": 111,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "200 Backstroke",
+    "best_time": "2:28.50",
+    "best_wa": 502,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "200 Backstroke",
+    "best_time": "2:31.22",
+    "best_wa": 475,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "200 Backstroke",
+    "best_time": "2:33.13",
+    "best_wa": 458,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "200 Backstroke",
+    "best_time": "2:35.70",
+    "best_wa": 435,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:37.56",
+    "best_wa": 420,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "200 Backstroke",
+    "best_time": "2:42.08",
+    "best_wa": 386,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "200 Backstroke",
+    "best_time": "2:45.45",
+    "best_wa": 363,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "200 Backstroke",
+    "best_time": "2:47.41",
+    "best_wa": 350,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:49.35",
+    "best_wa": 338,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "200 Backstroke",
+    "best_time": "2:50.92",
+    "best_wa": 329,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:52.52",
+    "best_wa": 320,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:54.91",
+    "best_wa": 307,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:54.95",
+    "best_wa": 307,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:58.95",
+    "best_wa": 287,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "200 Backstroke",
+    "best_time": "3:06.44",
+    "best_wa": 253,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:19.70",
+    "best_wa": 206,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:20.84",
+    "best_wa": 203,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:26.88",
+    "best_wa": 185,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:29.33",
+    "best_wa": 179,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:31.85",
+    "best_wa": 172,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:31.99",
+    "best_wa": 172,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:47.98",
+    "best_wa": 138,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:49.76",
+    "best_wa": 135,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1702480",
+    "swimmer_name": "Isla Compton",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "4:05.28",
+    "best_wa": 111,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "200 Breaststroke",
+    "best_time": "2:39.41",
+    "best_wa": 574,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "200 Breaststroke",
+    "best_time": "2:51.18",
+    "best_wa": 463,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "200 Breaststroke",
+    "best_time": "2:57.78",
+    "best_wa": 413,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "200 Breaststroke",
+    "best_time": "3:02.31",
+    "best_wa": 383,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "200 Breaststroke",
+    "best_time": "3:05.68",
+    "best_wa": 363,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:07.98",
+    "best_wa": 350,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:11.83",
+    "best_wa": 329,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "200 Breaststroke",
+    "best_time": "3:11.93",
+    "best_wa": 329,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:13.47",
+    "best_wa": 321,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "200 Breaststroke",
+    "best_time": "3:13.64",
+    "best_wa": 320,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "200 Breaststroke",
+    "best_time": "3:14.00",
+    "best_wa": 318,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:14.76",
+    "best_wa": 314,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:15.79",
+    "best_wa": 309,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:18.48",
+    "best_wa": 297,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:19.06",
+    "best_wa": 294,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:20.13",
+    "best_wa": 290,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:20.31",
+    "best_wa": 289,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "200 Breaststroke",
+    "best_time": "3:27.97",
+    "best_wa": 258,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:29.70",
+    "best_wa": 252,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "200 Breaststroke",
+    "best_time": "3:30.32",
+    "best_wa": 250,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "200 Breaststroke",
+    "best_time": "3:32.28",
+    "best_wa": 243,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "3:41.45",
+    "best_wa": 214,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:43.41",
+    "best_wa": 208,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "3:47.10",
+    "best_wa": 198,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1438411",
+    "swimmer_name": "Anaya Bahl",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:49.21",
+    "best_wa": 193,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "3:49.73",
+    "best_wa": 191,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:52.03",
+    "best_wa": 186,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "200 Breaststroke",
+    "best_time": "3:59.31",
+    "best_wa": 169,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1656005",
+    "swimmer_name": "Inaaya Munir",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "4:00.98",
+    "best_wa": 166,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "200 Breaststroke",
+    "best_time": "4:04.18",
+    "best_wa": 159,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "4:10.54",
+    "best_wa": 147,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "4:12.47",
+    "best_wa": 144,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "4:18.37",
+    "best_wa": 134,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "200 Breaststroke",
+    "best_time": "4:19.73",
+    "best_wa": 132,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1707560",
+    "swimmer_name": "Farah Behvandi",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "4:46.68",
+    "best_wa": 98,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1587854",
+    "swimmer_name": "Elina Bahl",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "4:49.24",
+    "best_wa": 96,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "200 Butterfly",
+    "best_time": "2:46.07",
+    "best_wa": 370,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "200 Butterfly",
+    "best_time": "2:46.10",
+    "best_wa": 370,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "200 Butterfly",
+    "best_time": "2:47.33",
+    "best_wa": 362,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "200 Butterfly",
+    "best_time": "2:48.45",
+    "best_wa": 355,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "200 Butterfly",
+    "best_time": "2:59.61",
+    "best_wa": 293,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "200 Butterfly",
+    "best_time": "3:02.30",
+    "best_wa": 280,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "200 Butterfly",
+    "best_time": "3:02.84",
+    "best_wa": 277,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "200 Butterfly",
+    "best_time": "3:12.00",
+    "best_wa": 240,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "200 Butterfly",
+    "best_time": "3:36.30",
+    "best_wa": 167,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "200 Butterfly",
+    "best_time": "4:21.31",
+    "best_wa": 95,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "200 Freestyle",
+    "best_time": "2:09.25",
+    "best_wa": 621,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "200 Freestyle",
+    "best_time": "2:14.24",
+    "best_wa": 554,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:16.29",
+    "best_wa": 530,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "200 Freestyle",
+    "best_time": "2:17.42",
+    "best_wa": 517,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "200 Freestyle",
+    "best_time": "2:18.85",
+    "best_wa": 501,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:19.04",
+    "best_wa": 499,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "200 Freestyle",
+    "best_time": "2:19.12",
+    "best_wa": 498,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:20.07",
+    "best_wa": 488,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "200 Freestyle",
+    "best_time": "2:21.85",
+    "best_wa": 470,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:22.37",
+    "best_wa": 465,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:24.46",
+    "best_wa": 445,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:24.90",
+    "best_wa": 441,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:28.85",
+    "best_wa": 407,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "200 Freestyle",
+    "best_time": "2:29.15",
+    "best_wa": 404,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:32.62",
+    "best_wa": 377,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:32.66",
+    "best_wa": 377,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:33.77",
+    "best_wa": 369,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "200 Freestyle",
+    "best_time": "2:36.40",
+    "best_wa": 350,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:36.48",
+    "best_wa": 350,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:37.57",
+    "best_wa": 343,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:39.65",
+    "best_wa": 329,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:41.39",
+    "best_wa": 319,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:42.31",
+    "best_wa": 313,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "200 Freestyle",
+    "best_time": "2:45.21",
+    "best_wa": 297,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:47.00",
+    "best_wa": 288,
+    "meet_date": "26/11/22"
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "3:02.54",
+    "best_wa": 220,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "3:03.28",
+    "best_wa": 218,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "200 Freestyle",
+    "best_time": "3:04.73",
+    "best_wa": 212,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "3:06.11",
+    "best_wa": 208,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "200 Freestyle",
+    "best_time": "3:06.99",
+    "best_wa": 205,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "200 Individual Medley",
+    "best_time": "2:30.68",
+    "best_wa": 525,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "2:31.36",
+    "best_wa": 518,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "200 Individual Medley",
+    "best_time": "2:32.48",
+    "best_wa": 507,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "200 Individual Medley",
+    "best_time": "2:40.36",
+    "best_wa": 436,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "2:41.65",
+    "best_wa": 425,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "2:41.70",
+    "best_wa": 425,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "2:42.31",
+    "best_wa": 420,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "2:43.36",
+    "best_wa": 412,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "200 Individual Medley",
+    "best_time": "2:44.35",
+    "best_wa": 405,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "2:45.38",
+    "best_wa": 397,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "200 Individual Medley",
+    "best_time": "2:45.57",
+    "best_wa": 396,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "200 Individual Medley",
+    "best_time": "2:45.67",
+    "best_wa": 395,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "2:49.85",
+    "best_wa": 367,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "200 Individual Medley",
+    "best_time": "2:55.61",
+    "best_wa": 332,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "2:56.08",
+    "best_wa": 329,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "2:56.37",
+    "best_wa": 327,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "200 Individual Medley",
+    "best_time": "2:56.57",
+    "best_wa": 326,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "200 Individual Medley",
+    "best_time": "2:58.76",
+    "best_wa": 315,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "3:02.49",
+    "best_wa": 296,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "3:04.32",
+    "best_wa": 287,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "200 Individual Medley",
+    "best_time": "3:10.12",
+    "best_wa": 261,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:18.56",
+    "best_wa": 229,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "3:22.32",
+    "best_wa": 217,
+    "meet_date": "26/11/22"
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "200 Individual Medley",
+    "best_time": "3:31.26",
+    "best_wa": 190,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:32.24",
+    "best_wa": 188,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "200 Individual Medley",
+    "best_time": "3:35.14",
+    "best_wa": 180,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:39.60",
+    "best_wa": 169,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:43.58",
+    "best_wa": 160,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "200 Individual Medley",
+    "best_time": "3:45.31",
+    "best_wa": 157,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:58.08",
+    "best_wa": 133,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "200 Individual Medley",
+    "best_time": "4:13.62",
+    "best_wa": 110,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "400 Freestyle",
+    "best_time": "4:42.71",
+    "best_wa": 540,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "400 Freestyle",
+    "best_time": "4:51.43",
+    "best_wa": 493,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "400 Freestyle",
+    "best_time": "4:51.73",
+    "best_wa": 491,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "400 Freestyle",
+    "best_time": "4:56.47",
+    "best_wa": 468,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "4:59.88",
+    "best_wa": 452,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "400 Freestyle",
+    "best_time": "5:01.67",
+    "best_wa": 444,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "400 Freestyle",
+    "best_time": "5:03.31",
+    "best_wa": 437,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "5:04.96",
+    "best_wa": 430,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "400 Freestyle",
+    "best_time": "5:09.67",
+    "best_wa": 411,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "5:20.06",
+    "best_wa": 372,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "400 Freestyle",
+    "best_time": "5:27.28",
+    "best_wa": 348,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "400 Freestyle",
+    "best_time": "5:32.75",
+    "best_wa": 331,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "6:05.85",
+    "best_wa": 249,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "400 Freestyle",
+    "best_time": "6:24.58",
+    "best_wa": 214,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "400 Individual Medley",
+    "best_time": "5:38.06",
+    "best_wa": 431,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "400 Individual Medley",
+    "best_time": "5:47.89",
+    "best_wa": 396,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "400 Individual Medley",
+    "best_time": "5:49.17",
+    "best_wa": 391,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "400 Individual Medley",
+    "best_time": "5:57.47",
+    "best_wa": 365,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "400 Individual Medley",
+    "best_time": "5:59.52",
+    "best_wa": 358,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "400 Individual Medley",
+    "best_time": "6:00.67",
+    "best_wa": 355,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "400 Individual Medley",
+    "best_time": "6:12.13",
+    "best_wa": 323,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "400 Individual Medley",
+    "best_time": "6:12.42",
+    "best_wa": 322,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "400 Individual Medley",
+    "best_time": "6:15.18",
+    "best_wa": 315,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "400 Individual Medley",
+    "best_time": "6:19.93",
+    "best_wa": 304,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "400 Individual Medley",
+    "best_time": "6:45.20",
+    "best_wa": 250,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "400 Individual Medley",
+    "best_time": "8:04.01",
+    "best_wa": 147,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "50 Backstroke",
+    "best_time": "32.02",
+    "best_wa": 489,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "50 Backstroke",
+    "best_time": "32.57",
+    "best_wa": 464,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "33.56",
+    "best_wa": 424,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "33.56",
+    "best_wa": 424,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "33.78",
+    "best_wa": 416,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "50 Backstroke",
+    "best_time": "33.81",
+    "best_wa": 415,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "50 Backstroke",
+    "best_time": "33.84",
+    "best_wa": 414,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "50 Backstroke",
+    "best_time": "34.33",
+    "best_wa": 396,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "50 Backstroke",
+    "best_time": "34.45",
+    "best_wa": 392,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "35.07",
+    "best_wa": 372,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "50 Backstroke",
+    "best_time": "35.09",
+    "best_wa": 371,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "50 Backstroke",
+    "best_time": "35.14",
+    "best_wa": 370,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "35.23",
+    "best_wa": 367,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "50 Backstroke",
+    "best_time": "36.31",
+    "best_wa": 335,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "36.41",
+    "best_wa": 332,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "36.78",
+    "best_wa": 322,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "36.88",
+    "best_wa": 320,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "37.36",
+    "best_wa": 307,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "50 Backstroke",
+    "best_time": "37.53",
+    "best_wa": 303,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "38.80",
+    "best_wa": 274,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "39.37",
+    "best_wa": 263,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "39.66",
+    "best_wa": 257,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "50 Backstroke",
+    "best_time": "39.82",
+    "best_wa": 254,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "41.27",
+    "best_wa": 228,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1438411",
+    "swimmer_name": "Anaya Bahl",
+    "yob": 2011,
+    "event": "50 Backstroke",
+    "best_time": "42.35",
+    "best_wa": 211,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "50 Backstroke",
+    "best_time": "42.41",
+    "best_wa": 210,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "42.95",
+    "best_wa": 202,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "50 Backstroke",
+    "best_time": "43.57",
+    "best_wa": 194,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1735667",
+    "swimmer_name": "Chiu Yuet Cheng",
+    "yob": 2015,
+    "event": "50 Backstroke",
+    "best_time": "48.63",
+    "best_wa": 139,
+    "meet_date": "21/06/25"
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "50 Breaststroke",
+    "best_time": "34.82",
+    "best_wa": 540,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "35.29",
+    "best_wa": 519,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "37.28",
+    "best_wa": 440,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "38.47",
+    "best_wa": 401,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "38.87",
+    "best_wa": 388,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "50 Breaststroke",
+    "best_time": "39.09",
+    "best_wa": 382,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "50 Breaststroke",
+    "best_time": "39.38",
+    "best_wa": 373,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "40.30",
+    "best_wa": 348,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "40.38",
+    "best_wa": 346,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "40.49",
+    "best_wa": 343,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1293131",
+    "swimmer_name": "Harriet Park",
+    "yob": 2007,
+    "event": "50 Breaststroke",
+    "best_time": "41.61",
+    "best_wa": 316,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "41.84",
+    "best_wa": 311,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "41.93",
+    "best_wa": 309,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "41.96",
+    "best_wa": 309,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "50 Breaststroke",
+    "best_time": "42.11",
+    "best_wa": 305,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "50 Breaststroke",
+    "best_time": "42.11",
+    "best_wa": 305,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "42.22",
+    "best_wa": 303,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "42.45",
+    "best_wa": 298,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "42.56",
+    "best_wa": 296,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "43.29",
+    "best_wa": 281,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1452576",
+    "swimmer_name": "India Park",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "43.88",
+    "best_wa": 270,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "44.59",
+    "best_wa": 257,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "44.61",
+    "best_wa": 257,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "44.98",
+    "best_wa": 250,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "45.03",
+    "best_wa": 250,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "45.17",
+    "best_wa": 247,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "46.21",
+    "best_wa": 231,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "46.28",
+    "best_wa": 230,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1615091",
+    "swimmer_name": "Ffion McKillop Paley",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "46.79",
+    "best_wa": 222,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "47.93",
+    "best_wa": 207,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "49.18",
+    "best_wa": 191,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "49.45",
+    "best_wa": 188,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "50 Breaststroke",
+    "best_time": "49.90",
+    "best_wa": 183,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "50 Breaststroke",
+    "best_time": "49.94",
+    "best_wa": 183,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "50.56",
+    "best_wa": 176,
+    "meet_date": "26/11/22"
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "30.79",
+    "best_wa": 470,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "30.96",
+    "best_wa": 462,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "50 Butterfly",
+    "best_time": "31.40",
+    "best_wa": 443,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "50 Butterfly",
+    "best_time": "31.97",
+    "best_wa": 419,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "50 Butterfly",
+    "best_time": "32.05",
+    "best_wa": 416,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "50 Butterfly",
+    "best_time": "32.20",
+    "best_wa": 410,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "32.50",
+    "best_wa": 399,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "32.78",
+    "best_wa": 389,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "50 Butterfly",
+    "best_time": "33.12",
+    "best_wa": 377,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "50 Butterfly",
+    "best_time": "33.49",
+    "best_wa": 365,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "33.77",
+    "best_wa": 356,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "34.22",
+    "best_wa": 342,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "50 Butterfly",
+    "best_time": "34.29",
+    "best_wa": 340,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "34.31",
+    "best_wa": 339,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "34.69",
+    "best_wa": 328,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "50 Butterfly",
+    "best_time": "35.26",
+    "best_wa": 312,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "50 Butterfly",
+    "best_time": "35.50",
+    "best_wa": 306,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "36.51",
+    "best_wa": 281,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "36.55",
+    "best_wa": 281,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "50 Butterfly",
+    "best_time": "37.35",
+    "best_wa": 263,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "37.84",
+    "best_wa": 253,
+    "meet_date": "23/11/24"
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "39.00",
+    "best_wa": 231,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "39.67",
+    "best_wa": 219,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "39.98",
+    "best_wa": 214,
+    "meet_date": "26/11/22"
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "50 Butterfly",
+    "best_time": "40.59",
+    "best_wa": 205,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "28.57",
+    "best_wa": 510,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "50 Freestyle",
+    "best_time": "28.64",
+    "best_wa": 506,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "50 Freestyle",
+    "best_time": "28.92",
+    "best_wa": 491,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "50 Freestyle",
+    "best_time": "29.06",
+    "best_wa": 484,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "29.13",
+    "best_wa": 481,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "29.16",
+    "best_wa": 479,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "50 Freestyle",
+    "best_time": "29.30",
+    "best_wa": 473,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "50 Freestyle",
+    "best_time": "29.40",
+    "best_wa": 468,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "50 Freestyle",
+    "best_time": "30.01",
+    "best_wa": 440,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "50 Freestyle",
+    "best_time": "30.17",
+    "best_wa": 433,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "50 Freestyle",
+    "best_time": "30.23",
+    "best_wa": 430,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "30.55",
+    "best_wa": 417,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "30.70",
+    "best_wa": 411,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "50 Freestyle",
+    "best_time": "31.09",
+    "best_wa": 395,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "31.27",
+    "best_wa": 389,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "50 Freestyle",
+    "best_time": "31.48",
+    "best_wa": 381,
+    "meet_date": "09/03/24"
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "31.72",
+    "best_wa": 372,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "31.72",
+    "best_wa": 372,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "31.89",
+    "best_wa": 366,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "32.10",
+    "best_wa": 359,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "32.24",
+    "best_wa": 355,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "50 Freestyle",
+    "best_time": "32.39",
+    "best_wa": 350,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "33.37",
+    "best_wa": 320,
+    "meet_date": "08/03/25"
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "33.76",
+    "best_wa": 309,
+    "meet_date": "08/03/25"
+  }
+]

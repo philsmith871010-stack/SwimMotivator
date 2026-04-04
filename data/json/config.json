@@ -1,7 +1,15 @@
 {
-  "target_tirefs": {
-    "bella": 1373165,
-    "amber": 1479966
+  "swimmers": {
+    "bella": {
+      "tiref": 1373165,
+      "name": "Bella",
+      "yob": 2011
+    },
+    "amber": {
+      "tiref": 1479966,
+      "name": "Amber",
+      "yob": 2012
+    }
   },
   "stroke_names": {
     "1": "50 Freestyle",

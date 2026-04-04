@@ -8,184 +8,91 @@
 </head>
 <body>
 
+  <!-- Header -->
   <div class="header">
-    <h1><span class="accent">Swim</span>Motivator</h1>
-    <div class="subtitle">Performance tracking for Bella, Amber &amp; peers &mdash; Co St Albans</div>
+    <div class="header-inner">
+      <div>
+        <h1><span class="accent">Swim</span>Motivator</h1>
+        <div class="subtitle">City of St Albans SC</div>
+      </div>
+      <div class="swimmer-toggle">
+        <button class="swimmer-btn bella active" data-swimmer="bella" id="btnBella">Bella</button>
+        <button class="swimmer-btn amber" data-swimmer="amber" id="btnAmber">Amber</button>
+      </div>
+    </div>
   </div>
 
   <div class="container">
-    <div class="status-bar">
-      <span id="statusText">Loading...</span>
-    </div>
+    <div class="status-bar"><span id="statusText">Loading...</span></div>
 
-    <!-- Tabs -->
-    <div class="tabs">
-      <button class="tab-btn active" data-tab="overviewPane">Overview</button>
-      <button class="tab-btn" data-tab="performancePane">Bella &amp; Amber</button>
-      <button class="tab-btn" data-tab="peerPane">Peer Comparison</button>
-      <button class="tab-btn" data-tab="meetPane">Meet Results</button>
-      <button class="tab-btn" data-tab="clubPane">Club Rankings</button>
-    </div>
-
-    <!-- ═══ Overview ═══ -->
-    <div class="tab-pane active" id="overviewPane">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-value cyan" id="statSwimmers">-</div>
-          <div class="stat-label">Swimmers</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value pink" id="statMeets">-</div>
-          <div class="stat-label">Meets</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value purple" id="statResults">-</div>
-          <div class="stat-label">Race Results</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value gold" id="statPBs">-</div>
-          <div class="stat-label">Personal Bests</div>
-        </div>
+    <!-- Row 1: Hero Stats -->
+    <div class="stats-grid" id="heroStats">
+      <div class="stat-card">
+        <div class="stat-label">Best Event</div>
+        <div class="stat-value cyan" id="statBestEvent">-</div>
+        <div class="stat-detail" id="statBestRank">-</div>
       </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
-        <div class="card">
-          <div class="card-title" style="color:var(--pink)">Bella &mdash; Personal Bests</div>
-          <div id="bellaPBSummary" class="data-table-wrap">
-            <div class="loading"><div class="loading-spinner"></div> Loading...</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-title" style="color:var(--cyan)">Amber &mdash; Personal Bests</div>
-          <div id="amberPBSummary" class="data-table-wrap">
-            <div class="loading"><div class="loading-spinner"></div> Loading...</div>
-          </div>
-        </div>
+      <div class="stat-card">
+        <div class="stat-label">Best WA Points</div>
+        <div class="stat-value gold" id="statBestWA">-</div>
+        <div class="stat-detail" id="statBestWAEvent">-</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Events Ranked</div>
+        <div class="stat-value purple" id="statEventsRanked">-</div>
+        <div class="stat-detail" id="statAvgRank">-</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Year Progress</div>
+        <div class="stat-value green" id="statTrend">-</div>
+        <div class="stat-detail" id="statTrendDetail">-</div>
       </div>
     </div>
 
-    <!-- ═══ Performance (Bella & Amber) ═══ -->
-    <div class="tab-pane" id="performancePane">
-      <div class="card">
-        <div class="card-title">Filters</div>
-        <div class="filters">
-          <div class="filter-group">
-            <label for="perfSwimmer1">Swimmer 1</label>
-            <select id="perfSwimmer1"></select>
+    <!-- Row 2: Rankings + Chart -->
+    <div class="two-col">
+      <div class="col-left">
+        <div class="card">
+          <div class="card-title">My Rankings — England</div>
+          <div class="rankings-list" id="rankingsList">
+            <div class="loading"><div class="loading-spinner"></div></div>
           </div>
-          <div class="filter-group">
-            <label for="perfSwimmer2">Swimmer 2</label>
-            <select id="perfSwimmer2"></select>
-          </div>
-          <div class="filter-group">
-            <label for="perfEvent">Event</label>
-            <select id="perfEvent"></select>
-          </div>
-          <div class="filter-group">
-            <label for="perfCourse">Course</label>
-            <select id="perfCourse">
-              <option value="">All</option>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="card">
+          <div class="card-title">
+            <span id="chartTitle">My Progress</span>
+            <select id="chartCourse" class="inline-select">
+              <option value="">All Courses</option>
               <option value="S">Short Course</option>
               <option value="L">Long Course</option>
             </select>
           </div>
+          <div class="chart-container"><canvas id="progressChart"></canvas></div>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-title">Performance Trend (time by race date)</div>
-        <div class="chart-container"><canvas id="performanceChart"></canvas></div>
-      </div>
-    </div>
-
-    <!-- ═══ Peer Comparison ═══ -->
-    <div class="tab-pane" id="peerPane">
-      <div class="card">
-        <div class="card-title">Filters</div>
-        <div class="filters">
-          <div class="filter-group">
-            <label for="peerEvent">Event</label>
-            <select id="peerEvent"></select>
-          </div>
-          <div class="filter-group">
-            <label for="peerCourse">Course</label>
-            <select id="peerCourse">
-              <option value="">All</option>
-              <option value="S">Short Course</option>
-              <option value="L">Long Course</option>
-            </select>
-          </div>
-          <div class="filter-group">
-            <label for="peerYob">Year of Birth</label>
-            <select id="peerYob">
-              <option value="">All</option>
-              <option value="2010">2010</option>
-              <option value="2011">2011</option>
-              <option value="2012">2012</option>
-              <option value="2013">2013</option>
-              <option value="2014">2014</option>
-            </select>
-          </div>
-          <div class="filter-group">
-            <label for="peerSex">Sex</label>
-            <select id="peerSex">
-              <option value="">All</option>
-              <option value="F">Female</option>
-              <option value="M">Male</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- Leaderboard -->
-      <div class="card">
-        <div class="card-title" style="display:flex;justify-content:space-between;align-items:center">
-          <span>Leaderboard <span style="font-weight:400;color:var(--text-muted)">(<span id="peerCount">0</span> swimmers)</span></span>
-          <span class="peer-actions">
-            <button class="peer-action-btn" id="selectTop5Btn">Top 5</button>
-            <button class="peer-action-btn" id="selectTop10Btn">Top 10</button>
-            <button class="peer-action-btn" id="clearSelectionBtn">Clear</button>
-          </span>
-        </div>
-        <div class="leaderboard-wrap" id="leaderboardContainer">
-          <div class="loading"><div class="loading-spinner"></div> Loading...</div>
-        </div>
-      </div>
-
-      <!-- Chart -->
-      <div class="card">
-        <div class="card-title">Performance Chart</div>
-        <div class="chart-container"><canvas id="peerChart"></canvas></div>
-      </div>
-    </div>
-
-    <!-- ═══ Meet Results ═══ -->
-    <div class="tab-pane" id="meetPane">
-      <div class="card">
-        <div class="card-title">Search Results</div>
-        <input type="text" id="meetSearch" class="search-input"
-               placeholder="Search swimmers, events, meets, clubs...">
-      </div>
-      <div class="card">
-        <div id="meetResultsContainer">
-          <div class="loading"><div class="loading-spinner"></div> Loading...</div>
+        <div class="card goals-card">
+          <div class="card-title">Goals</div>
+          <div id="goalsContainer">Select an event from My Rankings</div>
         </div>
       </div>
     </div>
 
-    <!-- ═══ Club Rankings ═══ -->
-    <div class="tab-pane" id="clubPane">
-      <div class="card">
-        <div class="card-title">Filters</div>
-        <div class="filters">
-          <div class="filter-group">
-            <label for="clubEvent">Event</label>
-            <select id="clubEvent"></select>
+    <!-- Row 3: Club Standings + Year on Year -->
+    <div class="two-col">
+      <div class="col-left">
+        <div class="card">
+          <div class="card-title">Club Standings — <span id="clubEventTitle">Select Event</span></div>
+          <div class="squad-list" id="squadContainer">
+            <div class="loading"><div class="loading-spinner"></div></div>
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-title">Top Clubs by Average WA Points</div>
-        <div class="chart-container"><canvas id="clubChart"></canvas></div>
+      <div class="col-right">
+        <div class="card">
+          <div class="card-title">Rank Progression</div>
+          <div class="chart-container chart-short"><canvas id="rankChart"></canvas></div>
+        </div>
       </div>
     </div>
   </div>
