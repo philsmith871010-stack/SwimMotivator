@@ -4,12 +4,14 @@ let CONFIG = {};
 let ALL_PBS = [];
 let ALL_RANKS = [];
 let ALL_SQUAD = [];
+let ALL_SWIMMERS = [];  // [{tiref, name, yob}] — built from squad.json
 let HISTORY = {};  // keyed by tiref (string)
-let activeSwimmer = 'bella';
+let activeSwimmer = null;  // {tiref, name, yob} — current swimmer object
 let selectedEvent = null;
 let comparators = [];  // [{tiref, name, color}] — max 3
 const COMP_COLORS = ['#69f0ae', '#b388ff', '#ffab40'];
-const historyCache = {};  // loaded on demand
+const BELLA_TIREF = '1373165';
+const AMBER_TIREF = '1479966';
 
 // ── Init ──────────────────────────────────────────────────
 async function init() {
@@ -22,21 +24,42 @@ async function init() {
       fetchJSON('squad.json').catch(() => []),
     ]);
 
-    const bella = CONFIG.swimmers.bella;
-    const amber = CONFIG.swimmers.amber;
-    const [bHist, aHist] = await Promise.all([
-      fetchJSON(`history/${bella.tiref}.json`).catch(() => []),
-      fetchJSON(`history/${amber.tiref}.json`).catch(() => []),
-    ]);
-    HISTORY[bella.tiref] = bHist;
-    HISTORY[amber.tiref] = aHist;
+    // Build unique swimmer list from squad data
+    const swimmerMap = new Map();
+    ALL_SQUAD.forEach(r => {
+      const tid = String(r.tiref);
+      if (!swimmerMap.has(tid)) {
+        swimmerMap.set(tid, { tiref: tid, name: r.swimmer_name || 'Unknown', yob: r.yob });
+      }
+    });
+    ALL_SWIMMERS = [...swimmerMap.values()].sort((a, b) => a.name.localeCompare(b.name));
 
-    setupToggle();
+    // Default to Bella
+    const defaultSwimmer = ALL_SWIMMERS.find(s => s.tiref === BELLA_TIREF) || ALL_SWIMMERS[0];
+    activeSwimmer = defaultSwimmer;
+
+    // Load history for default swimmer
+    await loadHistory(activeSwimmer.tiref);
+
+    setupSwimmerSelect();
     refresh();
     setStatus('Ready', true);
   } catch (err) {
     setStatus(`Error: ${err.message}`);
     console.error(err);
+  }
+}
+
+async function loadHistory(tiref) {
+  tiref = String(tiref);
+  if (HISTORY[tiref]) return HISTORY[tiref];
+  try {
+    const h = await fetchJSON(`history/${tiref}.json`);
+    HISTORY[tiref] = h;
+    return h;
+  } catch {
+    HISTORY[tiref] = [];
+    return [];
   }
 }
 
@@ -46,30 +69,133 @@ function setStatus(msg, ok = false) {
   el.className = ok ? 'connected' : '';
 }
 
-function getSwimmer() { return CONFIG.swimmers?.[activeSwimmer] || {}; }
-function getColor() { return activeSwimmer === 'bella' ? COLORS.bella : COLORS.amber; }
-function getGlow() { return activeSwimmer === 'bella' ? COLORS.bellaGlow : COLORS.amberGlow; }
+function getSwimmer() { return activeSwimmer || {}; }
+function getColor() {
+  if (!activeSwimmer) return COLORS.amber;
+  if (String(activeSwimmer.tiref) === BELLA_TIREF) return COLORS.bella;
+  if (String(activeSwimmer.tiref) === AMBER_TIREF) return COLORS.amber;
+  return COLORS.purple;
+}
+function getGlow() {
+  if (!activeSwimmer) return COLORS.amberGlow;
+  if (String(activeSwimmer.tiref) === BELLA_TIREF) return COLORS.bellaGlow;
+  if (String(activeSwimmer.tiref) === AMBER_TIREF) return COLORS.amberGlow;
+  return 'rgba(179, 136, 255, 0.25)';
+}
 
-// ── Toggle ────────────────────────────────────────────────
-function setupToggle() {
-  document.querySelectorAll('.swimmer-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      activeSwimmer = btn.dataset.swimmer;
-      document.querySelectorAll('.swimmer-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedEvent = null;
-      comparators = [];
-      refresh();
+// ── Swimmer Select Dropdown ───────────────────────────────
+function setupSwimmerSelect() {
+  const searchInput = document.getElementById('swimmerSearch');
+  const dropdown = document.getElementById('swimmerDropdown');
+
+  updateSearchInputStyle();
+
+  // Build dropdown HTML with search box + swimmer list
+  function renderDropdown(filter = '') {
+    const lc = filter.toLowerCase();
+    const filtered = lc ? ALL_SWIMMERS.filter(s => s.name.toLowerCase().includes(lc)) : ALL_SWIMMERS;
+
+    // Group by YOB
+    const groups = {};
+    filtered.forEach(s => {
+      const yob = s.yob || '?';
+      if (!groups[yob]) groups[yob] = [];
+      groups[yob].push(s);
     });
+
+    let html = '<input type="text" class="dd-search" id="ddSearchInput" placeholder="Type to filter...">';
+    const yobs = Object.keys(groups).sort((a, b) => Number(a) - Number(b));
+    yobs.forEach(yob => {
+      html += `<div class="dd-group-label">Born ${yob}</div>`;
+      groups[yob].forEach(s => {
+        const isActive = activeSwimmer && String(s.tiref) === String(activeSwimmer.tiref);
+        html += `<div class="dd-item${isActive ? ' active' : ''}" data-tiref="${s.tiref}">
+          <span>${s.name}</span>
+          <span class="dd-yob">${s.yob || ''}</span>
+        </div>`;
+      });
+    });
+
+    if (!filtered.length) html += '<div style="padding:1rem;color:var(--text-3);font-size:0.8rem;text-align:center">No matches</div>';
+    dropdown.innerHTML = html;
+
+    // Wire up search within dropdown
+    const ddSearch = document.getElementById('ddSearchInput');
+    if (ddSearch) {
+      ddSearch.value = filter;
+      ddSearch.focus();
+      ddSearch.addEventListener('input', () => renderDropdown(ddSearch.value));
+    }
+
+    // Wire up item clicks
+    dropdown.querySelectorAll('.dd-item').forEach(item => {
+      item.addEventListener('click', async () => {
+        const tiref = item.dataset.tiref;
+        const swimmer = ALL_SWIMMERS.find(s => String(s.tiref) === tiref);
+        if (swimmer) {
+          await selectSwimmer(swimmer);
+          closeDropdown();
+        }
+      });
+    });
+  }
+
+  function openDropdown() {
+    renderDropdown('');
+    dropdown.classList.add('open');
+    searchInput.classList.add('open');
+  }
+
+  function closeDropdown() {
+    dropdown.classList.remove('open');
+    searchInput.classList.remove('open');
+  }
+
+  searchInput.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (dropdown.classList.contains('open')) closeDropdown();
+    else openDropdown();
   });
+
+  dropdown.addEventListener('click', (e) => e.stopPropagation());
+
+  document.addEventListener('click', () => closeDropdown());
+}
+
+async function selectSwimmer(swimmer) {
+  activeSwimmer = swimmer;
+  selectedEvent = null;
+  comparators = [];
+  setStatus('Loading...');
+  await loadHistory(swimmer.tiref);
+  updateSearchInputStyle();
+  refresh();
+  setStatus('Ready', true);
+}
+
+function updateSearchInputStyle() {
+  const input = document.getElementById('swimmerSearch');
+  if (!activeSwimmer) return;
+  input.value = activeSwimmer.name;
+  input.classList.remove('has-bella', 'has-amber', 'has-other');
+  if (String(activeSwimmer.tiref) === BELLA_TIREF) input.classList.add('has-bella');
+  else if (String(activeSwimmer.tiref) === AMBER_TIREF) input.classList.add('has-amber');
+  else input.classList.add('has-other');
 }
 
 // ── Refresh ───────────────────────────────────────────────
 function refresh() {
   const swimmer = getSwimmer();
-  const history = HISTORY[swimmer.tiref] || [];
-  const pbs = ALL_PBS.filter(r => r.tiref === swimmer.tiref);
-  const ranks = ALL_RANKS.filter(r => r.tiref === swimmer.tiref);
+  const tiref = swimmer.tiref;
+  const history = HISTORY[tiref] || [];
+
+  // Use official PBs if available, otherwise derive from history
+  let pbs = ALL_PBS.filter(r => String(r.tiref) === String(tiref));
+  if (!pbs.length && history.length) {
+    pbs = derivePBsFromHistory(history, tiref, swimmer.name, swimmer.yob);
+  }
+
+  const ranks = ALL_RANKS.filter(r => String(r.tiref) === String(tiref));
   const cur = ranks.filter(r => r.year === 2026);
   const prev = ranks.filter(r => r.year === 2025);
 
@@ -85,6 +211,38 @@ function refresh() {
     updateSwimmerPicker();
   }
   updateRankProgression(ranks, pbs);
+}
+
+// Derive PB records from history data (for swimmers without official PB data)
+function derivePBsFromHistory(history, tiref, name, yob) {
+  const strokeNames = CONFIG.stroke_names || {};
+  const courseLabels = { S: 'SC', L: 'LC' };
+  const best = {};
+
+  history.forEach(r => {
+    const strokeName = strokeNames[String(r.stroke_code)];
+    if (!strokeName) return;
+    const course = courseLabels[r.course] || r.course;
+    const key = `${strokeName}|${course}`;
+    const time = parseTimeToSeconds(r.time);
+    if (!time || !Number.isFinite(time)) return;
+
+    if (!best[key] || time < parseTimeToSeconds(best[key].time)) {
+      best[key] = {
+        tiref: tiref,
+        course: course,
+        stroke: strokeName,
+        time: r.time,
+        wa_points: parseInt(r.wa_points) || 0,
+        date: r.date,
+        meet: r.meet_name,
+        swimmer_name: name,
+        yob: yob,
+      };
+    }
+  });
+
+  return Object.values(best);
 }
 
 // ── PB Celebration Banner ─────────────────────────────────
@@ -115,11 +273,14 @@ function updatePBBanner(history) {
 // ── Hero Stats ────────────────────────────────────────────
 function updateHeroStats(pbs, cur, prev, history) {
   // Best event
-  const bestPB = pbs.reduce((a, b) => ((a?.wa_points || 0) > (b?.wa_points || 0) ? a : b), null);
+  const bestPB = pbs.length ? pbs.reduce((a, b) => ((a?.wa_points || 0) > (b?.wa_points || 0) ? a : b), null) : null;
   if (bestPB) {
     document.getElementById('statBestEvent').textContent = fmtEvent(bestPB.stroke, bestPB.course);
     const rank = cur.find(r => r.event === bestPB.stroke && r.course === bestPB.course);
     document.getElementById('statBestRank').textContent = rank ? `#${rank.rank} in England` : bestPB.time;
+  } else {
+    document.getElementById('statBestEvent').textContent = '-';
+    document.getElementById('statBestRank').textContent = '';
   }
 
   // Season PBs
@@ -290,11 +451,7 @@ async function updateProgressChart() {
 
   // Add comparator datasets
   for (const comp of comparators) {
-    let h = historyCache[comp.tiref];
-    if (!h) {
-      try { h = await fetchJSON(`history/${comp.tiref}.json`); } catch { h = []; }
-      historyCache[comp.tiref] = h;
-    }
+    const h = await loadHistory(comp.tiref);
     const cd = filterH(h);
     datasets.push(buildDataset(cd, comp.name, comp.color, comp.color + '22', false));
   }
@@ -438,11 +595,11 @@ function updateGoals(ranks, history) {
   if (!selectedEvent) return;
   const container = document.getElementById('goalsContainer');
   const swimmer = getSwimmer();
-  ranks = ranks || ALL_RANKS.filter(r => r.tiref === swimmer.tiref);
+  ranks = ranks || ALL_RANKS.filter(r => String(r.tiref) === String(swimmer.tiref));
   history = history || HISTORY[swimmer.tiref] || [];
 
   const rank = ranks.find(r =>
-    r.tiref === swimmer.tiref && r.event === selectedEvent.stroke &&
+    String(r.tiref) === String(swimmer.tiref) && r.event === selectedEvent.stroke &&
     r.course === selectedEvent.course && r.year === 2026);
 
   if (!rank) {
@@ -543,8 +700,6 @@ function updateSquad() {
     return;
   }
 
-  const bellaId = String(CONFIG.swimmers.bella.tiref);
-  const amberId = String(CONFIG.swimmers.amber.tiref);
   const targetId = String(swimmer.tiref);
   const compTirefs = new Set(comparators.map(c => c.tiref));
 
@@ -555,13 +710,14 @@ function updateSquad() {
     const isTarget = tid === targetId;
     const isComp = compTirefs.has(tid);
     const comp = comparators.find(c => c.tiref === tid);
-    const targetCls = isTarget ? ` is-target ${activeSwimmer}` : '';
+    const targetCls = isTarget ? ' is-target' : '';
     const compCls = isComp ? ' is-compared' : '';
     const posCls = pos <= 3 ? ` p${pos}` : '';
     const dotColor = isTarget ? getColor() : comp ? comp.color : 'transparent';
+    const targetStyle = isTarget ? ` style="color:${getColor()}"` : '';
     const canClick = !isTarget;
 
-    html += `<div class="squad-row${targetCls}${compCls}" ${canClick ? `onclick="toggleComparator('${tid}','${r.swimmer_name || 'Swimmer'}')"` : ''}>
+    html += `<div class="squad-row${targetCls}${compCls}"${targetStyle} ${canClick ? `onclick="toggleComparator('${tid}','${r.swimmer_name || 'Swimmer'}')"` : ''}>
       <span class="squad-pos${posCls}">${pos}</span>
       <span class="squad-color-dot" style="background:${dotColor}"></span>
       <span class="squad-name">${r.swimmer_name || '-'}</span>
@@ -575,7 +731,7 @@ function updateSquad() {
 // ── Rank Progression Chart ────────────────────────────────
 function updateRankProgression(ranks, pbs) {
   const swimmer = getSwimmer();
-  pbs = pbs || ALL_PBS.filter(r => r.tiref === swimmer.tiref);
+  pbs = pbs || ALL_PBS.filter(r => String(r.tiref) === String(swimmer.tiref));
   const eventMap = new Map();
   pbs.forEach(pb => {
     const key = `${pb.stroke}|${pb.course}`;
