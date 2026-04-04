@@ -408,6 +408,95 @@ body {
 
 .compare-clear:hover { border-color: var(--red); color: var(--red); }
 
+/* Swimmer Picker (below chart) */
+.swimmer-picker {
+  border-top: 1px solid var(--border);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.picker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  user-select: none;
+}
+
+.picker-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-3);
+}
+
+.picker-toggle {
+  font-size: 0.6rem;
+  color: var(--text-3);
+  transition: transform 0.2s ease;
+}
+
+.picker-toggle.open { transform: rotate(180deg); }
+
+.picker-list {
+  display: none;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0.5rem 0 0.25rem;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.picker-list.open {
+  display: flex;
+}
+
+.picker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  padding: 0.25rem 0.6rem;
+  border-radius: 16px;
+  font-size: 0.7rem;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.picker-item:hover {
+  border-color: var(--text-3);
+  color: var(--text);
+}
+
+.picker-item.is-active {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.picker-item.is-selected {
+  border-color: var(--green);
+  color: var(--text);
+  background: rgba(105, 240, 174, 0.08);
+}
+
+.picker-item .picker-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.picker-item .picker-time {
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.65rem;
+}
+
 /* Goal projections */
 .goal-date { color: var(--green); font-size: 0.7rem; font-style: italic; }
 

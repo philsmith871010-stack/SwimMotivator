@@ -82,6 +82,7 @@ function refresh() {
     updateGoals(ranks, history);
     updateSquad();
     updateCompareInfo();
+    updateSwimmerPicker();
   }
   updateRankProgression(ranks, pbs);
 }
@@ -226,7 +227,7 @@ function updateRankings(pbs, ranks) {
   if (!events.length) { container.innerHTML = '<div class="loading">No PB data</div>'; return; }
   if (!selectedEvent) {
     selectedEvent = { stroke: events[0].pb.stroke, course: events[0].pb.course };
-    updateProgressChart(); updateGoals(ranks, HISTORY[getSwimmer().tiref] || []); updateSquad();
+    updateProgressChart(); updateGoals(ranks, HISTORY[getSwimmer().tiref] || []); updateSquad(); updateSwimmerPicker();
   }
 
   let html = '';
@@ -365,6 +366,7 @@ function toggleComparator(tiref, name) {
   updateProgressChart();
   updateSquad();
   updateCompareInfo();
+  updateSwimmerPicker();
 }
 
 function clearComparators() {
@@ -372,6 +374,7 @@ function clearComparators() {
   updateProgressChart();
   updateSquad();
   updateCompareInfo();
+  updateSwimmerPicker();
 }
 
 function updateCompareInfo() {
@@ -382,6 +385,52 @@ function updateCompareInfo() {
   chips.innerHTML = comparators.map(c =>
     `<span class="compare-chip"><span class="dot" style="background:${c.color}"></span>${c.name}</span>`
   ).join('');
+}
+
+// ── Swimmer Picker (below chart) ─────────────────────────
+let pickerOpen = false;
+
+function togglePickerOpen() {
+  pickerOpen = !pickerOpen;
+  document.getElementById('pickerList').classList.toggle('open', pickerOpen);
+  document.getElementById('pickerToggle').classList.toggle('open', pickerOpen);
+}
+
+function updateSwimmerPicker() {
+  const picker = document.getElementById('swimmerPicker');
+  const list = document.getElementById('pickerList');
+  if (!selectedEvent) { picker.style.display = 'none'; return; }
+
+  const swimmer = getSwimmer();
+  const swimmerYob = swimmer.yob;
+  const eventName = selectedEvent.stroke;
+
+  const squadRows = ALL_SQUAD.filter(r => r.event === eventName)
+    .filter(r => r.yob && Math.abs(r.yob - swimmerYob) <= 1)
+    .filter(r => r.best_time && Number.isFinite(parseTimeToSeconds(r.best_time)))
+    .sort((a, b) => parseTimeToSeconds(a.best_time) - parseTimeToSeconds(b.best_time));
+
+  if (!squadRows.length) { picker.style.display = 'none'; return; }
+
+  const targetId = String(swimmer.tiref);
+  const compTirefs = new Set(comparators.map(c => c.tiref));
+
+  let html = '';
+  squadRows.forEach(r => {
+    const tid = String(r.tiref);
+    const isTarget = tid === targetId;
+    const isComp = compTirefs.has(tid);
+    const comp = comparators.find(c => c.tiref === tid);
+    const dotColor = isTarget ? getColor() : comp ? comp.color : 'transparent';
+    const cls = isTarget ? ' is-active' : isComp ? ' is-selected' : '';
+
+    html += `<span class="picker-item${cls}" ${!isTarget ? `onclick="toggleComparator('${tid}','${r.swimmer_name || 'Swimmer'}')"` : ''}>`;
+    if (isComp || isTarget) html += `<span class="picker-dot" style="background:${dotColor}"></span>`;
+    html += `${r.swimmer_name || '-'} <span class="picker-time">${r.best_time}</span></span>`;
+  });
+
+  list.innerHTML = html;
+  picker.style.display = 'block';
 }
 
 // ── Goals with Projections ────────────────────────────────
