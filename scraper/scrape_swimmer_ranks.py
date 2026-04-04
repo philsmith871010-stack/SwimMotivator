@@ -1,33 +1,18 @@
-"""Find national rankings for all female CoSA swimmers across all their events and years."""
+"""Derive per-swimmer ranking data from bulk event_rankings table.
+
+This no longer makes any network requests — it reads from the
+event_rankings table (populated by scrape_rankings.py) and builds
+the swimmer_ranks table used by the frontend.
+
+Can extract ranks for all CoSA swimmers, or any set of swimmers.
+"""
 
 from __future__ import annotations
 
 import sqlite3
-import re
 
-from .config import BASE_URL, DB_PATH, TARGET_SWIMMERS, STROKE_NAMES
+from .config import DB_PATH, TARGET_SWIMMERS
 from .db import init_db
-from .parsers import norm_ws, parse_tiref_from_href
-from .session import fetch_soup
-
-RANKINGS_URL = f"{BASE_URL}/eventrankings/eventrankings.php"
-PAGE_SIZE = 100
-MAX_PAGES = 30  # up to rank 3000
-YEARS = [2023, 2024, 2025, 2026]
-
-# Map PB stroke names back to stroke codes
-STROKE_NAME_TO_CODE = {}
-for code, name in STROKE_NAMES.items():
-    STROKE_NAME_TO_CODE[name] = code
-# Also map the short forms from PB data
-SHORT_TO_FULL = {
-    "50 Freestyle": 1, "100 Freestyle": 2, "200 Freestyle": 3,
-    "400 Freestyle": 4, "800 Freestyle": 5, "1500 Freestyle": 6,
-    "50 Breaststroke": 7, "100 Breaststroke": 8, "200 Breaststroke": 9,
-    "50 Butterfly": 10, "100 Butterfly": 11, "200 Butterfly": 12,
-    "50 Backstroke": 13, "100 Backstroke": 14, "200 Backstroke": 15,
-    "200 Individual Medley": 16, "400 Individual Medley": 17, "100 Individual Medley": 18,
-}
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS swimmer_ranks (
@@ -50,136 +35,108 @@ def ensure_schema(conn: sqlite3.Connection) -> None:
     conn.commit()
 
 
-def _find_rank(tiref: int, stroke_code: int, pool: str, age: int, year: int) -> tuple[int | None, int, str | None]:
-    """Paginate through rankings to find a swimmer's rank.
+def _get_costa_tirefs(conn: sqlite3.Connection) -> set[str]:
+    """Get all CoSA swimmer tirefs from the database."""
+    tirefs = set()
 
-    Returns (rank, total_seen, time) or (None, total_seen, None) if not found.
-    """
-    total = 0
-    for page in range(MAX_PAGES):
-        start = page * PAGE_SIZE + 1
-        soup = fetch_soup(RANKINGS_URL, {
-            "Pool": pool,
-            "Stroke": str(stroke_code),
-            "Sex": "F",
-            "TargetYear": str(year),
-            "AgeGroup": str(age),
-            "AgeAt": "D",
-            "TargetNationality": "E",
-            "TargetRegion": "P",
-            "TargetCounty": "XXXX",
-            "TargetClub": "XXXX",
-            "StartNumber": str(start),
-            "RecordsToView": str(PAGE_SIZE),
-            "Level": "N",
-        })
-        table = soup.find("table", id="rankTable")
-        if not table:
-            break
-        rows = [tr for tr in table.find_all("tr") if len(tr.find_all("td")) >= 7]
-        if not rows:
-            break
-        for tr in rows:
-            tds = tr.find_all("td")
-            total += 1
-            link = tds[1].find("a", href=True)
-            if link and f"tiref={tiref}" in link.get("href", ""):
-                rank_text = norm_ws(tds[0].get_text(" ", strip=True))
-                # Rank text might have commas: "1,084"
-                rank = int(rank_text.replace(",", "")) if rank_text.replace(",", "").isdigit() else total
-                time_val = norm_ws(tds[6].get_text(" ", strip=True))
-                return rank, total, time_val
-        if len(rows) < PAGE_SIZE:
-            break
-    return None, total, None
-
-
-def _get_events_for_swimmer(conn: sqlite3.Connection, tiref: int) -> list[tuple[str, str, int]]:
-    """Get list of (stroke_name, course_code, stroke_code) from PBs."""
+    # From swimmers table
     rows = conn.execute("""
-        SELECT DISTINCT stroke, course FROM personal_bests
-        WHERE tiref = ? AND wa_points IS NOT NULL
-    """, (tiref,)).fetchall()
-    events = []
-    for stroke_name, course in rows:
-        stroke_name = norm_ws(stroke_name)
-        # Map course: LC→L, SC→S
-        pool = "L" if course == "LC" else "S"
-        # Find stroke code
-        code = SHORT_TO_FULL.get(stroke_name)
-        if code is None:
-            # Try partial match
-            for full_name, c in SHORT_TO_FULL.items():
-                if full_name in stroke_name or stroke_name in full_name:
-                    code = c
-                    break
-        if code is not None:
-            events.append((stroke_name, pool, code))
-    return events
-
-
-def _get_all_swimmers(conn: sqlite3.Connection) -> dict[int, dict]:
-    """Get all female CoSA swimmers with PB data in the database."""
-    swimmers = {}
-    # Get from swimmers table (female, CoSA)
-    rows = conn.execute("""
-        SELECT DISTINCT s.tiref, s.name, s.yob
-        FROM swimmers s
-        JOIN personal_bests pb ON s.tiref = pb.tiref
-        WHERE s.sex = 'F' AND s.club LIKE '%St Albans%'
-          AND s.yob IS NOT NULL
+        SELECT DISTINCT tiref FROM swimmers
+        WHERE club LIKE '%St Albans%' AND sex = 'F'
     """).fetchall()
-    for tiref, name, yob in rows:
-        swimmers[tiref] = {"name": name, "yob": yob}
+    for (tiref,) in rows:
+        tirefs.add(str(tiref))
+
+    # From meet results
+    rows = conn.execute("""
+        SELECT DISTINCT tiref FROM meet_results
+        WHERE club LIKE '%St Albans%' AND sex = 'F'
+    """).fetchall()
+    for (tiref,) in rows:
+        tirefs.add(str(tiref))
+
     # Always include target swimmers
-    for tiref, info in TARGET_SWIMMERS.items():
-        if tiref not in swimmers:
-            swimmers[tiref] = info
-    return swimmers
+    for tiref in TARGET_SWIMMERS:
+        tirefs.add(str(tiref))
+
+    return tirefs
 
 
-def main() -> None:
+def derive_swimmer_ranks(tirefs: set[str] | None = None) -> None:
+    """Extract per-swimmer ranks from event_rankings for given tirefs.
+
+    If tirefs is None, extracts for all CoSA swimmers.
+    """
     conn = init_db()
     try:
         ensure_schema(conn)
+
+        # Check event_rankings exists and has data
+        has_data = conn.execute("""
+            SELECT COUNT(*) FROM sqlite_master
+            WHERE type='table' AND name='event_rankings'
+        """).fetchone()[0]
+        if not has_data:
+            print("[Swimmer Ranks] event_rankings table not found. Run scrape_rankings first.")
+            return
+
+        count = conn.execute("SELECT COUNT(*) FROM event_rankings").fetchone()[0]
+        if not count:
+            print("[Swimmer Ranks] event_rankings table is empty. Run scrape_rankings first.")
+            return
+
+        # Get target tirefs
+        if tirefs is None:
+            tirefs = _get_costa_tirefs(conn)
+        print(f"[Swimmer Ranks] Extracting ranks for {len(tirefs)} swimmers from {count:,} ranking entries...")
+
         conn.execute("DELETE FROM swimmer_ranks")
         conn.commit()
 
-        all_swimmers = _get_all_swimmers(conn)
-        print(f"[Ranks] Processing {len(all_swimmers)} swimmers...")
+        # Get total swimmers per event/course/year for total_in_ranking
+        totals = {}
+        for row in conn.execute("""
+            SELECT event, course, year, age_group, COUNT(*) as cnt
+            FROM event_rankings
+            GROUP BY event, course, year, age_group
+        """).fetchall():
+            totals[(row[0], row[1], row[2], row[3])] = row[4]
 
-        total_found = 0
-        total_queries = 0
+        # Extract ranks for our swimmers
+        placeholders = ",".join(["?"] * len(tirefs))
+        rows = conn.execute(f"""
+            SELECT tiref, event, course, year, age_group, rank, time, swimmer_name
+            FROM event_rankings
+            WHERE tiref IN ({placeholders})
+            ORDER BY tiref, event, course, year
+        """, list(tirefs)).fetchall()
 
-        for i, (tiref, info) in enumerate(all_swimmers.items(), 1):
-            name = info["name"]
-            yob = info["yob"]
-            events = _get_events_for_swimmer(conn, tiref)
-            print(f"\n[Ranks] [{i}/{len(all_swimmers)}] {name} (tiref {tiref}, YoB {yob}): {len(events)} events")
+        inserted = 0
+        swimmers_found = set()
+        for tiref, event, course, year, age_group, rank, time_val, name in rows:
+            total = totals.get((event, course, year, age_group), 0)
+            try:
+                age_int = int(age_group)
+            except (ValueError, TypeError):
+                age_int = 0
+            conn.execute("""
+                INSERT OR REPLACE INTO swimmer_ranks
+                    (tiref, event, course, year, age_group, rank, total_in_ranking, time)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            """, (int(tiref) if str(tiref).isdigit() else tiref,
+                  event, course, int(year), age_int, rank, total, time_val))
+            inserted += 1
+            swimmers_found.add(tiref)
 
-            for stroke_name, pool, stroke_code in events:
-                course_label = "SC" if pool == "S" else "LC"
-                for year in YEARS:
-                    age = year - yob
-                    if age < 8 or age > 18:
-                        continue
+        conn.commit()
+        print(f"[Swimmer Ranks] Done: {inserted} rankings for {len(swimmers_found)} swimmers")
 
-                    rank, total, time_val = _find_rank(tiref, stroke_code, pool, age, year)
-                    total_queries += 1
-
-                    if rank is not None:
-                        conn.execute("""
-                            INSERT OR REPLACE INTO swimmer_ranks
-                                (tiref, event, course, year, age_group, rank, total_in_ranking, time)
-                            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-                        """, (tiref, stroke_name, course_label, year, age, rank, total, time_val))
-                        conn.commit()
-                        total_found += 1
-                        print(f"  {stroke_name} {course_label} {year} (age {age}): #{rank} ({time_val})")
-
-        print(f"\n[Ranks] Done: {total_found} rankings found from {total_queries} queries")
     finally:
         conn.close()
+
+
+def main() -> None:
+    derive_swimmer_ranks()
 
 
 if __name__ == "__main__":

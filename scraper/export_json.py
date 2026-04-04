@@ -74,14 +74,40 @@ def export_history(conn: sqlite3.Connection) -> None:
 
 
 def export_ranks(conn: sqlite3.Connection) -> None:
-    if not _table_exists(conn, "swimmer_ranks"):
-        print("  ranks.json: table not found, skipping")
-        return
-    rows = _dict_rows(conn, """
-        SELECT * FROM swimmer_ranks ORDER BY tiref, event, course, year
-    """)
-    (JSON_DIR / "ranks.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
-    print(f"  ranks.json: {len(rows)} ranking entries")
+    # Prefer swimmer_ranks (derived from bulk event_rankings)
+    if _table_exists(conn, "swimmer_ranks"):
+        count = conn.execute("SELECT COUNT(*) FROM swimmer_ranks").fetchone()[0]
+        if count:
+            rows = _dict_rows(conn, """
+                SELECT * FROM swimmer_ranks ORDER BY tiref, event, course, year
+            """)
+            (JSON_DIR / "ranks.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
+            unique = len(set(r["tiref"] for r in rows))
+            print(f"  ranks.json: {len(rows)} ranking entries for {unique} swimmers")
+            return
+
+    # Fallback: build from event_rankings for CoSA swimmers
+    if _table_exists(conn, "event_rankings"):
+        count = conn.execute("SELECT COUNT(*) FROM event_rankings").fetchone()[0]
+        if count:
+            rows = _dict_rows(conn, """
+                SELECT er.tiref, er.event, er.course, er.year,
+                       CAST(er.age_group AS INTEGER) as age_group,
+                       er.rank, er.time,
+                       (SELECT COUNT(*) FROM event_rankings er2
+                        WHERE er2.event = er.event AND er2.course = er.course
+                        AND er2.year = er.year AND er2.age_group = er.age_group) as total_in_ranking
+                FROM event_rankings er
+                WHERE er.club LIKE '%St Albans%'
+                ORDER BY er.tiref, er.event, er.course, er.year
+            """)
+            (JSON_DIR / "ranks.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
+            unique = len(set(r["tiref"] for r in rows))
+            print(f"  ranks.json: {len(rows)} ranking entries for {unique} swimmers (from event_rankings)")
+            return
+
+    print("  ranks.json: no ranking data found, writing empty array")
+    (JSON_DIR / "ranks.json").write_text("[]", encoding="utf-8")
 
 
 def export_squad(conn: sqlite3.Connection) -> None:
