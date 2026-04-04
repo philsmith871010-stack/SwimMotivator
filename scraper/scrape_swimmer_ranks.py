@@ -1,4 +1,4 @@
-"""Find national rankings for Bella & Amber across all their events and years."""
+"""Find national rankings for all female CoSA swimmers across all their events and years."""
 
 from __future__ import annotations
 
@@ -118,6 +118,26 @@ def _get_events_for_swimmer(conn: sqlite3.Connection, tiref: int) -> list[tuple[
     return events
 
 
+def _get_all_swimmers(conn: sqlite3.Connection) -> dict[int, dict]:
+    """Get all female CoSA swimmers with PB data in the database."""
+    swimmers = {}
+    # Get from swimmers table (female, CoSA)
+    rows = conn.execute("""
+        SELECT DISTINCT s.tiref, s.name, s.yob
+        FROM swimmers s
+        JOIN personal_bests pb ON s.tiref = pb.tiref
+        WHERE s.sex = 'F' AND s.club LIKE '%St Albans%'
+          AND s.yob IS NOT NULL
+    """).fetchall()
+    for tiref, name, yob in rows:
+        swimmers[tiref] = {"name": name, "yob": yob}
+    # Always include target swimmers
+    for tiref, info in TARGET_SWIMMERS.items():
+        if tiref not in swimmers:
+            swimmers[tiref] = info
+    return swimmers
+
+
 def main() -> None:
     conn = init_db()
     try:
@@ -125,14 +145,17 @@ def main() -> None:
         conn.execute("DELETE FROM swimmer_ranks")
         conn.commit()
 
+        all_swimmers = _get_all_swimmers(conn)
+        print(f"[Ranks] Processing {len(all_swimmers)} swimmers...")
+
         total_found = 0
         total_queries = 0
 
-        for tiref, info in TARGET_SWIMMERS.items():
+        for i, (tiref, info) in enumerate(all_swimmers.items(), 1):
             name = info["name"]
             yob = info["yob"]
             events = _get_events_for_swimmer(conn, tiref)
-            print(f"\n[Ranks] {name} (tiref {tiref}, YoB {yob}): {len(events)} events")
+            print(f"\n[Ranks] [{i}/{len(all_swimmers)}] {name} (tiref {tiref}, YoB {yob}): {len(events)} events")
 
             for stroke_name, pool, stroke_code in events:
                 course_label = "SC" if pool == "S" else "LC"
@@ -153,7 +176,6 @@ def main() -> None:
                         conn.commit()
                         total_found += 1
                         print(f"  {stroke_name} {course_label} {year} (age {age}): #{rank} ({time_val})")
-                    # Don't print for not-found — too noisy
 
         print(f"\n[Ranks] Done: {total_found} rankings found from {total_queries} queries")
     finally:

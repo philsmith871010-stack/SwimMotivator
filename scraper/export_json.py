@@ -37,11 +37,12 @@ def export_personal_bests(conn: sqlite3.Connection) -> None:
                s.name as swimmer_name, s.yob
         FROM personal_bests pb
         JOIN swimmers s ON pb.tiref = s.tiref
-        WHERE pb.tiref IN (?, ?)
+        WHERE s.sex = 'F' AND s.club LIKE '%St Albans%'
         ORDER BY pb.wa_points DESC
-    """, (BELLA_TIREF, AMBER_TIREF))
+    """)
     (JSON_DIR / "personal_bests.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
-    print(f"  personal_bests.json: {len(rows)} PBs")
+    unique = len(set(r["tiref"] for r in rows))
+    print(f"  personal_bests.json: {len(rows)} PBs for {unique} swimmers")
 
 
 def export_history(conn: sqlite3.Connection) -> None:

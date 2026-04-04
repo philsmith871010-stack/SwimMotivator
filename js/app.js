@@ -300,25 +300,38 @@ function updateHeroStats(pbs, cur, prev, history) {
   }
   document.getElementById('statPBStreak').textContent = streak > 0 ? `${streak} meet PB streak!` : 'Keep pushing!';
 
-  // Events ranked
-  document.getElementById('statEventsRanked').textContent = cur.length || '-';
+  // Events ranked (or total events if no ranking data)
   if (cur.length) {
+    document.getElementById('statEventsRanked').textContent = cur.length;
     const avg = Math.round(cur.reduce((s, r) => s + r.rank, 0) / cur.length);
     document.getElementById('statAvgRank').textContent = `Avg rank #${avg}`;
+    document.querySelector('.stat-card:nth-child(3) .stat-label').textContent = 'Events Ranked';
   } else {
-    document.getElementById('statAvgRank').textContent = '';
+    const eventCount = new Set(pbs.map(p => `${p.stroke}|${p.course}`)).size;
+    document.getElementById('statEventsRanked').textContent = eventCount || '-';
+    document.getElementById('statAvgRank').textContent = eventCount ? 'active events' : '';
+    document.querySelector('.stat-card:nth-child(3) .stat-label').textContent = 'Events Swum';
   }
 
-  // Ranks improved
-  let improved = 0, total = 0;
-  cur.forEach(cr => {
-    const pr = prev.find(p => p.event === cr.event && p.course === cr.course);
-    if (pr) { total++; if (cr.rank < pr.rank) improved++; }
-  });
+  // Ranks improved (or best WA if no ranking data)
   const trendEl = document.getElementById('statTrend');
-  trendEl.textContent = total > 0 ? `${improved}/${total}` : '-';
-  trendEl.className = `stat-value ${improved > total / 2 ? 'green' : 'red'}`;
-  document.getElementById('statTrendDetail').textContent = total > 0 ? 'events improved' : '';
+  if (cur.length) {
+    let improved = 0, total = 0;
+    cur.forEach(cr => {
+      const pr = prev.find(p => p.event === cr.event && p.course === cr.course);
+      if (pr) { total++; if (cr.rank < pr.rank) improved++; }
+    });
+    trendEl.textContent = total > 0 ? `${improved}/${total}` : '-';
+    trendEl.className = `stat-value ${improved > total / 2 ? 'green' : 'red'}`;
+    document.getElementById('statTrendDetail').textContent = total > 0 ? 'events improved' : '';
+    document.querySelector('.stat-card:nth-child(4) .stat-label').textContent = 'Ranks Improved';
+  } else {
+    const bestWA = pbs.reduce((max, p) => Math.max(max, p.wa_points || 0), 0);
+    trendEl.textContent = bestWA || '-';
+    trendEl.className = 'stat-value green';
+    document.getElementById('statTrendDetail').textContent = bestWA ? 'best WA points' : '';
+    document.querySelector('.stat-card:nth-child(4) .stat-label').textContent = 'Best WA Points';
+  }
 }
 
 function isCurrentSeason(dateStr) {
@@ -602,14 +615,6 @@ function updateGoals(ranks, history) {
     String(r.tiref) === String(swimmer.tiref) && r.event === selectedEvent.stroke &&
     r.course === selectedEvent.course && r.year === 2026);
 
-  if (!rank) {
-    container.innerHTML = '<div style="color:var(--text-3);font-size:0.8rem">No ranking data for this event</div>';
-    return;
-  }
-
-  const currentTime = parseTimeToSeconds(rank.time);
-  if (!currentTime) { container.innerHTML = '-'; return; }
-
   // Calculate improvement rate from history
   const strokeNames = CONFIG.stroke_names || {};
   let strokeCode = null;
@@ -638,43 +643,98 @@ function updateGoals(ranks, history) {
     }
   }
 
-  const milestones = [
-    { label: 'Top 50', target: 50 },
-    { label: 'Top 100', target: 100 },
-    { label: 'Top 200', target: 200 },
-  ].filter(m => m.target < rank.rank);
+  // Get current PB time for this event
+  const pb = ALL_PBS.find(p =>
+    String(p.tiref) === String(swimmer.tiref) && p.stroke === selectedEvent.stroke && p.course === selectedEvent.course);
+  const currentTime = rank ? parseTimeToSeconds(rank.time) : (pb ? parseTimeToSeconds(pb.time) : null);
 
-  let html = '';
-  if (!milestones.length) {
-    html += `<div class="goal-row"><span class="goal-achieved">Already top ${rank.rank}!</span></div>`;
+  if (!currentTime && !eventHistory.length) {
+    container.innerHTML = '<div style="color:var(--text-3);font-size:0.8rem">No data for this event</div>';
+    return;
   }
 
-  milestones.forEach(m => {
-    const ratio = m.target / rank.rank;
-    const estTime = currentTime * (0.95 + 0.05 * ratio);
-    const drop = currentTime - estTime;
+  let html = '';
 
-    let projection = '';
-    if (ratePerMonth && ratePerMonth > 0 && drop > 0) {
-      const monthsNeeded = drop / ratePerMonth;
-      const targetDate = new Date();
-      targetDate.setMonth(targetDate.getMonth() + Math.ceil(monthsNeeded));
-      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-      projection = `~${monthNames[targetDate.getMonth()]} ${targetDate.getFullYear()}`;
+  // Show ranking milestones if we have ranking data
+  if (rank) {
+    const milestones = [
+      { label: 'Top 50', target: 50 },
+      { label: 'Top 100', target: 100 },
+      { label: 'Top 200', target: 200 },
+    ].filter(m => m.target < rank.rank);
+
+    if (!milestones.length) {
+      html += `<div class="goal-row"><span class="goal-achieved">Already top ${rank.rank}!</span></div>`;
     }
 
-    html += `<div class="goal-row">
-      <span class="goal-label">${m.label} in England</span>
-      <span class="goal-time">~${formatSeconds(estTime)}</span>
-      <span class="goal-drop">drop ${drop.toFixed(2)}s ${projection ? `<span class="goal-date">${projection}</span>` : ''}</span>
-    </div>`;
-  });
+    milestones.forEach(m => {
+      const ratio = m.target / rank.rank;
+      const estTime = currentTime * (0.95 + 0.05 * ratio);
+      const drop = currentTime - estTime;
 
-  html += `<div class="goal-row">
-    <span class="goal-label">Current: #${rank.rank}</span>
-    <span class="goal-time">${rank.time}</span>
-    <span class="goal-drop">${ratePerMonth ? `improving ${ratePerMonth.toFixed(2)}s/month` : ''}</span>
+      let projection = '';
+      if (ratePerMonth && ratePerMonth > 0 && drop > 0) {
+        const monthsNeeded = drop / ratePerMonth;
+        const targetDate = new Date();
+        targetDate.setMonth(targetDate.getMonth() + Math.ceil(monthsNeeded));
+        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        projection = `~${monthNames[targetDate.getMonth()]} ${targetDate.getFullYear()}`;
+      }
+
+      html += `<div class="goal-row">
+        <span class="goal-label">${m.label} in England</span>
+        <span class="goal-time">~${formatSeconds(estTime)}</span>
+        <span class="goal-drop">drop ${drop.toFixed(2)}s ${projection ? `<span class="goal-date">${projection}</span>` : ''}</span>
+      </div>`;
+    });
+
+    html += `<div class="goal-row">
+      <span class="goal-label">Current: #${rank.rank}</span>
+      <span class="goal-time">${rank.time}</span>
+      <span class="goal-drop">${ratePerMonth ? `improving ${ratePerMonth.toFixed(2)}s/month` : ''}</span>
   </div>`;
+  } else {
+    // No ranking data — show history-based progression info
+    if (currentTime) {
+      html += `<div class="goal-row">
+        <span class="goal-label">Current PB</span>
+        <span class="goal-time">${formatSeconds(currentTime)}</span>
+        <span class="goal-drop">${ratePerMonth && ratePerMonth > 0 ? `improving ${ratePerMonth.toFixed(2)}s/month` : ''}</span>
+      </div>`;
+    }
+
+    // Total drop from first to last swim
+    if (eventHistory.length >= 2) {
+      const firstTime = parseTimeToSeconds(eventHistory[0].time);
+      const lastTime = parseTimeToSeconds(eventHistory[eventHistory.length - 1].time);
+      if (firstTime && lastTime) {
+        const totalDrop = firstTime - lastTime;
+        html += `<div class="goal-row">
+          <span class="goal-label">Total improvement</span>
+          <span class="goal-time">${formatSeconds(firstTime)} &rarr; ${formatSeconds(lastTime)}</span>
+          <span class="goal-drop">${totalDrop > 0 ? `dropped ${totalDrop.toFixed(2)}s` : ''}</span>
+        </div>`;
+      }
+    }
+
+    // Season PBs in this event
+    const seasonPBs = eventHistory.filter(r => Number(r.is_pb) === 1 && isCurrentSeason(r.date));
+    html += `<div class="goal-row">
+      <span class="goal-label">Swims this event</span>
+      <span class="goal-time">${eventHistory.length} total</span>
+      <span class="goal-drop">${seasonPBs.length ? `${seasonPBs.length} PB${seasonPBs.length > 1 ? 's' : ''} this season` : ''}</span>
+    </div>`;
+
+    // Projected time at current improvement rate
+    if (ratePerMonth && ratePerMonth > 0 && currentTime) {
+      const projectedTime = currentTime - (ratePerMonth * 6);
+      html += `<div class="goal-row">
+        <span class="goal-label">6-month projection</span>
+        <span class="goal-time goal-achieved">${formatSeconds(projectedTime)}</span>
+        <span class="goal-drop"><span class="goal-date">at current rate</span></span>
+      </div>`;
+    }
+  }
 
   container.innerHTML = html;
 }
@@ -728,7 +788,7 @@ function updateSquad() {
   container.innerHTML = html;
 }
 
-// ── Rank Progression Chart ────────────────────────────────
+// ── Rank / WA Progression Chart ──────────────────────────
 function updateRankProgression(ranks, pbs) {
   const swimmer = getSwimmer();
   pbs = pbs || ALL_PBS.filter(r => String(r.tiref) === String(swimmer.tiref));
@@ -740,38 +800,91 @@ function updateRankProgression(ranks, pbs) {
   });
   const topEvents = [...eventMap.values()].sort((a, b) => (b.wa_points || 0) - (a.wa_points || 0)).slice(0, 4);
   const colors = [getColor(), COLORS.gold, COLORS.purple, COLORS.green];
-  const years = [2023, 2024, 2025, 2026];
 
-  const datasets = topEvents.map((ev, i) => {
-    const data = years.map(y => {
-      const r = ranks.find(rk => rk.event === ev.stroke && rk.course === ev.course && rk.year === y);
-      return r ? { x: y, y: r.rank } : null;
-    }).filter(Boolean);
-    return {
-      label: fmtEvent(ev.stroke, ev.course), data,
-      borderColor: colors[i], backgroundColor: colors[i],
-      pointRadius: 5, pointHoverRadius: 8, borderWidth: 2, tension: 0.3, spanGaps: true,
-    };
-  });
+  const hasRanks = ranks.length > 0;
+  const chartTitle = document.querySelector('.chart-short')?.closest('.card')?.querySelector('.card-title');
 
-  destroyChart('rankProg');
-  charts.rankProg = new Chart(document.getElementById('rankChart'), {
-    type: 'line', data: { datasets },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      scales: {
-        x: { type: 'linear', min: 2022.5, max: 2026.5,
-             ticks: { stepSize: 1, color: COLORS.tick, callback: v => String(v) },
-             grid: { color: COLORS.grid } },
-        y: { reverse: true, title: { display: true, text: 'National Rank', color: COLORS.tick, font: { size: 10 } },
-             grid: { color: COLORS.grid }, ticks: { color: COLORS.tick } },
+  if (hasRanks) {
+    // Show rank progression by year
+    if (chartTitle) chartTitle.textContent = 'Rank Progression';
+    const years = [2023, 2024, 2025, 2026];
+    const datasets = topEvents.map((ev, i) => {
+      const data = years.map(y => {
+        const r = ranks.find(rk => rk.event === ev.stroke && rk.course === ev.course && rk.year === y);
+        return r ? { x: y, y: r.rank } : null;
+      }).filter(Boolean);
+      return {
+        label: fmtEvent(ev.stroke, ev.course), data,
+        borderColor: colors[i], backgroundColor: colors[i],
+        pointRadius: 5, pointHoverRadius: 8, borderWidth: 2, tension: 0.3, spanGaps: true,
+      };
+    });
+
+    destroyChart('rankProg');
+    charts.rankProg = new Chart(document.getElementById('rankChart'), {
+      type: 'line', data: { datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        scales: {
+          x: { type: 'linear', min: 2022.5, max: 2026.5,
+               ticks: { stepSize: 1, color: COLORS.tick, callback: v => String(v) },
+               grid: { color: COLORS.grid } },
+          y: { reverse: true, title: { display: true, text: 'National Rank', color: COLORS.tick, font: { size: 10 } },
+               grid: { color: COLORS.grid }, ticks: { color: COLORS.tick } },
+        },
+        plugins: {
+          legend: { labels: { usePointStyle: true, pointStyle: 'circle', padding: 12, font: { size: 10 } } },
+          tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: #${ctx.raw.y} (${ctx.raw.x})` } },
+        },
       },
-      plugins: {
-        legend: { labels: { usePointStyle: true, pointStyle: 'circle', padding: 12, font: { size: 10 } } },
-        tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: #${ctx.raw.y} (${ctx.raw.x})` } },
+    });
+  } else {
+    // No ranking data — show best WA points over time from history
+    if (chartTitle) chartTitle.textContent = 'Best WA Points Progression';
+    const history = HISTORY[swimmer.tiref] || [];
+    const strokeNames = CONFIG.stroke_names || {};
+    const courseLabels = { S: 'SC', L: 'LC' };
+
+    const datasets = topEvents.map((ev, i) => {
+      let evStrokeCode = null;
+      for (const [code, name] of Object.entries(strokeNames)) {
+        if (name === ev.stroke) { evStrokeCode = code; break; }
+      }
+      const evCourse = ev.course === 'SC' ? 'S' : ev.course === 'LC' ? 'L' : ev.course;
+
+      // Get PB swims for this event over time
+      const pbSwims = history
+        .filter(r => String(r.stroke_code) === evStrokeCode && r.course === evCourse && Number(r.is_pb) === 1)
+        .filter(r => parseInt(r.wa_points) > 0)
+        .sort(sortByDate)
+        .map(r => ({ x: parseDate(r.date), y: parseInt(r.wa_points) }))
+        .filter(p => p.x);
+
+      return {
+        label: fmtEvent(ev.stroke, ev.course), data: pbSwims,
+        borderColor: colors[i], backgroundColor: colors[i],
+        pointRadius: 5, pointHoverRadius: 8, borderWidth: 2, tension: 0.3, spanGaps: true,
+      };
+    }).filter(ds => ds.data.length > 0);
+
+    destroyChart('rankProg');
+    charts.rankProg = new Chart(document.getElementById('rankChart'), {
+      type: 'line', data: { datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        scales: {
+          x: { type: 'time', time: { unit: 'month', displayFormats: { month: 'MMM yy' } },
+               grid: { color: COLORS.grid }, ticks: { color: COLORS.tick } },
+          y: { title: { display: true, text: 'WA Points', color: COLORS.tick, font: { size: 10 } },
+               grid: { color: COLORS.grid }, ticks: { color: COLORS.tick } },
+        },
+        plugins: {
+          legend: { labels: { usePointStyle: true, pointStyle: 'circle', padding: 12, font: { size: 10 } } },
+          tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.raw.y} WA` } },
+        },
       },
-    },
-  });
+    });
+  }
 }
 
 // ── Event Listeners ──────────────────────────────────────
