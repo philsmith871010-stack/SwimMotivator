@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SwimMotivator</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1><span class="accent">Swim</span>Motivator</h1>
+    <div class="subtitle">Performance tracking for Bella, Amber &amp; peers &mdash; Co St Albans</div>
+  </div>
+
+  <div class="container">
+    <div class="status-bar">
+      <span id="statusText">Loading...</span>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="overviewPane">Overview</button>
+      <button class="tab-btn" data-tab="performancePane">Bella &amp; Amber</button>
+      <button class="tab-btn" data-tab="peerPane">Peer Comparison</button>
+      <button class="tab-btn" data-tab="meetPane">Meet Results</button>
+      <button class="tab-btn" data-tab="clubPane">Club Rankings</button>
+    </div>
+
+    <!-- ═══ Overview ═══ -->
+    <div class="tab-pane active" id="overviewPane">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value cyan" id="statSwimmers">-</div>
+          <div class="stat-label">Swimmers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value pink" id="statMeets">-</div>
+          <div class="stat-label">Meets</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value purple" id="statResults">-</div>
+          <div class="stat-label">Race Results</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value gold" id="statPBs">-</div>
+          <div class="stat-label">Personal Bests</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem">
+        <div class="card">
+          <div class="card-title" style="color:var(--pink)">Bella &mdash; Personal Bests</div>
+          <div id="bellaPBSummary" class="data-table-wrap">
+            <div class="loading"><div class="loading-spinner"></div> Loading...</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title" style="color:var(--cyan)">Amber &mdash; Personal Bests</div>
+          <div id="amberPBSummary" class="data-table-wrap">
+            <div class="loading"><div class="loading-spinner"></div> Loading...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ Performance (Bella & Amber) ═══ -->
+    <div class="tab-pane" id="performancePane">
+      <div class="card">
+        <div class="card-title">Filters</div>
+        <div class="filters">
+          <div class="filter-group">
+            <label for="perfSwimmer1">Swimmer 1</label>
+            <select id="perfSwimmer1"></select>
+          </div>
+          <div class="filter-group">
+            <label for="perfSwimmer2">Swimmer 2</label>
+            <select id="perfSwimmer2"></select>
+          </div>
+          <div class="filter-group">
+            <label for="perfEvent">Event</label>
+            <select id="perfEvent"></select>
+          </div>
+          <div class="filter-group">
+            <label for="perfCourse">Course</label>
+            <select id="perfCourse">
+              <option value="">All</option>
+              <option value="S">Short Course</option>
+              <option value="L">Long Course</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Performance Trend (time by race date)</div>
+        <div class="chart-container"><canvas id="performanceChart"></canvas></div>
+      </div>
+    </div>
+
+    <!-- ═══ Peer Comparison ═══ -->
+    <div class="tab-pane" id="peerPane">
+      <div class="card">
+        <div class="card-title">Filters</div>
+        <div class="filters">
+          <div class="filter-group">
+            <label for="peerEvent">Event</label>
+            <select id="peerEvent"></select>
+          </div>
+          <div class="filter-group">
+            <label for="peerCourse">Course</label>
+            <select id="peerCourse">
+              <option value="">All</option>
+              <option value="S">Short Course</option>
+              <option value="L">Long Course</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="peerYob">Year of Birth</label>
+            <select id="peerYob">
+              <option value="">All</option>
+              <option value="2010">2010</option>
+              <option value="2011">2011</option>
+              <option value="2012">2012</option>
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="peerSex">Sex</label>
+            <select id="peerSex">
+              <option value="">All</option>
+              <option value="F">Female</option>
+              <option value="M">Male</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">
+          Bella &amp; Amber vs Peers
+          <span style="font-weight:400;color:var(--text-muted);margin-left:0.5rem">
+            (<span id="peerCount">0</span> peers shown)
+          </span>
+        </div>
+        <div class="chart-container"><canvas id="peerChart"></canvas></div>
+      </div>
+    </div>
+
+    <!-- ═══ Meet Results ═══ -->
+    <div class="tab-pane" id="meetPane">
+      <div class="card">
+        <div class="card-title">Search Results</div>
+        <input type="text" id="meetSearch" class="search-input"
+               placeholder="Search swimmers, events, meets, clubs...">
+      </div>
+      <div class="card">
+        <div id="meetResultsContainer">
+          <div class="loading"><div class="loading-spinner"></div> Loading...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ Club Rankings ═══ -->
+    <div class="tab-pane" id="clubPane">
+      <div class="card">
+        <div class="card-title">Filters</div>
+        <div class="filters">
+          <div class="filter-group">
+            <label for="clubEvent">Event</label>
+            <select id="clubEvent">
+              <option value="1">50 Free</option>
+              <option value="2">100 Free</option>
+              <option value="3">200 Free</option>
+              <option value="4">400 Free</option>
+              <option value="7">50 Breast</option>
+              <option value="8">100 Breast</option>
+              <option value="9">200 Breast</option>
+              <option value="10">50 Fly</option>
+              <option value="11">100 Fly</option>
+              <option value="12">200 Fly</option>
+              <option value="13">50 Back</option>
+              <option value="14">100 Back</option>
+              <option value="15">200 Back</option>
+              <option value="18">100 IM</option>
+              <option value="16">200 IM</option>
+              <option value="17">400 IM</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Top Clubs by Average WA Points</div>
+        <div class="chart-container"><canvas id="clubChart"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

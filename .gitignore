@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+data/swimmotivator.db
+node_modules/
+.vite/
+*.egg-info/
+dist/
+.env
