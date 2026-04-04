@@ -4,8 +4,8 @@ Instead of searching for individual swimmers, this scrapes entire ranking
 lists and stores EVERY ranked swimmer. This is dramatically faster when
 you want data for many swimmers, and captures the full national picture.
 
-Time estimate: ~18 events × 2 courses × 11 age groups × 4 years = ~1,584 combos
-At ~5 pages avg and 0.4s/request ≈ 50-90 minutes for all of England.
+Time estimate: ~18 events × 2 sexes × 2 courses × 11 age groups × 4 years = ~3,168 combos
+At ~5 pages avg and 0.4s/request ≈ 2-3 hours for all of England (M+F).
 """
 
 from __future__ import annotations
@@ -26,7 +26,7 @@ MAX_PAGES = 30  # up to rank 3000 per combo
 # Configurable defaults
 DEFAULT_YEARS = [2023, 2024, 2025, 2026]
 DEFAULT_AGE_GROUPS = list(range(8, 19))  # 8-18
-DEFAULT_SEX = "F"
+DEFAULT_SEXES = ["F", "M"]
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS event_rankings (
@@ -109,23 +109,24 @@ def scrape_event_rankings(
     *,
     stroke_codes: list[int] | None = None,
     age_groups: list[int] | None = None,
-    sex: str = DEFAULT_SEX,
+    sexes: list[str] | None = None,
     courses: list[str] | None = None,
     years: list[int] | None = None,
     level: str = "N",  # N = National
 ) -> None:
-    """Scrape national rankings for all event/age/course/year combos.
+    """Scrape national rankings for all event/age/course/year/sex combos.
 
     Args:
         stroke_codes: Which strokes to scrape (default: all 18)
         age_groups: Which age groups (default: 8-18)
-        sex: "F" or "M" (default: "F")
+        sexes: ["F", "M"] or subset (default: both)
         courses: ["S", "L"] for short/long course (default: both)
         years: Which years to scrape (default: 2023-2026)
         level: "N" for National, "R" for Regional
     """
     _stroke_codes = stroke_codes or ALL_STROKE_CODES
     _age_groups = age_groups or DEFAULT_AGE_GROUPS
+    _sexes = sexes or DEFAULT_SEXES
     _courses = courses or ["S", "L"]
     _years = years or DEFAULT_YEARS
 
@@ -141,18 +142,20 @@ def scrape_event_rankings(
         # Build all combos
         combos = []
         for year in _years:
-            for stroke_code in _stroke_codes:
-                event_name = STROKE_NAMES.get(stroke_code, f"Stroke {stroke_code}")
-                for age in _age_groups:
-                    for course in _courses:
-                        combos.append((stroke_code, event_name, str(age), sex, course, year))
+            for sex in _sexes:
+                for stroke_code in _stroke_codes:
+                    event_name = STROKE_NAMES.get(stroke_code, f"Stroke {stroke_code}")
+                    for age in _age_groups:
+                        for course in _courses:
+                            combos.append((stroke_code, event_name, str(age), sex, course, year))
 
         total = len(combos)
         total_saved = 0
         total_requests = 0
 
         print(f"[Rankings] {total} combos to scrape ({len(_stroke_codes)} events × "
-              f"{len(_age_groups)} ages × {len(_courses)} courses × {len(_years)} years)")
+              f"{len(_sexes)} sexes × {len(_age_groups)} ages × "
+              f"{len(_courses)} courses × {len(_years)} years)")
 
         for idx, (stroke_code, event_name, age, sex, course, year) in enumerate(combos, start=1):
             combo_rows: list[dict] = []
