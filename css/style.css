@@ -1581,6 +1581,23 @@ body {
   .swimmer-btn { padding: 0.4rem 1rem; font-size: 0.9rem; }
 }
 
+/* ═══ Course Badge ═══ */
+.course-badge {
+  font-size: 0.55rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: 6px;
+  background: rgba(136, 146, 168, 0.15);
+  color: var(--text-3);
+  font-weight: 600;
+  vertical-align: middle;
+  margin-left: 0.25rem;
+}
+.course-badge.converted {
+  background: rgba(255, 215, 64, 0.15);
+  color: var(--gold);
+  cursor: help;
+}
+
 /* ═══ AI Coach Insight Card ═══ */
 .ai-coach-card {
   background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(30, 38, 64, 0.9));
