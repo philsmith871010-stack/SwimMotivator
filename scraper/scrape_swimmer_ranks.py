@@ -9,10 +9,25 @@ Can extract ranks for all CoSA swimmers, or any set of swimmers.
 
 from __future__ import annotations
 
+import bisect
 import sqlite3
 
 from .config import DB_PATH, TARGET_SWIMMERS
 from .db import init_db
+
+
+def _time_to_seconds(t: str) -> float | None:
+    """Convert swim time string to seconds. Handles 'MM:SS.ss' and 'SS.ss'."""
+    if not t or not isinstance(t, str):
+        return None
+    t = t.strip()
+    try:
+        if ':' in t:
+            parts = t.split(':')
+            return float(parts[0]) * 60 + float(parts[1])
+        return float(t)
+    except (ValueError, IndexError):
+        return None
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS swimmer_ranks (
@@ -102,6 +117,23 @@ def derive_swimmer_ranks(tirefs: set[str] | None = None) -> None:
         """).fetchall():
             totals[(row[0], row[1], row[2], row[3])] = row[4]
 
+        # Build a cache of all times per event combo for computing missing ranks
+        # Key: (event, course, year, age_group) -> sorted list of times in seconds
+        print("[Swimmer Ranks] Building time index for missing rank computation...")
+        time_index = {}
+        for row in conn.execute("""
+            SELECT event, course, year, age_group, time
+            FROM event_rankings
+            WHERE time IS NOT NULL
+        """).fetchall():
+            key = (row[0], row[1], row[2], row[3])
+            secs = _time_to_seconds(row[4])
+            if secs is not None:
+                time_index.setdefault(key, []).append(secs)
+        # Sort each list so we can count faster times efficiently
+        for key in time_index:
+            time_index[key].sort()
+
         # Extract ranks for our swimmers
         placeholders = ",".join(["?"] * len(tirefs))
         rows = conn.execute(f"""
@@ -122,16 +154,17 @@ def derive_swimmer_ranks(tirefs: set[str] | None = None) -> None:
                 age_int = 0
 
             # If rank is null but we have a time, compute rank from position
-            # by counting how many swimmers have a faster time in the same event
+            # by counting how many swimmers have a faster time (using seconds)
             actual_rank = rank
             if actual_rank is None and time_val:
-                computed = conn.execute("""
-                    SELECT COUNT(*) FROM event_rankings
-                    WHERE event = ? AND course = ? AND year = ? AND age_group = ?
-                      AND time < ?
-                """, (event, course, year, age_group, time_val)).fetchone()[0]
-                actual_rank = computed + 1
-                null_fixed += 1
+                swimmer_secs = _time_to_seconds(time_val)
+                if swimmer_secs is not None:
+                    key = (event, course, year, age_group)
+                    times = time_index.get(key, [])
+                    # Binary search: count times strictly less than swimmer's time
+                    faster_count = bisect.bisect_left(times, swimmer_secs)
+                    actual_rank = faster_count + 1
+                    null_fixed += 1
 
             conn.execute("""
                 INSERT OR REPLACE INTO swimmer_ranks
