@@ -3,6 +3,8 @@
 let CONFIG = {};
 let ALL_PBS = [];
 let ALL_RANKS = [];
+let ALL_COUNTY_RANKS = [];
+let ALL_REGION_RANKS = [];
 let ALL_SQUAD = [];
 let ALL_SWIMMERS = [];  // [{tiref, name, yob}] — built from squad.json
 let HISTORY = {};  // keyed by tiref (string)
@@ -17,11 +19,13 @@ const AMBER_TIREF = '1479966';
 async function init() {
   try {
     setStatus('Loading data...');
-    [CONFIG, ALL_PBS, ALL_RANKS, ALL_SQUAD] = await Promise.all([
+    [CONFIG, ALL_PBS, ALL_RANKS, ALL_SQUAD, ALL_COUNTY_RANKS, ALL_REGION_RANKS] = await Promise.all([
       fetchJSON('config.json'),
       fetchJSON('personal_bests.json'),
       fetchJSON('ranks.json').catch(() => []),
       fetchJSON('squad.json').catch(() => []),
+      fetchJSON('county_ranks.json').catch(() => []),
+      fetchJSON('region_ranks.json').catch(() => []),
     ]);
 
     // Build unique swimmer list from squad data
@@ -983,6 +987,8 @@ function switchTab(tab) {
   // Render tab content
   if (tab === 'club') renderClubTab();
   if (tab === 'national') renderNationalTab();
+  if (tab === 'county') renderCountyTab();
+  if (tab === 'region') renderRegionTab();
   if (tab === 'training' && typeof renderTrainingTab === 'function') renderTrainingTab();
 }
 
@@ -1447,6 +1453,161 @@ function renderNationalYoY(curRanks, prevRanks, year) {
   });
 
   container.innerHTML = html;
+}
+
+// ── County Tab ───────────────────────────────────────────
+function renderCountyTab() {
+  renderAreaTab('county', ALL_COUNTY_RANKS, 'Hertfordshire', 10);
+}
+
+// ── Region Tab ───────────────────────────────────────────
+function renderRegionTab() {
+  renderAreaTab('region', ALL_REGION_RANKS, 'East', 25);
+}
+
+/**
+ * Shared renderer for county/region tabs.
+ * @param {string} prefix - 'county' or 'region'
+ * @param {Array} allRanks - ALL_COUNTY_RANKS or ALL_REGION_RANKS
+ * @param {string} areaName - 'Hertfordshire' or 'East'
+ * @param {number} topN - threshold for "top N" stat
+ */
+function renderAreaTab(prefix, allRanks, areaName, topN) {
+  if (!activeSwimmer) return;
+  const tiref = String(activeSwimmer.tiref);
+  const rawRanks = allRanks.filter(r => String(r.tiref) === tiref);
+  const ranks = mergeRanksByCourse(rawRanks);
+  const year = 2026;
+  const curRanks = ranks.filter(r => r.year === year);
+  const prevRanks = ranks.filter(r => r.year === year - 1);
+
+  document.getElementById(`${prefix}SwimmerName`).textContent = activeSwimmer.name;
+
+  // Stats
+  const ranked = curRanks.filter(r => r.rank != null);
+  if (ranked.length) {
+    const best = ranked.reduce((min, r) => r.rank < min.rank ? r : min, ranked[0]);
+    document.getElementById(`${prefix}StatBest`).textContent = `#${best.rank}`;
+    document.getElementById(`${prefix}StatBestDetail`).textContent = fmtEvent(best.event);
+
+    document.getElementById(`${prefix}StatEvents`).textContent = ranked.length;
+    document.getElementById(`${prefix}StatEventsDetail`).textContent = `in ${year}`;
+
+    const topCount = ranked.filter(r => r.rank <= topN).length;
+    document.getElementById(`${prefix}Stat${prefix === 'county' ? 'Top10' : 'Top25'}`).textContent = topCount;
+    document.getElementById(`${prefix}Stat${prefix === 'county' ? 'Top10' : 'Top25'}Detail`).textContent =
+      topCount > 0 ? `in ${areaName}` : '';
+
+    const avg = Math.round(ranked.reduce((s, r) => s + r.rank, 0) / ranked.length);
+    document.getElementById(`${prefix}StatAvg`).textContent = `#${avg}`;
+    document.getElementById(`${prefix}StatAvgDetail`).textContent = 'across events';
+  } else {
+    document.getElementById(`${prefix}StatBest`).textContent = '-';
+    document.getElementById(`${prefix}StatBestDetail`).textContent = curRanks.length ? 'Times recorded' : 'No data yet';
+    document.getElementById(`${prefix}StatEvents`).textContent = curRanks.length || '-';
+    document.getElementById(`${prefix}StatEventsDetail`).textContent = curRanks.length ? `in ${year}` : '';
+    document.getElementById(`${prefix}Stat${prefix === 'county' ? 'Top10' : 'Top25'}`).textContent = '-';
+    document.getElementById(`${prefix}Stat${prefix === 'county' ? 'Top10' : 'Top25'}Detail`).textContent = '';
+    document.getElementById(`${prefix}StatAvg`).textContent = '-';
+    document.getElementById(`${prefix}StatAvgDetail`).textContent = '';
+  }
+
+  // Rankings list
+  const container = document.getElementById(`${prefix}RankingsList`);
+  if (!curRanks.length && !prevRanks.length) {
+    container.innerHTML = `<div class="club-empty-state">${areaName} ranking data will appear after export.<br>Run: python bulk_load.py --step 3</div>`;
+  } else {
+    const sorted = [...curRanks].sort((a, b) => {
+      if (a.rank == null && b.rank == null) return 0;
+      if (a.rank == null) return 1;
+      if (b.rank == null) return -1;
+      return a.rank - b.rank;
+    });
+
+    let html = '';
+    sorted.forEach(r => {
+      const hasRank = r.rank != null;
+      const total = r.total_in_ranking || r.total || 0;
+      const badgeCls = !hasRank ? 'other' :
+        r.rank <= 3 ? 'top50' : r.rank <= 10 ? 'top100' :
+        r.rank <= 25 ? 'top250' : r.rank <= 50 ? 'top500' : 'other';
+
+      const prev = prevRanks.find(p => normaliseEvent(p.event) === normaliseEvent(r.event));
+      let moveHtml = '';
+      if (prev?.rank != null && hasRank) {
+        const diff = prev.rank - r.rank;
+        const dir = diff > 0 ? 'up' : diff < 0 ? 'down' : 'same';
+        const arrow = dir === 'up' ? '&#9650;' : dir === 'down' ? '&#9660;' : '&#8212;';
+        moveHtml = `<span class="nat-rank-move ${dir}">${arrow}${Math.abs(diff) || ''}</span>`;
+      } else if (!prev) {
+        moveHtml = '<span class="nat-rank-move same">NEW</span>';
+      }
+
+      const rankDisplay = hasRank ? `#${r.rank}${total ? ' / ' + total : ''}` : (total ? `${total} swimmers` : '-');
+
+      html += `<div class="nat-rank-row">
+        <span class="nat-rank-event">${fmtEvent(r.event)}</span>
+        <span class="nat-rank-time">${r.time}</span>
+        <span class="nat-rank-badge ${badgeCls}">${rankDisplay}</span>
+        ${moveHtml}
+      </div>`;
+    });
+    container.innerHTML = html;
+  }
+
+  // Rank progression chart
+  renderAreaChart(prefix, ranks);
+}
+
+function renderAreaChart(prefix, allRanks) {
+  const chartId = prefix === 'county' ? 'countyRank' : 'regionRank';
+  destroyChart(chartId);
+  const canvas = document.getElementById(`${prefix}RankChart`);
+  if (!canvas) return;
+
+  const ranked = allRanks.filter(r => r.rank != null);
+  const eventBest = {};
+  ranked.forEach(r => {
+    const key = normaliseEvent(r.event);
+    if (!eventBest[key] || r.rank < eventBest[key].rank) eventBest[key] = r;
+  });
+
+  const topEvents = Object.values(eventBest).sort((a, b) => a.rank - b.rank).slice(0, 5);
+  const chartColors = [COLORS.amber, COLORS.gold, COLORS.purple, COLORS.green, COLORS.bella];
+  const years = [2023, 2024, 2025, 2026];
+
+  const datasets = topEvents.map((ev, i) => {
+    const data = years.map(y => {
+      const r = ranked.find(rk => normaliseEvent(rk.event) === normaliseEvent(ev.event) && rk.year === y);
+      return r ? r.rank : null;
+    });
+    return {
+      label: fmtEvent(ev.event), data,
+      borderColor: chartColors[i % chartColors.length],
+      backgroundColor: chartColors[i % chartColors.length] + '22',
+      tension: 0.3, pointRadius: 4, fill: false,
+    };
+  });
+
+  if (!datasets.length) return;
+
+  charts[chartId] = new Chart(canvas, {
+    type: 'line',
+    data: { labels: years.map(String), datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: {
+        x: { grid: { color: COLORS.grid }, ticks: { color: COLORS.tick } },
+        y: { reverse: true, grid: { color: COLORS.grid },
+             ticks: { color: COLORS.tick, stepSize: 1, callback: v => '#' + v },
+             min: 1 },
+      },
+      plugins: {
+        legend: { labels: { usePointStyle: true, pointStyle: 'circle', padding: 10, font: { size: 10 }, color: '#8892a8' } },
+        tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: #${ctx.raw}` } },
+      },
+    },
+  });
 }
 
 // ── Event Listeners ──────────────────────────────────────

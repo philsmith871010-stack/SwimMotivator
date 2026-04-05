@@ -634,23 +634,44 @@
 
     <!-- ═══ COUNTY TAB ═══ -->
     <div class="tab-panel" id="panelCounty">
-      <div class="coming-soon-panel">
-        <div class="coming-soon-icon">&#127942;</div>
-        <h2 class="coming-soon-title">County Rankings</h2>
-        <p class="coming-soon-text">County-level rankings are coming soon.</p>
-        <p class="coming-soon-text">Once the overnight data load completes, you'll be able to see how swimmers rank within their county, track county championship qualifying times, and compare across clubs in your area.</p>
-        <div class="coming-soon-features">
-          <div class="coming-soon-feature">
-            <span class="coming-soon-dot"></span>
-            County ranking positions by event and age group
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Best County Rank</div>
+          <div class="stat-value cyan" id="countyStatBest">-</div>
+          <div class="stat-detail" id="countyStatBestDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Events Ranked</div>
+          <div class="stat-value gold" id="countyStatEvents">-</div>
+          <div class="stat-detail" id="countyStatEventsDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Top 10 Finishes</div>
+          <div class="stat-value green" id="countyStatTop10">-</div>
+          <div class="stat-detail" id="countyStatTop10Detail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Avg County Rank</div>
+          <div class="stat-value purple" id="countyStatAvg">-</div>
+          <div class="stat-detail" id="countyStatAvgDetail">-</div>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="col-left">
+          <div class="card">
+            <div class="card-title">
+              <span>County Rankings — Hertfordshire</span>
+              <span id="countySwimmerName" style="color:var(--text-2);font-size:0.8rem"></span>
+            </div>
+            <div id="countyRankingsList">
+              <div class="club-empty-state">Select a swimmer to see county rankings</div>
+            </div>
           </div>
-          <div class="coming-soon-feature">
-            <span class="coming-soon-dot"></span>
-            County championship qualifying time targets
-          </div>
-          <div class="coming-soon-feature">
-            <span class="coming-soon-dot"></span>
-            Compare with swimmers from other clubs in county
+        </div>
+        <div class="col-right">
+          <div class="card">
+            <div class="card-title">County Rank Progression</div>
+            <div class="chart-container"><canvas id="countyRankChart"></canvas></div>
           </div>
         </div>
       </div>
@@ -658,23 +679,44 @@
 
     <!-- ═══ REGION TAB ═══ -->
     <div class="tab-panel" id="panelRegion">
-      <div class="coming-soon-panel">
-        <div class="coming-soon-icon">&#127757;</div>
-        <h2 class="coming-soon-title">Regional Rankings</h2>
-        <p class="coming-soon-text">Regional-level rankings are coming soon.</p>
-        <p class="coming-soon-text">See how swimmers perform at regional level, track regional championship qualifying times, and identify the strongest competitors across your region.</p>
-        <div class="coming-soon-features">
-          <div class="coming-soon-feature">
-            <span class="coming-soon-dot"></span>
-            Regional ranking positions by event and age group
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Best Regional Rank</div>
+          <div class="stat-value cyan" id="regionStatBest">-</div>
+          <div class="stat-detail" id="regionStatBestDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Events Ranked</div>
+          <div class="stat-value gold" id="regionStatEvents">-</div>
+          <div class="stat-detail" id="regionStatEventsDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Top 25 Finishes</div>
+          <div class="stat-value green" id="regionStatTop25">-</div>
+          <div class="stat-detail" id="regionStatTop25Detail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Avg Regional Rank</div>
+          <div class="stat-value purple" id="regionStatAvg">-</div>
+          <div class="stat-detail" id="regionStatAvgDetail">-</div>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="col-left">
+          <div class="card">
+            <div class="card-title">
+              <span>Regional Rankings — East</span>
+              <span id="regionSwimmerName" style="color:var(--text-2);font-size:0.8rem"></span>
+            </div>
+            <div id="regionRankingsList">
+              <div class="club-empty-state">Select a swimmer to see regional rankings</div>
+            </div>
           </div>
-          <div class="coming-soon-feature">
-            <span class="coming-soon-dot"></span>
-            Regional championship qualifying time tracker
-          </div>
-          <div class="coming-soon-feature">
-            <span class="coming-soon-dot"></span>
-            Cross-club comparison within region
+        </div>
+        <div class="col-right">
+          <div class="card">
+            <div class="card-title">Regional Rank Progression</div>
+            <div class="chart-container"><canvas id="regionRankChart"></canvas></div>
           </div>
         </div>
       </div>

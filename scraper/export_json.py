@@ -222,6 +222,161 @@ def export_squad(conn: sqlite3.Connection) -> None:
     print(f"  squad.json: {len(rows)} entries, {unique} swimmers")
 
 
+# Club name patterns for county/region filtering
+HERTS_CLUB_PATTERNS = [
+    '%St Albans%', '%Berkhamsted%', '%Bishop%Stortford%', '%Bushey%',
+    '%Cheshunt%', '%Dacorum%', '%Harpenden%', '%Hatfield%',
+    '%Hemel Hempstead%', '%Hertford%', '%Hertsmere%', '%Hitchin%',
+    '%Hoddesdon%', '%Letchworth%', '%Potters Bar%', '%Royston%',
+    '%Stevenage%', '%Verulam%', '%Ware%', '%Watford%',
+    '%Welwyn%', '%Borehamwood%', '%Rickmansworth%', '%Tring%',
+    '%Sawbridgeworth%',
+]
+
+EAST_REGION_PATTERNS = HERTS_CLUB_PATTERNS + [
+    # Bedfordshire
+    '%Bedford%', '%Dunstable%', '%Leighton Buzzard%', '%Luton%', '%Flitwick%',
+    # Cambridgeshire
+    '%Cambridge%', '%Ely%', '%Huntingdon%', '%Peterborough%', '%St Ives%',
+    '%St Neots%', '%Wisbech%',
+    # Essex
+    '%Basildon%', '%Braintree%', '%Brentwood%', '%Chelmsford%', '%Colchester%',
+    '%Harlow%', '%Southend%', '%Thurrock%', '%Epping%', '%Billericay%',
+    '%Saffron%', '%Halstead%', '%Witham%', '%Clacton%', '%Maldon%',
+    # Norfolk
+    '%Norwich%', '%Norfolk%', '%Great Yarmouth%', '%King%Lynn%', '%Dereham%',
+    '%Thetford%', '%North Norfolk%',
+    # Suffolk
+    '%Ipswich%', '%Bury St Edmunds%', '%Felixstowe%', '%Lowestoft%',
+    '%Stowmarket%', '%Sudbury%', '%Newmarket%', '%Haverhill%',
+]
+
+
+def _build_club_filter_sql(patterns: list[str]) -> str:
+    """Build SQL WHERE clause to match club names against patterns."""
+    clauses = [f"club LIKE '{p}'" for p in patterns]
+    return " OR ".join(clauses)
+
+
+def export_county_region_ranks(conn: sqlite3.Connection) -> None:
+    """Derive county and regional ranks for CoSA swimmers from event_rankings."""
+    if not _table_exists(conn, "event_rankings"):
+        print("  county_ranks.json: no event_rankings table, skipping")
+        print("  region_ranks.json: no event_rankings table, skipping")
+        return
+
+    from .parsers import parse_time_seconds
+
+    # Get CoSA swimmer tirefs
+    costa_tirefs = set()
+    for row in conn.execute("""
+        SELECT DISTINCT tiref FROM meet_results
+        WHERE club LIKE '%St Albans%' AND sex = 'F'
+    """).fetchall():
+        costa_tirefs.add(str(row[0]))
+    for row in conn.execute(
+        "SELECT tiref FROM swimmers WHERE sex = 'F' AND club LIKE '%St Albans%'"
+    ).fetchall():
+        costa_tirefs.add(str(row[0]))
+
+    if not costa_tirefs:
+        print("  county_ranks.json: no CoSA swimmers found")
+        print("  region_ranks.json: no CoSA swimmers found")
+        return
+
+    herts_filter = _build_club_filter_sql(HERTS_CLUB_PATTERNS)
+    east_filter = _build_club_filter_sql(EAST_REGION_PATTERNS)
+
+    placeholders = ",".join(["?"] * len(costa_tirefs))
+
+    # Get our swimmers' ranking entries
+    our_rows = conn.execute(f"""
+        SELECT tiref, event, course, year, age_group, time
+        FROM event_rankings
+        WHERE tiref IN ({placeholders})
+    """, list(costa_tirefs)).fetchall()
+
+    county_ranks = []
+    region_ranks = []
+
+    for tiref, event, course, year, age_group, time_val in our_rows:
+        our_secs = parse_time_seconds(time_val)
+        if our_secs is None:
+            continue
+
+        # County rank: count Herts swimmers with faster times
+        county_faster = conn.execute(f"""
+            SELECT COUNT(*) FROM event_rankings
+            WHERE event = ? AND course = ? AND year = ? AND age_group = ?
+              AND ({herts_filter})
+              AND tiref != ?
+        """, (event, course, year, age_group, tiref)).fetchone()[0]
+
+        # Count faster times properly (using parsed seconds comparison would be ideal
+        # but too slow for 2M rows, so we use the event_rankings rank order)
+        county_total = conn.execute(f"""
+            SELECT COUNT(*) FROM event_rankings
+            WHERE event = ? AND course = ? AND year = ? AND age_group = ?
+              AND ({herts_filter})
+        """, (event, course, year, age_group)).fetchone()[0]
+
+        # Count how many Herts swimmers have a strictly faster time
+        # We need proper time comparison, so fetch all Herts times for this combo
+        herts_times = conn.execute(f"""
+            SELECT time FROM event_rankings
+            WHERE event = ? AND course = ? AND year = ? AND age_group = ?
+              AND ({herts_filter})
+              AND tiref != ?
+        """, (event, course, year, age_group, tiref)).fetchall()
+
+        county_rank = 1
+        for (ht,) in herts_times:
+            ht_secs = parse_time_seconds(ht)
+            if ht_secs is not None and ht_secs < our_secs:
+                county_rank += 1
+
+        county_ranks.append({
+            "tiref": int(tiref) if str(tiref).isdigit() else tiref,
+            "event": event, "course": course, "year": year,
+            "age_group": int(age_group) if str(age_group).isdigit() else 0,
+            "rank": county_rank, "total": county_total + 1,
+            "time": time_val,
+        })
+
+        # Region rank: same but for East Region
+        region_times = conn.execute(f"""
+            SELECT time FROM event_rankings
+            WHERE event = ? AND course = ? AND year = ? AND age_group = ?
+              AND ({east_filter})
+              AND tiref != ?
+        """, (event, course, year, age_group, tiref)).fetchall()
+
+        region_rank = 1
+        region_total = len(region_times)
+        for (rt,) in region_times:
+            rt_secs = parse_time_seconds(rt)
+            if rt_secs is not None and rt_secs < our_secs:
+                region_rank += 1
+
+        region_ranks.append({
+            "tiref": int(tiref) if str(tiref).isdigit() else tiref,
+            "event": event, "course": course, "year": year,
+            "age_group": int(age_group) if str(age_group).isdigit() else 0,
+            "rank": region_rank, "total": region_total + 1,
+            "time": time_val,
+        })
+
+    (JSON_DIR / "county_ranks.json").write_text(
+        json.dumps(county_ranks, indent=2), encoding="utf-8")
+    unique_c = len(set(r["tiref"] for r in county_ranks))
+    print(f"  county_ranks.json: {len(county_ranks)} entries for {unique_c} swimmers")
+
+    (JSON_DIR / "region_ranks.json").write_text(
+        json.dumps(region_ranks, indent=2), encoding="utf-8")
+    unique_r = len(set(r["tiref"] for r in region_ranks))
+    print(f"  region_ranks.json: {len(region_ranks)} entries for {unique_r} swimmers")
+
+
 def main() -> None:
     JSON_DIR.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(DB_PATH)
@@ -231,6 +386,7 @@ def main() -> None:
         export_personal_bests(conn)
         export_history(conn)
         export_ranks(conn)
+        export_county_region_ranks(conn)
         export_squad(conn)
         print("[Export] Done!")
     finally:
