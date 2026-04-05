@@ -91,7 +91,7 @@ def _parse_rankings_page(soup, *, event: str, course: str, sex: str,
         tds = tr.find_all("td")
         if len(tds) < 7:
             continue
-        rank_text = norm_ws(tds[0].get_text(" ", strip=True)).replace(",", "")
+        rank_text = norm_ws(tds[0].get_text(" ", strip=True)).replace(",", "").lstrip("=").strip()
         rank = int(rank_text) if rank_text.isdigit() else None
 
         link = tds[1].find("a", href=True)

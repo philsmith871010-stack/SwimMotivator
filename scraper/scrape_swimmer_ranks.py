@@ -113,23 +113,39 @@ def derive_swimmer_ranks(tirefs: set[str] | None = None) -> None:
 
         inserted = 0
         swimmers_found = set()
+        null_fixed = 0
         for tiref, event, course, year, age_group, rank, time_val, name in rows:
             total = totals.get((event, course, year, age_group), 0)
             try:
                 age_int = int(age_group)
             except (ValueError, TypeError):
                 age_int = 0
+
+            # If rank is null but we have a time, compute rank from position
+            # by counting how many swimmers have a faster time in the same event
+            actual_rank = rank
+            if actual_rank is None and time_val:
+                computed = conn.execute("""
+                    SELECT COUNT(*) FROM event_rankings
+                    WHERE event = ? AND course = ? AND year = ? AND age_group = ?
+                      AND time < ?
+                """, (event, course, year, age_group, time_val)).fetchone()[0]
+                actual_rank = computed + 1
+                null_fixed += 1
+
             conn.execute("""
                 INSERT OR REPLACE INTO swimmer_ranks
                     (tiref, event, course, year, age_group, rank, total_in_ranking, time)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             """, (int(tiref) if str(tiref).isdigit() else tiref,
-                  event, course, int(year), age_int, rank, total, time_val))
+                  event, course, int(year), age_int, actual_rank, total, time_val))
             inserted += 1
             swimmers_found.add(tiref)
 
         conn.commit()
         print(f"[Swimmer Ranks] Done: {inserted} rankings for {len(swimmers_found)} swimmers")
+        if null_fixed:
+            print(f"[Swimmer Ranks] Computed {null_fixed} missing ranks from time-based position")
 
     finally:
         conn.close()
