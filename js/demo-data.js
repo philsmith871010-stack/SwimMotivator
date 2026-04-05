@@ -169,7 +169,43 @@
     },
   ];
 
+  // Events
+  const EVENTS_KEY = 'swimMotivator_events';
+  if (!localStorage.getItem(EVENTS_KEY)) {
+    const events = [
+      {
+        id: 'event_01', name: 'Herts County Championships', date: dayOffset(18),
+        venue: 'Hatfield Swim Centre',
+        entries: ['100 Free', '50 Back', '200 IM'],
+        notes: 'Must hit QTs! Focus on 100 Free PB.',
+        createdAt: dayOffset(-7),
+      },
+      {
+        id: 'event_02', name: 'Club Championship Gala', date: dayOffset(5),
+        venue: 'Westminster Lodge, St Albans',
+        entries: ['50 Free', '100 Free', '50 Breast', '200 IM'],
+        notes: 'Aiming for gold in 50 free!',
+        createdAt: dayOffset(-10),
+      },
+      {
+        id: 'event_03', name: 'East Region Spring Open', date: dayOffset(45),
+        venue: 'Luton SC',
+        entries: ['100 Free', '200 Free'],
+        notes: 'Good chance for regional PBs.',
+        createdAt: dayOffset(-5),
+      },
+      {
+        id: 'event_04', name: 'CoSA Winter Gala', date: dayOffset(-21),
+        venue: 'Westminster Lodge, St Albans',
+        entries: ['50 Free', '100 Back', '200 IM'],
+        notes: 'Got a PB in 50 free!',
+        createdAt: dayOffset(-30),
+      },
+    ];
+    localStorage.setItem(EVENTS_KEY, JSON.stringify(events));
+  }
+
   localStorage.setItem(STORAGE_KEY, JSON.stringify(sessions));
   localStorage.setItem(GOALS_KEY, JSON.stringify(goals));
-  console.log('SwimMotivator: Demo training data loaded (10 sessions, 6 goals)');
+  console.log('SwimMotivator: Demo training data loaded (10 sessions, 6 goals, 4 events)');
 })();

@@ -271,7 +271,19 @@
         <button class="training-nav-btn active" data-view="log" onclick="switchTrainingView('log')">Log Session</button>
         <button class="training-nav-btn" data-view="history" onclick="switchTrainingView('history')">History</button>
         <button class="training-nav-btn" data-view="goals" onclick="switchTrainingView('goals')">Goals</button>
+        <button class="training-nav-btn" data-view="events" onclick="switchTrainingView('events')">Events</button>
+        <button class="training-nav-btn" data-view="qualify" onclick="switchTrainingView('qualify')">Qualifying</button>
         <button class="training-nav-btn" data-view="stats" onclick="switchTrainingView('stats')">Stats</button>
+      </div>
+
+      <!-- ── AI Coach Insight (shown on all views) ── -->
+      <div class="ai-coach-card" id="aiCoachCard">
+        <div class="ai-coach-header">
+          <span class="ai-coach-avatar">&#129302;</span>
+          <span class="ai-coach-name">Coach AI</span>
+          <span class="ai-coach-badge">INSIGHT</span>
+        </div>
+        <div class="ai-coach-message" id="aiCoachMessage">Loading your insights...</div>
       </div>
 
       <!-- ── LOG SESSION VIEW ── -->
@@ -485,6 +497,100 @@
         </div>
       </div>
 
+      <!-- ── EVENTS VIEW ── -->
+      <div class="training-view" id="trainingEvents">
+        <div class="card">
+          <div class="card-title">
+            <span>Upcoming Events</span>
+            <button class="t-small-btn" onclick="showEventForm()">+ Add Event</button>
+          </div>
+
+          <!-- Event form (hidden) -->
+          <div id="tEventForm" style="display:none">
+            <div class="t-goal-form">
+              <div class="t-field">
+                <label class="t-label">Event name</label>
+                <input type="text" id="tEventName" class="t-input" placeholder="e.g. Herts County Championships">
+              </div>
+              <div class="t-field">
+                <label class="t-label">Date</label>
+                <input type="date" id="tEventDate" class="t-input">
+              </div>
+              <div class="t-field">
+                <label class="t-label">Venue</label>
+                <input type="text" id="tEventVenue" class="t-input" placeholder="e.g. Hatfield SC">
+              </div>
+              <div class="t-field">
+                <label class="t-label">Events entered (select all that apply)</label>
+                <div class="t-stroke-chips t-event-entries" id="tEventEntries">
+                  <button class="t-stroke" data-entry="50 Free" onclick="toggleEventEntry(this)">50 Free</button>
+                  <button class="t-stroke" data-entry="100 Free" onclick="toggleEventEntry(this)">100 Free</button>
+                  <button class="t-stroke" data-entry="200 Free" onclick="toggleEventEntry(this)">200 Free</button>
+                  <button class="t-stroke" data-entry="50 Back" onclick="toggleEventEntry(this)">50 Back</button>
+                  <button class="t-stroke" data-entry="100 Back" onclick="toggleEventEntry(this)">100 Back</button>
+                  <button class="t-stroke" data-entry="200 Back" onclick="toggleEventEntry(this)">200 Back</button>
+                  <button class="t-stroke" data-entry="50 Breast" onclick="toggleEventEntry(this)">50 Breast</button>
+                  <button class="t-stroke" data-entry="100 Breast" onclick="toggleEventEntry(this)">100 Breast</button>
+                  <button class="t-stroke" data-entry="200 Breast" onclick="toggleEventEntry(this)">200 Breast</button>
+                  <button class="t-stroke" data-entry="50 Fly" onclick="toggleEventEntry(this)">50 Fly</button>
+                  <button class="t-stroke" data-entry="100 Fly" onclick="toggleEventEntry(this)">100 Fly</button>
+                  <button class="t-stroke" data-entry="200 Fly" onclick="toggleEventEntry(this)">200 Fly</button>
+                  <button class="t-stroke" data-entry="200 IM" onclick="toggleEventEntry(this)">200 IM</button>
+                  <button class="t-stroke" data-entry="400 IM" onclick="toggleEventEntry(this)">400 IM</button>
+                </div>
+              </div>
+              <div class="t-field">
+                <label class="t-label">Target times / notes</label>
+                <textarea id="tEventNotes" class="t-textarea" placeholder="Any target times or goals for this event?" rows="2"></textarea>
+              </div>
+              <div class="t-goal-actions">
+                <button class="t-save-btn t-save-sm" onclick="saveEvent()">Save Event</button>
+                <button class="t-cancel-btn" onclick="hideEventForm()">Cancel</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="tEventsList">
+            <div class="club-empty-state">No upcoming events. Add your next competition!</div>
+          </div>
+        </div>
+
+        <!-- Past events -->
+        <div class="card">
+          <div class="card-title">Past Events</div>
+          <div id="tPastEventsList">
+            <div class="club-empty-state">Past events will appear here after they happen.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── QUALIFYING TIMES VIEW ── -->
+      <div class="training-view" id="trainingQualify">
+        <div class="ai-coach-card" id="aiQualifyInsight">
+          <div class="ai-coach-header">
+            <span class="ai-coach-avatar">&#129302;</span>
+            <span class="ai-coach-name">Coach AI</span>
+            <span class="ai-coach-badge">QUALIFYING</span>
+          </div>
+          <div class="ai-coach-message" id="aiQualifyMessage">Analysing your times against qualifying standards...</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <span>County Qualifying Times</span>
+            <select class="inline-select" id="qualCounty" onchange="renderQualifying()">
+              <option value="herts">Hertfordshire</option>
+            </select>
+          </div>
+          <div class="qual-legend">
+            <span class="qual-tag qual-qualified">&#10003; Qualified</span>
+            <span class="qual-tag qual-close">Nearly there</span>
+            <span class="qual-tag qual-target">Target</span>
+          </div>
+          <div id="qualGrid" class="qual-grid"></div>
+        </div>
+      </div>
+
       <!-- ── STATS VIEW ── -->
       <div class="training-view" id="trainingStats">
         <div class="stats-grid">
@@ -581,7 +687,7 @@
   <script src="js/utils.js?v=5"></script>
   <script src="js/charts.js?v=5"></script>
   <script src="js/app.js?v=5"></script>
-  <script src="js/demo-data.js?v=1"></script>
-  <script src="js/training.js?v=1"></script>
+  <script src="js/demo-data.js?v=2"></script>
+  <script src="js/training.js?v=2"></script>
 </body>
 </html>
