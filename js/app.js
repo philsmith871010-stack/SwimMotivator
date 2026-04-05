@@ -1171,17 +1171,18 @@ function renderNationalTab() {
 
   // Stats
   if (curRanks.length) {
-    const bestRank = curRanks.reduce((min, r) => r.rank < min.rank ? r : min, curRanks[0]);
-    document.getElementById('natStatBestRank').textContent = `#${bestRank.rank}`;
+    const rankedOnly = curRanks.filter(r => r.rank != null);
+    const bestRank = rankedOnly.length ? rankedOnly.reduce((min, r) => r.rank < min.rank ? r : min, rankedOnly[0]) : null;
+    document.getElementById('natStatBestRank').textContent = bestRank ? `#${bestRank.rank}` : '-';
     document.getElementById('natStatBestRankDetail').textContent =
-      fmtEvent(bestRank.event, bestRank.course);
+      bestRank ? fmtEvent(bestRank.event, bestRank.course) : 'Times recorded';
 
-    document.getElementById('natStatEventsRanked').textContent = curRanks.length;
+    document.getElementById('natStatEventsRanked').textContent = rankedOnly.length || curRanks.length;
     document.getElementById('natStatEventsRankedDetail').textContent = `in ${year}`;
 
-    const avgRank = Math.round(curRanks.reduce((s, r) => s + r.rank, 0) / curRanks.length);
-    document.getElementById('natStatAvgRank').textContent = `#${avgRank}`;
-    document.getElementById('natStatAvgRankDetail').textContent = 'across all events';
+    const avgRank = rankedOnly.length ? Math.round(rankedOnly.reduce((s, r) => s + r.rank, 0) / rankedOnly.length) : null;
+    document.getElementById('natStatAvgRank').textContent = avgRank ? `#${avgRank}` : '-';
+    document.getElementById('natStatAvgRankDetail').textContent = rankedOnly.length ? 'across all events' : '';
 
     let improved = 0, total = 0;
     curRanks.forEach(cr => {
@@ -1244,27 +1245,37 @@ function renderNationalRankingsList(curRanks, prevRanks, year) {
     return;
   }
 
-  const sorted = [...curRanks].sort((a, b) => a.rank - b.rank);
+  const sorted = [...curRanks].sort((a, b) => {
+    if (a.rank == null && b.rank == null) return 0;
+    if (a.rank == null) return 1;
+    if (b.rank == null) return -1;
+    return a.rank - b.rank;
+  });
   let html = '';
   sorted.forEach(r => {
-    const badgeCls = r.rank <= 50 ? 'top50' : r.rank <= 100 ? 'top100' :
+    const hasRank = r.rank != null;
+    const badgeCls = !hasRank ? 'other' : r.rank <= 50 ? 'top50' : r.rank <= 100 ? 'top100' :
       r.rank <= 250 ? 'top250' : r.rank <= 500 ? 'top500' : 'other';
 
     const prev = prevRanks.find(p => p.event === r.event && p.course === r.course);
     let moveHtml = '';
-    if (prev) {
+    if (prev && hasRank && prev.rank != null) {
       const diff = prev.rank - r.rank;
       const dir = diff > 0 ? 'up' : diff < 0 ? 'down' : 'same';
       const arrow = dir === 'up' ? '&#9650;' : dir === 'down' ? '&#9660;' : '&#8212;';
       moveHtml = `<span class="nat-rank-move ${dir}">${arrow}${Math.abs(diff) || ''}</span>`;
-    } else {
+    } else if (!prev) {
       moveHtml = '<span class="nat-rank-move same">NEW</span>';
+    } else {
+      moveHtml = '<span class="nat-rank-move same">&#8212;</span>';
     }
+
+    const rankDisplay = hasRank ? `#${r.rank}${r.total_in_ranking ? ' / ' + r.total_in_ranking : ''}` : `${r.total_in_ranking ? r.total_in_ranking + ' swimmers' : 'Ranked'}`;
 
     html += `<div class="nat-rank-row">
       <span class="nat-rank-event">${fmtEvent(r.event, r.course)}</span>
       <span class="nat-rank-time">${r.time}</span>
-      <span class="nat-rank-badge ${badgeCls}">#${r.rank}${r.total_in_ranking ? ' / ' + r.total_in_ranking : ''}</span>
+      <span class="nat-rank-badge ${badgeCls}">${rankDisplay}</span>
       ${moveHtml}
     </div>`;
   });
@@ -1279,7 +1290,7 @@ function renderNationalRankChart(allRanks) {
 
   // Get top events by best rank
   const eventBest = {};
-  allRanks.forEach(r => {
+  allRanks.filter(r => r.rank != null).forEach(r => {
     const key = `${r.event}|${r.course}`;
     if (!eventBest[key] || r.rank < eventBest[key].rank) eventBest[key] = r;
   });
