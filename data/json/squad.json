@@ -1,1 +1,8922 @@
-[]
+[
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "50 Freestyle",
+    "best_time": "30.19",
+    "best_wa": 432
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "100 Freestyle",
+    "best_time": "1:07.13",
+    "best_wa": 419
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "200 Freestyle",
+    "best_time": "2:25.04",
+    "best_wa": 439
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "50 Breaststroke",
+    "best_time": "35.41",
+    "best_wa": 514
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "100 Breaststroke",
+    "best_time": "1:19.38",
+    "best_wa": 484
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "200 Breaststroke",
+    "best_time": "2:51.75",
+    "best_wa": 459
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "50 Butterfly",
+    "best_time": "33.32",
+    "best_wa": 370
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "50 Backstroke",
+    "best_time": "37.27",
+    "best_wa": 310
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "100 Backstroke",
+    "best_time": "1:19.83",
+    "best_wa": 309
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "200 Backstroke",
+    "best_time": "3:15.03",
+    "best_wa": 221
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "200 Individual Medley",
+    "best_time": "2:36.95",
+    "best_wa": 465
+  },
+  {
+    "tiref": "1165373",
+    "swimmer_name": "Scarlett Harrison-Mirauer",
+    "yob": 2007,
+    "event": "100 Individual Medley",
+    "best_time": "1:13.02",
+    "best_wa": 429
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "50 Freestyle",
+    "best_time": "28.39",
+    "best_wa": 520
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "100 Freestyle",
+    "best_time": "59.67",
+    "best_wa": 597
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "200 Freestyle",
+    "best_time": "2:09.25",
+    "best_wa": 621
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "400 Freestyle",
+    "best_time": "4:32.76",
+    "best_wa": 601
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "50 Breaststroke",
+    "best_time": "44.44",
+    "best_wa": 260
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "100 Breaststroke",
+    "best_time": "1:32.44",
+    "best_wa": 307
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "200 Breaststroke",
+    "best_time": "3:22.94",
+    "best_wa": 278
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "50 Butterfly",
+    "best_time": "34.74",
+    "best_wa": 327
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "50 Backstroke",
+    "best_time": "34.40",
+    "best_wa": 394
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "100 Backstroke",
+    "best_time": "1:15.25",
+    "best_wa": 369
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "200 Backstroke",
+    "best_time": "2:42.89",
+    "best_wa": 380
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "200 Individual Medley",
+    "best_time": "2:43.58",
+    "best_wa": 411
+  },
+  {
+    "tiref": "1203035",
+    "swimmer_name": "Erin Younger",
+    "yob": 2007,
+    "event": "100 Individual Medley",
+    "best_time": "1:16.90",
+    "best_wa": 368
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "50 Freestyle",
+    "best_time": "28.52",
+    "best_wa": 512
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "100 Freestyle",
+    "best_time": "1:01.71",
+    "best_wa": 539
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "200 Freestyle",
+    "best_time": "2:17.29",
+    "best_wa": 518
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "400 Freestyle",
+    "best_time": "4:56.15",
+    "best_wa": 469
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "800 Freestyle",
+    "best_time": "11:15.22",
+    "best_wa": 353
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "1500 Freestyle",
+    "best_time": "20:48.80",
+    "best_wa": 384
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "50 Breaststroke",
+    "best_time": "36.46",
+    "best_wa": 471
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "100 Breaststroke",
+    "best_time": "1:21.13",
+    "best_wa": 454
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "200 Breaststroke",
+    "best_time": "2:52.90",
+    "best_wa": 450
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "50 Butterfly",
+    "best_time": "31.70",
+    "best_wa": 430
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "100 Butterfly",
+    "best_time": "1:14.69",
+    "best_wa": 351
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "200 Butterfly",
+    "best_time": "3:33.84",
+    "best_wa": 173
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "50 Backstroke",
+    "best_time": "30.95",
+    "best_wa": 541
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "100 Backstroke",
+    "best_time": "1:06.05",
+    "best_wa": 547
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "200 Backstroke",
+    "best_time": "2:23.86",
+    "best_wa": 552
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "200 Individual Medley",
+    "best_time": "2:30.40",
+    "best_wa": 528
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "400 Individual Medley",
+    "best_time": "5:26.55",
+    "best_wa": 478
+  },
+  {
+    "tiref": "1229692",
+    "swimmer_name": "Sophie Holliss",
+    "yob": 2008,
+    "event": "100 Individual Medley",
+    "best_time": "1:09.67",
+    "best_wa": 494
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "50 Freestyle",
+    "best_time": "31.39",
+    "best_wa": 384
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "100 Freestyle",
+    "best_time": "1:08.17",
+    "best_wa": 400
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "50 Breaststroke",
+    "best_time": "35.58",
+    "best_wa": 506
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "100 Breaststroke",
+    "best_time": "1:16.00",
+    "best_wa": 552
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "200 Breaststroke",
+    "best_time": "2:44.18",
+    "best_wa": 525
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "50 Butterfly",
+    "best_time": "32.79",
+    "best_wa": 389
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "100 Butterfly",
+    "best_time": "1:23.43",
+    "best_wa": 252
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "50 Backstroke",
+    "best_time": "36.42",
+    "best_wa": 332
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "100 Backstroke",
+    "best_time": "1:22.00",
+    "best_wa": 285
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "200 Individual Medley",
+    "best_time": "2:37.16",
+    "best_wa": 463
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "400 Individual Medley",
+    "best_time": "6:11.48",
+    "best_wa": 325
+  },
+  {
+    "tiref": "1242583",
+    "swimmer_name": "Yasmin Meadows",
+    "yob": 2006,
+    "event": "100 Individual Medley",
+    "best_time": "1:14.35",
+    "best_wa": 407
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "50 Freestyle",
+    "best_time": "28.42",
+    "best_wa": 518
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "100 Freestyle",
+    "best_time": "1:02.04",
+    "best_wa": 531
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "200 Freestyle",
+    "best_time": "2:14.24",
+    "best_wa": 554
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "400 Freestyle",
+    "best_time": "4:42.71",
+    "best_wa": 540
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "800 Freestyle",
+    "best_time": "9:58.36",
+    "best_wa": 507
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "1500 Freestyle",
+    "best_time": "18:22.28",
+    "best_wa": 559
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "50 Breaststroke",
+    "best_time": "38.66",
+    "best_wa": 395
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "100 Breaststroke",
+    "best_time": "1:23.73",
+    "best_wa": 413
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "200 Breaststroke",
+    "best_time": "2:57.39",
+    "best_wa": 416
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "50 Butterfly",
+    "best_time": "32.05",
+    "best_wa": 416
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "100 Butterfly",
+    "best_time": "1:17.55",
+    "best_wa": 314
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "200 Butterfly",
+    "best_time": "3:03.87",
+    "best_wa": 273
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "50 Backstroke",
+    "best_time": "33.81",
+    "best_wa": 415
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "100 Backstroke",
+    "best_time": "1:12.42",
+    "best_wa": 415
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "200 Backstroke",
+    "best_time": "2:35.69",
+    "best_wa": 435
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "200 Individual Medley",
+    "best_time": "2:34.48",
+    "best_wa": 488
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "400 Individual Medley",
+    "best_time": "5:40.85",
+    "best_wa": 421
+  },
+  {
+    "tiref": "1277946",
+    "swimmer_name": "Ava Black",
+    "yob": 2007,
+    "event": "100 Individual Medley",
+    "best_time": "1:11.20",
+    "best_wa": 463
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "50 Freestyle",
+    "best_time": "29.32",
+    "best_wa": 472
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "100 Freestyle",
+    "best_time": "1:04.32",
+    "best_wa": 476
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "200 Freestyle",
+    "best_time": "2:19.12",
+    "best_wa": 498
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "400 Freestyle",
+    "best_time": "4:58.35",
+    "best_wa": 459
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "800 Freestyle",
+    "best_time": "10:20.57",
+    "best_wa": 455
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "50 Breaststroke",
+    "best_time": "38.41",
+    "best_wa": 402
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "100 Breaststroke",
+    "best_time": "1:23.89",
+    "best_wa": 410
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "200 Breaststroke",
+    "best_time": "2:57.60",
+    "best_wa": 415
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "50 Butterfly",
+    "best_time": "35.60",
+    "best_wa": 304
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "100 Butterfly",
+    "best_time": "1:21.26",
+    "best_wa": 272
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "50 Backstroke",
+    "best_time": "33.87",
+    "best_wa": 413
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "100 Backstroke",
+    "best_time": "1:12.07",
+    "best_wa": 421
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "200 Backstroke",
+    "best_time": "2:38.13",
+    "best_wa": 415
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "200 Individual Medley",
+    "best_time": "2:42.07",
+    "best_wa": 422
+  },
+  {
+    "tiref": "1293130",
+    "swimmer_name": "Isla Black",
+    "yob": 2009,
+    "event": "100 Individual Medley",
+    "best_time": "1:13.78",
+    "best_wa": 416
+  },
+  {
+    "tiref": "1293131",
+    "swimmer_name": "Harriet Park",
+    "yob": 2007,
+    "event": "50 Freestyle",
+    "best_time": "32.64",
+    "best_wa": 342
+  },
+  {
+    "tiref": "1293131",
+    "swimmer_name": "Harriet Park",
+    "yob": 2007,
+    "event": "100 Freestyle",
+    "best_time": "1:11.62",
+    "best_wa": 345
+  },
+  {
+    "tiref": "1293131",
+    "swimmer_name": "Harriet Park",
+    "yob": 2007,
+    "event": "200 Freestyle",
+    "best_time": "3:26.24",
+    "best_wa": 153
+  },
+  {
+    "tiref": "1293131",
+    "swimmer_name": "Harriet Park",
+    "yob": 2007,
+    "event": "50 Breaststroke",
+    "best_time": "41.61",
+    "best_wa": 316
+  },
+  {
+    "tiref": "1293131",
+    "swimmer_name": "Harriet Park",
+    "yob": 2007,
+    "event": "100 Breaststroke",
+    "best_time": "1:30.94",
+    "best_wa": 322
+  },
+  {
+    "tiref": "1293131",
+    "swimmer_name": "Harriet Park",
+    "yob": 2007,
+    "event": "200 Breaststroke",
+    "best_time": "3:20.22",
+    "best_wa": 289
+  },
+  {
+    "tiref": "1293131",
+    "swimmer_name": "Harriet Park",
+    "yob": 2007,
+    "event": "50 Butterfly",
+    "best_time": "37.76",
+    "best_wa": 254
+  },
+  {
+    "tiref": "1293131",
+    "swimmer_name": "Harriet Park",
+    "yob": 2007,
+    "event": "50 Backstroke",
+    "best_time": "38.98",
+    "best_wa": 271
+  },
+  {
+    "tiref": "1293131",
+    "swimmer_name": "Harriet Park",
+    "yob": 2007,
+    "event": "100 Backstroke",
+    "best_time": "1:32.91",
+    "best_wa": 196
+  },
+  {
+    "tiref": "1293131",
+    "swimmer_name": "Harriet Park",
+    "yob": 2007,
+    "event": "100 Individual Medley",
+    "best_time": "1:21.69",
+    "best_wa": 307
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "50 Freestyle",
+    "best_time": "30.99",
+    "best_wa": 399
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "100 Freestyle",
+    "best_time": "1:06.53",
+    "best_wa": 430
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "200 Freestyle",
+    "best_time": "2:25.55",
+    "best_wa": 435
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "400 Freestyle",
+    "best_time": "5:13.75",
+    "best_wa": 395
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "800 Freestyle",
+    "best_time": "10:27.47",
+    "best_wa": 440
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "1500 Freestyle",
+    "best_time": "24:09.45",
+    "best_wa": 246
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "50 Breaststroke",
+    "best_time": "43.55",
+    "best_wa": 276
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "100 Breaststroke",
+    "best_time": "1:38.00",
+    "best_wa": 257
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "200 Breaststroke",
+    "best_time": "3:35.52",
+    "best_wa": 232
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "50 Butterfly",
+    "best_time": "34.57",
+    "best_wa": 332
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "100 Butterfly",
+    "best_time": "1:19.29",
+    "best_wa": 293
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "200 Butterfly",
+    "best_time": "3:01.78",
+    "best_wa": 282
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "50 Backstroke",
+    "best_time": "38.41",
+    "best_wa": 283
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "100 Backstroke",
+    "best_time": "1:21.15",
+    "best_wa": 294
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "200 Backstroke",
+    "best_time": "3:09.27",
+    "best_wa": 242
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "200 Individual Medley",
+    "best_time": "3:05.99",
+    "best_wa": 279
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "400 Individual Medley",
+    "best_time": "6:14.59",
+    "best_wa": 317
+  },
+  {
+    "tiref": "1317865",
+    "swimmer_name": "Lauren Presland",
+    "yob": 2007,
+    "event": "100 Individual Medley",
+    "best_time": "1:21.72",
+    "best_wa": 306
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "50 Freestyle",
+    "best_time": "30.56",
+    "best_wa": 416
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "100 Freestyle",
+    "best_time": "1:07.32",
+    "best_wa": 415
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "200 Freestyle",
+    "best_time": "2:24.39",
+    "best_wa": 445
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "400 Freestyle",
+    "best_time": "4:59.09",
+    "best_wa": 456
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "800 Freestyle",
+    "best_time": "10:16.19",
+    "best_wa": 465
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "50 Breaststroke",
+    "best_time": "42.40",
+    "best_wa": 299
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "100 Breaststroke",
+    "best_time": "1:32.09",
+    "best_wa": 310
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "50 Butterfly",
+    "best_time": "31.85",
+    "best_wa": 424
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "100 Butterfly",
+    "best_time": "1:10.52",
+    "best_wa": 417
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "200 Butterfly",
+    "best_time": "2:38.60",
+    "best_wa": 425
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "50 Backstroke",
+    "best_time": "33.95",
+    "best_wa": 410
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "100 Backstroke",
+    "best_time": "1:11.82",
+    "best_wa": 425
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "200 Backstroke",
+    "best_time": "2:34.80",
+    "best_wa": 443
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "200 Individual Medley",
+    "best_time": "2:40.18",
+    "best_wa": 437
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "400 Individual Medley",
+    "best_time": "5:40.58",
+    "best_wa": 422
+  },
+  {
+    "tiref": "1318612",
+    "swimmer_name": "Eva Glynn",
+    "yob": 2007,
+    "event": "100 Individual Medley",
+    "best_time": "1:16.18",
+    "best_wa": 378
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "50 Freestyle",
+    "best_time": "30.44",
+    "best_wa": 421
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "100 Freestyle",
+    "best_time": "1:08.27",
+    "best_wa": 398
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "200 Freestyle",
+    "best_time": "2:33.53",
+    "best_wa": 370
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "400 Freestyle",
+    "best_time": "5:47.97",
+    "best_wa": 289
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "50 Breaststroke",
+    "best_time": "44.13",
+    "best_wa": 265
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "100 Breaststroke",
+    "best_time": "1:43.53",
+    "best_wa": 218
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "200 Breaststroke",
+    "best_time": "4:12.49",
+    "best_wa": 144
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "50 Butterfly",
+    "best_time": "37.39",
+    "best_wa": 262
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "100 Butterfly",
+    "best_time": "1:26.30",
+    "best_wa": 227
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "50 Backstroke",
+    "best_time": "35.68",
+    "best_wa": 353
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "100 Backstroke",
+    "best_time": "1:16.20",
+    "best_wa": 356
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "200 Backstroke",
+    "best_time": "2:47.76",
+    "best_wa": 348
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "200 Individual Medley",
+    "best_time": "2:56.23",
+    "best_wa": 328
+  },
+  {
+    "tiref": "1326401",
+    "swimmer_name": "Emily Sharp",
+    "yob": 2008,
+    "event": "100 Individual Medley",
+    "best_time": "1:20.20",
+    "best_wa": 324
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "50 Freestyle",
+    "best_time": "28.75",
+    "best_wa": 500
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "100 Freestyle",
+    "best_time": "1:00.33",
+    "best_wa": 577
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "200 Freestyle",
+    "best_time": "2:09.97",
+    "best_wa": 611
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "400 Freestyle",
+    "best_time": "4:41.87",
+    "best_wa": 545
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "800 Freestyle",
+    "best_time": "9:36.33",
+    "best_wa": 568
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "1500 Freestyle",
+    "best_time": "19:40.06",
+    "best_wa": 455
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "50 Breaststroke",
+    "best_time": "33.91",
+    "best_wa": 585
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "100 Breaststroke",
+    "best_time": "1:11.72",
+    "best_wa": 657
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "200 Breaststroke",
+    "best_time": "2:36.69",
+    "best_wa": 604
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "50 Butterfly",
+    "best_time": "32.39",
+    "best_wa": 403
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "100 Butterfly",
+    "best_time": "1:07.57",
+    "best_wa": 474
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "200 Butterfly",
+    "best_time": "2:35.25",
+    "best_wa": 453
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "50 Backstroke",
+    "best_time": "36.02",
+    "best_wa": 343
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "100 Backstroke",
+    "best_time": "1:11.77",
+    "best_wa": 426
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "200 Backstroke",
+    "best_time": "2:37.28",
+    "best_wa": 422
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "200 Individual Medley",
+    "best_time": "2:24.47",
+    "best_wa": 596
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "400 Individual Medley",
+    "best_time": "5:12.69",
+    "best_wa": 545
+  },
+  {
+    "tiref": "1327430",
+    "swimmer_name": "Georgina Hamilton",
+    "yob": 2008,
+    "event": "100 Individual Medley",
+    "best_time": "1:14.44",
+    "best_wa": 405
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "28.98",
+    "best_wa": 488
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:03.43",
+    "best_wa": 497
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:16.29",
+    "best_wa": 530
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "400 Freestyle",
+    "best_time": "4:47.53",
+    "best_wa": 513
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "34.78",
+    "best_wa": 542
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:16.59",
+    "best_wa": 539
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "200 Breaststroke",
+    "best_time": "2:51.18",
+    "best_wa": 463
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "32.48",
+    "best_wa": 400
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "33.35",
+    "best_wa": 432
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:11.53",
+    "best_wa": 430
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "2:31.36",
+    "best_wa": 518
+  },
+  {
+    "tiref": "1350901",
+    "swimmer_name": "Gigi Raubitschek-Smith",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:09.12",
+    "best_wa": 506
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "50 Freestyle",
+    "best_time": "31.55",
+    "best_wa": 378
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "100 Freestyle",
+    "best_time": "1:07.43",
+    "best_wa": 413
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "200 Freestyle",
+    "best_time": "2:31.15",
+    "best_wa": 388
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "400 Freestyle",
+    "best_time": "5:14.06",
+    "best_wa": 394
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "800 Freestyle",
+    "best_time": "10:47.76",
+    "best_wa": 400
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "1500 Freestyle",
+    "best_time": "20:31.62",
+    "best_wa": 401
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "50 Breaststroke",
+    "best_time": "44.77",
+    "best_wa": 254
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "100 Breaststroke",
+    "best_time": "1:49.15",
+    "best_wa": 186
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "200 Breaststroke",
+    "best_time": "3:52.18",
+    "best_wa": 185
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "50 Butterfly",
+    "best_time": "35.16",
+    "best_wa": 315
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "100 Butterfly",
+    "best_time": "1:19.72",
+    "best_wa": 289
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "200 Butterfly",
+    "best_time": "3:08.37",
+    "best_wa": 254
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "50 Backstroke",
+    "best_time": "33.46",
+    "best_wa": 428
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "100 Backstroke",
+    "best_time": "1:11.22",
+    "best_wa": 436
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "200 Backstroke",
+    "best_time": "2:31.22",
+    "best_wa": 475
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "200 Individual Medley",
+    "best_time": "2:50.69",
+    "best_wa": 361
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "400 Individual Medley",
+    "best_time": "6:04.36",
+    "best_wa": 344
+  },
+  {
+    "tiref": "1351276",
+    "swimmer_name": "Rosie Wenn",
+    "yob": 2008,
+    "event": "100 Individual Medley",
+    "best_time": "1:20.80",
+    "best_wa": 317
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "50 Freestyle",
+    "best_time": "31.10",
+    "best_wa": 395
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "100 Freestyle",
+    "best_time": "1:06.28",
+    "best_wa": 435
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "200 Freestyle",
+    "best_time": "2:29.27",
+    "best_wa": 403
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "400 Freestyle",
+    "best_time": "5:19.19",
+    "best_wa": 375
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "50 Breaststroke",
+    "best_time": "40.27",
+    "best_wa": 349
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "100 Breaststroke",
+    "best_time": "1:29.14",
+    "best_wa": 342
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "200 Breaststroke",
+    "best_time": "3:11.93",
+    "best_wa": 329
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "50 Butterfly",
+    "best_time": "34.06",
+    "best_wa": 347
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "100 Butterfly",
+    "best_time": "1:15.12",
+    "best_wa": 345
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "200 Butterfly",
+    "best_time": "3:01.20",
+    "best_wa": 285
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "50 Backstroke",
+    "best_time": "35.94",
+    "best_wa": 345
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "100 Backstroke",
+    "best_time": "1:15.65",
+    "best_wa": 364
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "200 Backstroke",
+    "best_time": "2:45.94",
+    "best_wa": 359
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "200 Individual Medley",
+    "best_time": "2:44.30",
+    "best_wa": 405
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "400 Individual Medley",
+    "best_time": "5:56.45",
+    "best_wa": 368
+  },
+  {
+    "tiref": "1354300",
+    "swimmer_name": "Susannah Read",
+    "yob": 2009,
+    "event": "100 Individual Medley",
+    "best_time": "1:16.41",
+    "best_wa": 375
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "50 Freestyle",
+    "best_time": "30.83",
+    "best_wa": 406
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "100 Freestyle",
+    "best_time": "1:06.30",
+    "best_wa": 435
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "200 Freestyle",
+    "best_time": "2:21.76",
+    "best_wa": 471
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "400 Freestyle",
+    "best_time": "5:04.45",
+    "best_wa": 432
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "800 Freestyle",
+    "best_time": "10:34.98",
+    "best_wa": 425
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "40.77",
+    "best_wa": 336
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:31.54",
+    "best_wa": 316
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:20.13",
+    "best_wa": 290
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "50 Butterfly",
+    "best_time": "36.54",
+    "best_wa": 281
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "50 Backstroke",
+    "best_time": "38.95",
+    "best_wa": 271
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "100 Backstroke",
+    "best_time": "1:39.06",
+    "best_wa": 162
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "200 Individual Medley",
+    "best_time": "3:09.19",
+    "best_wa": 265
+  },
+  {
+    "tiref": "1373165",
+    "swimmer_name": "Isabella Smith",
+    "yob": 2011,
+    "event": "100 Individual Medley",
+    "best_time": "1:22.79",
+    "best_wa": 294
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "30.21",
+    "best_wa": 431
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:04.81",
+    "best_wa": 466
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:18.49",
+    "best_wa": 505
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "400 Freestyle",
+    "best_time": "4:45.31",
+    "best_wa": 525
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "800 Freestyle",
+    "best_time": "9:46.21",
+    "best_wa": 540
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "1500 Freestyle",
+    "best_time": "18:38.48",
+    "best_wa": 535
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "41.00",
+    "best_wa": 331
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:29.22",
+    "best_wa": 341
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "200 Breaststroke",
+    "best_time": "3:10.53",
+    "best_wa": 336
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "36.49",
+    "best_wa": 282
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "100 Butterfly",
+    "best_time": "1:21.87",
+    "best_wa": 266
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "34.50",
+    "best_wa": 391
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:11.42",
+    "best_wa": 432
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "200 Backstroke",
+    "best_time": "2:30.31",
+    "best_wa": 484
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "2:41.69",
+    "best_wa": 425
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "400 Individual Medley",
+    "best_time": "5:36.99",
+    "best_wa": 435
+  },
+  {
+    "tiref": "1383229",
+    "swimmer_name": "Daisy Jubb",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:17.95",
+    "best_wa": 353
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "50 Freestyle",
+    "best_time": "31.48",
+    "best_wa": 381
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "100 Freestyle",
+    "best_time": "1:08.16",
+    "best_wa": 400
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "200 Freestyle",
+    "best_time": "2:48.58",
+    "best_wa": 280
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "50 Breaststroke",
+    "best_time": "41.88",
+    "best_wa": 310
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "100 Breaststroke",
+    "best_time": "1:29.02",
+    "best_wa": 343
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "50 Butterfly",
+    "best_time": "39.52",
+    "best_wa": 222
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "50 Backstroke",
+    "best_time": "35.01",
+    "best_wa": 374
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "100 Backstroke",
+    "best_time": "1:18.62",
+    "best_wa": 324
+  },
+  {
+    "tiref": "1383233",
+    "swimmer_name": "Paloma Lee",
+    "yob": 2008,
+    "event": "100 Individual Medley",
+    "best_time": "1:22.13",
+    "best_wa": 302
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "27.92",
+    "best_wa": 546
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:02.35",
+    "best_wa": 523
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:24.10",
+    "best_wa": 448
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "36.46",
+    "best_wa": 471
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:21.31",
+    "best_wa": 451
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "200 Breaststroke",
+    "best_time": "3:07.48",
+    "best_wa": 353
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "29.72",
+    "best_wa": 522
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "100 Butterfly",
+    "best_time": "1:08.55",
+    "best_wa": 454
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "32.50",
+    "best_wa": 467
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:11.93",
+    "best_wa": 423
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "2:38.40",
+    "best_wa": 452
+  },
+  {
+    "tiref": "1388092",
+    "swimmer_name": "Verity Fuge",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:10.51",
+    "best_wa": 477
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "50 Freestyle",
+    "best_time": "29.62",
+    "best_wa": 457
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "100 Freestyle",
+    "best_time": "1:03.51",
+    "best_wa": 495
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "200 Freestyle",
+    "best_time": "2:19.53",
+    "best_wa": 494
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "400 Freestyle",
+    "best_time": "4:56.87",
+    "best_wa": 466
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "50 Breaststroke",
+    "best_time": "43.78",
+    "best_wa": 272
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "100 Breaststroke",
+    "best_time": "1:41.42",
+    "best_wa": 232
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "50 Butterfly",
+    "best_time": "40.03",
+    "best_wa": 213
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "100 Butterfly",
+    "best_time": "1:31.82",
+    "best_wa": 189
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "50 Backstroke",
+    "best_time": "33.47",
+    "best_wa": 428
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "100 Backstroke",
+    "best_time": "1:11.78",
+    "best_wa": 426
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "200 Backstroke",
+    "best_time": "2:37.05",
+    "best_wa": 424
+  },
+  {
+    "tiref": "1390588",
+    "swimmer_name": "Sophie Coleman",
+    "yob": 2008,
+    "event": "100 Individual Medley",
+    "best_time": "1:22.72",
+    "best_wa": 295
+  },
+  {
+    "tiref": "1390590",
+    "swimmer_name": "Alice Azzopardi",
+    "yob": 2009,
+    "event": "50 Freestyle",
+    "best_time": "32.05",
+    "best_wa": 361
+  },
+  {
+    "tiref": "1390590",
+    "swimmer_name": "Alice Azzopardi",
+    "yob": 2009,
+    "event": "100 Freestyle",
+    "best_time": "1:11.31",
+    "best_wa": 349
+  },
+  {
+    "tiref": "1390590",
+    "swimmer_name": "Alice Azzopardi",
+    "yob": 2009,
+    "event": "50 Breaststroke",
+    "best_time": "37.56",
+    "best_wa": 430
+  },
+  {
+    "tiref": "1390590",
+    "swimmer_name": "Alice Azzopardi",
+    "yob": 2009,
+    "event": "100 Breaststroke",
+    "best_time": "1:23.82",
+    "best_wa": 411
+  },
+  {
+    "tiref": "1390590",
+    "swimmer_name": "Alice Azzopardi",
+    "yob": 2009,
+    "event": "200 Breaststroke",
+    "best_time": "3:02.96",
+    "best_wa": 379
+  },
+  {
+    "tiref": "1390590",
+    "swimmer_name": "Alice Azzopardi",
+    "yob": 2009,
+    "event": "50 Butterfly",
+    "best_time": "36.29",
+    "best_wa": 287
+  },
+  {
+    "tiref": "1390590",
+    "swimmer_name": "Alice Azzopardi",
+    "yob": 2009,
+    "event": "100 Butterfly",
+    "best_time": "1:46.18",
+    "best_wa": 122
+  },
+  {
+    "tiref": "1390590",
+    "swimmer_name": "Alice Azzopardi",
+    "yob": 2009,
+    "event": "50 Backstroke",
+    "best_time": "37.28",
+    "best_wa": 309
+  },
+  {
+    "tiref": "1390590",
+    "swimmer_name": "Alice Azzopardi",
+    "yob": 2009,
+    "event": "100 Backstroke",
+    "best_time": "1:37.99",
+    "best_wa": 167
+  },
+  {
+    "tiref": "1390590",
+    "swimmer_name": "Alice Azzopardi",
+    "yob": 2009,
+    "event": "200 Individual Medley",
+    "best_time": "2:59.75",
+    "best_wa": 309
+  },
+  {
+    "tiref": "1390590",
+    "swimmer_name": "Alice Azzopardi",
+    "yob": 2009,
+    "event": "100 Individual Medley",
+    "best_time": "1:18.97",
+    "best_wa": 339
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "28.72",
+    "best_wa": 502
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:02.51",
+    "best_wa": 519
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:19.42",
+    "best_wa": 495
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "400 Freestyle",
+    "best_time": "5:01.67",
+    "best_wa": 444
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "800 Freestyle",
+    "best_time": "10:20.51",
+    "best_wa": 455
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "1500 Freestyle",
+    "best_time": "22:14.44",
+    "best_wa": 315
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "40.87",
+    "best_wa": 334
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "2:14.46",
+    "best_wa": 99
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "30.96",
+    "best_wa": 462
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "100 Butterfly",
+    "best_time": "1:11.82",
+    "best_wa": 395
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "33.56",
+    "best_wa": 424
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:14.82",
+    "best_wa": 376
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "200 Backstroke",
+    "best_time": "2:47.96",
+    "best_wa": 347
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "2:44.97",
+    "best_wa": 400
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "400 Individual Medley",
+    "best_time": "5:49.17",
+    "best_wa": 391
+  },
+  {
+    "tiref": "1401237",
+    "swimmer_name": "Tehya Roberton",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:15.50",
+    "best_wa": 388
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "28.58",
+    "best_wa": 509
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:02.75",
+    "best_wa": 513
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:24.53",
+    "best_wa": 444
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "800 Freestyle",
+    "best_time": "10:38.57",
+    "best_wa": 417
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "36.09",
+    "best_wa": 485
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:19.77",
+    "best_wa": 477
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "200 Breaststroke",
+    "best_time": "2:55.31",
+    "best_wa": 431
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "31.57",
+    "best_wa": 436
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "100 Butterfly",
+    "best_time": "2:11.93",
+    "best_wa": 63
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "33.33",
+    "best_wa": 433
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:11.45",
+    "best_wa": 432
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "200 Backstroke",
+    "best_time": "2:49.25",
+    "best_wa": 339
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "2:39.50",
+    "best_wa": 443
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "400 Individual Medley",
+    "best_time": "6:12.13",
+    "best_wa": 323
+  },
+  {
+    "tiref": "1419619",
+    "swimmer_name": "Mimi Clinch",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:11.14",
+    "best_wa": 464
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "50 Freestyle",
+    "best_time": "30.12",
+    "best_wa": 435
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "100 Freestyle",
+    "best_time": "1:04.23",
+    "best_wa": 478
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "200 Freestyle",
+    "best_time": "2:20.35",
+    "best_wa": 485
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "400 Freestyle",
+    "best_time": "5:04.77",
+    "best_wa": 431
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "800 Freestyle",
+    "best_time": "10:33.36",
+    "best_wa": 428
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "1500 Freestyle",
+    "best_time": "21:16.00",
+    "best_wa": 360
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "50 Breaststroke",
+    "best_time": "46.02",
+    "best_wa": 234
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "100 Breaststroke",
+    "best_time": "1:39.03",
+    "best_wa": 249
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "200 Breaststroke",
+    "best_time": "3:24.13",
+    "best_wa": 273
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "50 Butterfly",
+    "best_time": "31.75",
+    "best_wa": 428
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "100 Butterfly",
+    "best_time": "1:11.50",
+    "best_wa": 400
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "200 Butterfly",
+    "best_time": "2:45.78",
+    "best_wa": 372
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "50 Backstroke",
+    "best_time": "33.96",
+    "best_wa": 410
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "100 Backstroke",
+    "best_time": "1:16.47",
+    "best_wa": 352
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "200 Backstroke",
+    "best_time": "2:48.06",
+    "best_wa": 346
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "200 Individual Medley",
+    "best_time": "2:42.01",
+    "best_wa": 423
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "400 Individual Medley",
+    "best_time": "5:43.40",
+    "best_wa": 411
+  },
+  {
+    "tiref": "1432359",
+    "swimmer_name": "Holly Malfroy",
+    "yob": 2009,
+    "event": "100 Individual Medley",
+    "best_time": "1:19.88",
+    "best_wa": 328
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "31.99",
+    "best_wa": 363
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:09.80",
+    "best_wa": 373
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:32.65",
+    "best_wa": 377
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "400 Freestyle",
+    "best_time": "5:36.45",
+    "best_wa": 320
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "800 Freestyle",
+    "best_time": "11:33.27",
+    "best_wa": 326
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "1500 Freestyle",
+    "best_time": "21:57.31",
+    "best_wa": 327
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "44.97",
+    "best_wa": 251
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "33.47",
+    "best_wa": 365
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "100 Butterfly",
+    "best_time": "1:13.28",
+    "best_wa": 372
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "200 Butterfly",
+    "best_time": "2:45.11",
+    "best_wa": 377
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "44.78",
+    "best_wa": 178
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:38.23",
+    "best_wa": 166
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "3:07.78",
+    "best_wa": 271
+  },
+  {
+    "tiref": "1432365",
+    "swimmer_name": "Tabitha Baylis",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:21.87",
+    "best_wa": 305
+  },
+  {
+    "tiref": "1438411",
+    "swimmer_name": "Anaya Bahl",
+    "yob": 2011,
+    "event": "50 Freestyle",
+    "best_time": "36.08",
+    "best_wa": 253
+  },
+  {
+    "tiref": "1438411",
+    "swimmer_name": "Anaya Bahl",
+    "yob": 2011,
+    "event": "100 Freestyle",
+    "best_time": "1:24.52",
+    "best_wa": 210
+  },
+  {
+    "tiref": "1438411",
+    "swimmer_name": "Anaya Bahl",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "49.34",
+    "best_wa": 190
+  },
+  {
+    "tiref": "1438411",
+    "swimmer_name": "Anaya Bahl",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:44.81",
+    "best_wa": 210
+  },
+  {
+    "tiref": "1438411",
+    "swimmer_name": "Anaya Bahl",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:49.21",
+    "best_wa": 193
+  },
+  {
+    "tiref": "1438411",
+    "swimmer_name": "Anaya Bahl",
+    "yob": 2011,
+    "event": "50 Butterfly",
+    "best_time": "49.15",
+    "best_wa": 115
+  },
+  {
+    "tiref": "1438411",
+    "swimmer_name": "Anaya Bahl",
+    "yob": 2011,
+    "event": "50 Backstroke",
+    "best_time": "41.89",
+    "best_wa": 218
+  },
+  {
+    "tiref": "1438411",
+    "swimmer_name": "Anaya Bahl",
+    "yob": 2011,
+    "event": "100 Backstroke",
+    "best_time": "1:26.08",
+    "best_wa": 247
+  },
+  {
+    "tiref": "1438411",
+    "swimmer_name": "Anaya Bahl",
+    "yob": 2011,
+    "event": "200 Backstroke",
+    "best_time": "3:22.54",
+    "best_wa": 197
+  },
+  {
+    "tiref": "1438411",
+    "swimmer_name": "Anaya Bahl",
+    "yob": 2011,
+    "event": "100 Individual Medley",
+    "best_time": "1:37.80",
+    "best_wa": 178
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "29.50",
+    "best_wa": 463
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "100 Freestyle",
+    "best_time": "1:02.83",
+    "best_wa": 511
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:13.80",
+    "best_wa": 560
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "4:44.06",
+    "best_wa": 532
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "800 Freestyle",
+    "best_time": "12:02.77",
+    "best_wa": 288
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "40.23",
+    "best_wa": 350
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:27.15",
+    "best_wa": 366
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:03.10",
+    "best_wa": 378
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "34.99",
+    "best_wa": 320
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "100 Butterfly",
+    "best_time": "1:22.69",
+    "best_wa": 259
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "35.61",
+    "best_wa": 355
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:13.73",
+    "best_wa": 393
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:35.34",
+    "best_wa": 438
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "2:36.09",
+    "best_wa": 473
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "400 Individual Medley",
+    "best_time": "5:35.78",
+    "best_wa": 440
+  },
+  {
+    "tiref": "1452573",
+    "swimmer_name": "Sofia Sacoto",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:16.41",
+    "best_wa": 375
+  },
+  {
+    "tiref": "1452576",
+    "swimmer_name": "India Park",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "35.25",
+    "best_wa": 271
+  },
+  {
+    "tiref": "1452576",
+    "swimmer_name": "India Park",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:18.79",
+    "best_wa": 259
+  },
+  {
+    "tiref": "1452576",
+    "swimmer_name": "India Park",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "43.88",
+    "best_wa": 270
+  },
+  {
+    "tiref": "1452576",
+    "swimmer_name": "India Park",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:36.49",
+    "best_wa": 269
+  },
+  {
+    "tiref": "1452576",
+    "swimmer_name": "India Park",
+    "yob": 2010,
+    "event": "200 Breaststroke",
+    "best_time": "3:31.19",
+    "best_wa": 246
+  },
+  {
+    "tiref": "1452576",
+    "swimmer_name": "India Park",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "41.37",
+    "best_wa": 193
+  },
+  {
+    "tiref": "1452576",
+    "swimmer_name": "India Park",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "42.89",
+    "best_wa": 203
+  },
+  {
+    "tiref": "1452576",
+    "swimmer_name": "India Park",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:28.50",
+    "best_wa": 241
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "50 Freestyle",
+    "best_time": "33.90",
+    "best_wa": 305
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "100 Freestyle",
+    "best_time": "1:17.27",
+    "best_wa": 275
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "200 Freestyle",
+    "best_time": "3:11.22",
+    "best_wa": 191
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "400 Freestyle",
+    "best_time": "6:07.57",
+    "best_wa": 245
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "40.49",
+    "best_wa": 343
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:31.94",
+    "best_wa": 312
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:18.48",
+    "best_wa": 297
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "50 Butterfly",
+    "best_time": "39.06",
+    "best_wa": 230
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "50 Backstroke",
+    "best_time": "40.95",
+    "best_wa": 233
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "200 Individual Medley",
+    "best_time": "3:28.52",
+    "best_wa": 198
+  },
+  {
+    "tiref": "1469446",
+    "swimmer_name": "Sophia Butt",
+    "yob": 2011,
+    "event": "100 Individual Medley",
+    "best_time": "1:24.29",
+    "best_wa": 279
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "30.64",
+    "best_wa": 413
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "100 Freestyle",
+    "best_time": "1:08.94",
+    "best_wa": 387
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:32.77",
+    "best_wa": 376
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "5:32.90",
+    "best_wa": 330
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "44.59",
+    "best_wa": 257
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:40.40",
+    "best_wa": 239
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "4:07.22",
+    "best_wa": 153
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "33.81",
+    "best_wa": 355
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "100 Butterfly",
+    "best_time": "1:29.08",
+    "best_wa": 207
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "35.47",
+    "best_wa": 359
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:20.61",
+    "best_wa": 300
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:49.67",
+    "best_wa": 336
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "2:56.03",
+    "best_wa": 329
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "400 Individual Medley",
+    "best_time": "6:45.20",
+    "best_wa": 250
+  },
+  {
+    "tiref": "1479966",
+    "swimmer_name": "Amber Smith",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:22.44",
+    "best_wa": 298
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "32.67",
+    "best_wa": 341
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "100 Freestyle",
+    "best_time": "1:11.78",
+    "best_wa": 343
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:38.32",
+    "best_wa": 338
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "6:05.85",
+    "best_wa": 249
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "47.11",
+    "best_wa": 218
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:42.23",
+    "best_wa": 226
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:52.03",
+    "best_wa": 186
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "38.75",
+    "best_wa": 235
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "38.33",
+    "best_wa": 285
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:21.96",
+    "best_wa": 286
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:53.90",
+    "best_wa": 312
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "3:02.80",
+    "best_wa": 294
+  },
+  {
+    "tiref": "1488614",
+    "swimmer_name": "Lilly Burger",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:27.89",
+    "best_wa": 246
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "50 Freestyle",
+    "best_time": "28.49",
+    "best_wa": 514
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "100 Freestyle",
+    "best_time": "1:01.24",
+    "best_wa": 552
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "200 Freestyle",
+    "best_time": "2:13.22",
+    "best_wa": 567
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "400 Freestyle",
+    "best_time": "4:54.47",
+    "best_wa": 478
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "800 Freestyle",
+    "best_time": "10:08.40",
+    "best_wa": 483
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "37.07",
+    "best_wa": 448
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:24.79",
+    "best_wa": 397
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:47.63",
+    "best_wa": 197
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "50 Butterfly",
+    "best_time": "31.65",
+    "best_wa": 432
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "100 Butterfly",
+    "best_time": "1:11.75",
+    "best_wa": 396
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "200 Butterfly",
+    "best_time": "2:48.61",
+    "best_wa": 354
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "50 Backstroke",
+    "best_time": "31.14",
+    "best_wa": 531
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "100 Backstroke",
+    "best_time": "1:08.30",
+    "best_wa": 494
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "200 Backstroke",
+    "best_time": "2:28.88",
+    "best_wa": 498
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "200 Individual Medley",
+    "best_time": "2:32.91",
+    "best_wa": 503
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "400 Individual Medley",
+    "best_time": "5:34.95",
+    "best_wa": 443
+  },
+  {
+    "tiref": "1489428",
+    "swimmer_name": "Anna Zapisetskaya",
+    "yob": 2011,
+    "event": "100 Individual Medley",
+    "best_time": "1:10.99",
+    "best_wa": 467
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "34.75",
+    "best_wa": 283
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "100 Freestyle",
+    "best_time": "1:12.40",
+    "best_wa": 334
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:39.12",
+    "best_wa": 333
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "5:41.49",
+    "best_wa": 306
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "800 Freestyle",
+    "best_time": "11:38.81",
+    "best_wa": 318
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "1500 Freestyle",
+    "best_time": "22:23.90",
+    "best_wa": 308
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "46.28",
+    "best_wa": 230
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:48.96",
+    "best_wa": 187
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:45.37",
+    "best_wa": 203
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "49.29",
+    "best_wa": 114
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "38.65",
+    "best_wa": 278
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:20.94",
+    "best_wa": 297
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:52.26",
+    "best_wa": 321
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "3:22.31",
+    "best_wa": 217
+  },
+  {
+    "tiref": "1498621",
+    "swimmer_name": "Anna Lucia Gonzalez Blankenship",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:26.89",
+    "best_wa": 255
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "29.55",
+    "best_wa": 461
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "100 Freestyle",
+    "best_time": "1:04.34",
+    "best_wa": 476
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:20.20",
+    "best_wa": 487
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "5:02.44",
+    "best_wa": 441
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "800 Freestyle",
+    "best_time": "10:06.46",
+    "best_wa": 487
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "1500 Freestyle",
+    "best_time": "19:20.00",
+    "best_wa": 479
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "43.98",
+    "best_wa": 268
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:38.87",
+    "best_wa": 250
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:33.47",
+    "best_wa": 239
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "30.64",
+    "best_wa": 476
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "100 Butterfly",
+    "best_time": "1:08.83",
+    "best_wa": 449
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "200 Butterfly",
+    "best_time": "2:32.53",
+    "best_wa": 478
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "34.01",
+    "best_wa": 408
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:12.42",
+    "best_wa": 415
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:33.61",
+    "best_wa": 453
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "2:37.61",
+    "best_wa": 459
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "400 Individual Medley",
+    "best_time": "5:36.88",
+    "best_wa": 436
+  },
+  {
+    "tiref": "1498622",
+    "swimmer_name": "Charlotte Douglas",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:13.29",
+    "best_wa": 425
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "50 Freestyle",
+    "best_time": "27.56",
+    "best_wa": 568
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "100 Freestyle",
+    "best_time": "59.85",
+    "best_wa": 591
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "200 Freestyle",
+    "best_time": "2:11.59",
+    "best_wa": 589
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "400 Freestyle",
+    "best_time": "4:33.83",
+    "best_wa": 594
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "800 Freestyle",
+    "best_time": "9:38.08",
+    "best_wa": 563
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "1500 Freestyle",
+    "best_time": "18:24.90",
+    "best_wa": 555
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "38.73",
+    "best_wa": 393
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:18.79",
+    "best_wa": 495
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "2:59.91",
+    "best_wa": 399
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "50 Butterfly",
+    "best_time": "29.01",
+    "best_wa": 561
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "100 Butterfly",
+    "best_time": "1:04.81",
+    "best_wa": 537
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "200 Butterfly",
+    "best_time": "2:30.51",
+    "best_wa": 498
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "50 Backstroke",
+    "best_time": "32.08",
+    "best_wa": 486
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "100 Backstroke",
+    "best_time": "1:13.00",
+    "best_wa": 405
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "200 Backstroke",
+    "best_time": "2:39.90",
+    "best_wa": 402
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "200 Individual Medley",
+    "best_time": "2:28.36",
+    "best_wa": 551
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "400 Individual Medley",
+    "best_time": "5:16.17",
+    "best_wa": 527
+  },
+  {
+    "tiref": "1498623",
+    "swimmer_name": "Jasmine Scott",
+    "yob": 2011,
+    "event": "100 Individual Medley",
+    "best_time": "1:07.18",
+    "best_wa": 552
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "30.64",
+    "best_wa": 413
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "100 Freestyle",
+    "best_time": "1:06.16",
+    "best_wa": 438
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:23.64",
+    "best_wa": 452
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "5:26.84",
+    "best_wa": 349
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "800 Freestyle",
+    "best_time": "11:18.77",
+    "best_wa": 347
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "40.81",
+    "best_wa": 335
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:28.30",
+    "best_wa": 352
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:12.22",
+    "best_wa": 327
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "37.45",
+    "best_wa": 261
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "35.13",
+    "best_wa": 370
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:13.65",
+    "best_wa": 394
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:35.86",
+    "best_wa": 434
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "2:56.16",
+    "best_wa": 329
+  },
+  {
+    "tiref": "1502309",
+    "swimmer_name": "Eloise Geffin",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:19.33",
+    "best_wa": 335
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "29.35",
+    "best_wa": 470
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "100 Freestyle",
+    "best_time": "1:03.05",
+    "best_wa": 506
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:17.33",
+    "best_wa": 518
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "4:50.22",
+    "best_wa": 499
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "800 Freestyle",
+    "best_time": "10:01.60",
+    "best_wa": 499
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "1500 Freestyle",
+    "best_time": "19:20.28",
+    "best_wa": 479
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "43.86",
+    "best_wa": 270
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:34.35",
+    "best_wa": 288
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:19.06",
+    "best_wa": 294
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "31.77",
+    "best_wa": 427
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "100 Butterfly",
+    "best_time": "1:10.07",
+    "best_wa": 425
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "200 Butterfly",
+    "best_time": "2:38.38",
+    "best_wa": 427
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "33.53",
+    "best_wa": 426
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:11.94",
+    "best_wa": 423
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:32.58",
+    "best_wa": 463
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "2:42.31",
+    "best_wa": 420
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "400 Individual Medley",
+    "best_time": "5:47.89",
+    "best_wa": 396
+  },
+  {
+    "tiref": "1519793",
+    "swimmer_name": "Charlotte Stewart",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:18.85",
+    "best_wa": 341
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "31.72",
+    "best_wa": 372
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:08.52",
+    "best_wa": 394
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:28.25",
+    "best_wa": 411
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "400 Freestyle",
+    "best_time": "5:13.27",
+    "best_wa": 397
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "800 Freestyle",
+    "best_time": "10:44.32",
+    "best_wa": 406
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "1500 Freestyle",
+    "best_time": "20:57.55",
+    "best_wa": 376
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "40.91",
+    "best_wa": 333
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:39.80",
+    "best_wa": 243
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "33.94",
+    "best_wa": 350
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "100 Butterfly",
+    "best_time": "1:36.87",
+    "best_wa": 161
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "34.40",
+    "best_wa": 394
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:13.92",
+    "best_wa": 390
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "200 Backstroke",
+    "best_time": "2:38.91",
+    "best_wa": 409
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "2:44.71",
+    "best_wa": 402
+  },
+  {
+    "tiref": "1519796",
+    "swimmer_name": "Emily Hooper",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:15.69",
+    "best_wa": 385
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "34.59",
+    "best_wa": 287
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "100 Freestyle",
+    "best_time": "1:15.37",
+    "best_wa": 296
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:32.81",
+    "best_wa": 376
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "5:22.35",
+    "best_wa": 364
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "800 Freestyle",
+    "best_time": "11:21.82",
+    "best_wa": 343
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "1500 Freestyle",
+    "best_time": "21:39.48",
+    "best_wa": 341
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "42.50",
+    "best_wa": 297
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:29.60",
+    "best_wa": 337
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:00.13",
+    "best_wa": 398
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "37.17",
+    "best_wa": 267
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "100 Butterfly",
+    "best_time": "1:18.36",
+    "best_wa": 304
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "200 Butterfly",
+    "best_time": "2:49.84",
+    "best_wa": 346
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "40.04",
+    "best_wa": 250
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:26.21",
+    "best_wa": 246
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:54.89",
+    "best_wa": 307
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "2:47.24",
+    "best_wa": 384
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "400 Individual Medley",
+    "best_time": "5:45.97",
+    "best_wa": 402
+  },
+  {
+    "tiref": "1572868",
+    "swimmer_name": "Elise Dotchin",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:22.65",
+    "best_wa": 296
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "50 Freestyle",
+    "best_time": "31.81",
+    "best_wa": 369
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "100 Freestyle",
+    "best_time": "1:11.78",
+    "best_wa": 343
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "200 Freestyle",
+    "best_time": "2:39.00",
+    "best_wa": 333
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "39.25",
+    "best_wa": 377
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:28.18",
+    "best_wa": 353
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:10.22",
+    "best_wa": 337
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "50 Butterfly",
+    "best_time": "34.30",
+    "best_wa": 340
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "100 Butterfly",
+    "best_time": "1:28.47",
+    "best_wa": 211
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "50 Backstroke",
+    "best_time": "39.64",
+    "best_wa": 257
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "100 Backstroke",
+    "best_time": "1:26.24",
+    "best_wa": 245
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "200 Individual Medley",
+    "best_time": "2:57.01",
+    "best_wa": 324
+  },
+  {
+    "tiref": "1572874",
+    "swimmer_name": "Natalie Herbst",
+    "yob": 2011,
+    "event": "100 Individual Medley",
+    "best_time": "1:19.35",
+    "best_wa": 335
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "35.14",
+    "best_wa": 274
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "100 Freestyle",
+    "best_time": "1:16.64",
+    "best_wa": 281
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:43.80",
+    "best_wa": 305
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "5:56.11",
+    "best_wa": 270
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "800 Freestyle",
+    "best_time": "12:03.75",
+    "best_wa": 287
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "44.71",
+    "best_wa": 255
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:36.88",
+    "best_wa": 266
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:39.41",
+    "best_wa": 220
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "42.48",
+    "best_wa": 178
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "100 Butterfly",
+    "best_time": "1:33.09",
+    "best_wa": 181
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "40.01",
+    "best_wa": 250
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:24.45",
+    "best_wa": 261
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:57.96",
+    "best_wa": 291
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "3:11.93",
+    "best_wa": 254
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "400 Individual Medley",
+    "best_time": "7:10.13",
+    "best_wa": 209
+  },
+  {
+    "tiref": "1576788",
+    "swimmer_name": "Clara Newby",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:28.60",
+    "best_wa": 240
+  },
+  {
+    "tiref": "1587854",
+    "swimmer_name": "Elina Bahl",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "47.51",
+    "best_wa": 110
+  },
+  {
+    "tiref": "1587854",
+    "swimmer_name": "Elina Bahl",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "2:01.71",
+    "best_wa": 70
+  },
+  {
+    "tiref": "1587854",
+    "swimmer_name": "Elina Bahl",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "1:00.61",
+    "best_wa": 102
+  },
+  {
+    "tiref": "1587854",
+    "swimmer_name": "Elina Bahl",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "2:21.05",
+    "best_wa": 86
+  },
+  {
+    "tiref": "1587854",
+    "swimmer_name": "Elina Bahl",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "4:49.24",
+    "best_wa": 96
+  },
+  {
+    "tiref": "1587854",
+    "swimmer_name": "Elina Bahl",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "1:00.30",
+    "best_wa": 73
+  },
+  {
+    "tiref": "1587854",
+    "swimmer_name": "Elina Bahl",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "2:00.16",
+    "best_wa": 90
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "36.54",
+    "best_wa": 243
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:21.31",
+    "best_wa": 236
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "3:04.52",
+    "best_wa": 213
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "400 Freestyle",
+    "best_time": "6:28.84",
+    "best_wa": 207
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "800 Freestyle",
+    "best_time": "13:17.61",
+    "best_wa": 214
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "1500 Freestyle",
+    "best_time": "25:50.06",
+    "best_wa": 201
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "51.32",
+    "best_wa": 168
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:53.07",
+    "best_wa": 167
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "4:04.07",
+    "best_wa": 159
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "45.39",
+    "best_wa": 146
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "100 Butterfly",
+    "best_time": "1:42.96",
+    "best_wa": 134
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "42.93",
+    "best_wa": 202
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:34.21",
+    "best_wa": 188
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:25.32",
+    "best_wa": 190
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:24.06",
+    "best_wa": 211
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "400 Individual Medley",
+    "best_time": "7:17.28",
+    "best_wa": 199
+  },
+  {
+    "tiref": "1589015",
+    "swimmer_name": "Ellie Stancliffe",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:36.74",
+    "best_wa": 184
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "33.46",
+    "best_wa": 317
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:17.63",
+    "best_wa": 271
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "2:49.21",
+    "best_wa": 277
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "800 Freestyle",
+    "best_time": "12:32.97",
+    "best_wa": 254
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "1500 Freestyle",
+    "best_time": "24:39.21",
+    "best_wa": 231
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "41.74",
+    "best_wa": 313
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:34.95",
+    "best_wa": 283
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "3:17.05",
+    "best_wa": 304
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "41.46",
+    "best_wa": 192
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "40.66",
+    "best_wa": 238
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:40.64",
+    "best_wa": 154
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:23.12",
+    "best_wa": 196
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:07.27",
+    "best_wa": 273
+  },
+  {
+    "tiref": "1589051",
+    "swimmer_name": "Lucia Carradice",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:29.31",
+    "best_wa": 234
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "31.25",
+    "best_wa": 389
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:06.76",
+    "best_wa": 426
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:27.63",
+    "best_wa": 417
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "400 Freestyle",
+    "best_time": "5:10.79",
+    "best_wa": 406
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "800 Freestyle",
+    "best_time": "10:48.13",
+    "best_wa": 399
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "1500 Freestyle",
+    "best_time": "20:57.86",
+    "best_wa": 376
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "41.48",
+    "best_wa": 319
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:30.59",
+    "best_wa": 326
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "200 Breaststroke",
+    "best_time": "3:13.64",
+    "best_wa": 320
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "37.60",
+    "best_wa": 258
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "100 Butterfly",
+    "best_time": "1:33.44",
+    "best_wa": 179
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "35.90",
+    "best_wa": 347
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:14.96",
+    "best_wa": 374
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "200 Backstroke",
+    "best_time": "2:39.81",
+    "best_wa": 402
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "2:56.22",
+    "best_wa": 328
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "400 Individual Medley",
+    "best_time": "6:34.29",
+    "best_wa": 272
+  },
+  {
+    "tiref": "1589054",
+    "swimmer_name": "Peggy Edwards",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:19.37",
+    "best_wa": 334
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "50 Freestyle",
+    "best_time": "34.60",
+    "best_wa": 287
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "100 Freestyle",
+    "best_time": "1:17.60",
+    "best_wa": 271
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "200 Freestyle",
+    "best_time": "2:52.46",
+    "best_wa": 261
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "400 Freestyle",
+    "best_time": "6:30.05",
+    "best_wa": 205
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "800 Freestyle",
+    "best_time": "12:08.39",
+    "best_wa": 281
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "1500 Freestyle",
+    "best_time": "23:17.84",
+    "best_wa": 274
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "50 Breaststroke",
+    "best_time": "49.60",
+    "best_wa": 187
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "100 Breaststroke",
+    "best_time": "1:51.16",
+    "best_wa": 176
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "200 Breaststroke",
+    "best_time": "4:31.29",
+    "best_wa": 116
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "50 Butterfly",
+    "best_time": "44.56",
+    "best_wa": 155
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "100 Butterfly",
+    "best_time": "2:07.87",
+    "best_wa": 70
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "50 Backstroke",
+    "best_time": "39.82",
+    "best_wa": 254
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "100 Backstroke",
+    "best_time": "1:29.69",
+    "best_wa": 218
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "200 Backstroke",
+    "best_time": "3:08.49",
+    "best_wa": 245
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "200 Individual Medley",
+    "best_time": "3:19.80",
+    "best_wa": 225
+  },
+  {
+    "tiref": "1605755",
+    "swimmer_name": "Penelope Hodgson",
+    "yob": 2013,
+    "event": "100 Individual Medley",
+    "best_time": "1:30.46",
+    "best_wa": 226
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "32.59",
+    "best_wa": 343
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "100 Freestyle",
+    "best_time": "1:12.13",
+    "best_wa": 338
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:33.76",
+    "best_wa": 369
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "5:54.98",
+    "best_wa": 272
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "1500 Freestyle",
+    "best_time": "22:51.30",
+    "best_wa": 290
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "43.23",
+    "best_wa": 282
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:40.46",
+    "best_wa": 239
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:43.41",
+    "best_wa": 208
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "40.10",
+    "best_wa": 212
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "35.86",
+    "best_wa": 348
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:17.68",
+    "best_wa": 336
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:45.99",
+    "best_wa": 359
+  },
+  {
+    "tiref": "1605762",
+    "swimmer_name": "Viola Gray",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:25.76",
+    "best_wa": 265
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "31.35",
+    "best_wa": 386
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:06.70",
+    "best_wa": 427
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:21.00",
+    "best_wa": 478
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "400 Freestyle",
+    "best_time": "4:53.50",
+    "best_wa": 482
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "800 Freestyle",
+    "best_time": "10:05.62",
+    "best_wa": 489
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "1500 Freestyle",
+    "best_time": "19:16.01",
+    "best_wa": 484
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "42.73",
+    "best_wa": 292
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:33.29",
+    "best_wa": 298
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "36.51",
+    "best_wa": 281
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "100 Butterfly",
+    "best_time": "1:28.66",
+    "best_wa": 210
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "39.30",
+    "best_wa": 264
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "100 Backstroke",
+    "best_time": "1:27.45",
+    "best_wa": 235
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "3:03.87",
+    "best_wa": 289
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "400 Individual Medley",
+    "best_time": "6:01.70",
+    "best_wa": 352
+  },
+  {
+    "tiref": "1606347",
+    "swimmer_name": "Hoi Ching Kong",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:21.93",
+    "best_wa": 304
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "50 Freestyle",
+    "best_time": "36.85",
+    "best_wa": 237
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "100 Freestyle",
+    "best_time": "1:20.37",
+    "best_wa": 244
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "200 Freestyle",
+    "best_time": "2:54.50",
+    "best_wa": 252
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "50 Breaststroke",
+    "best_time": "45.15",
+    "best_wa": 248
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "100 Breaststroke",
+    "best_time": "1:38.37",
+    "best_wa": 254
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "200 Breaststroke",
+    "best_time": "3:27.17",
+    "best_wa": 261
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "50 Butterfly",
+    "best_time": "41.34",
+    "best_wa": 194
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "100 Butterfly",
+    "best_time": "1:31.97",
+    "best_wa": 188
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "200 Butterfly",
+    "best_time": "3:31.67",
+    "best_wa": 179
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "50 Backstroke",
+    "best_time": "41.20",
+    "best_wa": 229
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "100 Backstroke",
+    "best_time": "1:26.86",
+    "best_wa": 240
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "200 Backstroke",
+    "best_time": "3:07.89",
+    "best_wa": 247
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "200 Individual Medley",
+    "best_time": "3:08.51",
+    "best_wa": 268
+  },
+  {
+    "tiref": "1606349",
+    "swimmer_name": "Irene Miao",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:26.72",
+    "best_wa": 256
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "50 Freestyle",
+    "best_time": "36.40",
+    "best_wa": 246
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "100 Freestyle",
+    "best_time": "1:24.07",
+    "best_wa": 213
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "200 Freestyle",
+    "best_time": "3:04.73",
+    "best_wa": 212
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "400 Freestyle",
+    "best_time": "6:24.58",
+    "best_wa": 214
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "50 Breaststroke",
+    "best_time": "52.84",
+    "best_wa": 154
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "100 Breaststroke",
+    "best_time": "1:57.83",
+    "best_wa": 148
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "50 Butterfly",
+    "best_time": "45.17",
+    "best_wa": 148
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "50 Backstroke",
+    "best_time": "46.43",
+    "best_wa": 160
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "200 Individual Medley",
+    "best_time": "3:25.65",
+    "best_wa": 206
+  },
+  {
+    "tiref": "1615088",
+    "swimmer_name": "Olivia Timmons",
+    "yob": 2013,
+    "event": "100 Individual Medley",
+    "best_time": "1:34.80",
+    "best_wa": 196
+  },
+  {
+    "tiref": "1615091",
+    "swimmer_name": "Ffion McKillop Paley",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "38.10",
+    "best_wa": 215
+  },
+  {
+    "tiref": "1615091",
+    "swimmer_name": "Ffion McKillop Paley",
+    "yob": 2012,
+    "event": "100 Freestyle",
+    "best_time": "1:21.18",
+    "best_wa": 237
+  },
+  {
+    "tiref": "1615091",
+    "swimmer_name": "Ffion McKillop Paley",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "3:30.25",
+    "best_wa": 144
+  },
+  {
+    "tiref": "1615091",
+    "swimmer_name": "Ffion McKillop Paley",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "46.79",
+    "best_wa": 222
+  },
+  {
+    "tiref": "1615091",
+    "swimmer_name": "Ffion McKillop Paley",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:50.60",
+    "best_wa": 179
+  },
+  {
+    "tiref": "1615091",
+    "swimmer_name": "Ffion McKillop Paley",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "49.19",
+    "best_wa": 115
+  },
+  {
+    "tiref": "1615091",
+    "swimmer_name": "Ffion McKillop Paley",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "47.31",
+    "best_wa": 151
+  },
+  {
+    "tiref": "1615091",
+    "swimmer_name": "Ffion McKillop Paley",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:31.60",
+    "best_wa": 217
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "50 Freestyle",
+    "best_time": "32.08",
+    "best_wa": 360
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "100 Freestyle",
+    "best_time": "1:09.37",
+    "best_wa": 380
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "200 Freestyle",
+    "best_time": "2:28.55",
+    "best_wa": 409
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "400 Freestyle",
+    "best_time": "5:17.03",
+    "best_wa": 383
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "800 Freestyle",
+    "best_time": "10:51.72",
+    "best_wa": 393
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "1500 Freestyle",
+    "best_time": "21:05.45",
+    "best_wa": 369
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "42.22",
+    "best_wa": 303
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:34.79",
+    "best_wa": 284
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:24.91",
+    "best_wa": 270
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "50 Butterfly",
+    "best_time": "34.34",
+    "best_wa": 338
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "100 Butterfly",
+    "best_time": "1:21.86",
+    "best_wa": 266
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "50 Backstroke",
+    "best_time": "36.02",
+    "best_wa": 343
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "100 Backstroke",
+    "best_time": "1:17.19",
+    "best_wa": 342
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "200 Backstroke",
+    "best_time": "2:45.45",
+    "best_wa": 363
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "200 Individual Medley",
+    "best_time": "2:53.50",
+    "best_wa": 344
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "400 Individual Medley",
+    "best_time": "6:10.83",
+    "best_wa": 326
+  },
+  {
+    "tiref": "1621304",
+    "swimmer_name": "Gia Soni",
+    "yob": 2011,
+    "event": "100 Individual Medley",
+    "best_time": "1:21.93",
+    "best_wa": 304
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "50 Freestyle",
+    "best_time": "30.18",
+    "best_wa": 432
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "100 Freestyle",
+    "best_time": "1:03.21",
+    "best_wa": 502
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "200 Freestyle",
+    "best_time": "2:13.95",
+    "best_wa": 558
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "400 Freestyle",
+    "best_time": "4:43.92",
+    "best_wa": 533
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "800 Freestyle",
+    "best_time": "9:47.02",
+    "best_wa": 537
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "1500 Freestyle",
+    "best_time": "18:46.33",
+    "best_wa": 524
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "50 Breaststroke",
+    "best_time": "44.34",
+    "best_wa": 261
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "100 Breaststroke",
+    "best_time": "1:34.39",
+    "best_wa": 288
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "200 Breaststroke",
+    "best_time": "3:15.43",
+    "best_wa": 311
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "50 Butterfly",
+    "best_time": "33.48",
+    "best_wa": 365
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "100 Butterfly",
+    "best_time": "1:14.86",
+    "best_wa": 349
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "200 Butterfly",
+    "best_time": "2:54.40",
+    "best_wa": 320
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "50 Backstroke",
+    "best_time": "34.72",
+    "best_wa": 383
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "100 Backstroke",
+    "best_time": "1:12.83",
+    "best_wa": 408
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "200 Backstroke",
+    "best_time": "2:31.30",
+    "best_wa": 474
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "200 Individual Medley",
+    "best_time": "2:40.46",
+    "best_wa": 435
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "400 Individual Medley",
+    "best_time": "5:31.12",
+    "best_wa": 459
+  },
+  {
+    "tiref": "1636562",
+    "swimmer_name": "Addison Summers",
+    "yob": 2012,
+    "event": "100 Individual Medley",
+    "best_time": "1:14.82",
+    "best_wa": 399
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "38.50",
+    "best_wa": 208
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:22.55",
+    "best_wa": 225
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "2:58.07",
+    "best_wa": 237
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "400 Freestyle",
+    "best_time": "6:10.82",
+    "best_wa": 239
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "800 Freestyle",
+    "best_time": "14:10.41",
+    "best_wa": 176
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "1500 Freestyle",
+    "best_time": "26:31.66",
+    "best_wa": 185
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "50.16",
+    "best_wa": 180
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:48.78",
+    "best_wa": 188
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "3:48.14",
+    "best_wa": 195
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "54.61",
+    "best_wa": 84
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "44.26",
+    "best_wa": 185
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:33.06",
+    "best_wa": 195
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:10.57",
+    "best_wa": 237
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:22.32",
+    "best_wa": 217
+  },
+  {
+    "tiref": "1646912",
+    "swimmer_name": "Martha Molloy",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:35.49",
+    "best_wa": 192
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "50 Freestyle",
+    "best_time": "30.84",
+    "best_wa": 405
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "100 Freestyle",
+    "best_time": "1:09.55",
+    "best_wa": 377
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "200 Freestyle",
+    "best_time": "2:36.40",
+    "best_wa": 350
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "50 Breaststroke",
+    "best_time": "39.19",
+    "best_wa": 379
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "100 Breaststroke",
+    "best_time": "1:24.76",
+    "best_wa": 398
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "200 Breaststroke",
+    "best_time": "3:11.83",
+    "best_wa": 329
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "50 Butterfly",
+    "best_time": "34.54",
+    "best_wa": 332
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "100 Butterfly",
+    "best_time": "1:25.64",
+    "best_wa": 233
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "50 Backstroke",
+    "best_time": "35.58",
+    "best_wa": 356
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "100 Backstroke",
+    "best_time": "1:16.97",
+    "best_wa": 345
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "200 Individual Medley",
+    "best_time": "2:53.61",
+    "best_wa": 343
+  },
+  {
+    "tiref": "1649123",
+    "swimmer_name": "Chloe Yuan",
+    "yob": 2011,
+    "event": "100 Individual Medley",
+    "best_time": "1:17.11",
+    "best_wa": 365
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "41.27",
+    "best_wa": 169
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:26.32",
+    "best_wa": 197
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "3:07.67",
+    "best_wa": 203
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "400 Freestyle",
+    "best_time": "6:34.69",
+    "best_wa": 198
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "800 Freestyle",
+    "best_time": "14:22.77",
+    "best_wa": 169
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "53.82",
+    "best_wa": 146
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:58.62",
+    "best_wa": 145
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "4:18.34",
+    "best_wa": 134
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "48.19",
+    "best_wa": 122
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "45.50",
+    "best_wa": 170
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:40.03",
+    "best_wa": 157
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:31.42",
+    "best_wa": 174
+  },
+  {
+    "tiref": "1649127",
+    "swimmer_name": "Beatrice Stewart",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:38.81",
+    "best_wa": 173
+  },
+  {
+    "tiref": "1656005",
+    "swimmer_name": "Inaaya Munir",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "36.60",
+    "best_wa": 242
+  },
+  {
+    "tiref": "1656005",
+    "swimmer_name": "Inaaya Munir",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:21.68",
+    "best_wa": 232
+  },
+  {
+    "tiref": "1656005",
+    "swimmer_name": "Inaaya Munir",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "2:54.50",
+    "best_wa": 252
+  },
+  {
+    "tiref": "1656005",
+    "swimmer_name": "Inaaya Munir",
+    "yob": 2014,
+    "event": "400 Freestyle",
+    "best_time": "6:33.52",
+    "best_wa": 200
+  },
+  {
+    "tiref": "1656005",
+    "swimmer_name": "Inaaya Munir",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "50.33",
+    "best_wa": 179
+  },
+  {
+    "tiref": "1656005",
+    "swimmer_name": "Inaaya Munir",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:46.53",
+    "best_wa": 200
+  },
+  {
+    "tiref": "1656005",
+    "swimmer_name": "Inaaya Munir",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "4:00.98",
+    "best_wa": 166
+  },
+  {
+    "tiref": "1656005",
+    "swimmer_name": "Inaaya Munir",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "47.89",
+    "best_wa": 124
+  },
+  {
+    "tiref": "1656005",
+    "swimmer_name": "Inaaya Munir",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "44.57",
+    "best_wa": 181
+  },
+  {
+    "tiref": "1656005",
+    "swimmer_name": "Inaaya Munir",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:33.25",
+    "best_wa": 194
+  },
+  {
+    "tiref": "1656005",
+    "swimmer_name": "Inaaya Munir",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:40.24",
+    "best_wa": 153
+  },
+  {
+    "tiref": "1656005",
+    "swimmer_name": "Inaaya Munir",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:36.02",
+    "best_wa": 189
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "36.37",
+    "best_wa": 247
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:17.32",
+    "best_wa": 274
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "3:08.21",
+    "best_wa": 201
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "400 Freestyle",
+    "best_time": "5:56.26",
+    "best_wa": 269
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "800 Freestyle",
+    "best_time": "13:17.57",
+    "best_wa": 214
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "56.18",
+    "best_wa": 128
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "41.13",
+    "best_wa": 197
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "39.32",
+    "best_wa": 264
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:22.75",
+    "best_wa": 278
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "2:59.26",
+    "best_wa": 285
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:10.86",
+    "best_wa": 258
+  },
+  {
+    "tiref": "1656008",
+    "swimmer_name": "Imogen Douglas",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:33.66",
+    "best_wa": 203
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "32.35",
+    "best_wa": 351
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:11.47",
+    "best_wa": 347
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "2:37.09",
+    "best_wa": 346
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "400 Freestyle",
+    "best_time": "5:38.40",
+    "best_wa": 314
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "800 Freestyle",
+    "best_time": "11:38.76",
+    "best_wa": 318
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "1500 Freestyle",
+    "best_time": "23:36.26",
+    "best_wa": 263
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "52.37",
+    "best_wa": 158
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:39.36",
+    "best_wa": 247
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "3:58.48",
+    "best_wa": 171
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "35.10",
+    "best_wa": 317
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "100 Butterfly",
+    "best_time": "1:18.50",
+    "best_wa": 302
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "200 Butterfly",
+    "best_time": "3:07.85",
+    "best_wa": 256
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "37.26",
+    "best_wa": 310
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:19.76",
+    "best_wa": 310
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "2:52.10",
+    "best_wa": 322
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "2:54.27",
+    "best_wa": 339
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "400 Individual Medley",
+    "best_time": "6:15.45",
+    "best_wa": 315
+  },
+  {
+    "tiref": "1656013",
+    "swimmer_name": "Scarlett Ye",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:23.31",
+    "best_wa": 289
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "33.35",
+    "best_wa": 320
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:16.57",
+    "best_wa": 282
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "2:46.96",
+    "best_wa": 288
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "400 Freestyle",
+    "best_time": "6:16.65",
+    "best_wa": 228
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "47.41",
+    "best_wa": 214
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:44.47",
+    "best_wa": 212
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "3:45.65",
+    "best_wa": 202
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "38.85",
+    "best_wa": 233
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "100 Butterfly",
+    "best_time": "1:32.31",
+    "best_wa": 186
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "37.30",
+    "best_wa": 309
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:23.73",
+    "best_wa": 268
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "2:58.31",
+    "best_wa": 290
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:10.87",
+    "best_wa": 258
+  },
+  {
+    "tiref": "1656014",
+    "swimmer_name": "Serena Yao",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:24.65",
+    "best_wa": 275
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "50 Freestyle",
+    "best_time": "35.59",
+    "best_wa": 263
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "100 Freestyle",
+    "best_time": "1:20.08",
+    "best_wa": 247
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "200 Freestyle",
+    "best_time": "3:09.63",
+    "best_wa": 196
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "400 Freestyle",
+    "best_time": "6:14.58",
+    "best_wa": 232
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "50 Breaststroke",
+    "best_time": "54.12",
+    "best_wa": 144
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "100 Breaststroke",
+    "best_time": "1:54.00",
+    "best_wa": 163
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "50 Butterfly",
+    "best_time": "41.72",
+    "best_wa": 188
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "100 Butterfly",
+    "best_time": "1:36.20",
+    "best_wa": 164
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "50 Backstroke",
+    "best_time": "41.23",
+    "best_wa": 229
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "100 Backstroke",
+    "best_time": "1:27.41",
+    "best_wa": 236
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "200 Backstroke",
+    "best_time": "2:59.60",
+    "best_wa": 283
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "200 Individual Medley",
+    "best_time": "3:13.57",
+    "best_wa": 248
+  },
+  {
+    "tiref": "1660435",
+    "swimmer_name": "Cora Summers",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:33.84",
+    "best_wa": 202
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "33.62",
+    "best_wa": 313
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:22.08",
+    "best_wa": 229
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "2:42.77",
+    "best_wa": 311
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "400 Freestyle",
+    "best_time": "6:27.56",
+    "best_wa": 209
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "1500 Freestyle",
+    "best_time": "22:47.97",
+    "best_wa": 292
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "42.04",
+    "best_wa": 307
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:31.87",
+    "best_wa": 312
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "3:20.07",
+    "best_wa": 290
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "36.75",
+    "best_wa": 276
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "100 Butterfly",
+    "best_time": "2:01.69",
+    "best_wa": 81
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "36.73",
+    "best_wa": 324
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:21.47",
+    "best_wa": 291
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "2:57.67",
+    "best_wa": 293
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "2:56.69",
+    "best_wa": 326
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "400 Individual Medley",
+    "best_time": "6:26.57",
+    "best_wa": 288
+  },
+  {
+    "tiref": "1660437",
+    "swimmer_name": "Sophia Zhou",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:29.26",
+    "best_wa": 235
+  },
+  {
+    "tiref": "1660443",
+    "swimmer_name": "Zoe Hrstic",
+    "yob": 2013,
+    "event": "50 Freestyle",
+    "best_time": "37.39",
+    "best_wa": 227
+  },
+  {
+    "tiref": "1660443",
+    "swimmer_name": "Zoe Hrstic",
+    "yob": 2013,
+    "event": "100 Freestyle",
+    "best_time": "1:27.38",
+    "best_wa": 190
+  },
+  {
+    "tiref": "1660443",
+    "swimmer_name": "Zoe Hrstic",
+    "yob": 2013,
+    "event": "200 Freestyle",
+    "best_time": "3:13.42",
+    "best_wa": 185
+  },
+  {
+    "tiref": "1660443",
+    "swimmer_name": "Zoe Hrstic",
+    "yob": 2013,
+    "event": "50 Breaststroke",
+    "best_time": "50.34",
+    "best_wa": 178
+  },
+  {
+    "tiref": "1660443",
+    "swimmer_name": "Zoe Hrstic",
+    "yob": 2013,
+    "event": "100 Breaststroke",
+    "best_time": "1:49.64",
+    "best_wa": 183
+  },
+  {
+    "tiref": "1660443",
+    "swimmer_name": "Zoe Hrstic",
+    "yob": 2013,
+    "event": "50 Butterfly",
+    "best_time": "45.54",
+    "best_wa": 145
+  },
+  {
+    "tiref": "1660443",
+    "swimmer_name": "Zoe Hrstic",
+    "yob": 2013,
+    "event": "200 Individual Medley",
+    "best_time": "3:41.82",
+    "best_wa": 164
+  },
+  {
+    "tiref": "1660443",
+    "swimmer_name": "Zoe Hrstic",
+    "yob": 2013,
+    "event": "100 Individual Medley",
+    "best_time": "1:34.90",
+    "best_wa": 195
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "50 Freestyle",
+    "best_time": "39.29",
+    "best_wa": 196
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "100 Freestyle",
+    "best_time": "1:27.40",
+    "best_wa": 190
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "200 Freestyle",
+    "best_time": "3:11.35",
+    "best_wa": 191
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "400 Freestyle",
+    "best_time": "6:57.58",
+    "best_wa": 167
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "50 Breaststroke",
+    "best_time": "44.89",
+    "best_wa": 252
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "100 Breaststroke",
+    "best_time": "1:40.05",
+    "best_wa": 242
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "200 Breaststroke",
+    "best_time": "3:30.32",
+    "best_wa": 250
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "50 Butterfly",
+    "best_time": "46.16",
+    "best_wa": 139
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "50 Backstroke",
+    "best_time": "44.96",
+    "best_wa": 176
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "100 Backstroke",
+    "best_time": "1:37.39",
+    "best_wa": 170
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "200 Backstroke",
+    "best_time": "3:31.49",
+    "best_wa": 173
+  },
+  {
+    "tiref": "1665041",
+    "swimmer_name": "Nancy Owen",
+    "yob": 2013,
+    "event": "100 Individual Medley",
+    "best_time": "1:38.07",
+    "best_wa": 177
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "50 Freestyle",
+    "best_time": "33.04",
+    "best_wa": 329
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "100 Freestyle",
+    "best_time": "1:13.55",
+    "best_wa": 318
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "200 Freestyle",
+    "best_time": "2:39.55",
+    "best_wa": 330
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "400 Freestyle",
+    "best_time": "5:45.72",
+    "best_wa": 295
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "50 Breaststroke",
+    "best_time": "45.06",
+    "best_wa": 249
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "100 Breaststroke",
+    "best_time": "1:37.93",
+    "best_wa": 258
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "200 Breaststroke",
+    "best_time": "3:28.31",
+    "best_wa": 257
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "50 Butterfly",
+    "best_time": "44.13",
+    "best_wa": 159
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "50 Backstroke",
+    "best_time": "38.12",
+    "best_wa": 289
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "100 Backstroke",
+    "best_time": "1:23.19",
+    "best_wa": 273
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "200 Backstroke",
+    "best_time": "2:56.19",
+    "best_wa": 300
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "200 Individual Medley",
+    "best_time": "3:06.38",
+    "best_wa": 277
+  },
+  {
+    "tiref": "1665050",
+    "swimmer_name": "Liza Zapisetskaya",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:27.66",
+    "best_wa": 248
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "36.82",
+    "best_wa": 238
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:20.36",
+    "best_wa": 244
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "3:08.90",
+    "best_wa": 199
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "400 Freestyle",
+    "best_time": "7:44.35",
+    "best_wa": 121
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "800 Freestyle",
+    "best_time": "13:46.11",
+    "best_wa": 193
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "1500 Freestyle",
+    "best_time": "26:28.67",
+    "best_wa": 186
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "52.07",
+    "best_wa": 161
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:53.24",
+    "best_wa": 167
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "3:53.26",
+    "best_wa": 183
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "46.17",
+    "best_wa": 139
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "100 Butterfly",
+    "best_time": "1:48.84",
+    "best_wa": 113
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "200 Butterfly",
+    "best_time": "3:45.87",
+    "best_wa": 147
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "43.04",
+    "best_wa": 201
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:30.90",
+    "best_wa": 209
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:15.05",
+    "best_wa": 221
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:23.46",
+    "best_wa": 213
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "400 Individual Medley",
+    "best_time": "7:12.02",
+    "best_wa": 206
+  },
+  {
+    "tiref": "1672532",
+    "swimmer_name": "Delphis Law",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:36.85",
+    "best_wa": 184
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "50 Freestyle",
+    "best_time": "33.57",
+    "best_wa": 314
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "100 Freestyle",
+    "best_time": "1:11.90",
+    "best_wa": 341
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "200 Freestyle",
+    "best_time": "2:32.89",
+    "best_wa": 375
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "400 Freestyle",
+    "best_time": "5:13.70",
+    "best_wa": 395
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "800 Freestyle",
+    "best_time": "10:55.32",
+    "best_wa": 386
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "1500 Freestyle",
+    "best_time": "20:39.57",
+    "best_wa": 393
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "50 Breaststroke",
+    "best_time": "46.50",
+    "best_wa": 227
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "100 Breaststroke",
+    "best_time": "1:38.26",
+    "best_wa": 255
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "200 Breaststroke",
+    "best_time": "3:30.60",
+    "best_wa": 249
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "50 Butterfly",
+    "best_time": "34.97",
+    "best_wa": 320
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "100 Butterfly",
+    "best_time": "1:15.84",
+    "best_wa": 335
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "200 Butterfly",
+    "best_time": "2:53.76",
+    "best_wa": 323
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "50 Backstroke",
+    "best_time": "38.38",
+    "best_wa": 284
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "100 Backstroke",
+    "best_time": "1:20.55",
+    "best_wa": 301
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "200 Backstroke",
+    "best_time": "2:49.96",
+    "best_wa": 335
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "200 Individual Medley",
+    "best_time": "2:52.22",
+    "best_wa": 352
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "400 Individual Medley",
+    "best_time": "6:00.38",
+    "best_wa": 356
+  },
+  {
+    "tiref": "1681926",
+    "swimmer_name": "Sakura Yamada-Orr",
+    "yob": 2013,
+    "event": "100 Individual Medley",
+    "best_time": "1:22.99",
+    "best_wa": 292
+  },
+  {
+    "tiref": "1693584",
+    "swimmer_name": "Elodie Franklin-Smith",
+    "yob": 2015,
+    "event": "50 Freestyle",
+    "best_time": "40.41",
+    "best_wa": 180
+  },
+  {
+    "tiref": "1693584",
+    "swimmer_name": "Elodie Franklin-Smith",
+    "yob": 2015,
+    "event": "100 Freestyle",
+    "best_time": "1:25.72",
+    "best_wa": 201
+  },
+  {
+    "tiref": "1693584",
+    "swimmer_name": "Elodie Franklin-Smith",
+    "yob": 2015,
+    "event": "50 Breaststroke",
+    "best_time": "53.19",
+    "best_wa": 151
+  },
+  {
+    "tiref": "1693584",
+    "swimmer_name": "Elodie Franklin-Smith",
+    "yob": 2015,
+    "event": "100 Breaststroke",
+    "best_time": "1:52.90",
+    "best_wa": 168
+  },
+  {
+    "tiref": "1693584",
+    "swimmer_name": "Elodie Franklin-Smith",
+    "yob": 2015,
+    "event": "50 Butterfly",
+    "best_time": "43.64",
+    "best_wa": 165
+  },
+  {
+    "tiref": "1693584",
+    "swimmer_name": "Elodie Franklin-Smith",
+    "yob": 2015,
+    "event": "100 Butterfly",
+    "best_time": "1:44.53",
+    "best_wa": 128
+  },
+  {
+    "tiref": "1693584",
+    "swimmer_name": "Elodie Franklin-Smith",
+    "yob": 2015,
+    "event": "50 Backstroke",
+    "best_time": "46.16",
+    "best_wa": 163
+  },
+  {
+    "tiref": "1693584",
+    "swimmer_name": "Elodie Franklin-Smith",
+    "yob": 2015,
+    "event": "100 Backstroke",
+    "best_time": "1:39.04",
+    "best_wa": 162
+  },
+  {
+    "tiref": "1693584",
+    "swimmer_name": "Elodie Franklin-Smith",
+    "yob": 2015,
+    "event": "200 Individual Medley",
+    "best_time": "3:33.38",
+    "best_wa": 185
+  },
+  {
+    "tiref": "1693584",
+    "swimmer_name": "Elodie Franklin-Smith",
+    "yob": 2015,
+    "event": "400 Individual Medley",
+    "best_time": "7:35.34",
+    "best_wa": 176
+  },
+  {
+    "tiref": "1693584",
+    "swimmer_name": "Elodie Franklin-Smith",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:38.80",
+    "best_wa": 173
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "33.47",
+    "best_wa": 317
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:13.03",
+    "best_wa": 325
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "2:42.92",
+    "best_wa": 310
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "400 Freestyle",
+    "best_time": "5:45.86",
+    "best_wa": 295
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "800 Freestyle",
+    "best_time": "13:07.02",
+    "best_wa": 223
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "1500 Freestyle",
+    "best_time": "24:04.17",
+    "best_wa": 248
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "49.10",
+    "best_wa": 192
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:53.07",
+    "best_wa": 167
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "3:45.74",
+    "best_wa": 202
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "39.70",
+    "best_wa": 219
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "100 Butterfly",
+    "best_time": "1:31.09",
+    "best_wa": 193
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "200 Butterfly",
+    "best_time": "3:14.79",
+    "best_wa": 229
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "38.56",
+    "best_wa": 280
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:27.96",
+    "best_wa": 231
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "2:57.80",
+    "best_wa": 292
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:14.78",
+    "best_wa": 243
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "400 Individual Medley",
+    "best_time": "6:25.04",
+    "best_wa": 292
+  },
+  {
+    "tiref": "1693589",
+    "swimmer_name": "Bronwyn Hill",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:31.13",
+    "best_wa": 221
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "50 Freestyle",
+    "best_time": "34.82",
+    "best_wa": 281
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "100 Freestyle",
+    "best_time": "1:14.81",
+    "best_wa": 303
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "400 Freestyle",
+    "best_time": "6:33.85",
+    "best_wa": 199
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "50 Breaststroke",
+    "best_time": "39.66",
+    "best_wa": 366
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "100 Breaststroke",
+    "best_time": "1:27.16",
+    "best_wa": 366
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "200 Breaststroke",
+    "best_time": "3:08.04",
+    "best_wa": 349
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "50 Butterfly",
+    "best_time": "39.70",
+    "best_wa": 219
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "100 Butterfly",
+    "best_time": "1:30.71",
+    "best_wa": 196
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "50 Backstroke",
+    "best_time": "41.49",
+    "best_wa": 224
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "100 Backstroke",
+    "best_time": "1:31.30",
+    "best_wa": 207
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "200 Individual Medley",
+    "best_time": "2:57.71",
+    "best_wa": 320
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "400 Individual Medley",
+    "best_time": "7:16.45",
+    "best_wa": 200
+  },
+  {
+    "tiref": "1693722",
+    "swimmer_name": "Jessica Bedford",
+    "yob": 2013,
+    "event": "100 Individual Medley",
+    "best_time": "1:25.12",
+    "best_wa": 271
+  },
+  {
+    "tiref": "1702480",
+    "swimmer_name": "Isla Compton",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "48.99",
+    "best_wa": 101
+  },
+  {
+    "tiref": "1702480",
+    "swimmer_name": "Isla Compton",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:44.07",
+    "best_wa": 112
+  },
+  {
+    "tiref": "1702480",
+    "swimmer_name": "Isla Compton",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "53.92",
+    "best_wa": 145
+  },
+  {
+    "tiref": "1702480",
+    "swimmer_name": "Isla Compton",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "2:00.15",
+    "best_wa": 139
+  },
+  {
+    "tiref": "1702480",
+    "swimmer_name": "Isla Compton",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "55.38",
+    "best_wa": 80
+  },
+  {
+    "tiref": "1702480",
+    "swimmer_name": "Isla Compton",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "53.66",
+    "best_wa": 103
+  },
+  {
+    "tiref": "1702480",
+    "swimmer_name": "Isla Compton",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "4:05.28",
+    "best_wa": 111
+  },
+  {
+    "tiref": "1702480",
+    "swimmer_name": "Isla Compton",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:51.44",
+    "best_wa": 120
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "37.53",
+    "best_wa": 225
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:26.57",
+    "best_wa": 195
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "3:24.43",
+    "best_wa": 157
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "400 Freestyle",
+    "best_time": "6:12.43",
+    "best_wa": 236
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "44.27",
+    "best_wa": 263
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:39.86",
+    "best_wa": 243
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "3:25.31",
+    "best_wa": 268
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "38.50",
+    "best_wa": 240
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "100 Butterfly",
+    "best_time": "1:33.08",
+    "best_wa": 181
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "200 Butterfly",
+    "best_time": "3:23.51",
+    "best_wa": 201
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "43.44",
+    "best_wa": 195
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:34.82",
+    "best_wa": 184
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:14.70",
+    "best_wa": 222
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:09.35",
+    "best_wa": 265
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "400 Individual Medley",
+    "best_time": "6:38.77",
+    "best_wa": 262
+  },
+  {
+    "tiref": "1702482",
+    "swimmer_name": "Emilia Sharp",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:30.32",
+    "best_wa": 227
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "36.56",
+    "best_wa": 243
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:26.17",
+    "best_wa": 198
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "3:06.86",
+    "best_wa": 205
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "400 Freestyle",
+    "best_time": "7:17.44",
+    "best_wa": 145
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "800 Freestyle",
+    "best_time": "13:32.95",
+    "best_wa": 202
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "1500 Freestyle",
+    "best_time": "26:31.54",
+    "best_wa": 185
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "54.33",
+    "best_wa": 142
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:46.48",
+    "best_wa": 200
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "3:40.78",
+    "best_wa": 216
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "42.24",
+    "best_wa": 182
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "100 Butterfly",
+    "best_time": "1:46.49",
+    "best_wa": 121
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "200 Butterfly",
+    "best_time": "3:42.59",
+    "best_wa": 154
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "41.73",
+    "best_wa": 221
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:30.32",
+    "best_wa": 213
+  },
+  {
+    "tiref": "1706072",
+    "swimmer_name": "Sophie Ellis",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:39.53",
+    "best_wa": 169
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "40.96",
+    "best_wa": 173
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:31.59",
+    "best_wa": 165
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "3:40.74",
+    "best_wa": 124
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "400 Freestyle",
+    "best_time": "6:36.15",
+    "best_wa": 196
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "56.54",
+    "best_wa": 126
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "1:51.72",
+    "best_wa": 173
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "3:59.35",
+    "best_wa": 169
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "49.43",
+    "best_wa": 113
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "100 Butterfly",
+    "best_time": "1:57.24",
+    "best_wa": 90
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "45.16",
+    "best_wa": 174
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "1:36.20",
+    "best_wa": 177
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "200 Backstroke",
+    "best_time": "3:30.92",
+    "best_wa": 175
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "3:35.02",
+    "best_wa": 181
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "400 Individual Medley",
+    "best_time": "7:12.75",
+    "best_wa": 205
+  },
+  {
+    "tiref": "1707039",
+    "swimmer_name": "Annabel Pascoe",
+    "yob": 2014,
+    "event": "100 Individual Medley",
+    "best_time": "1:40.18",
+    "best_wa": 166
+  },
+  {
+    "tiref": "1707560",
+    "swimmer_name": "Farah Behvandi",
+    "yob": 2014,
+    "event": "50 Freestyle",
+    "best_time": "43.29",
+    "best_wa": 146
+  },
+  {
+    "tiref": "1707560",
+    "swimmer_name": "Farah Behvandi",
+    "yob": 2014,
+    "event": "100 Freestyle",
+    "best_time": "1:40.11",
+    "best_wa": 126
+  },
+  {
+    "tiref": "1707560",
+    "swimmer_name": "Farah Behvandi",
+    "yob": 2014,
+    "event": "200 Freestyle",
+    "best_time": "3:31.02",
+    "best_wa": 142
+  },
+  {
+    "tiref": "1707560",
+    "swimmer_name": "Farah Behvandi",
+    "yob": 2014,
+    "event": "50 Breaststroke",
+    "best_time": "58.20",
+    "best_wa": 115
+  },
+  {
+    "tiref": "1707560",
+    "swimmer_name": "Farah Behvandi",
+    "yob": 2014,
+    "event": "100 Breaststroke",
+    "best_time": "2:03.52",
+    "best_wa": 128
+  },
+  {
+    "tiref": "1707560",
+    "swimmer_name": "Farah Behvandi",
+    "yob": 2014,
+    "event": "200 Breaststroke",
+    "best_time": "4:46.68",
+    "best_wa": 98
+  },
+  {
+    "tiref": "1707560",
+    "swimmer_name": "Farah Behvandi",
+    "yob": 2014,
+    "event": "50 Butterfly",
+    "best_time": "1:00.34",
+    "best_wa": 62
+  },
+  {
+    "tiref": "1707560",
+    "swimmer_name": "Farah Behvandi",
+    "yob": 2014,
+    "event": "50 Backstroke",
+    "best_time": "57.18",
+    "best_wa": 85
+  },
+  {
+    "tiref": "1707560",
+    "swimmer_name": "Farah Behvandi",
+    "yob": 2014,
+    "event": "100 Backstroke",
+    "best_time": "2:02.81",
+    "best_wa": 85
+  },
+  {
+    "tiref": "1707560",
+    "swimmer_name": "Farah Behvandi",
+    "yob": 2014,
+    "event": "200 Individual Medley",
+    "best_time": "4:06.96",
+    "best_wa": 119
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "50 Freestyle",
+    "best_time": "38.60",
+    "best_wa": 206
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "100 Freestyle",
+    "best_time": "1:19.70",
+    "best_wa": 250
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "200 Freestyle",
+    "best_time": "2:52.11",
+    "best_wa": 263
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "400 Freestyle",
+    "best_time": "5:54.48",
+    "best_wa": 274
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "50 Breaststroke",
+    "best_time": "52.52",
+    "best_wa": 157
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "100 Breaststroke",
+    "best_time": "1:46.26",
+    "best_wa": 202
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "200 Breaststroke",
+    "best_time": "3:40.24",
+    "best_wa": 217
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "50 Butterfly",
+    "best_time": "49.14",
+    "best_wa": 115
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "50 Backstroke",
+    "best_time": "43.65",
+    "best_wa": 193
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "100 Backstroke",
+    "best_time": "1:33.12",
+    "best_wa": 195
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "200 Backstroke",
+    "best_time": "3:14.92",
+    "best_wa": 222
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "200 Individual Medley",
+    "best_time": "3:11.63",
+    "best_wa": 255
+  },
+  {
+    "tiref": "1710705",
+    "swimmer_name": "Polly Clevenger",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:32.60",
+    "best_wa": 210
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "50 Freestyle",
+    "best_time": "33.01",
+    "best_wa": 330
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "100 Freestyle",
+    "best_time": "1:11.91",
+    "best_wa": 341
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "200 Freestyle",
+    "best_time": "2:43.79",
+    "best_wa": 305
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "50 Breaststroke",
+    "best_time": "44.61",
+    "best_wa": 257
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "100 Breaststroke",
+    "best_time": "1:36.90",
+    "best_wa": 266
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "200 Breaststroke",
+    "best_time": "3:27.38",
+    "best_wa": 260
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "50 Butterfly",
+    "best_time": "35.39",
+    "best_wa": 309
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "100 Butterfly",
+    "best_time": "1:22.92",
+    "best_wa": 256
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "200 Butterfly",
+    "best_time": "3:10.42",
+    "best_wa": 246
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "50 Backstroke",
+    "best_time": "38.49",
+    "best_wa": 281
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "200 Backstroke",
+    "best_time": "3:02.00",
+    "best_wa": 272
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "200 Individual Medley",
+    "best_time": "3:02.49",
+    "best_wa": 296
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "400 Individual Medley",
+    "best_time": "6:30.37",
+    "best_wa": 280
+  },
+  {
+    "tiref": "1714701",
+    "swimmer_name": "Tiana Tsang",
+    "yob": 2010,
+    "event": "100 Individual Medley",
+    "best_time": "1:23.67",
+    "best_wa": 285
+  },
+  {
+    "tiref": "1716439",
+    "swimmer_name": "Amelie Burger",
+    "yob": 2015,
+    "event": "50 Freestyle",
+    "best_time": "36.14",
+    "best_wa": 252
+  },
+  {
+    "tiref": "1716439",
+    "swimmer_name": "Amelie Burger",
+    "yob": 2015,
+    "event": "100 Freestyle",
+    "best_time": "1:21.14",
+    "best_wa": 237
+  },
+  {
+    "tiref": "1716439",
+    "swimmer_name": "Amelie Burger",
+    "yob": 2015,
+    "event": "200 Freestyle",
+    "best_time": "2:51.73",
+    "best_wa": 265
+  },
+  {
+    "tiref": "1716439",
+    "swimmer_name": "Amelie Burger",
+    "yob": 2015,
+    "event": "50 Breaststroke",
+    "best_time": "47.55",
+    "best_wa": 212
+  },
+  {
+    "tiref": "1716439",
+    "swimmer_name": "Amelie Burger",
+    "yob": 2015,
+    "event": "100 Breaststroke",
+    "best_time": "1:54.70",
+    "best_wa": 160
+  },
+  {
+    "tiref": "1716439",
+    "swimmer_name": "Amelie Burger",
+    "yob": 2015,
+    "event": "50 Butterfly",
+    "best_time": "47.79",
+    "best_wa": 125
+  },
+  {
+    "tiref": "1716439",
+    "swimmer_name": "Amelie Burger",
+    "yob": 2015,
+    "event": "50 Backstroke",
+    "best_time": "44.88",
+    "best_wa": 177
+  },
+  {
+    "tiref": "1716439",
+    "swimmer_name": "Amelie Burger",
+    "yob": 2015,
+    "event": "100 Backstroke",
+    "best_time": "1:33.83",
+    "best_wa": 190
+  },
+  {
+    "tiref": "1716439",
+    "swimmer_name": "Amelie Burger",
+    "yob": 2015,
+    "event": "200 Backstroke",
+    "best_time": "3:16.68",
+    "best_wa": 216
+  },
+  {
+    "tiref": "1716439",
+    "swimmer_name": "Amelie Burger",
+    "yob": 2015,
+    "event": "200 Individual Medley",
+    "best_time": "3:21.61",
+    "best_wa": 219
+  },
+  {
+    "tiref": "1716439",
+    "swimmer_name": "Amelie Burger",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:33.50",
+    "best_wa": 204
+  },
+  {
+    "tiref": "1716440",
+    "swimmer_name": "Lila Nazeri",
+    "yob": 2015,
+    "event": "50 Freestyle",
+    "best_time": "44.16",
+    "best_wa": 138
+  },
+  {
+    "tiref": "1716440",
+    "swimmer_name": "Lila Nazeri",
+    "yob": 2015,
+    "event": "50 Breaststroke",
+    "best_time": "55.35",
+    "best_wa": 134
+  },
+  {
+    "tiref": "1716440",
+    "swimmer_name": "Lila Nazeri",
+    "yob": 2015,
+    "event": "100 Breaststroke",
+    "best_time": "2:05.02",
+    "best_wa": 124
+  },
+  {
+    "tiref": "1716440",
+    "swimmer_name": "Lila Nazeri",
+    "yob": 2015,
+    "event": "50 Backstroke",
+    "best_time": "47.81",
+    "best_wa": 146
+  },
+  {
+    "tiref": "1716440",
+    "swimmer_name": "Lila Nazeri",
+    "yob": 2015,
+    "event": "100 Backstroke",
+    "best_time": "1:43.16",
+    "best_wa": 143
+  },
+  {
+    "tiref": "1716440",
+    "swimmer_name": "Lila Nazeri",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:49.09",
+    "best_wa": 128
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "50 Freestyle",
+    "best_time": "43.26",
+    "best_wa": 146
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "100 Freestyle",
+    "best_time": "1:58.90",
+    "best_wa": 75
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "200 Freestyle",
+    "best_time": "3:34.14",
+    "best_wa": 136
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "400 Freestyle",
+    "best_time": "7:26.34",
+    "best_wa": 137
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "50 Breaststroke",
+    "best_time": "59.11",
+    "best_wa": 110
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "100 Breaststroke",
+    "best_time": "2:03.70",
+    "best_wa": 128
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "200 Breaststroke",
+    "best_time": "3:50.16",
+    "best_wa": 190
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "50 Butterfly",
+    "best_time": "57.73",
+    "best_wa": 71
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "100 Butterfly",
+    "best_time": "2:03.00",
+    "best_wa": 78
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "50 Backstroke",
+    "best_time": "45.21",
+    "best_wa": 173
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "100 Backstroke",
+    "best_time": "1:39.85",
+    "best_wa": 158
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "200 Individual Medley",
+    "best_time": "3:35.44",
+    "best_wa": 179
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "400 Individual Medley",
+    "best_time": "8:17.61",
+    "best_wa": 135
+  },
+  {
+    "tiref": "1732646",
+    "swimmer_name": "Giana Tsang",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:57.37",
+    "best_wa": 103
+  },
+  {
+    "tiref": "1735667",
+    "swimmer_name": "Chiu Yuet Cheng",
+    "yob": 2015,
+    "event": "50 Freestyle",
+    "best_time": "43.58",
+    "best_wa": 143
+  },
+  {
+    "tiref": "1735667",
+    "swimmer_name": "Chiu Yuet Cheng",
+    "yob": 2015,
+    "event": "100 Freestyle",
+    "best_time": "1:35.22",
+    "best_wa": 146
+  },
+  {
+    "tiref": "1735667",
+    "swimmer_name": "Chiu Yuet Cheng",
+    "yob": 2015,
+    "event": "200 Freestyle",
+    "best_time": "3:37.26",
+    "best_wa": 130
+  },
+  {
+    "tiref": "1735667",
+    "swimmer_name": "Chiu Yuet Cheng",
+    "yob": 2015,
+    "event": "400 Freestyle",
+    "best_time": "7:55.30",
+    "best_wa": 113
+  },
+  {
+    "tiref": "1735667",
+    "swimmer_name": "Chiu Yuet Cheng",
+    "yob": 2015,
+    "event": "50 Breaststroke",
+    "best_time": "52.20",
+    "best_wa": 160
+  },
+  {
+    "tiref": "1735667",
+    "swimmer_name": "Chiu Yuet Cheng",
+    "yob": 2015,
+    "event": "50 Butterfly",
+    "best_time": "1:03.12",
+    "best_wa": 54
+  },
+  {
+    "tiref": "1735667",
+    "swimmer_name": "Chiu Yuet Cheng",
+    "yob": 2015,
+    "event": "50 Backstroke",
+    "best_time": "45.18",
+    "best_wa": 174
+  },
+  {
+    "tiref": "1735667",
+    "swimmer_name": "Chiu Yuet Cheng",
+    "yob": 2015,
+    "event": "100 Backstroke",
+    "best_time": "1:35.58",
+    "best_wa": 180
+  },
+  {
+    "tiref": "1735667",
+    "swimmer_name": "Chiu Yuet Cheng",
+    "yob": 2015,
+    "event": "200 Backstroke",
+    "best_time": "3:21.61",
+    "best_wa": 200
+  },
+  {
+    "tiref": "1735667",
+    "swimmer_name": "Chiu Yuet Cheng",
+    "yob": 2015,
+    "event": "100 Individual Medley",
+    "best_time": "1:39.57",
+    "best_wa": 169
+  }
+]
