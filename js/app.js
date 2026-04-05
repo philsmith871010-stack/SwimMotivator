@@ -195,22 +195,26 @@ function refresh() {
     pbs = derivePBsFromHistory(history, tiref, swimmer.name, swimmer.yob);
   }
 
+  // Merge SC/LC into single events using British Swimming conversion
+  const mergedPBs = mergePBsByCourse(pbs);
+
   const ranks = ALL_RANKS.filter(r => String(r.tiref) === String(tiref));
-  const cur = ranks.filter(r => r.year === 2026);
-  const prev = ranks.filter(r => r.year === 2025);
+  const mergedRanks = mergeRanksByCourse(ranks);
+  const cur = mergedRanks.filter(r => r.year === 2026);
+  const prev = mergedRanks.filter(r => r.year === 2025);
 
   updatePBBanner(history);
-  updateHeroStats(pbs, cur, prev, history);
-  updateSeasonSummary(history, ranks, cur, prev);
-  updateRankings(pbs, ranks);
+  updateHeroStats(mergedPBs, cur, prev, history);
+  updateSeasonSummary(history, mergedRanks, cur, prev);
+  updateRankings(mergedPBs, mergedRanks);
   if (selectedEvent) {
     updateProgressChart();
-    updateGoals(ranks, history);
+    updateGoals(mergedRanks, history);
     updateSquad();
     updateCompareInfo();
     updateSwimmerPicker();
   }
-  updateRankProgression(ranks, pbs);
+  updateRankProgression(mergedRanks, mergedPBs);
 }
 
 // Derive PB records from history data (for swimmers without official PB data)
@@ -275,9 +279,9 @@ function updateHeroStats(pbs, cur, prev, history) {
   // Best event
   const bestPB = pbs.length ? pbs.reduce((a, b) => ((a?.wa_points || 0) > (b?.wa_points || 0) ? a : b), null) : null;
   if (bestPB) {
-    document.getElementById('statBestEvent').textContent = fmtEvent(bestPB.stroke, bestPB.course);
-    const rank = cur.find(r => r.event === bestPB.stroke && r.course === bestPB.course);
-    document.getElementById('statBestRank').textContent = rank ? `#${rank.rank} in England` : bestPB.time;
+    document.getElementById('statBestEvent').textContent = fmtEvent(bestPB.stroke);
+    const rank = cur.find(r => normaliseEvent(r.event) === normaliseEvent(bestPB.stroke));
+    document.getElementById('statBestRank').textContent = rank?.rank ? `#${rank.rank} in England` : bestPB.time;
   } else {
     document.getElementById('statBestEvent').textContent = '-';
     document.getElementById('statBestRank').textContent = '';
@@ -381,32 +385,31 @@ function updateSeasonSummary(history, allRanks, cur, prev) {
 // ── Rankings List ─────────────────────────────────────────
 function updateRankings(pbs, ranks) {
   const container = document.getElementById('rankingsList');
-  const eventMap = new Map();
-  pbs.forEach(pb => {
-    const key = `${pb.stroke}|${pb.course}`;
-    if (!eventMap.has(key) || (pb.wa_points || 0) > (eventMap.get(key).wa_points || 0))
-      eventMap.set(key, pb);
-  });
 
-  const events = [...eventMap.values()]
+  // pbs are already merged by course from mergePBsByCourse
+  const events = [...pbs]
     .sort((a, b) => (b.wa_points || 0) - (a.wa_points || 0))
     .map(pb => {
-      const cr = ranks.find(r => r.event === pb.stroke && r.course === pb.course && r.year === 2026);
-      const pr = ranks.find(r => r.event === pb.stroke && r.course === pb.course && r.year === 2025);
+      const event = normaliseEvent(pb.stroke);
+      const cr = ranks.find(r => normaliseEvent(r.event) === event && r.year === 2026);
+      const pr = ranks.find(r => normaliseEvent(r.event) === event && r.year === 2025);
       let move = null, dir = 'same';
-      if (cr && pr) { move = pr.rank - cr.rank; dir = move > 0 ? 'up' : move < 0 ? 'down' : 'same'; }
+      if (cr?.rank != null && pr?.rank != null) {
+        move = pr.rank - cr.rank;
+        dir = move > 0 ? 'up' : move < 0 ? 'down' : 'same';
+      }
       return { pb, cr, pr, move, dir };
     });
 
   if (!events.length) { container.innerHTML = '<div class="loading">No PB data</div>'; return; }
   if (!selectedEvent) {
-    selectedEvent = { stroke: events[0].pb.stroke, course: events[0].pb.course };
+    selectedEvent = { stroke: events[0].pb.stroke, course: events[0].pb.originalCourse || events[0].pb.course };
     updateProgressChart(); updateGoals(ranks, HISTORY[getSwimmer().tiref] || []); updateSquad(); updateSwimmerPicker();
   }
 
   let html = '';
   events.forEach(e => {
-    const sel = selectedEvent && selectedEvent.stroke === e.pb.stroke && selectedEvent.course === e.pb.course;
+    const sel = selectedEvent && normaliseEvent(selectedEvent.stroke) === normaliseEvent(e.pb.stroke);
     const rank = e.cr?.rank;
     const bc = rank ? (rank <= 50 ? 'gold' : rank <= 100 ? 'silver' : rank <= 250 ? 'cyan' : 'grey') : 'grey';
     let moveHtml = '';
@@ -414,8 +417,11 @@ function updateRankings(pbs, ranks) {
       const arrow = e.dir === 'up' ? '&#9650;' : e.dir === 'down' ? '&#9660;' : '&#8212;';
       moveHtml = `<span class="rank-move ${e.dir}">${arrow}${Math.abs(e.move) || ''}</span>`;
     }
-    html += `<div class="rank-row${sel ? ' selected' : ''}" onclick="selectEvent('${e.pb.stroke}','${e.pb.course}')">
-      <span class="rank-event">${fmtEvent(e.pb.stroke, e.pb.course)}</span>
+    const courseBadge = e.pb.converted
+      ? `<span class="course-badge converted" title="Converted from LC ${e.pb.originalTime}">LC*</span>`
+      : `<span class="course-badge">${e.pb.originalCourse || e.pb.course}</span>`;
+    html += `<div class="rank-row${sel ? ' selected' : ''}" onclick="selectEvent('${e.pb.stroke}','${e.pb.originalCourse || e.pb.course}')">
+      <span class="rank-event">${fmtEvent(e.pb.stroke)} ${courseBadge}</span>
       <span class="rank-time">${e.pb.time}</span>
       <span class="rank-badge ${bc}">${rank ? '#' + rank : '-'}</span>
       ${moveHtml}
@@ -425,13 +431,60 @@ function updateRankings(pbs, ranks) {
 }
 
 function fmtEvent(stroke, course) {
-  return stroke.replace('Freestyle', 'Free').replace('Breaststroke', 'Breast')
+  const short = stroke.replace('Freestyle', 'Free').replace('Breaststroke', 'Breast')
     .replace('Butterfly', 'Fly').replace('Backstroke', 'Back')
-    .replace('Individual Medley', 'IM') + ' ' + course;
+    .replace('Individual Medley', 'IM');
+  return short;
+}
+
+/**
+ * Merge PBs across SC/LC by converting to SC-equivalent.
+ * Returns one entry per event with the fastest SC-equivalent time,
+ * keeping track of original course and whether a conversion was applied.
+ */
+function mergePBsByCourse(pbs) {
+  const byEvent = {};
+  pbs.forEach(pb => {
+    const event = normaliseEvent(pb.stroke);
+    const secs = parseTimeToSeconds(pb.time);
+    if (!secs) return;
+    const isLc = pb.course === 'LC' || pb.course === 'L';
+    const scEquiv = isLc ? toScEquivalent(secs, pb.course, event) : secs;
+    if (!scEquiv) return;
+
+    if (!byEvent[event] || scEquiv < byEvent[event].scEquiv) {
+      byEvent[event] = {
+        ...pb,
+        stroke: event,
+        scEquiv,
+        originalCourse: pb.course,
+        converted: isLc,
+        originalTime: pb.time,
+        originalSecs: secs,
+      };
+    }
+  });
+  return Object.values(byEvent);
+}
+
+/**
+ * Merge ranks across SC/LC for a given year.
+ * For each event, pick the best rank (lowest number).
+ */
+function mergeRanksByCourse(ranks) {
+  const byEventYear = {};
+  ranks.forEach(r => {
+    const event = normaliseEvent(r.event);
+    const key = `${event}|${r.year}`;
+    if (!byEventYear[key] || (r.rank != null && (byEventYear[key].rank == null || r.rank < byEventYear[key].rank))) {
+      byEventYear[key] = { ...r, event };
+    }
+  });
+  return Object.values(byEventYear);
 }
 
 function selectEvent(stroke, course) {
-  selectedEvent = { stroke, course };
+  selectedEvent = { stroke: normaliseEvent(stroke), course };
   comparators = [];
   refresh();
 }
@@ -447,13 +500,20 @@ async function updateProgressChart() {
   for (const [code, name] of Object.entries(strokeNames)) {
     if (name === selectedEvent.stroke) { strokeCode = code; break; }
   }
-  const courseMap = { SC: 'S', LC: 'L' };
-  const hCourse = courseMap[selectedEvent.course] || '';
-
+  // Show both courses by default, converting LC to SC equivalent
   const filterH = (h) => h
     .filter(r => !strokeCode || String(r.stroke_code) === strokeCode)
-    .filter(r => courseFilter ? r.course === courseFilter : (!hCourse || r.course === hCourse))
+    .filter(r => courseFilter ? r.course === courseFilter : true)
     .filter(r => r.time && Number.isFinite(parseTimeToSeconds(r.time)))
+    .map(r => {
+      // Convert LC times to SC equivalent for unified chart
+      if (r.course === 'L' && !courseFilter) {
+        const secs = parseTimeToSeconds(r.time);
+        const scSecs = toScEquivalent(secs, 'LC', selectedEvent.stroke);
+        if (scSecs) return { ...r, time: formatSeconds(scSecs), _converted: true, _originalTime: r.time };
+      }
+      return r;
+    })
     .sort(sortByDate);
 
   const myData = filterH(history);
@@ -500,7 +560,7 @@ async function updateProgressChart() {
     },
   });
 
-  document.getElementById('chartTitle').textContent = `${fmtEvent(selectedEvent.stroke, selectedEvent.course)} — Progress`;
+  document.getElementById('chartTitle').textContent = `${fmtEvent(selectedEvent.stroke)} — Progress`;
 }
 
 function buildDataset(rows, label, color, glow, showPBs) {
@@ -747,7 +807,7 @@ function updateSquad() {
   const swimmer = getSwimmer();
   const swimmerYob = swimmer.yob;
 
-  titleEl.textContent = `${fmtEvent(selectedEvent.stroke, selectedEvent.course)} (YoB ${swimmerYob - 1}-${swimmerYob + 1})`;
+  titleEl.textContent = `${fmtEvent(selectedEvent.stroke)} (YoB ${swimmerYob - 1}-${swimmerYob + 1})`;
 
   const eventName = selectedEvent.stroke;
   let squadRows = ALL_SQUAD.filter(r => r.event === eventName)
@@ -1162,7 +1222,8 @@ function renderNationalTab() {
   if (!activeSwimmer) return;
   const swimmer = activeSwimmer;
   const tiref = String(swimmer.tiref);
-  const ranks = ALL_RANKS.filter(r => String(r.tiref) === tiref);
+  const rawRanks = ALL_RANKS.filter(r => String(r.tiref) === tiref);
+  const ranks = mergeRanksByCourse(rawRanks);
   const year = parseInt(document.getElementById('natYearFilter').value) || 2026;
   const curRanks = ranks.filter(r => r.year === year);
   const prevRanks = ranks.filter(r => r.year === year - 1);
@@ -1347,10 +1408,10 @@ function renderNationalYoY(curRanks, prevRanks, year) {
     return;
   }
 
-  // Merge events from both years
+  // Merge events from both years (already course-merged)
   const eventKeys = new Set();
-  curRanks.forEach(r => eventKeys.add(`${r.event}|${r.course}`));
-  prevRanks.forEach(r => eventKeys.add(`${r.event}|${r.course}`));
+  curRanks.forEach(r => eventKeys.add(normaliseEvent(r.event)));
+  prevRanks.forEach(r => eventKeys.add(normaliseEvent(r.event)));
 
   let html = `<div class="yoy-row" style="font-weight:600;color:var(--text-3);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.5px">
     <span>Event</span>
@@ -1359,13 +1420,12 @@ function renderNationalYoY(curRanks, prevRanks, year) {
     <span>Change</span>
   </div>`;
 
-  [...eventKeys].sort().forEach(key => {
-    const [event, course] = key.split('|');
-    const cur = curRanks.find(r => r.event === event && r.course === course);
-    const prev = prevRanks.find(r => r.event === event && r.course === course);
+  [...eventKeys].sort().forEach(event => {
+    const cur = curRanks.find(r => normaliseEvent(r.event) === event);
+    const prev = prevRanks.find(r => normaliseEvent(r.event) === event);
 
     let changeCls = 'same', changeText = '-';
-    if (cur && prev) {
+    if (cur?.rank != null && prev?.rank != null) {
       const diff = prev.rank - cur.rank;
       changeCls = diff > 0 ? 'up' : diff < 0 ? 'down' : 'same';
       const arrow = diff > 0 ? '\u25B2' : diff < 0 ? '\u25BC' : '\u2014';
@@ -1379,9 +1439,9 @@ function renderNationalYoY(curRanks, prevRanks, year) {
     }
 
     html += `<div class="yoy-row">
-      <span class="yoy-event">${fmtEvent(event, course)}</span>
-      <span class="yoy-prev">${prev ? '#' + prev.rank : '-'}</span>
-      <span class="yoy-curr">${cur ? '#' + cur.rank : '-'}</span>
+      <span class="yoy-event">${fmtEvent(event)}</span>
+      <span class="yoy-prev">${prev?.rank ? '#' + prev.rank : '-'}</span>
+      <span class="yoy-curr">${cur?.rank ? '#' + cur.rank : '-'}</span>
       <span class="yoy-change ${changeCls}">${changeText}</span>
     </div>`;
   });

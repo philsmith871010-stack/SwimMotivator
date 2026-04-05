@@ -32,14 +32,63 @@ def export_config(conn: sqlite3.Connection) -> None:
 
 
 def export_personal_bests(conn: sqlite3.Connection) -> None:
-    rows = _dict_rows(conn, """
-        SELECT pb.tiref, pb.course, pb.stroke, pb.time, pb.wa_points, pb.date, pb.meet,
-               s.name as swimmer_name, s.yob
-        FROM personal_bests pb
-        JOIN swimmers s ON pb.tiref = s.tiref
-        WHERE s.sex = 'F' AND s.club LIKE '%St Albans%'
-        ORDER BY pb.wa_points DESC
-    """)
+    from .parsers import parse_time_seconds
+
+    stroke_map = {str(k): v for k, v in STROKE_NAMES.items()}
+
+    # Get all female Costa swimmer tirefs
+    costa_females = {}
+    for row in conn.execute("""
+        SELECT DISTINCT mr.tiref, mr.swimmer_name, mr.yob
+        FROM meet_results mr
+        WHERE mr.club LIKE '%St Albans%' AND mr.sex = 'F'
+          AND mr.swimmer_name IS NOT NULL
+        GROUP BY mr.tiref
+    """).fetchall():
+        costa_females[str(row[0])] = {"name": row[1], "yob": row[2]}
+    for row in conn.execute(
+        "SELECT tiref, name, yob FROM swimmers WHERE sex = 'F' AND club LIKE '%St Albans%'"
+    ).fetchall():
+        t = str(row[0])
+        if t not in costa_females:
+            costa_females[t] = {"name": row[1], "yob": row[2]}
+
+    # Derive PBs from swimmer_history for each swimmer (both SC and LC)
+    rows = []
+    for tiref, info in costa_females.items():
+        hist = conn.execute("""
+            SELECT stroke_code, course, time, wa_points, date, meet_name
+            FROM swimmer_history
+            WHERE tiref = ? AND time IS NOT NULL AND TRIM(time) <> ''
+        """, (tiref,)).fetchall()
+
+        # Group by (stroke, course) and find fastest time
+        best: dict[tuple, dict] = {}
+        for stroke_code, course, time_str, wa, date_str, meet in hist:
+            secs = parse_time_seconds(time_str)
+            if secs is None:
+                continue
+            key = (stroke_code, course)
+            wa_int = int(wa) if wa and str(wa).strip().isdigit() else 0
+            if key not in best or secs < parse_time_seconds(best[key]["time"]):
+                event_name = stroke_map.get(str(stroke_code))
+                if event_name:
+                    course_label = "SC" if course == "S" else "LC"
+                    best[key] = {
+                        "tiref": tiref,
+                        "course": course_label,
+                        "stroke": event_name,
+                        "time": time_str,
+                        "wa_points": wa_int,
+                        "date": date_str or "",
+                        "meet": meet or "",
+                        "swimmer_name": info["name"],
+                        "yob": info["yob"],
+                    }
+
+        rows.extend(best.values())
+
+    rows.sort(key=lambda r: -(r.get("wa_points") or 0))
     (JSON_DIR / "personal_bests.json").write_text(json.dumps(rows, indent=2), encoding="utf-8")
     unique = len(set(r["tiref"] for r in rows))
     print(f"  personal_bests.json: {len(rows)} PBs for {unique} swimmers")
