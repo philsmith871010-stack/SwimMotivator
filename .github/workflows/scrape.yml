@@ -15,9 +15,9 @@ on:
           - meets-full      # All years meet results (~8 hours, resumable)
           - export          # Just re-export JSON from existing DB
 
-  # Daily at 2am UTC
-  schedule:
-    - cron: '0 2 * * *'
+  # Daily at 2am UTC — DISABLED until bulk load is uploaded to GitHub Release
+  # schedule:
+  #   - cron: '0 2 * * *'
 
 permissions:
   contents: write
