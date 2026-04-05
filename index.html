@@ -22,114 +22,672 @@
     </div>
   </div>
 
+  <!-- Tab Navigation -->
+  <div class="tab-bar">
+    <div class="tab-bar-inner">
+      <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
+      <button class="tab-btn" data-tab="club">Club</button>
+      <button class="tab-btn" data-tab="national">National</button>
+      <button class="tab-btn" data-tab="training">Training</button>
+      <button class="tab-btn" data-tab="county">County</button>
+      <button class="tab-btn" data-tab="region">Region</button>
+    </div>
+  </div>
+
   <div class="container">
     <div class="status-bar"><span id="statusText">Loading...</span></div>
 
-    <!-- PB Celebration Banner (hidden by default) -->
-    <div class="pb-banner" id="pbBanner" style="display:none">
-      <div class="pb-banner-inner">
-        <span class="pb-icon">&#9733;</span>
-        <div class="pb-text">
-          <div class="pb-headline" id="pbHeadline">NEW PB!</div>
-          <div class="pb-detail" id="pbDetail"></div>
-        </div>
-      </div>
-    </div>
+    <!-- ═══ DASHBOARD TAB ═══ -->
+    <div class="tab-panel active" id="panelDashboard">
 
-    <!-- Row 1: Hero Stats -->
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-label">Best Event</div>
-        <div class="stat-value cyan" id="statBestEvent">-</div>
-        <div class="stat-detail" id="statBestRank">-</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Season PBs</div>
-        <div class="stat-value gold" id="statPBCount">-</div>
-        <div class="stat-detail" id="statPBStreak">-</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Events Ranked</div>
-        <div class="stat-value purple" id="statEventsRanked">-</div>
-        <div class="stat-detail" id="statAvgRank">-</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-label">Ranks Improved</div>
-        <div class="stat-value green" id="statTrend">-</div>
-        <div class="stat-detail" id="statTrendDetail">-</div>
-      </div>
-    </div>
-
-    <!-- Season Summary -->
-    <div class="season-summary" id="seasonSummary"></div>
-
-    <!-- Row 2: Rankings + Chart -->
-    <div class="two-col">
-      <div class="col-left">
-        <div class="card">
-          <div class="card-title">My Rankings — England</div>
-          <div class="rankings-list" id="rankingsList">
-            <div class="loading"><div class="loading-spinner"></div></div>
+      <!-- PB Celebration Banner (hidden by default) -->
+      <div class="pb-banner" id="pbBanner" style="display:none">
+        <div class="pb-banner-inner">
+          <span class="pb-icon">&#9733;</span>
+          <div class="pb-text">
+            <div class="pb-headline" id="pbHeadline">NEW PB!</div>
+            <div class="pb-detail" id="pbDetail"></div>
           </div>
         </div>
       </div>
-      <div class="col-right">
+
+      <!-- Row 1: Hero Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Best Event</div>
+          <div class="stat-value cyan" id="statBestEvent">-</div>
+          <div class="stat-detail" id="statBestRank">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Season PBs</div>
+          <div class="stat-value gold" id="statPBCount">-</div>
+          <div class="stat-detail" id="statPBStreak">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Events Ranked</div>
+          <div class="stat-value purple" id="statEventsRanked">-</div>
+          <div class="stat-detail" id="statAvgRank">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Ranks Improved</div>
+          <div class="stat-value green" id="statTrend">-</div>
+          <div class="stat-detail" id="statTrendDetail">-</div>
+        </div>
+      </div>
+
+      <!-- Season Summary -->
+      <div class="season-summary" id="seasonSummary"></div>
+
+      <!-- Row 2: Rankings + Chart -->
+      <div class="two-col">
+        <div class="col-left">
+          <div class="card">
+            <div class="card-title">My Rankings — England</div>
+            <div class="rankings-list" id="rankingsList">
+              <div class="loading"><div class="loading-spinner"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="card">
+            <div class="card-title">
+              <span id="chartTitle">My Progress</span>
+              <select id="chartCourse" class="inline-select">
+                <option value="">All Courses</option>
+                <option value="S">Short Course</option>
+                <option value="L">Long Course</option>
+              </select>
+            </div>
+            <div class="chart-container"><canvas id="progressChart"></canvas></div>
+            <div class="compare-info" id="compareInfo" style="display:none">
+              <span class="compare-label">Comparing with:</span>
+              <span id="compareChips"></span>
+              <button class="compare-clear" onclick="clearComparators()">Clear all</button>
+            </div>
+            <div class="swimmer-picker" id="swimmerPicker" style="display:none">
+              <div class="picker-header" onclick="togglePickerOpen()">
+                <span class="picker-label">Add / Remove Swimmers</span>
+                <span class="picker-toggle" id="pickerToggle">&#9660;</span>
+              </div>
+              <div class="picker-list" id="pickerList"></div>
+            </div>
+          </div>
+          <div class="card goals-card">
+            <div class="card-title">Goals &amp; Projections</div>
+            <div id="goalsContainer">Select an event from My Rankings</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Club Standings + Rank Progression -->
+      <div class="two-col">
+        <div class="col-left">
+          <div class="card">
+            <div class="card-title">
+              Club Standings — <span id="clubEventTitle">Select Event</span>
+            </div>
+            <div class="squad-hint">Click a swimmer to compare on the chart above</div>
+            <div class="squad-list" id="squadContainer">
+              <div class="loading"><div class="loading-spinner"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="card">
+            <div class="card-title">Rank Progression</div>
+            <div class="chart-container chart-short"><canvas id="rankChart"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CLUB TAB ═══ -->
+    <div class="tab-panel" id="panelClub">
+      <!-- Club summary stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Swimmers</div>
+          <div class="stat-value cyan" id="clubStatSwimmers">-</div>
+          <div class="stat-detail" id="clubStatSwimmersDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Club PBs This Season</div>
+          <div class="stat-value gold" id="clubStatPBs">-</div>
+          <div class="stat-detail" id="clubStatPBsDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Events Covered</div>
+          <div class="stat-value purple" id="clubStatEvents">-</div>
+          <div class="stat-detail" id="clubStatEventsDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Top WA Points</div>
+          <div class="stat-value green" id="clubStatTopWA">-</div>
+          <div class="stat-detail" id="clubStatTopWADetail">-</div>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="club-filters">
+        <select id="clubEventFilter" class="filter-select">
+          <option value="">Select Event</option>
+        </select>
+        <select id="clubCourseFilter" class="filter-select">
+          <option value="">All Courses</option>
+          <option value="SC">Short Course</option>
+          <option value="LC">Long Course</option>
+        </select>
+        <select id="clubAgeFilter" class="filter-select">
+          <option value="">All Ages</option>
+        </select>
+        <select id="clubSexFilter" class="filter-select">
+          <option value="">All</option>
+          <option value="F">Girls</option>
+          <option value="M">Boys</option>
+        </select>
+      </div>
+
+      <!-- Club leaderboard -->
+      <div class="card">
+        <div class="card-title">
+          Club Leaderboard — <span id="clubLeaderboardTitle">Select an event</span>
+        </div>
+        <div class="club-leaderboard" id="clubLeaderboard">
+          <div class="club-empty-state">Select an event above to see club rankings</div>
+        </div>
+      </div>
+
+      <!-- Club top performers chart -->
+      <div class="card">
+        <div class="card-title">Top 5 Progression</div>
+        <div class="chart-container"><canvas id="clubChart"></canvas></div>
+      </div>
+    </div>
+
+    <!-- ═══ NATIONAL TAB ═══ -->
+    <div class="tab-panel" id="panelNational">
+      <!-- National overview for selected swimmer -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Best National Rank</div>
+          <div class="stat-value gold" id="natStatBestRank">-</div>
+          <div class="stat-detail" id="natStatBestRankDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Events Ranked</div>
+          <div class="stat-value cyan" id="natStatEventsRanked">-</div>
+          <div class="stat-detail" id="natStatEventsRankedDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Avg National Rank</div>
+          <div class="stat-value purple" id="natStatAvgRank">-</div>
+          <div class="stat-detail" id="natStatAvgRankDetail">-</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Ranks Improved</div>
+          <div class="stat-value green" id="natStatImproved">-</div>
+          <div class="stat-detail" id="natStatImprovedDetail">-</div>
+        </div>
+      </div>
+
+      <!-- National rankings table -->
+      <div class="two-col">
+        <div class="col-left">
+          <div class="card">
+            <div class="card-title">
+              National Rankings — <span id="natSwimmerName">Select Swimmer</span>
+              <select id="natYearFilter" class="inline-select">
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+              </select>
+            </div>
+            <div class="national-rankings-list" id="nationalRankingsList">
+              <div class="club-empty-state">Select a swimmer to view national rankings</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-right">
+          <div class="card">
+            <div class="card-title">National Rank Progression</div>
+            <div class="chart-container"><canvas id="nationalRankChart"></canvas></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Year-on-Year Comparison</div>
+            <div id="natYoyContainer" class="national-yoy">
+              <div class="club-empty-state">Rankings data will appear here</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ TRAINING TAB ═══ -->
+    <div class="tab-panel" id="panelTraining">
+
+      <!-- Training nav: sub-tabs -->
+      <div class="training-nav">
+        <button class="training-nav-btn active" data-view="log" onclick="switchTrainingView('log')">Log Session</button>
+        <button class="training-nav-btn" data-view="history" onclick="switchTrainingView('history')">History</button>
+        <button class="training-nav-btn" data-view="goals" onclick="switchTrainingView('goals')">Goals</button>
+        <button class="training-nav-btn" data-view="events" onclick="switchTrainingView('events')">Events</button>
+        <button class="training-nav-btn" data-view="qualify" onclick="switchTrainingView('qualify')">Qualifying</button>
+        <button class="training-nav-btn" data-view="stats" onclick="switchTrainingView('stats')">Stats</button>
+      </div>
+
+      <!-- ── AI Coach Insight (shown on all views) ── -->
+      <div class="ai-coach-card" id="aiCoachCard">
+        <div class="ai-coach-header">
+          <span class="ai-coach-avatar">&#129302;</span>
+          <span class="ai-coach-name">Coach AI</span>
+          <span class="ai-coach-badge">INSIGHT</span>
+        </div>
+        <div class="ai-coach-message" id="aiCoachMessage">Loading your insights...</div>
+      </div>
+
+      <!-- ── LOG SESSION VIEW ── -->
+      <div class="training-view active" id="trainingLog">
+
+        <!-- Session setup -->
+        <div class="card t-setup-card">
+          <div class="t-row">
+            <div class="t-field">
+              <label class="t-label">Date</label>
+              <input type="date" id="tDate" class="t-input">
+            </div>
+            <div class="t-field">
+              <label class="t-label">Pool</label>
+              <div class="t-toggle-group">
+                <button class="t-toggle active" data-pool="25" onclick="setPool(25)">25m</button>
+                <button class="t-toggle" data-pool="50" onclick="setPool(50)">50m</button>
+              </div>
+            </div>
+            <div class="t-field">
+              <label class="t-label">Duration</label>
+              <div class="t-toggle-group">
+                <button class="t-toggle" onclick="setDuration(45)">45m</button>
+                <button class="t-toggle active" onclick="setDuration(60)">60m</button>
+                <button class="t-toggle" onclick="setDuration(75)">75m</button>
+                <button class="t-toggle" onclick="setDuration(90)">90m</button>
+                <input type="number" id="tDurationCustom" class="t-mini-input" placeholder="min" min="10" max="300" onchange="setDuration(this.value)">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick templates -->
+        <div class="t-templates">
+          <span class="t-templates-label">Quick start:</span>
+          <button class="t-template-btn" onclick="applyTemplate('warmup')">+ Warm Up</button>
+          <button class="t-template-btn" onclick="applyTemplate('main_free')">+ Main (Free)</button>
+          <button class="t-template-btn" onclick="applyTemplate('main_im')">+ Main (IM)</button>
+          <button class="t-template-btn" onclick="applyTemplate('kick')">+ Kick Set</button>
+          <button class="t-template-btn" onclick="applyTemplate('sprint')">+ Sprints</button>
+          <button class="t-template-btn" onclick="applyTemplate('cooldown')">+ Cool Down</button>
+        </div>
+
+        <!-- Set builder -->
+        <div class="card t-builder-card">
+          <div class="t-builder-title">Build a Set</div>
+
+          <div class="t-builder-row">
+            <div class="t-builder-field">
+              <label class="t-label">Reps</label>
+              <div class="t-stepper">
+                <button class="t-stepper-btn" onclick="stepReps(-1)">-</button>
+                <span class="t-stepper-val" id="tReps">1</span>
+                <button class="t-stepper-btn" onclick="stepReps(1)">+</button>
+              </div>
+              <div class="t-presets">
+                <button class="t-preset" onclick="setReps(1)">1</button>
+                <button class="t-preset" onclick="setReps(2)">2</button>
+                <button class="t-preset" onclick="setReps(4)">4</button>
+                <button class="t-preset" onclick="setReps(6)">6</button>
+                <button class="t-preset" onclick="setReps(8)">8</button>
+                <button class="t-preset" onclick="setReps(10)">10</button>
+                <button class="t-preset" onclick="setReps(16)">16</button>
+              </div>
+            </div>
+
+            <div class="t-builder-x">x</div>
+
+            <div class="t-builder-field">
+              <label class="t-label">Distance</label>
+              <div class="t-presets t-presets-dist">
+                <button class="t-preset active" onclick="setDistance(25)">25</button>
+                <button class="t-preset" onclick="setDistance(50)">50</button>
+                <button class="t-preset" onclick="setDistance(100)">100</button>
+                <button class="t-preset" onclick="setDistance(200)">200</button>
+                <button class="t-preset" onclick="setDistance(400)">400</button>
+                <button class="t-preset" onclick="setDistance(800)">800</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-builder-row">
+            <div class="t-builder-field t-builder-wide">
+              <label class="t-label">Stroke</label>
+              <div class="t-stroke-chips">
+                <button class="t-stroke active" data-stroke="free" onclick="setStroke('free')">Freestyle</button>
+                <button class="t-stroke" data-stroke="back" onclick="setStroke('back')">Backstroke</button>
+                <button class="t-stroke" data-stroke="breast" onclick="setStroke('breast')">Breaststroke</button>
+                <button class="t-stroke" data-stroke="fly" onclick="setStroke('fly')">Butterfly</button>
+                <button class="t-stroke" data-stroke="im" onclick="setStroke('im')">IM</button>
+                <button class="t-stroke" data-stroke="kick" onclick="setStroke('kick')">Kick</button>
+                <button class="t-stroke" data-stroke="pull" onclick="setStroke('pull')">Pull</button>
+                <button class="t-stroke" data-stroke="choice" onclick="setStroke('choice')">Choice</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-builder-row">
+            <div class="t-builder-field">
+              <label class="t-label">Intensity</label>
+              <div class="t-intensity-chips">
+                <button class="t-intensity active" data-int="easy" onclick="setIntensity('easy')"><span class="t-int-dot easy"></span>Easy</button>
+                <button class="t-intensity" data-int="moderate" onclick="setIntensity('moderate')"><span class="t-int-dot moderate"></span>Moderate</button>
+                <button class="t-intensity" data-int="hard" onclick="setIntensity('hard')"><span class="t-int-dot hard"></span>Hard</button>
+                <button class="t-intensity" data-int="sprint" onclick="setIntensity('sprint')"><span class="t-int-dot sprint"></span>Sprint</button>
+              </div>
+            </div>
+            <div class="t-builder-field">
+              <label class="t-label">Interval / Rest</label>
+              <input type="text" id="tInterval" class="t-input t-input-sm" placeholder="e.g. 1:30 or 15s rest">
+            </div>
+          </div>
+
+          <div class="t-builder-row">
+            <div class="t-builder-field t-builder-wide">
+              <label class="t-label">Set type</label>
+              <div class="t-type-chips">
+                <button class="t-type" data-type="" onclick="setType('')">Normal</button>
+                <button class="t-type" data-type="warmup" onclick="setType('warmup')">Warm Up</button>
+                <button class="t-type" data-type="main" onclick="setType('main')">Main Set</button>
+                <button class="t-type" data-type="cooldown" onclick="setType('cooldown')">Cool Down</button>
+              </div>
+            </div>
+          </div>
+
+          <button class="t-add-btn" onclick="addSet()">+ Add Set</button>
+        </div>
+
+        <!-- Session sets list -->
+        <div class="card" id="tSessionCard" style="display:none">
+          <div class="card-title">
+            <span>Your Session</span>
+            <span class="t-total-distance" id="tTotalDist">0m</span>
+          </div>
+          <div id="tSetsList"></div>
+
+          <!-- Free text notes -->
+          <div class="t-notes-section">
+            <label class="t-label">Notes</label>
+            <textarea id="tNotes" class="t-textarea" placeholder="How was the session? Anything to remember?" rows="2"></textarea>
+          </div>
+
+          <!-- Feeling -->
+          <div class="t-feeling-section">
+            <label class="t-label">How did you feel?</label>
+            <div class="t-feeling-scale">
+              <button class="t-feeling" data-feel="1" onclick="setFeeling(1)">&#128553;<br><span>Awful</span></button>
+              <button class="t-feeling" data-feel="2" onclick="setFeeling(2)">&#128531;<br><span>Tough</span></button>
+              <button class="t-feeling" data-feel="3" onclick="setFeeling(3)">&#128522;<br><span>OK</span></button>
+              <button class="t-feeling" data-feel="4" onclick="setFeeling(4)">&#128170;<br><span>Strong</span></button>
+              <button class="t-feeling" data-feel="5" onclick="setFeeling(5)">&#128293;<br><span>On Fire!</span></button>
+            </div>
+          </div>
+
+          <button class="t-save-btn" onclick="saveSession()">Save Session</button>
+        </div>
+
+        <!-- Save success message -->
+        <div class="t-save-success" id="tSaveSuccess" style="display:none">
+          <span class="t-save-icon">&#10003;</span>
+          <span>Session saved!</span>
+          <button class="t-save-link" onclick="switchTrainingView('history')">View history</button>
+        </div>
+      </div>
+
+      <!-- ── HISTORY VIEW ── -->
+      <div class="training-view" id="trainingHistory">
+        <div class="card">
+          <div class="card-title">Session History</div>
+          <div id="tHistoryList">
+            <div class="club-empty-state">No sessions recorded yet. Start logging!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── GOALS VIEW ── -->
+      <div class="training-view" id="trainingGoals">
         <div class="card">
           <div class="card-title">
-            <span id="chartTitle">My Progress</span>
-            <select id="chartCourse" class="inline-select">
-              <option value="">All Courses</option>
-              <option value="S">Short Course</option>
-              <option value="L">Long Course</option>
+            <span>My Goals</span>
+            <button class="t-small-btn" onclick="showGoalForm()">+ New Goal</button>
+          </div>
+
+          <!-- Goal form (hidden) -->
+          <div id="tGoalForm" style="display:none">
+            <div class="t-goal-form">
+              <div class="t-field">
+                <label class="t-label">What's your goal?</label>
+                <select id="tGoalType" class="t-input" onchange="updateGoalForm()">
+                  <option value="pb">Hit a PB time</option>
+                  <option value="distance">Weekly training distance</option>
+                  <option value="sessions">Sessions per week</option>
+                  <option value="custom">Custom goal</option>
+                </select>
+              </div>
+              <div id="tGoalFields"></div>
+              <div class="t-field">
+                <label class="t-label">Target date</label>
+                <input type="date" id="tGoalDeadline" class="t-input">
+              </div>
+              <div class="t-goal-actions">
+                <button class="t-save-btn t-save-sm" onclick="saveGoal()">Save Goal</button>
+                <button class="t-cancel-btn" onclick="hideGoalForm()">Cancel</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="tGoalsList">
+            <div class="club-empty-state">No goals set yet. Set your first goal!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── EVENTS VIEW ── -->
+      <div class="training-view" id="trainingEvents">
+        <div class="card">
+          <div class="card-title">
+            <span>Upcoming Events</span>
+            <button class="t-small-btn" onclick="showEventForm()">+ Add Event</button>
+          </div>
+
+          <!-- Event form (hidden) -->
+          <div id="tEventForm" style="display:none">
+            <div class="t-goal-form">
+              <div class="t-field">
+                <label class="t-label">Event name</label>
+                <input type="text" id="tEventName" class="t-input" placeholder="e.g. Herts County Championships">
+              </div>
+              <div class="t-field">
+                <label class="t-label">Date</label>
+                <input type="date" id="tEventDate" class="t-input">
+              </div>
+              <div class="t-field">
+                <label class="t-label">Venue</label>
+                <input type="text" id="tEventVenue" class="t-input" placeholder="e.g. Hatfield SC">
+              </div>
+              <div class="t-field">
+                <label class="t-label">Events entered (select all that apply)</label>
+                <div class="t-stroke-chips t-event-entries" id="tEventEntries">
+                  <button class="t-stroke" data-entry="50 Free" onclick="toggleEventEntry(this)">50 Free</button>
+                  <button class="t-stroke" data-entry="100 Free" onclick="toggleEventEntry(this)">100 Free</button>
+                  <button class="t-stroke" data-entry="200 Free" onclick="toggleEventEntry(this)">200 Free</button>
+                  <button class="t-stroke" data-entry="50 Back" onclick="toggleEventEntry(this)">50 Back</button>
+                  <button class="t-stroke" data-entry="100 Back" onclick="toggleEventEntry(this)">100 Back</button>
+                  <button class="t-stroke" data-entry="200 Back" onclick="toggleEventEntry(this)">200 Back</button>
+                  <button class="t-stroke" data-entry="50 Breast" onclick="toggleEventEntry(this)">50 Breast</button>
+                  <button class="t-stroke" data-entry="100 Breast" onclick="toggleEventEntry(this)">100 Breast</button>
+                  <button class="t-stroke" data-entry="200 Breast" onclick="toggleEventEntry(this)">200 Breast</button>
+                  <button class="t-stroke" data-entry="50 Fly" onclick="toggleEventEntry(this)">50 Fly</button>
+                  <button class="t-stroke" data-entry="100 Fly" onclick="toggleEventEntry(this)">100 Fly</button>
+                  <button class="t-stroke" data-entry="200 Fly" onclick="toggleEventEntry(this)">200 Fly</button>
+                  <button class="t-stroke" data-entry="200 IM" onclick="toggleEventEntry(this)">200 IM</button>
+                  <button class="t-stroke" data-entry="400 IM" onclick="toggleEventEntry(this)">400 IM</button>
+                </div>
+              </div>
+              <div class="t-field">
+                <label class="t-label">Target times / notes</label>
+                <textarea id="tEventNotes" class="t-textarea" placeholder="Any target times or goals for this event?" rows="2"></textarea>
+              </div>
+              <div class="t-goal-actions">
+                <button class="t-save-btn t-save-sm" onclick="saveEvent()">Save Event</button>
+                <button class="t-cancel-btn" onclick="hideEventForm()">Cancel</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="tEventsList">
+            <div class="club-empty-state">No upcoming events. Add your next competition!</div>
+          </div>
+        </div>
+
+        <!-- Past events -->
+        <div class="card">
+          <div class="card-title">Past Events</div>
+          <div id="tPastEventsList">
+            <div class="club-empty-state">Past events will appear here after they happen.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── QUALIFYING TIMES VIEW ── -->
+      <div class="training-view" id="trainingQualify">
+        <div class="ai-coach-card" id="aiQualifyInsight">
+          <div class="ai-coach-header">
+            <span class="ai-coach-avatar">&#129302;</span>
+            <span class="ai-coach-name">Coach AI</span>
+            <span class="ai-coach-badge">QUALIFYING</span>
+          </div>
+          <div class="ai-coach-message" id="aiQualifyMessage">Analysing your times against qualifying standards...</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <span>County Qualifying Times</span>
+            <select class="inline-select" id="qualCounty" onchange="renderQualifying()">
+              <option value="herts">Hertfordshire</option>
             </select>
           </div>
-          <div class="chart-container"><canvas id="progressChart"></canvas></div>
-          <div class="compare-info" id="compareInfo" style="display:none">
-            <span class="compare-label">Comparing with:</span>
-            <span id="compareChips"></span>
-            <button class="compare-clear" onclick="clearComparators()">Clear all</button>
+          <div class="qual-legend">
+            <span class="qual-tag qual-qualified">&#10003; Qualified</span>
+            <span class="qual-tag qual-close">Nearly there</span>
+            <span class="qual-tag qual-target">Target</span>
           </div>
-          <div class="swimmer-picker" id="swimmerPicker" style="display:none">
-            <div class="picker-header" onclick="togglePickerOpen()">
-              <span class="picker-label">Add / Remove Swimmers</span>
-              <span class="picker-toggle" id="pickerToggle">&#9660;</span>
-            </div>
-            <div class="picker-list" id="pickerList"></div>
+          <div id="qualGrid" class="qual-grid"></div>
+        </div>
+      </div>
+
+      <!-- ── STATS VIEW ── -->
+      <div class="training-view" id="trainingStats">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">This Week</div>
+            <div class="stat-value cyan" id="tsWeekDist">0m</div>
+            <div class="stat-detail" id="tsWeekSessions">0 sessions</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">This Month</div>
+            <div class="stat-value gold" id="tsMonthDist">0m</div>
+            <div class="stat-detail" id="tsMonthSessions">0 sessions</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Total Distance</div>
+            <div class="stat-value purple" id="tsTotalDist">0m</div>
+            <div class="stat-detail" id="tsTotalSessions">0 sessions</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Avg Feeling</div>
+            <div class="stat-value green" id="tsAvgFeel">-</div>
+            <div class="stat-detail" id="tsStreak">-</div>
           </div>
         </div>
-        <div class="card goals-card">
-          <div class="card-title">Goals &amp; Projections</div>
-          <div id="goalsContainer">Select an event from My Rankings</div>
+        <div class="two-col">
+          <div class="col-left">
+            <div class="card">
+              <div class="card-title">Weekly Distance</div>
+              <div class="chart-container"><canvas id="tsWeeklyChart"></canvas></div>
+            </div>
+          </div>
+          <div class="col-right">
+            <div class="card">
+              <div class="card-title">Training Breakdown</div>
+              <div class="chart-container chart-short"><canvas id="tsBreakdownChart"></canvas></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Row 3: Club Standings + Rank Progression -->
-    <div class="two-col">
-      <div class="col-left">
-        <div class="card">
-          <div class="card-title">
-            Club Standings — <span id="clubEventTitle">Select Event</span>
+    <!-- ═══ COUNTY TAB ═══ -->
+    <div class="tab-panel" id="panelCounty">
+      <div class="coming-soon-panel">
+        <div class="coming-soon-icon">&#127942;</div>
+        <h2 class="coming-soon-title">County Rankings</h2>
+        <p class="coming-soon-text">County-level rankings are coming soon.</p>
+        <p class="coming-soon-text">Once the overnight data load completes, you'll be able to see how swimmers rank within their county, track county championship qualifying times, and compare across clubs in your area.</p>
+        <div class="coming-soon-features">
+          <div class="coming-soon-feature">
+            <span class="coming-soon-dot"></span>
+            County ranking positions by event and age group
           </div>
-          <div class="squad-hint">Click a swimmer to compare on the chart above</div>
-          <div class="squad-list" id="squadContainer">
-            <div class="loading"><div class="loading-spinner"></div></div>
+          <div class="coming-soon-feature">
+            <span class="coming-soon-dot"></span>
+            County championship qualifying time targets
           </div>
-        </div>
-      </div>
-      <div class="col-right">
-        <div class="card">
-          <div class="card-title">Rank Progression</div>
-          <div class="chart-container chart-short"><canvas id="rankChart"></canvas></div>
+          <div class="coming-soon-feature">
+            <span class="coming-soon-dot"></span>
+            Compare with swimmers from other clubs in county
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- ═══ REGION TAB ═══ -->
+    <div class="tab-panel" id="panelRegion">
+      <div class="coming-soon-panel">
+        <div class="coming-soon-icon">&#127757;</div>
+        <h2 class="coming-soon-title">Regional Rankings</h2>
+        <p class="coming-soon-text">Regional-level rankings are coming soon.</p>
+        <p class="coming-soon-text">See how swimmers perform at regional level, track regional championship qualifying times, and identify the strongest competitors across your region.</p>
+        <div class="coming-soon-features">
+          <div class="coming-soon-feature">
+            <span class="coming-soon-dot"></span>
+            Regional ranking positions by event and age group
+          </div>
+          <div class="coming-soon-feature">
+            <span class="coming-soon-dot"></span>
+            Regional championship qualifying time tracker
+          </div>
+          <div class="coming-soon-feature">
+            <span class="coming-soon-dot"></span>
+            Cross-club comparison within region
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
-  <script src="js/utils.js?v=4"></script>
-  <script src="js/charts.js?v=4"></script>
-  <script src="js/app.js?v=4"></script>
+  <script src="js/utils.js?v=5"></script>
+  <script src="js/charts.js?v=5"></script>
+  <script src="js/app.js?v=5"></script>
+  <script src="js/demo-data.js?v=2"></script>
+  <script src="js/training.js?v=2"></script>
 </body>
 </html>
