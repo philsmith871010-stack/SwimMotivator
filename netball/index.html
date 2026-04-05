@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>NetballStats - Live Match Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏐</text></svg>">
+</head>
+<body>
+    <!-- ==================== HOME SCREEN ==================== -->
+    <div id="view-home" class="view active">
+        <header class="app-header">
+            <h1>NetballStats</h1>
+            <p class="subtitle">Live Match Tracker</p>
+        </header>
+        <div class="home-actions">
+            <button class="btn btn-primary btn-large" onclick="App.showView('view-setup-team')">
+                <span class="btn-icon">+</span>
+                New Match
+            </button>
+            <button class="btn btn-secondary btn-large" onclick="App.showView('view-history')">
+                <span class="btn-icon">&#128203;</span>
+                Match History
+            </button>
+            <button class="btn btn-secondary btn-large" onclick="App.showView('view-manage-teams')">
+                <span class="btn-icon">&#9881;</span>
+                Manage Teams
+            </button>
+        </div>
+        <div class="home-footer">
+            <p>Tap <strong>New Match</strong> to get started</p>
+        </div>
+    </div>
+
+    <!-- ==================== MANAGE TEAMS ==================== -->
+    <div id="view-manage-teams" class="view">
+        <header class="view-header">
+            <button class="btn-back" onclick="App.showView('view-home')">&larr;</button>
+            <h2>Manage Teams</h2>
+        </header>
+        <div class="view-body padded">
+            <div class="form-group">
+                <label>Team Name</label>
+                <input type="text" id="manage-team-name" placeholder="e.g. Lightning" class="input-large">
+            </div>
+            <div class="form-group">
+                <label>Players</label>
+                <div id="manage-team-players" class="player-list-edit"></div>
+                <button class="btn btn-outline btn-small" onclick="App.addPlayerRow('manage-team-players')">+ Add Player</button>
+            </div>
+            <div class="form-actions">
+                <button class="btn btn-primary" onclick="App.saveTeam()">Save Team</button>
+            </div>
+            <hr>
+            <h3>Saved Teams</h3>
+            <div id="saved-teams-list" class="saved-teams"></div>
+        </div>
+    </div>
+
+    <!-- ==================== TEAM SETUP ==================== -->
+    <div id="view-setup-team" class="view">
+        <header class="view-header">
+            <button class="btn-back" onclick="App.showView('view-home')">&larr;</button>
+            <h2>Match Setup</h2>
+        </header>
+        <div class="view-body padded">
+            <div class="form-section">
+                <h3>Your Team</h3>
+                <div class="form-group">
+                    <label>Select Saved Team</label>
+                    <select id="setup-saved-team" class="input-large" onchange="App.loadSavedTeam()">
+                        <option value="">-- Or enter manually below --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Team Name</label>
+                    <input type="text" id="setup-team-name" placeholder="e.g. Lightning" class="input-large">
+                </div>
+                <div class="form-group">
+                    <label>Players (min 7)</label>
+                    <div id="setup-team-players" class="player-list-edit"></div>
+                    <button class="btn btn-outline btn-small" onclick="App.addPlayerRow('setup-team-players')">+ Add Player</button>
+                </div>
+            </div>
+            <div class="form-section">
+                <h3>Opposition</h3>
+                <div class="form-group">
+                    <label>Team Name</label>
+                    <input type="text" id="setup-opposition" placeholder="e.g. Storm" class="input-large">
+                </div>
+            </div>
+            <div class="form-section">
+                <h3>Match Details</h3>
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label>Date</label>
+                        <input type="date" id="setup-date" class="input-large">
+                    </div>
+                    <div class="form-group flex-1">
+                        <label>Venue</label>
+                        <input type="text" id="setup-venue" placeholder="Venue" class="input-large">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label>Competition</label>
+                        <input type="text" id="setup-competition" placeholder="e.g. League" class="input-large">
+                    </div>
+                    <div class="form-group flex-1">
+                        <label>Quarter Length (min)</label>
+                        <select id="setup-quarter-length" class="input-large">
+                            <option value="8">8 min</option>
+                            <option value="10" selected>10 min</option>
+                            <option value="12">12 min</option>
+                            <option value="15">15 min</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Tracking Level</label>
+                    <div class="toggle-group">
+                        <button class="toggle-btn active" data-level="basic" onclick="App.setTrackingLevel('basic')">Basic</button>
+                        <button class="toggle-btn" data-level="detailed" onclick="App.setTrackingLevel('detailed')">Detailed</button>
+                    </div>
+                    <p class="hint" id="tracking-hint">Goals, centre passes, interceptions, turnovers</p>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-large" onclick="App.proceedToLineup()" style="width:100%;margin-top:1rem;">
+                Set Starting Lineup &rarr;
+            </button>
+        </div>
+    </div>
+
+    <!-- ==================== LINEUP SELECTION ==================== -->
+    <div id="view-lineup" class="view">
+        <header class="view-header">
+            <button class="btn-back" onclick="App.showView('view-setup-team')">&larr;</button>
+            <h2>Starting Lineup</h2>
+            <span id="lineup-quarter-label" class="quarter-badge">Q1</span>
+        </header>
+        <div class="view-body padded">
+            <p class="hint">Tap a position to assign a player</p>
+            <div class="court-layout">
+                <div class="court-third court-attack">
+                    <div class="position-slot" data-pos="GS" onclick="App.selectPosition('GS')">
+                        <span class="pos-label">GS</span>
+                        <span class="pos-player" id="lineup-GS">Tap to assign</span>
+                    </div>
+                    <div class="position-slot" data-pos="GA" onclick="App.selectPosition('GA')">
+                        <span class="pos-label">GA</span>
+                        <span class="pos-player" id="lineup-GA">Tap to assign</span>
+                    </div>
+                    <div class="position-slot" data-pos="WA" onclick="App.selectPosition('WA')">
+                        <span class="pos-label">WA</span>
+                        <span class="pos-player" id="lineup-WA">Tap to assign</span>
+                    </div>
+                </div>
+                <div class="court-third court-centre">
+                    <div class="position-slot" data-pos="C" onclick="App.selectPosition('C')">
+                        <span class="pos-label">C</span>
+                        <span class="pos-player" id="lineup-C">Tap to assign</span>
+                    </div>
+                </div>
+                <div class="court-third court-defence">
+                    <div class="position-slot" data-pos="WD" onclick="App.selectPosition('WD')">
+                        <span class="pos-label">WD</span>
+                        <span class="pos-player" id="lineup-WD">Tap to assign</span>
+                    </div>
+                    <div class="position-slot" data-pos="GD" onclick="App.selectPosition('GD')">
+                        <span class="pos-label">GD</span>
+                        <span class="pos-player" id="lineup-GD">Tap to assign</span>
+                    </div>
+                    <div class="position-slot" data-pos="GK" onclick="App.selectPosition('GK')">
+                        <span class="pos-label">GK</span>
+                        <span class="pos-player" id="lineup-GK">Tap to assign</span>
+                    </div>
+                </div>
+            </div>
+            <div id="player-picker" class="player-picker hidden">
+                <h4 id="picker-title">Select player for GS</h4>
+                <div id="picker-players" class="picker-grid"></div>
+                <button class="btn btn-outline btn-small" onclick="App.closePlayerPicker()">Cancel</button>
+            </div>
+            <button class="btn btn-primary btn-large" id="btn-start-match" onclick="App.startMatch()" style="width:100%;margin-top:1rem;">
+                Start Match
+            </button>
+        </div>
+    </div>
+
+    <!-- ==================== LIVE MATCH ==================== -->
+    <div id="view-match" class="view">
+        <div class="match-scoreboard">
+            <div class="score-team score-home">
+                <span class="score-team-name" id="match-home-name">Home</span>
+                <span class="score-value" id="match-home-score">0</span>
+            </div>
+            <div class="score-centre">
+                <span class="score-quarter" id="match-quarter">Q1</span>
+                <span class="score-timer" id="match-timer" onclick="App.toggleTimer()">10:00</span>
+                <span class="timer-hint">tap to start/pause</span>
+            </div>
+            <div class="score-team score-away">
+                <span class="score-team-name" id="match-away-name">Away</span>
+                <span class="score-value" id="match-away-score">0</span>
+            </div>
+        </div>
+
+        <div class="match-toolbar">
+            <button class="btn btn-small btn-tool" id="btn-undo" onclick="App.undoLastEvent()" disabled>Undo</button>
+            <button class="btn btn-small btn-tool" onclick="App.showSubstitution()">Subs</button>
+            <button class="btn btn-small btn-tool btn-away-goal" onclick="App.recordAwayGoal()">Opp Goal</button>
+            <button class="btn btn-small btn-tool" id="btn-quarter" onclick="App.nextQuarter()">End Qtr</button>
+        </div>
+
+        <!-- Player selection grid - tap a player first -->
+        <div id="match-player-grid" class="match-player-grid">
+            <p class="grid-hint">Tap a player to record a stat</p>
+            <div id="match-court-players" class="court-players"></div>
+        </div>
+
+        <!-- Action buttons - appear after selecting a player -->
+        <div id="match-actions" class="match-actions hidden">
+            <div class="selected-player-bar">
+                <span id="selected-player-name">Player Name</span>
+                <span id="selected-player-pos" class="pos-badge">GS</span>
+                <button class="btn btn-small btn-outline" onclick="App.cancelPlayerSelection()">Cancel</button>
+            </div>
+            <div id="action-buttons" class="action-grid"></div>
+        </div>
+
+        <!-- Substitution panel -->
+        <div id="match-subs" class="match-subs hidden">
+            <div class="subs-header">
+                <h3>Substitution</h3>
+                <button class="btn btn-small btn-outline" onclick="App.closeSubs()">Cancel</button>
+            </div>
+            <div class="subs-body">
+                <div class="subs-section">
+                    <h4>Player Off</h4>
+                    <div id="subs-on-court" class="subs-grid"></div>
+                </div>
+                <div class="subs-section">
+                    <h4>Player On (or position swap)</h4>
+                    <div id="subs-bench" class="subs-grid"></div>
+                </div>
+                <div class="subs-section">
+                    <h4>New Position</h4>
+                    <div id="subs-positions" class="subs-grid"></div>
+                </div>
+                <button class="btn btn-primary" id="btn-confirm-sub" onclick="App.confirmSub()" disabled>Confirm Sub</button>
+            </div>
+        </div>
+
+        <!-- Event feed -->
+        <div class="match-feed">
+            <h4>Match Feed</h4>
+            <div id="match-events" class="event-list"></div>
+        </div>
+    </div>
+
+    <!-- ==================== MATCH SUMMARY ==================== -->
+    <div id="view-summary" class="view">
+        <header class="view-header">
+            <button class="btn-back" onclick="App.showView('view-home')">&larr;</button>
+            <h2>Match Summary</h2>
+        </header>
+        <div class="view-body padded">
+            <div class="summary-score" id="summary-scoreboard"></div>
+            <div class="summary-tabs">
+                <button class="tab-btn active" onclick="App.showSummaryTab('team')">Team</button>
+                <button class="tab-btn" onclick="App.showSummaryTab('players')">Players</button>
+                <button class="tab-btn" onclick="App.showSummaryTab('quarters')">Quarters</button>
+                <button class="tab-btn" onclick="App.showSummaryTab('timeline')">Timeline</button>
+            </div>
+            <div id="summary-content" class="summary-content"></div>
+            <div class="summary-actions">
+                <button class="btn btn-secondary" onclick="App.exportMatch()">Export CSV</button>
+                <button class="btn btn-secondary" onclick="App.shareMatch()">Share</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MATCH HISTORY ==================== -->
+    <div id="view-history" class="view">
+        <header class="view-header">
+            <button class="btn-back" onclick="App.showView('view-home')">&larr;</button>
+            <h2>Match History</h2>
+        </header>
+        <div class="view-body padded">
+            <div id="history-list" class="history-list"></div>
+            <p id="history-empty" class="empty-state hidden">No matches recorded yet</p>
+        </div>
+    </div>
+
+    <!-- ==================== TOAST NOTIFICATION ==================== -->
+    <div id="toast" class="toast hidden"></div>
+
+    <!-- ==================== CONFIRM DIALOG ==================== -->
+    <div id="confirm-dialog" class="dialog-overlay hidden">
+        <div class="dialog">
+            <p id="confirm-message"></p>
+            <div class="dialog-actions">
+                <button class="btn btn-outline" onclick="App.confirmDialog(false)">Cancel</button>
+                <button class="btn btn-primary" onclick="App.confirmDialog(true)">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
