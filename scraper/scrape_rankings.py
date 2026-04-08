@@ -208,7 +208,7 @@ def scrape_event_rankings(
             _mark_combo_scraped(conn, key, len(combo_rows))
             conn.commit()
 
-            if idx % 50 == 0 or idx == total:
+            if idx % 10 == 0 or idx <= 3 or idx == total:
                 pct = idx / total * 100
                 print(f"[Rankings] {idx}/{total} ({pct:.0f}%) — "
                       f"{total_saved:,} entries — {total_requests} requests")
