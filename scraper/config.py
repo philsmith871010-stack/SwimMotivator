@@ -11,14 +11,13 @@ BASE_URL = "https://www.swimmingresults.org"
 PB_URL = f"{BASE_URL}/individualbest/personal_best.php"
 BIOG_URL = f"{BASE_URL}/biogs/biogs_details.php"
 HISTORY_URL = f"{BASE_URL}/individualbest/personal_best_time_date.php"
-SHOWMEETSBYEVENT_URL = f"{BASE_URL}/showmeetsbyevent/index.php"
-SHOWMEETS_URL = f"{BASE_URL}/showmeets/index.php"
+RANKINGS_URL = f"{BASE_URL}/eventrankings/eventrankings.php"
 CLUB_CODES_ZIP_URL = f"{BASE_URL}/clubcodes/GBClub.php"
 
 REQUEST_DELAY = 0.4
 REQUEST_TIMEOUT = 30
 
-# Target swimmers
+# Target swimmers (for quick testing)
 BELLA_TIREF = 1373165
 BELLA_YOB = 2011
 AMBER_TIREF = 1479966
@@ -40,10 +39,6 @@ COSTA_TIREFS = [
     1812687, 1818108, 1830975, 1837530, BELLA_TIREF, AMBER_TIREF,
 ]
 
-# Peer filtering
-PEER_MIN_YOB = 2010
-PEER_MAX_YOB = 2014
-
 # Stroke code → event name mapping
 STROKE_NAMES = {
     1: "50 Freestyle", 2: "100 Freestyle", 3: "200 Freestyle", 4: "400 Freestyle",
@@ -53,10 +48,20 @@ STROKE_NAMES = {
     16: "200 Individual Medley", 17: "400 Individual Medley", 18: "100 Individual Medley",
 }
 
-# Stroke codes used when scraping meet event pages
-MEET_STROKE_CODES = [1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18, 16, 17]
-
 # All stroke codes including distance freestyle
 ALL_STROKE_CODES = list(range(1, 19))
 
 COURSES = ["S", "L"]
+
+# Ranking levels with their API filter parameters
+# Level=N (National), Level=D (District/Region), Level=C (County)
+# These map to the radio buttons on eventrankings.php
+RANKING_LEVELS = {
+    "national": {"Level": "N", "TargetRegion": "P", "TargetCounty": "XXXX", "TargetClub": "XXXX"},
+    "regional": {"Level": "D", "TargetRegion": "T", "TargetCounty": "XXXX", "TargetClub": "XXXX"},   # T = East Region
+    "county":   {"Level": "C", "TargetRegion": "P", "TargetCounty": "HRTT", "TargetClub": "XXXX"},   # HRTT = Hertfordshire
+}
+
+RANKING_YEARS = [2022, 2023, 2024, 2025, 2026]
+DEFAULT_AGE_GROUPS = list(range(8, 19))  # 8-18
+DEFAULT_SEXES = ["F", "M"]
