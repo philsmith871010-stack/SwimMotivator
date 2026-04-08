@@ -167,12 +167,10 @@ def scrape_event_rankings(
                     "Sex": sex,
                     "TargetYear": str(year),
                     "AgeGroup": age,
-                    "AgeAt": "D",
-                    "TargetNationality": "E",
-                    "TargetClub": "XXXX",
+                    "AgeAt": "A",
+                    "TargetNationality": "P",
                     "StartNumber": str(start),
                     "RecordsToView": str(PAGE_SIZE),
-                    "Level": "N",
                     **level_params,
                 }
                 try:

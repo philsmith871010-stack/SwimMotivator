@@ -54,10 +54,12 @@ ALL_STROKE_CODES = list(range(1, 19))
 COURSES = ["S", "L"]
 
 # Ranking levels with their API filter parameters
+# Level=N (National), Level=D (District/Region), Level=C (County)
+# These map to the radio buttons on eventrankings.php
 RANKING_LEVELS = {
-    "national": {"TargetRegion": "P", "TargetCounty": "XXXX"},
-    "regional": {"TargetRegion": "T", "TargetCounty": "XXXX"},   # T = East Region
-    "county":   {"TargetRegion": "P", "TargetCounty": "HRTT"},   # HRTT = Hertfordshire
+    "national": {"Level": "N", "TargetRegion": "P", "TargetCounty": "XXXX", "TargetClub": "XXXX"},
+    "regional": {"Level": "D", "TargetRegion": "T", "TargetCounty": "XXXX", "TargetClub": "XXXX"},   # T = East Region
+    "county":   {"Level": "C", "TargetRegion": "P", "TargetCounty": "HRTT", "TargetClub": "XXXX"},   # HRTT = Hertfordshire
 }
 
 RANKING_YEARS = [2022, 2023, 2024, 2025, 2026]
