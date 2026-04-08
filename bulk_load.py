@@ -1,20 +1,25 @@
 #!/usr/bin/env python3
 """
-Initial bulk data load — run this LOCALLY once to build the full database.
+SwimMotivator data pipeline — targeted scraping for CoSA swimmers.
 
-This captures everything you need for a complete England swimming app:
-  1. National rankings (M+F, all events, ages 8-18, 2022-2026) — ~3 hours
-  2. Meet results for every competition 2022-2026              — ~8 hours
-  3. Derive per-swimmer ranks + export JSON                    — instant
+Steps:
+  1. Club metadata (GBClub.php)                    — ~5 seconds
+  2. Personal bests for all CoSA swimmers           — ~1 minute
+  3. Full swim history (every time ever swam)       — ~22 minutes
+  4. Rankings at county/regional/national level     — ~40 minutes
+  5. Export JSON for the frontend                   — instant
 
-Total: ~11 hours, fully RESUMABLE (safe to Ctrl+C and restart).
+Total: ~60 minutes, fully RESUMABLE (safe to Ctrl+C and restart).
 
 Usage:
     python bulk_load.py              # run everything
-    python bulk_load.py --step 1     # just rankings
-    python bulk_load.py --step 2     # just meets
-    python bulk_load.py --step 3     # just derive + export
-    python bulk_load.py --status     # check progress without scraping
+    python bulk_load.py --step 1     # just clubs
+    python bulk_load.py --step 2     # just PBs
+    python bulk_load.py --step 3     # just history
+    python bulk_load.py --step 4     # just rankings (all levels)
+    python bulk_load.py --step 5     # just export JSON
+    python bulk_load.py --status     # check progress
+    python bulk_load.py --test       # quick test with 2 swimmers only
 """
 
 import argparse
@@ -22,10 +27,7 @@ import sqlite3
 import sys
 import time
 
-from scraper.config import DB_PATH
-
-MEET_YEARS = [2022, 2023, 2024, 2025, 2026]
-RANKING_YEARS = [2022, 2023, 2024, 2025, 2026]
+from scraper.config import DB_PATH, BELLA_TIREF, AMBER_TIREF, COSTA_TIREFS, RANKING_YEARS
 
 
 def show_status():
@@ -38,51 +40,55 @@ def show_status():
 
     conn = sqlite3.connect(DB_PATH)
     try:
-        # Rankings progress
+        # Swimmers
         try:
-            total_combos = conn.execute("SELECT COUNT(*) FROM scraped_ranking_combos").fetchone()[0]
-            total_rankings = conn.execute("SELECT COUNT(*) FROM event_rankings").fetchone()[0]
-            unique_swimmers = conn.execute("SELECT COUNT(DISTINCT tiref) FROM event_rankings").fetchone()[0]
-            print(f"Rankings:       {total_rankings:>10,} entries ({total_combos} combos scraped)")
-            print(f"                {unique_swimmers:>10,} unique swimmers")
+            count = conn.execute("SELECT COUNT(*) FROM swimmers").fetchone()[0]
+            print(f"Swimmers:       {count:>10,}")
+        except sqlite3.OperationalError:
+            print("Swimmers:       not started")
 
-            # Expected combos: 18 events × 2 sexes × 11 ages × 2 courses × 5 years
-            expected = 18 * 2 * 11 * 2 * len(RANKING_YEARS)
-            pct = total_combos / expected * 100 if expected else 0
-            print(f"                {pct:>9.0f}% complete ({total_combos}/{expected} combos)")
+        # Personal bests
+        try:
+            pb_count = conn.execute("SELECT COUNT(*) FROM personal_bests").fetchone()[0]
+            pb_swimmers = conn.execute("SELECT COUNT(DISTINCT tiref) FROM personal_bests").fetchone()[0]
+            print(f"Personal bests: {pb_count:>10,} entries for {pb_swimmers} swimmers")
+        except sqlite3.OperationalError:
+            print("Personal bests: not started")
+
+        # Swimmer history
+        try:
+            hist_count = conn.execute("SELECT COUNT(*) FROM swimmer_history").fetchone()[0]
+            hist_swimmers = conn.execute("SELECT COUNT(DISTINCT tiref) FROM swimmer_history").fetchone()[0]
+            done = conn.execute("SELECT COUNT(*) FROM scraped_swimmer_history").fetchone()[0]
+            print(f"Swim history:   {hist_count:>10,} swims for {hist_swimmers} swimmers ({done} scraped)")
+        except sqlite3.OperationalError:
+            print("Swim history:   not started")
+
+        # Rankings
+        try:
+            rank_count = conn.execute("SELECT COUNT(*) FROM rankings").fetchone()[0]
+            for level in ["national", "regional", "county"]:
+                lcount = conn.execute(
+                    "SELECT COUNT(*) FROM rankings WHERE level = ?", (level,)
+                ).fetchone()[0]
+                lunique = conn.execute(
+                    "SELECT COUNT(DISTINCT tiref) FROM rankings WHERE level = ?", (level,)
+                ).fetchone()[0]
+                print(f"  {level:>10}: {lcount:>10,} entries, {lunique:,} swimmers")
+
+            combos_done = conn.execute("SELECT COUNT(*) FROM scraped_ranking_combos").fetchone()[0]
+            print(f"  Combos scraped: {combos_done}")
         except sqlite3.OperationalError:
             print("Rankings:       not started")
 
-        print()
-
-        # Meet results progress
+        # Clubs
         try:
-            total_meets = conn.execute("SELECT COUNT(*) FROM scraped_meets").fetchone()[0]
-            total_swims = conn.execute("SELECT COUNT(*) FROM meet_results").fetchone()[0]
-            meets_with_data = conn.execute(
-                "SELECT COUNT(*) FROM scraped_meets WHERE swims_saved > 0").fetchone()[0]
-            print(f"Meet results:   {total_swims:>10,} individual swims")
-            print(f"                {meets_with_data:>10,} meets with data ({total_meets} total processed)")
-
-            for year in MEET_YEARS:
-                yr_meets = conn.execute(
-                    "SELECT COUNT(*), COALESCE(SUM(swims_saved), 0) FROM scraped_meets WHERE year = ?",
-                    (year,)).fetchone()
-                print(f"  {year}:         {yr_meets[0]:>6} meets, {yr_meets[1]:>8,} swims")
+            club_count = conn.execute("SELECT COUNT(*) FROM clubs").fetchone()[0]
+            print(f"Clubs:          {club_count:>10,}")
         except sqlite3.OperationalError:
-            print("Meet results:   not started")
+            print("Clubs:          not loaded")
 
-        print()
-
-        # Swimmer ranks (derived)
-        try:
-            sr_count = conn.execute("SELECT COUNT(*) FROM swimmer_ranks").fetchone()[0]
-            sr_swimmers = conn.execute("SELECT COUNT(DISTINCT tiref) FROM swimmer_ranks").fetchone()[0]
-            print(f"Swimmer ranks:  {sr_count:>10,} entries for {sr_swimmers:,} swimmers")
-        except sqlite3.OperationalError:
-            print("Swimmer ranks:  not derived yet (run step 3)")
-
-        # DB file size
+        # DB size
         size_mb = DB_PATH.stat().st_size / 1e6
         print(f"\nDatabase size:  {size_mb:.1f} MB")
 
@@ -90,118 +96,130 @@ def show_status():
         conn.close()
 
 
-def step1_rankings():
-    """Scrape national rankings — every swimmer's best time per event per year."""
+def step1_clubs():
     print("\n" + "=" * 60)
-    print("STEP 1: National Rankings")
-    print("  M+F, all events, ages 8-18, years", RANKING_YEARS)
-    print("  Estimated: ~3 hours (resumable)")
+    print("STEP 1: Club Metadata")
+    print("=" * 60)
+    from scraper.scrape_clubs import main as clubs_main
+    clubs_main()
+
+
+def step2_pbs(tirefs=None):
+    print("\n" + "=" * 60)
+    print("STEP 2: Personal Bests")
+    print(f"  {len(tirefs or COSTA_TIREFS)} swimmers")
+    print("=" * 60)
+    from scraper.scrape_personal_bests import main as pbs_main
+    # The PB scraper uses COSTA_TIREFS by default
+    # For test mode, we'd need to modify it — for now just run default
+    pbs_main()
+
+
+def step3_history(tirefs=None):
+    _tirefs = tirefs or COSTA_TIREFS
+    print("\n" + "=" * 60)
+    print("STEP 3: Full Swim History")
+    print(f"  {len(_tirefs)} swimmers, 36 requests each")
+    print("  Estimated: ~22 minutes (resumable)")
+    print("=" * 60)
+    from scraper.scrape_history import scrape_history
+    scrape_history(tirefs=_tirefs)
+
+
+def step4_rankings(years=None, levels=None):
+    _years = years or RANKING_YEARS
+    print("\n" + "=" * 60)
+    print("STEP 4: Rankings (County + Regional + National)")
+    print(f"  Years: {_years}")
+    print(f"  Levels: {levels or 'all'}")
+    print("  Estimated: ~40 minutes (resumable)")
     print("=" * 60)
     from scraper.scrape_rankings import scrape_event_rankings
-    scrape_event_rankings(years=RANKING_YEARS)
+    scrape_event_rankings(years=_years, levels=levels)
 
 
-def step2_meets():
-    """Scrape all meet results — every swim at every competition."""
+def step5_export():
     print("\n" + "=" * 60)
-    print("STEP 2: Meet Results")
-    print("  Every competition, years", MEET_YEARS)
-    print("  Estimated: ~8 hours (resumable per-meet)")
+    print("STEP 5: Export JSON")
     print("=" * 60)
-    from scraper.scrape_meets import scrape_year
-    for year in MEET_YEARS:
-        print(f"\n{'─' * 40}")
-        print(f"  Scraping meets for {year}...")
-        print(f"{'─' * 40}")
-        try:
-            scrape_year(year)
-        except KeyboardInterrupt:
-            print("\n[!] Interrupted — progress saved. Run again to resume.")
-            raise
-        except Exception as e:
-            print(f"[!] Error scraping {year}: {e}")
-            print("    Continuing to next year (already-scraped meets are saved)...")
-            continue
-
-
-def step3_derive_and_export():
-    """Derive swimmer ranks and export all JSON."""
-    print("\n" + "=" * 60)
-    print("STEP 3: Derive ranks + Export JSON")
-    print("=" * 60)
-
-    print("\nDeriving per-swimmer ranks...")
-    from scraper.scrape_swimmer_ranks import derive_swimmer_ranks
-    derive_swimmer_ranks()
-
-    print("\nExporting JSON...")
-    from scraper.export_json import main as export_json
-    export_json()
+    from scraper.export_json import main as export_main
+    export_main()
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Bulk load England swimming data (resumable)",
+        description="SwimMotivator data pipeline (resumable)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python bulk_load.py              Run full pipeline (~11 hours)
-  python bulk_load.py --step 1     Just rankings (~3 hours)
-  python bulk_load.py --step 2     Just meet results (~8 hours)
-  python bulk_load.py --step 3     Just derive + export (instant)
+  python bulk_load.py              Full pipeline (~60 minutes)
+  python bulk_load.py --step 1     Just club metadata
+  python bulk_load.py --step 2     Just personal bests
+  python bulk_load.py --step 3     Just swim history
+  python bulk_load.py --step 4     Just rankings
+  python bulk_load.py --step 5     Just export JSON
+  python bulk_load.py --test       Quick test (Bella + Amber only)
   python bulk_load.py --status     Check progress
         """)
-    parser.add_argument("--step", type=int, choices=[1, 2, 3],
+    parser.add_argument("--step", type=int, choices=[1, 2, 3, 4, 5],
                         help="Run only a specific step")
     parser.add_argument("--status", action="store_true",
                         help="Show progress and exit")
+    parser.add_argument("--test", action="store_true",
+                        help="Quick test with Bella + Amber only")
+    parser.add_argument("--force", action="store_true",
+                        help="Clear and re-scrape everything")
     args = parser.parse_args()
 
     if args.status:
         show_status()
         return
 
+    test_tirefs = [BELLA_TIREF, AMBER_TIREF] if args.test else None
+
     start = time.time()
 
     print("=" * 60)
-    print("SwimMotivator — Bulk Data Load")
-    print(f"Rankings: {RANKING_YEARS[0]}-{RANKING_YEARS[-1]}  (M+F)")
-    print(f"Meets:    {MEET_YEARS[0]}-{MEET_YEARS[-1]}")
+    print("SwimMotivator — Data Pipeline")
+    if args.test:
+        print("MODE: TEST (Bella + Amber only)")
     print("=" * 60)
     print()
     print("RESUMABLE: safe to Ctrl+C and restart at any time.")
-    print("Already-scraped data will be skipped automatically.")
-    print()
-    print("Check progress anytime:  python bulk_load.py --status")
+    print("Check progress:  python bulk_load.py --status")
     print()
 
     try:
         if args.step is None or args.step == 1:
-            step1_rankings()
+            step1_clubs()
 
         if args.step is None or args.step == 2:
-            step2_meets()
+            step2_pbs(test_tirefs)
 
         if args.step is None or args.step == 3:
-            step3_derive_and_export()
+            step3_history(test_tirefs)
+
+        if args.step is None or args.step == 4:
+            # For test mode, still scrape all rankings (they're shared)
+            # but limit to current year only
+            if args.test:
+                step4_rankings(years=[2025, 2026])
+            else:
+                step4_rankings()
+
+        if args.step is None or args.step == 5:
+            step5_export()
 
     except KeyboardInterrupt:
         print("\n\n[!] Interrupted — all progress saved.")
         print("    Run again to resume from where you left off.")
-        print("    Run 'python bulk_load.py --status' to check progress.")
         sys.exit(0)
 
     elapsed = time.time() - start
-    hours = elapsed / 3600
+    mins = elapsed / 60
     print(f"\n{'=' * 60}")
-    print(f"Done! Total time: {hours:.1f} hours")
+    print(f"Done! Total time: {mins:.1f} minutes")
     show_status()
-    print(f"\n{'=' * 60}")
-    print()
-    print("Next steps:")
-    print("  git add data/ && git commit -m 'Bulk data load' && git push")
-    print("  (This triggers the GitHub Pages deploy)")
-    print("  Weekly updates will run automatically via GitHub Actions.")
 
 
 if __name__ == "__main__":

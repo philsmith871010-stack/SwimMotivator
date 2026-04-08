@@ -7,6 +7,7 @@ import sqlite3
 from .config import DATA_DIR, DB_PATH
 
 SCHEMA = """
+-- Core swimmer identity
 CREATE TABLE IF NOT EXISTS swimmers (
     tiref INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
@@ -15,11 +16,12 @@ CREATE TABLE IF NOT EXISTS swimmers (
     club TEXT
 );
 
+-- Personal bests (from personal_best.php, all strokes both courses in 1 request)
 CREATE TABLE IF NOT EXISTS personal_bests (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     tiref INTEGER NOT NULL,
-    course TEXT NOT NULL,
-    stroke TEXT NOT NULL,
+    course TEXT NOT NULL,        -- 'SC' or 'LC'
+    stroke TEXT NOT NULL,        -- e.g. '50 Freestyle'
     time TEXT NOT NULL,
     converted_time TEXT,
     wa_points INTEGER,
@@ -32,41 +34,12 @@ CREATE TABLE IF NOT EXISTS personal_bests (
 );
 CREATE INDEX IF NOT EXISTS idx_pb_tiref ON personal_bests (tiref);
 
-CREATE TABLE IF NOT EXISTS meet_results (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    tiref TEXT NOT NULL,
-    swimmer_name TEXT,
-    yob INTEGER,
-    sex TEXT,
-    club TEXT,
-    meet_name TEXT,
-    meet_date TEXT,
-    course TEXT,
-    licence TEXT,
-    meetcode TEXT,
-    event TEXT,
-    round TEXT,
-    time TEXT,
-    wa_points TEXT
-);
-CREATE INDEX IF NOT EXISTS idx_mr_meetcode ON meet_results (meetcode);
-CREATE INDEX IF NOT EXISTS idx_mr_tiref ON meet_results (tiref);
-
-CREATE TABLE IF NOT EXISTS scraped_meets (
-    year INTEGER NOT NULL,
-    meetcode TEXT NOT NULL,
-    meet_name TEXT,
-    licence TEXT,
-    swims_saved INTEGER DEFAULT 0,
-    scraped_at TEXT DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (year, meetcode)
-);
-
+-- Full swim history (from personal_best_time_date.php, 36 requests per swimmer)
 CREATE TABLE IF NOT EXISTS swimmer_history (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     tiref TEXT NOT NULL,
     stroke_code INTEGER NOT NULL,
-    course TEXT NOT NULL,
+    course TEXT NOT NULL,        -- 'S' or 'L'
     date TEXT,
     time TEXT,
     is_pb INTEGER NOT NULL,
@@ -78,6 +51,43 @@ CREATE TABLE IF NOT EXISTS swimmer_history (
 );
 CREATE INDEX IF NOT EXISTS idx_hist_key ON swimmer_history (tiref, stroke_code, course);
 
+-- Rankings at county/regional/national level (from eventrankings.php)
+CREATE TABLE IF NOT EXISTS rankings (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    tiref TEXT NOT NULL,
+    swimmer_name TEXT,
+    club TEXT,
+    yob INTEGER,
+    sex TEXT,
+    event TEXT,                  -- e.g. '50 Freestyle'
+    course TEXT,                 -- 'SC' or 'LC'
+    age_group TEXT,
+    rank INTEGER,
+    total_in_ranking INTEGER,
+    time TEXT,
+    meet_name TEXT,
+    date TEXT,
+    year INTEGER,
+    level TEXT NOT NULL          -- 'national', 'regional', 'county'
+);
+CREATE INDEX IF NOT EXISTS idx_rank_tiref ON rankings (tiref);
+CREATE INDEX IF NOT EXISTS idx_rank_event ON rankings (event, course, sex, age_group, year, level);
+
+-- Resumability tracker for rankings scraper
+CREATE TABLE IF NOT EXISTS scraped_ranking_combos (
+    combo_key TEXT PRIMARY KEY,
+    swimmers_found INTEGER DEFAULT 0,
+    scraped_at TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Resumability tracker for swimmer history scraper
+CREATE TABLE IF NOT EXISTS scraped_swimmer_history (
+    tiref TEXT PRIMARY KEY,
+    swims_found INTEGER DEFAULT 0,
+    scraped_at TEXT DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Club metadata (from GBClub.php ZIP)
 CREATE TABLE IF NOT EXISTS clubs (
     club_code TEXT PRIMARY KEY,
     club_name TEXT NOT NULL,
@@ -129,35 +139,6 @@ def clear_personal_bests(conn: sqlite3.Connection, tiref: int) -> None:
     conn.execute("DELETE FROM personal_bests WHERE tiref = ?", (tiref,))
 
 
-def insert_meet_results(conn: sqlite3.Connection, rows: list[dict]) -> None:
-    conn.executemany("""
-        INSERT INTO meet_results (tiref, swimmer_name, yob, sex, club, meet_name,
-            meet_date, course, licence, meetcode, event, round, time, wa_points)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-    """, [(r["tiref"], r["swimmer_name"], r["yob"], r["sex"], r["club"],
-           r["meet_name"], r["meet_date"], r["course"], r["licence"],
-           r["meetcode"], r["event"], r["round"], r["time"], r["wa_points"])
-          for r in rows])
-
-
-def is_meet_scraped(conn: sqlite3.Connection, year: int, meetcode: str) -> bool:
-    row = conn.execute(
-        "SELECT 1 FROM scraped_meets WHERE year = ? AND meetcode = ?",
-        (year, meetcode)).fetchone()
-    return row is not None
-
-
-def mark_meet_scraped(conn: sqlite3.Connection, *, year: int, meetcode: str,
-                      meet_name: str, licence: str, swims_saved: int) -> None:
-    conn.execute("""
-        INSERT INTO scraped_meets (year, meetcode, meet_name, licence, swims_saved)
-        VALUES (?, ?, ?, ?, ?)
-        ON CONFLICT(year, meetcode) DO UPDATE SET
-            meet_name = excluded.meet_name, licence = excluded.licence,
-            swims_saved = excluded.swims_saved, scraped_at = CURRENT_TIMESTAMP
-    """, (year, meetcode, meet_name, licence, swims_saved))
-
-
 def insert_history_rows(conn: sqlite3.Connection, *, tiref: int, stroke: int,
                         course: str, rows: list[dict]) -> None:
     conn.executemany("""
@@ -166,6 +147,18 @@ def insert_history_rows(conn: sqlite3.Connection, *, tiref: int, stroke: int,
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """, [(str(tiref), stroke, course, r["date"], r["time"], int(r["is_pb"]),
            r["meet_name"], r["venue"], r["wa_points"], r["round"], r["level"])
+          for r in rows])
+
+
+def insert_rankings(conn: sqlite3.Connection, rows: list[dict]) -> None:
+    conn.executemany("""
+        INSERT INTO rankings (tiref, swimmer_name, club, yob, sex, event, course,
+            age_group, rank, total_in_ranking, time, meet_name, date, year, level)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """, [(r["tiref"], r["swimmer_name"], r["club"], r["yob"], r["sex"],
+           r["event"], r["course"], r["age_group"], r["rank"],
+           r.get("total_in_ranking"), r["time"], r["meet_name"],
+           r["date"], r["year"], r["level"])
           for r in rows])
 
 

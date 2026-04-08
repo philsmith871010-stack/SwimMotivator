@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SwimMotivator — Data Validation</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; padding: 20px; background: #f5f5f5; }
+        h1 { margin-bottom: 10px; }
+        .controls { background: #fff; padding: 15px; border-radius: 8px; margin-bottom: 20px;
+                     display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
+        select, button { padding: 8px 12px; border-radius: 4px; border: 1px solid #ccc; font-size: 14px; }
+        button { background: #2563eb; color: white; border: none; cursor: pointer; }
+        button:hover { background: #1d4ed8; }
+        .link { color: #2563eb; text-decoration: underline; cursor: pointer; font-size: 13px; }
+        .section { background: #fff; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .section h2 { margin-bottom: 10px; font-size: 16px; color: #333; }
+        .section h3 { margin: 15px 0 8px; font-size: 14px; color: #555; }
+        table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 15px; }
+        th, td { padding: 6px 10px; border: 1px solid #ddd; text-align: left; }
+        th { background: #f0f0f0; font-weight: 600; }
+        tr:nth-child(even) { background: #fafafa; }
+        .pb-row { background: #e8f5e9 !important; font-weight: 600; }
+        .mismatch { background: #ffebee !important; }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                  gap: 10px; margin-bottom: 15px; }
+        .stat { background: #f8f9fa; padding: 10px; border-radius: 6px; text-align: center; }
+        .stat .value { font-size: 24px; font-weight: 700; color: #2563eb; }
+        .stat .label { font-size: 12px; color: #666; }
+        .empty { color: #999; font-style: italic; padding: 20px; text-align: center; }
+        .level-badge { display: inline-block; padding: 2px 8px; border-radius: 10px;
+                       font-size: 11px; font-weight: 600; color: white; }
+        .level-county { background: #16a34a; }
+        .level-regional { background: #2563eb; }
+        .level-national { background: #7c3aed; }
+        #status { padding: 10px; margin-bottom: 15px; background: #fef3c7; border-radius: 6px; display: none; }
+    </style>
+</head>
+<body>
+    <h1>Data Validation</h1>
+    <p style="margin-bottom: 15px; color: #666;">Compare this data against
+        <a href="https://www.swimmingresults.org" target="_blank">swimmingresults.org</a>
+        to verify accuracy.</p>
+
+    <div id="status"></div>
+
+    <div class="controls">
+        <label>Swimmer:</label>
+        <select id="swimmerSelect"><option value="">Loading...</option></select>
+        <label>View:</label>
+        <select id="viewSelect">
+            <option value="pbs">Personal Bests</option>
+            <option value="history">Full History</option>
+            <option value="rankings">Rankings</option>
+            <option value="summary">Summary Stats</option>
+        </select>
+        <button onclick="loadSwimmer()">Load</button>
+        <span id="seLink" class="link" onclick="openOnSE()">View on SwimEngland →</span>
+    </div>
+
+    <div id="content"></div>
+
+    <script>
+    const BASE = 'data/json';
+    let swimmers = [];
+    let currentData = null;
+
+    const STROKE_NAMES = {
+        1: "50 Free", 2: "100 Free", 3: "200 Free", 4: "400 Free",
+        5: "800 Free", 6: "1500 Free", 7: "50 Breast", 8: "100 Breast",
+        9: "200 Breast", 10: "50 Fly", 11: "100 Fly", 12: "200 Fly",
+        13: "50 Back", 14: "100 Back", 15: "200 Back",
+        16: "200 IM", 17: "400 IM", 18: "100 IM",
+    };
+
+    async function init() {
+        try {
+            const resp = await fetch(`${BASE}/swimmers.json`);
+            swimmers = await resp.json();
+            const sel = document.getElementById('swimmerSelect');
+            sel.innerHTML = '<option value="">— Select —</option>';
+            swimmers.forEach(s => {
+                const opt = document.createElement('option');
+                opt.value = s.tiref;
+                opt.textContent = `${s.name} (${s.yob || '?'}, ${s.sex || '?'}) — tiref ${s.tiref}`;
+                sel.appendChild(opt);
+            });
+            showStatus(`Loaded ${swimmers.length} swimmers`, 'ok');
+        } catch (e) {
+            showStatus('Failed to load swimmers.json. Run bulk_load.py first.', 'error');
+        }
+    }
+
+    function showStatus(msg, type) {
+        const el = document.getElementById('status');
+        el.style.display = 'block';
+        el.style.background = type === 'error' ? '#fee2e2' : '#d1fae5';
+        el.textContent = msg;
+    }
+
+    function openOnSE() {
+        const tiref = document.getElementById('swimmerSelect').value;
+        if (tiref) {
+            window.open(`https://www.swimmingresults.org/individualbest/personal_best.php?tiref=${tiref}&mode=A`, '_blank');
+        }
+    }
+
+    async function loadSwimmer() {
+        const tiref = document.getElementById('swimmerSelect').value;
+        if (!tiref) return;
+
+        try {
+            const resp = await fetch(`${BASE}/swimmers/${tiref}.json`);
+            currentData = await resp.json();
+            renderView();
+        } catch (e) {
+            showStatus(`Failed to load data for tiref ${tiref}`, 'error');
+        }
+    }
+
+    function renderView() {
+        if (!currentData) return;
+        const view = document.getElementById('viewSelect').value;
+        const el = document.getElementById('content');
+
+        switch (view) {
+            case 'pbs': el.innerHTML = renderPBs(); break;
+            case 'history': el.innerHTML = renderHistory(); break;
+            case 'rankings': el.innerHTML = renderRankings(); break;
+            case 'summary': el.innerHTML = renderSummary(); break;
+        }
+    }
+
+    function renderPBs() {
+        const d = currentData;
+        if (!d.pbs || d.pbs.length === 0)
+            return '<div class="empty">No personal bests found</div>';
+
+        // Group by course
+        const sc = d.pbs.filter(p => p.course === 'SC');
+        const lc = d.pbs.filter(p => p.course === 'LC');
+
+        let html = `<div class="section"><h2>Personal Bests — ${d.name} (${d.yob})</h2>`;
+        html += `<p style="margin-bottom:10px;color:#666">Compare against:
+            <a href="https://www.swimmingresults.org/individualbest/personal_best.php?tiref=${d.tiref}&mode=A" target="_blank">
+            swimmingresults.org PB page</a></p>`;
+
+        for (const [label, rows] of [['Short Course', sc], ['Long Course', lc]]) {
+            if (rows.length === 0) continue;
+            html += `<h3>${label} (${rows.length} events)</h3>`;
+            html += `<table><tr><th>Event</th><th>Time</th><th>Converted</th><th>WA Pts</th>
+                     <th>Date</th><th>Meet</th><th>Venue</th></tr>`;
+            rows.sort((a, b) => (a.stroke || '').localeCompare(b.stroke || ''));
+            for (const r of rows) {
+                html += `<tr>
+                    <td>${r.stroke}</td><td><strong>${r.time}</strong></td>
+                    <td>${r.converted_time || ''}</td><td>${r.wa_points || ''}</td>
+                    <td>${r.date || ''}</td><td>${r.meet || ''}</td><td>${r.venue || ''}</td>
+                </tr>`;
+            }
+            html += '</table>';
+        }
+        html += '</div>';
+        return html;
+    }
+
+    function renderHistory() {
+        const d = currentData;
+        if (!d.history || d.history.length === 0)
+            return '<div class="empty">No history found</div>';
+
+        let html = `<div class="section"><h2>Full Swim History — ${d.name} (${d.yob})</h2>`;
+        html += `<p style="margin-bottom:10px;color:#666">${d.history.length} total swims.
+            PB swims highlighted in green. Compare per-event against:
+            <a href="https://www.swimmingresults.org/individualbest/personal_best_time_date.php?tiref=${d.tiref}&mode=A&tstroke=1&tcourse=S" target="_blank">
+            swimmingresults.org history page</a> (change tstroke/tcourse in URL)</p>`;
+
+        // Group by stroke_code + course
+        const groups = {};
+        for (const r of d.history) {
+            const key = `${r.stroke_code}|${r.course}`;
+            if (!groups[key]) groups[key] = [];
+            groups[key].push(r);
+        }
+
+        const sortedKeys = Object.keys(groups).sort((a, b) => {
+            const [sa, ca] = a.split('|');
+            const [sb, cb] = b.split('|');
+            return (parseInt(sa) - parseInt(sb)) || ca.localeCompare(cb);
+        });
+
+        for (const key of sortedKeys) {
+            const [strokeCode, course] = key.split('|');
+            const eventName = STROKE_NAMES[parseInt(strokeCode)] || `Stroke ${strokeCode}`;
+            const courseLabel = course === 'S' ? 'SC' : 'LC';
+            const rows = groups[key];
+
+            html += `<h3>${eventName} ${courseLabel} (${rows.length} swims)
+                <a class="link" href="https://www.swimmingresults.org/individualbest/personal_best_time_date.php?tiref=${d.tiref}&mode=A&tstroke=${strokeCode}&tcourse=${course}" target="_blank" style="font-size:12px">verify →</a></h3>`;
+            html += `<table><tr><th>Time</th><th>WA</th><th>Date</th><th>Meet</th><th>PB?</th></tr>`;
+            for (const r of rows) {
+                const cls = r.is_pb ? ' class="pb-row"' : '';
+                html += `<tr${cls}>
+                    <td><strong>${r.time}</strong></td><td>${r.wa_points || ''}</td>
+                    <td>${r.date || ''}</td><td>${r.meet_name || ''}</td>
+                    <td>${r.is_pb ? '✓ PB' : ''}</td>
+                </tr>`;
+            }
+            html += '</table>';
+        }
+        html += '</div>';
+        return html;
+    }
+
+    function renderRankings() {
+        const d = currentData;
+        const r = d.rankings || {};
+
+        let html = `<div class="section"><h2>Rankings — ${d.name} (${d.yob})</h2>`;
+        html += `<p style="margin-bottom:10px;color:#666">Compare against:
+            <a href="https://www.swimmingresults.org/eventrankings/eventrankings.php" target="_blank">
+            swimmingresults.org event rankings</a></p>`;
+
+        for (const [level, label] of [['county', 'County (Herts)'], ['regional', 'Regional (East)'], ['national', 'National']]) {
+            const rows = r[level] || [];
+            const badgeClass = `level-${level}`;
+
+            html += `<h3><span class="level-badge ${badgeClass}">${label}</span> — ${rows.length} entries</h3>`;
+
+            if (rows.length === 0) {
+                html += '<div class="empty">No ranking data at this level</div>';
+                continue;
+            }
+
+            // Group by year
+            const byYear = {};
+            for (const row of rows) {
+                if (!byYear[row.year]) byYear[row.year] = [];
+                byYear[row.year].push(row);
+            }
+
+            for (const year of Object.keys(byYear).sort().reverse()) {
+                const yearRows = byYear[year];
+                html += `<p style="margin-top:10px;font-weight:600">${year}</p>`;
+                html += `<table><tr><th>Event</th><th>Course</th><th>Age</th>
+                         <th>Rank</th><th>Total</th><th>Time</th></tr>`;
+                yearRows.sort((a, b) => (a.event || '').localeCompare(b.event || ''));
+                for (const row of yearRows) {
+                    html += `<tr>
+                        <td>${row.event}</td><td>${row.course}</td><td>${row.age_group}</td>
+                        <td><strong>${row.rank || '?'}</strong></td>
+                        <td>${row.total_in_ranking || '?'}</td>
+                        <td>${row.time || ''}</td>
+                    </tr>`;
+                }
+                html += '</table>';
+            }
+        }
+        html += '</div>';
+        return html;
+    }
+
+    function renderSummary() {
+        const d = currentData;
+        const pbs = d.pbs || [];
+        const hist = d.history || [];
+        const ranks = d.rankings || {};
+
+        const natl = ranks.national || [];
+        const reg = ranks.regional || [];
+        const cty = ranks.county || [];
+
+        // Find best rank at each level (lowest number)
+        const bestRank = (rows) => {
+            const valid = rows.filter(r => r.rank != null);
+            return valid.length ? Math.min(...valid.map(r => r.rank)) : '—';
+        };
+
+        let html = `<div class="section"><h2>Summary — ${d.name} (${d.yob}, ${d.sex}, ${d.club})</h2>`;
+        html += `<div class="stats">
+            <div class="stat"><div class="value">${pbs.length}</div><div class="label">Personal Bests</div></div>
+            <div class="stat"><div class="value">${hist.length}</div><div class="label">Total Swims</div></div>
+            <div class="stat"><div class="value">${natl.length}</div><div class="label">National Rankings</div></div>
+            <div class="stat"><div class="value">${reg.length}</div><div class="label">Regional Rankings</div></div>
+            <div class="stat"><div class="value">${cty.length}</div><div class="label">County Rankings</div></div>
+            <div class="stat"><div class="value">${bestRank(cty)}</div><div class="label">Best County Rank</div></div>
+            <div class="stat"><div class="value">${bestRank(reg)}</div><div class="label">Best Regional Rank</div></div>
+            <div class="stat"><div class="value">${bestRank(natl)}</div><div class="label">Best National Rank</div></div>
+        </div>`;
+
+        // Rank progression: for each event, show rank by year at each level
+        html += '<h3>Rank Progression by Event</h3>';
+
+        // Collect all events across all levels
+        const allEvents = new Set();
+        [...natl, ...reg, ...cty].forEach(r => allEvents.add(`${r.event}|${r.course}`));
+
+        if (allEvents.size === 0) {
+            html += '<div class="empty">No ranking data available</div>';
+        } else {
+            const years = [...new Set([...natl, ...reg, ...cty].map(r => r.year))].sort();
+
+            for (const eventKey of [...allEvents].sort()) {
+                const [event, course] = eventKey.split('|');
+                html += `<h3>${event} ${course}</h3>`;
+                html += `<table><tr><th>Level</th>`;
+                years.forEach(y => html += `<th>${y}</th>`);
+                html += '</tr>';
+
+                for (const [level, label, rows] of [['county', 'County', cty], ['regional', 'Regional', reg], ['national', 'National', natl]]) {
+                    html += `<tr><td><span class="level-badge level-${level}">${label}</span></td>`;
+                    for (const year of years) {
+                        const match = rows.find(r => r.event === event && r.course === course && r.year === year);
+                        if (match && match.rank != null) {
+                            html += `<td><strong>#${match.rank}</strong> / ${match.total_in_ranking || '?'}</td>`;
+                        } else {
+                            html += '<td>—</td>';
+                        }
+                    }
+                    html += '</tr>';
+                }
+                html += '</table>';
+            }
+        }
+
+        html += '</div>';
+        return html;
+    }
+
+    document.getElementById('viewSelect').addEventListener('change', renderView);
+    init();
+    </script>
+</body>
+</html>
