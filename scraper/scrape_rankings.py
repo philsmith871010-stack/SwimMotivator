@@ -173,11 +173,14 @@ def scrape_event_rankings(
                     **level_params,
                 }
                 try:
+                    course_label = 'SC' if course == 'S' else 'LC'
+                    if pages == 0:
+                        print(f"  {idx}/{total}: {event_name} {course_label} {sex} "
+                              f"age {age} {year} {level}...", end="", flush=True)
                     soup = fetch_soup(RANKINGS_URL, params)
                     total_requests += 1
                 except Exception as exc:
-                    print(f"  [!] Failed: {event_name} {sex} age {age} "
-                          f"{'SC' if course == 'S' else 'LC'} {year} {level}: {exc}")
+                    print(f" FAILED: {exc}")
                     break
 
                 rows = _parse_rankings_page(
@@ -186,12 +189,18 @@ def scrape_event_rankings(
                 )
 
                 if not rows:
+                    if pages == 0:
+                        print(" empty")
+                    else:
+                        print(f" {len(combo_rows)} swimmers")
                     break
 
                 combo_rows.extend(rows)
                 pages += 1
+                print(f" p{pages}", end="", flush=True)
 
                 if len(rows) < PAGE_SIZE:
+                    print(f" {len(combo_rows)} swimmers")
                     break
                 start += PAGE_SIZE
 

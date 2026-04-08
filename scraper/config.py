@@ -14,7 +14,7 @@ HISTORY_URL = f"{BASE_URL}/individualbest/personal_best_time_date.php"
 RANKINGS_URL = f"{BASE_URL}/eventrankings/eventrankings.php"
 CLUB_CODES_ZIP_URL = f"{BASE_URL}/clubcodes/GBClub.php"
 
-REQUEST_DELAY = 0.4
+REQUEST_DELAY = 0.5
 REQUEST_TIMEOUT = 30
 
 # Target swimmers (for quick testing)
