@@ -137,17 +137,17 @@ def scrape_personal_bests(tirefs: list[int]) -> None:
 
 def main() -> None:
     # Standalone: derive tirefs from rankings data
-    from .config import CLUB_NAME_PATTERN
+    from .config import CLUB_NAME_PATTERN, SQUAD_MIN_YEAR
     from .db import get_club_tirefs, init_db
     conn = init_db()
     try:
-        tirefs = get_club_tirefs(conn, CLUB_NAME_PATTERN)
+        tirefs = get_club_tirefs(conn, CLUB_NAME_PATTERN, min_year=SQUAD_MIN_YEAR)
     finally:
         conn.close()
     if not tirefs:
         print("[PB] No club swimmers found in rankings. Run rankings scrape first.")
         return
-    print(f"[PB] Found {len(tirefs)} club swimmers from rankings")
+    print(f"[PB] Found {len(tirefs)} active club swimmers from rankings")
     scrape_personal_bests(tirefs=tirefs)
 
 
