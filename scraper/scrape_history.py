@@ -11,7 +11,7 @@ from __future__ import annotations
 
 import sqlite3
 
-from .config import ALL_STROKE_CODES, COURSES, HISTORY_URL, COSTA_TIREFS
+from .config import ALL_STROKE_CODES, COURSES, HISTORY_URL
 from .db import init_db, insert_history_rows
 from .parsers import norm_ws, parse_date, parse_time_seconds
 from .session import fetch_soup
@@ -76,7 +76,7 @@ def _mark_swimmer_scraped(conn: sqlite3.Connection, tiref: str, count: int) -> N
 
 
 def scrape_history(
-    tirefs: list[int] | None = None,
+    tirefs: list[int],
     *,
     force: bool = False,
 ) -> None:
@@ -84,7 +84,7 @@ def scrape_history(
 
     RESUMABLE: tracks which swimmers have been scraped.
     """
-    _tirefs = tirefs or COSTA_TIREFS
+    _tirefs = tirefs
 
     conn = init_db()
     try:
@@ -137,7 +137,19 @@ def scrape_history(
 
 
 def main() -> None:
-    scrape_history()
+    # Standalone: derive tirefs from rankings data
+    from .config import CLUB_NAME_PATTERN
+    from .db import get_club_tirefs, init_db
+    conn = init_db()
+    try:
+        tirefs = get_club_tirefs(conn, CLUB_NAME_PATTERN)
+    finally:
+        conn.close()
+    if not tirefs:
+        print("[History] No club swimmers found in rankings. Run rankings scrape first.")
+        return
+    print(f"[History] Found {len(tirefs)} club swimmers from rankings")
+    scrape_history(tirefs=tirefs)
 
 
 if __name__ == "__main__":

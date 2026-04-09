@@ -7,12 +7,15 @@ from typing import Any
 
 from bs4 import BeautifulSoup
 
-from .config import BIOG_URL, COSTA_TIREFS, PB_URL
+from .config import BIOG_URL, PB_URL
 from .db import clear_personal_bests, init_db, insert_personal_best, upsert_swimmer
 from .parsers import norm_ws, parse_int_or_none
 from .session import fetch_soup
 
 SWIMMER_LINE_RE = re.compile(r"^(.+?)\s*-\s*\(\s*(\d+)\s*\)\s*-\s*(.+)$", re.DOTALL)
+VALID_STROKE_RE = re.compile(
+    r"^\d+m?\s+(Freestyle|Backstroke|Breaststroke|Butterfly|Individual Medley)$", re.I
+)
 
 
 def parse_swimmer_header(soup: BeautifulSoup, tiref: int) -> tuple[str, str]:
@@ -39,6 +42,8 @@ def parse_pb_table(table, course: str) -> list[dict[str, Any]]:
             continue
         stroke = norm_ws(cells[0].get_text(" ", strip=True))
         if stroke.lower() == "stroke":
+            continue
+        if not VALID_STROKE_RE.match(stroke):
             continue
         time_val = norm_ws(cells[1].get_text(" ", strip=True))
         converted = norm_ws(cells[2].get_text(" ", strip=True))
@@ -113,11 +118,12 @@ def scrape_one(conn, tiref: int) -> None:
         insert_personal_best(conn, tiref=tiref, **row)
 
 
-def main() -> None:
+def scrape_personal_bests(tirefs: list[int]) -> None:
+    _tirefs = tirefs
     conn = init_db()
-    total = len(COSTA_TIREFS)
+    total = len(_tirefs)
     try:
-        for i, tiref in enumerate(COSTA_TIREFS, start=1):
+        for i, tiref in enumerate(_tirefs, start=1):
             print(f"[PB] Swimmer {i}/{total} (tiref {tiref})...")
             try:
                 scrape_one(conn, tiref)
@@ -127,6 +133,22 @@ def main() -> None:
                 print(f"  Error: {e}")
     finally:
         conn.close()
+
+
+def main() -> None:
+    # Standalone: derive tirefs from rankings data
+    from .config import CLUB_NAME_PATTERN
+    from .db import get_club_tirefs, init_db
+    conn = init_db()
+    try:
+        tirefs = get_club_tirefs(conn, CLUB_NAME_PATTERN)
+    finally:
+        conn.close()
+    if not tirefs:
+        print("[PB] No club swimmers found in rankings. Run rankings scrape first.")
+        return
+    print(f"[PB] Found {len(tirefs)} club swimmers from rankings")
+    scrape_personal_bests(tirefs=tirefs)
 
 
 if __name__ == "__main__":

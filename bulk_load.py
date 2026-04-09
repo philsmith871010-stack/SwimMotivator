@@ -1,25 +1,29 @@
 #!/usr/bin/env python3
 """
-SwimMotivator data pipeline — targeted scraping for CoSA swimmers.
+SwimMotivator data pipeline — dynamic squad from rankings data.
 
-Steps:
+Pipeline order (rankings first to discover club swimmers):
   1. Club metadata (GBClub.php)                    — ~5 seconds
-  2. Personal bests for all CoSA swimmers           — ~1 minute
-  3. Full swim history (every time ever swam)       — ~22 minutes
-  4. Rankings at county/regional/national level     — ~40 minutes
-  5. Export JSON for the frontend                   — instant
+  2. Rankings at county level                      — ~15 minutes
+  3. Personal bests for club swimmers              — ~1 minute
+  4. Full swim history (every time ever swam)      — ~22 minutes
+  5. Export JSON for the frontend                  — instant
 
-Total: ~60 minutes, fully RESUMABLE (safe to Ctrl+C and restart).
+Club swimmers are derived DYNAMICALLY from rankings data — no hardcoded
+list needed. Any swimmer whose club name contains "St Albans" in the
+county rankings is included.
+
+Fully RESUMABLE: safe to Ctrl+C and restart at any time.
 
 Usage:
     python bulk_load.py              # run everything
     python bulk_load.py --step 1     # just clubs
-    python bulk_load.py --step 2     # just PBs
-    python bulk_load.py --step 3     # just history
-    python bulk_load.py --step 4     # just rankings (all levels)
+    python bulk_load.py --step 2     # just rankings
+    python bulk_load.py --step 3     # just PBs (requires step 2 first)
+    python bulk_load.py --step 4     # just history (requires step 2 first)
     python bulk_load.py --step 5     # just export JSON
     python bulk_load.py --status     # check progress
-    python bulk_load.py --test       # quick test with 2 swimmers only
+    python bulk_load.py --test       # quick test with Bella + Amber only
 """
 
 import argparse
@@ -27,7 +31,7 @@ import sqlite3
 import sys
 import time
 
-from scraper.config import DB_PATH, BELLA_TIREF, AMBER_TIREF, COSTA_TIREFS, RANKING_YEARS
+from scraper.config import DB_PATH, CLUB_NAME_PATTERN, RANKING_YEARS, TEST_TIREFS
 
 
 def show_status():
@@ -66,8 +70,7 @@ def show_status():
 
         # Rankings
         try:
-            rank_count = conn.execute("SELECT COUNT(*) FROM rankings").fetchone()[0]
-            for level in ["national", "regional", "county"]:
+            for level in ["county", "regional", "national"]:
                 lcount = conn.execute(
                     "SELECT COUNT(*) FROM rankings WHERE level = ?", (level,)
                 ).fetchone()[0]
@@ -80,6 +83,16 @@ def show_status():
             print(f"  Combos scraped: {combos_done}")
         except sqlite3.OperationalError:
             print("Rankings:       not started")
+
+        # Club swimmers derived from rankings
+        try:
+            club_count = conn.execute(
+                "SELECT COUNT(DISTINCT tiref) FROM rankings WHERE club LIKE ?",
+                (f"%{CLUB_NAME_PATTERN}%",)
+            ).fetchone()[0]
+            print(f"Club swimmers:  {club_count:>10,} (matching '{CLUB_NAME_PATTERN}')")
+        except sqlite3.OperationalError:
+            pass
 
         # Clubs
         try:
@@ -96,6 +109,17 @@ def show_status():
         conn.close()
 
 
+def _get_club_tirefs() -> list[int]:
+    """Derive club swimmers from rankings data."""
+    from scraper.db import get_club_tirefs, init_db
+    conn = init_db()
+    try:
+        tirefs = get_club_tirefs(conn, CLUB_NAME_PATTERN)
+    finally:
+        conn.close()
+    return tirefs
+
+
 def step1_clubs():
     print("\n" + "=" * 60)
     print("STEP 1: Club Metadata")
@@ -104,38 +128,35 @@ def step1_clubs():
     clubs_main()
 
 
-def step2_pbs(tirefs=None):
-    print("\n" + "=" * 60)
-    print("STEP 2: Personal Bests")
-    print(f"  {len(tirefs or COSTA_TIREFS)} swimmers")
-    print("=" * 60)
-    from scraper.scrape_personal_bests import main as pbs_main
-    # The PB scraper uses COSTA_TIREFS by default
-    # For test mode, we'd need to modify it — for now just run default
-    pbs_main()
-
-
-def step3_history(tirefs=None):
-    _tirefs = tirefs or COSTA_TIREFS
-    print("\n" + "=" * 60)
-    print("STEP 3: Full Swim History")
-    print(f"  {len(_tirefs)} swimmers, 36 requests each")
-    print("  Estimated: ~22 minutes (resumable)")
-    print("=" * 60)
-    from scraper.scrape_history import scrape_history
-    scrape_history(tirefs=_tirefs)
-
-
-def step4_rankings(years=None, levels=None):
+def step2_rankings(years=None, levels=None):
     _years = years or RANKING_YEARS
     print("\n" + "=" * 60)
-    print("STEP 4: Rankings (County + Regional + National)")
+    print("STEP 2: Rankings")
     print(f"  Years: {_years}")
-    print(f"  Levels: {levels or 'all'}")
-    print("  Estimated: ~40 minutes (resumable)")
+    print(f"  Levels: {levels or 'all configured'}")
+    print("  Resumable — safe to Ctrl+C and restart")
     print("=" * 60)
     from scraper.scrape_rankings import scrape_event_rankings
     scrape_event_rankings(years=_years, levels=levels)
+
+
+def step3_pbs(tirefs: list[int]):
+    print("\n" + "=" * 60)
+    print("STEP 3: Personal Bests")
+    print(f"  {len(tirefs)} swimmers")
+    print("=" * 60)
+    from scraper.scrape_personal_bests import scrape_personal_bests
+    scrape_personal_bests(tirefs=tirefs)
+
+
+def step4_history(tirefs: list[int]):
+    print("\n" + "=" * 60)
+    print("STEP 4: Full Swim History")
+    print(f"  {len(tirefs)} swimmers, 36 requests each")
+    print("  Resumable — safe to Ctrl+C and restart")
+    print("=" * 60)
+    from scraper.scrape_history import scrape_history
+    scrape_history(tirefs=tirefs)
 
 
 def step5_export():
@@ -151,13 +172,16 @@ def main():
         description="SwimMotivator data pipeline (resumable)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
+Pipeline order:
+  Step 1: Club metadata
+  Step 2: Rankings (county) — discovers all swimmers
+  Step 3: Personal bests (for club swimmers found in step 2)
+  Step 4: Swim history (for club swimmers found in step 2)
+  Step 5: Export JSON
+
 Examples:
-  python bulk_load.py              Full pipeline (~60 minutes)
-  python bulk_load.py --step 1     Just club metadata
-  python bulk_load.py --step 2     Just personal bests
-  python bulk_load.py --step 3     Just swim history
-  python bulk_load.py --step 4     Just rankings
-  python bulk_load.py --step 5     Just export JSON
+  python bulk_load.py              Full pipeline
+  python bulk_load.py --step 2     Just rankings
   python bulk_load.py --test       Quick test (Bella + Amber only)
   python bulk_load.py --status     Check progress
         """)
@@ -175,14 +199,12 @@ Examples:
         show_status()
         return
 
-    test_tirefs = [BELLA_TIREF, AMBER_TIREF] if args.test else None
-
     start = time.time()
 
     print("=" * 60)
     print("SwimMotivator — Data Pipeline")
     if args.test:
-        print("MODE: TEST (Bella + Amber only)")
+        print("MODE: TEST (Bella + Amber only, 2 years)")
     print("=" * 60)
     print()
     print("RESUMABLE: safe to Ctrl+C and restart at any time.")
@@ -190,23 +212,47 @@ Examples:
     print()
 
     try:
+        # Step 1: Club metadata
         if args.step is None or args.step == 1:
             step1_clubs()
 
+        # Step 2: Rankings — this discovers all swimmers
         if args.step is None or args.step == 2:
-            step2_pbs(test_tirefs)
-
-        if args.step is None or args.step == 3:
-            step3_history(test_tirefs)
-
-        if args.step is None or args.step == 4:
-            # For test mode, still scrape all rankings (they're shared)
-            # but limit to current year only
             if args.test:
-                step4_rankings(years=[2025, 2026])
+                step2_rankings(years=[2025, 2026])
             else:
-                step4_rankings()
+                step2_rankings()
 
+        # Derive club swimmers from rankings (or use test set)
+        if args.test:
+            club_tirefs = TEST_TIREFS
+            print(f"\n[Test mode] Using {len(club_tirefs)} test swimmers")
+        else:
+            club_tirefs = _get_club_tirefs()
+            if club_tirefs:
+                print(f"\n[Squad] Found {len(club_tirefs)} swimmers matching "
+                      f"'{CLUB_NAME_PATTERN}' in rankings")
+            else:
+                print(f"\n[Squad] No swimmers found matching '{CLUB_NAME_PATTERN}'.")
+                print("  Run step 2 (rankings) first to populate the database.")
+                if args.step and args.step > 2:
+                    return
+
+        # Step 3: Personal bests for club swimmers
+        if args.step is None or args.step == 3:
+            if club_tirefs:
+                step3_pbs(club_tirefs)
+            else:
+                print("\n[Skip] Step 3: no club swimmers found (run step 2 first)")
+
+        # Step 4: Full history for club swimmers
+        if args.step is None or args.step == 4:
+            if club_tirefs:
+                step4_history(club_tirefs)
+            else:
+                print("\n[Skip] Step 4: no club swimmers found (run step 2 first)")
+
+        # Step 5: Export
         if args.step is None or args.step == 5:
             step5_export()
 
