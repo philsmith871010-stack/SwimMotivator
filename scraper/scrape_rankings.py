@@ -46,12 +46,18 @@ def _parse_rankings_page(soup, *, event: str, course: str, sex: str,
     if not table:
         return []
     rows: list[dict] = []
+    last_rank = None
     for tr in table.find_all("tr"):
         tds = tr.find_all("td")
         if len(tds) < 7:
             continue
         rank_text = norm_ws(tds[0].get_text(" ", strip=True)).replace(",", "").lstrip("=").strip()
-        rank = int(rank_text) if rank_text.isdigit() else None
+        if rank_text.isdigit():
+            rank = int(rank_text)
+            last_rank = rank
+        else:
+            # Blank rank = tied with previous swimmer
+            rank = last_rank
 
         link = tds[1].find("a", href=True)
         if not link:
