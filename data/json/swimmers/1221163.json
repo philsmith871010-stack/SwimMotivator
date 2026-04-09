@@ -1,0 +1,3106 @@
+{
+  "tiref": 1221163,
+  "name": "Florence Crowley",
+  "yob": 2006,
+  "sex": "F",
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Backstroke",
+      "time": "1:16.64",
+      "converted_time": "1:17.70",
+      "wa_points": 350,
+      "date": "01/10/23",
+      "meet": "City of St Albans Club Champs 2023",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "1:26.28",
+      "converted_time": "1:27.70",
+      "wa_points": 377,
+      "date": "01/10/23",
+      "meet": "City of St Albans Club Champs 2023",
+      "venue": "St Albans"
+    },
+    {
+      "course": "LC",
+      "stroke": "100 Butterfly",
+      "time": "1:08.16",
+      "converted_time": "1:07.00",
+      "wa_points": 514,
+      "date": "30/04/23",
+      "meet": "Swim England East Region LC Championships 2023",
+      "venue": "Norwich"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Butterfly",
+      "time": "1:06.08",
+      "converted_time": "1:07.20",
+      "wa_points": 507,
+      "date": "21/01/23",
+      "meet": "SE Hertfordshire County Championships 2023",
+      "venue": "Borehamwood"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:03.01",
+      "converted_time": "1:04.30",
+      "wa_points": 507,
+      "date": "03/12/23",
+      "meet": "City of St Albans Winter Meet 2023",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "1:14.08",
+      "converted_time": "1:14.10",
+      "wa_points": 411,
+      "date": "29/01/23",
+      "meet": "SE Hertfordshire County Championships 2023",
+      "venue": "Borehamwood"
+    },
+    {
+      "course": "LC",
+      "stroke": "1500 Freestyle",
+      "time": "18:45.80",
+      "converted_time": "18:27.30",
+      "wa_points": 546,
+      "date": "08/03/26",
+      "meet": "NOVA Centurion 2026 National Qualifier",
+      "venue": "Nottingham"
+    },
+    {
+      "course": "SC",
+      "stroke": "1500 Freestyle",
+      "time": "18:18.89",
+      "converted_time": "18:37.50",
+      "wa_points": 564,
+      "date": "03/02/24",
+      "meet": "SE Hertfordshire County Championships 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Backstroke",
+      "time": "2:35.30",
+      "converted_time": "2:37.40",
+      "wa_points": 439,
+      "date": "01/10/23",
+      "meet": "City of St Albans Club Champs 2023",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Breaststroke",
+      "time": "3:02.73",
+      "converted_time": "3:05.60",
+      "wa_points": 381,
+      "date": "16/09/23",
+      "meet": "City of St Albans Club Champs 2023",
+      "venue": "St Albans"
+    },
+    {
+      "course": "LC",
+      "stroke": "200 Butterfly",
+      "time": "2:27.12",
+      "converted_time": "2:25.00",
+      "wa_points": 567,
+      "date": "29/04/23",
+      "meet": "Swim England East Region LC Championships 2023",
+      "venue": "Norwich"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Butterfly",
+      "time": "2:24.24",
+      "converted_time": "2:26.40",
+      "wa_points": 566,
+      "date": "28/01/23",
+      "meet": "SE Hertfordshire County Championships 2023",
+      "venue": "Borehamwood"
+    },
+    {
+      "course": "LC",
+      "stroke": "200 Freestyle",
+      "time": "2:20.32",
+      "converted_time": "2:17.80",
+      "wa_points": 511,
+      "date": "12/03/22",
+      "meet": "71st ESSA National Inter-Divisional Championships",
+      "venue": "Coventry"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Freestyle",
+      "time": "2:14.54",
+      "converted_time": "2:17.10",
+      "wa_points": 551,
+      "date": "02/12/23",
+      "meet": "City of St Albans Winter Meet 2023",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Individual Medley",
+      "time": "2:35.49",
+      "converted_time": "2:38.00",
+      "wa_points": 478,
+      "date": "05/02/23",
+      "meet": "SE Hertfordshire County Championships 2023",
+      "venue": "Borehamwood"
+    },
+    {
+      "course": "LC",
+      "stroke": "400 Freestyle",
+      "time": "4:43.49",
+      "converted_time": "4:38.50",
+      "wa_points": 563,
+      "date": "15/02/26",
+      "meet": "BUCS Long Course Championships 2025-26",
+      "venue": "Sheffield"
+    },
+    {
+      "course": "SC",
+      "stroke": "400 Freestyle",
+      "time": "4:37.55",
+      "converted_time": "4:42.60",
+      "wa_points": 570,
+      "date": "27/01/24",
+      "meet": "SE Hertfordshire County Championships 2024",
+      "venue": "Borehamwood"
+    },
+    {
+      "course": "LC",
+      "stroke": "400 Individual Medley",
+      "time": "5:36.81",
+      "converted_time": "5:31.50",
+      "wa_points": 479,
+      "date": "30/04/23",
+      "meet": "Swim England East Region LC Championships 2023",
+      "venue": "Norwich"
+    },
+    {
+      "course": "SC",
+      "stroke": "400 Individual Medley",
+      "time": "5:21.18",
+      "converted_time": "5:26.60",
+      "wa_points": 503,
+      "date": "04/03/23",
+      "meet": "Watford SC Regional Qualifier 2023",
+      "venue": "Garston"
+    },
+    {
+      "course": "LC",
+      "stroke": "50 Backstroke",
+      "time": "39.67",
+      "converted_time": "39.20",
+      "wa_points": 310,
+      "date": "16/03/19",
+      "meet": "Harpenden Frantic Fifties 2019",
+      "venue": "Inspire - Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "34.04",
+      "converted_time": "34.60",
+      "wa_points": 407,
+      "date": "16/09/23",
+      "meet": "City of St Albans Club Champs 2023",
+      "venue": "St Albans"
+    },
+    {
+      "course": "LC",
+      "stroke": "50 Breaststroke",
+      "time": "44.22",
+      "converted_time": "43.50",
+      "wa_points": 286,
+      "date": "16/03/19",
+      "meet": "Harpenden Frantic Fifties 2019",
+      "venue": "Inspire - Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "40.35",
+      "converted_time": "41.10",
+      "wa_points": 347,
+      "date": "16/09/23",
+      "meet": "City of St Albans Club Champs 2023",
+      "venue": "St Albans"
+    },
+    {
+      "course": "LC",
+      "stroke": "50 Butterfly",
+      "time": "30.89",
+      "converted_time": "30.30",
+      "wa_points": 494,
+      "date": "01/05/23",
+      "meet": "Swim England East Region LC Championships 2023",
+      "venue": "Norwich"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "30.99",
+      "converted_time": "31.60",
+      "wa_points": 461,
+      "date": "29/01/23",
+      "meet": "SE Hertfordshire County Championships 2023",
+      "venue": "Borehamwood"
+    },
+    {
+      "course": "LC",
+      "stroke": "50 Freestyle",
+      "time": "32.38",
+      "converted_time": "31.70",
+      "wa_points": 387,
+      "date": "16/03/19",
+      "meet": "Harpenden Frantic Fifties 2019",
+      "venue": "Inspire - Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "29.24",
+      "converted_time": "29.90",
+      "wa_points": 475,
+      "date": "01/10/23",
+      "meet": "City of St Albans Club Champs 2023",
+      "venue": "St Albans"
+    },
+    {
+      "course": "LC",
+      "stroke": "800 Freestyle",
+      "time": "9:46.14",
+      "converted_time": "9:36.20",
+      "wa_points": 563,
+      "date": "07/03/26",
+      "meet": "NOVA Centurion 2026 National Qualifier",
+      "venue": "Nottingham"
+    },
+    {
+      "course": "SC",
+      "stroke": "800 Freestyle",
+      "time": "9:30.41",
+      "converted_time": "9:40.40",
+      "wa_points": 586,
+      "date": "01/11/24",
+      "meet": "SE East Region Short Course Championships 2024",
+      "venue": "Luton"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "L",
+      "date": "16/03/19",
+      "time": "32.38",
+      "is_pb": 1,
+      "meet_name": "Harpenden Frantic Fifties 2019",
+      "wa_points": "387"
+    },
+    {
+      "stroke_code": 1,
+      "course": "L",
+      "date": "17/03/18",
+      "time": "32.51",
+      "is_pb": 1,
+      "meet_name": "Harpenden Frantic Fifties 2018",
+      "wa_points": "383"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "01/10/17",
+      "time": "37.00",
+      "is_pb": 0,
+      "meet_name": "Harpenden Legacy Open Meet 2017",
+      "wa_points": "234"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "01/10/23",
+      "time": "29.24",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "475"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "04/12/21",
+      "time": "29.53",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "462"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "05/10/19",
+      "time": "30.45",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Meet",
+      "wa_points": "421"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "07/10/18",
+      "time": "32.47",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Meet",
+      "wa_points": "347"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "09/12/17",
+      "time": "33.91",
+      "is_pb": 1,
+      "meet_name": "NASL - London Rounds 2017 - Division 1 & 2",
+      "wa_points": "305"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "10/12/17",
+      "time": "35.18",
+      "is_pb": 0,
+      "meet_name": "Harpenden Last Chance Meet 2017",
+      "wa_points": "273"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "11/11/17",
+      "time": "35.67",
+      "is_pb": 1,
+      "meet_name": "NASL - London Rounds 2017 - Division 1 & 2",
+      "wa_points": "262"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "11/12/22",
+      "time": "29.87",
+      "is_pb": 0,
+      "meet_name": "Harpenden SC FINIS Last Chance County Qualifier",
+      "wa_points": "446"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "15/05/21",
+      "time": "31.10",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Swimming Club",
+      "wa_points": "395"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "30.29",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "428"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "19/09/15",
+      "time": "43.58",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "143"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "19/12/20",
+      "time": "31.40",
+      "is_pb": 0,
+      "meet_name": "City of St Albans",
+      "wa_points": "384"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "20/11/22",
+      "time": "29.78",
+      "is_pb": 0,
+      "meet_name": "Watford Swimming Club County Qualifier",
+      "wa_points": "450"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "21/11/14",
+      "time": "46.13",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "121"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "22/04/17",
+      "time": "36.99",
+      "is_pb": 1,
+      "meet_name": "HSSA St Albans District Primary Trials Gala 2017",
+      "wa_points": "235"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "26/01/19",
+      "time": "31.15",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "393"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "27/01/18",
+      "time": "32.64",
+      "is_pb": 1,
+      "meet_name": "Hertfordshire County Championships",
+      "wa_points": "342"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "01/11/20",
+      "time": "1:06.32",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC",
+      "wa_points": "434"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "03/12/23",
+      "time": "1:03.01",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "507"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "04/12/22",
+      "time": "1:05.50",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Winter Meet 2022",
+      "wa_points": "451"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "06/10/18",
+      "time": "1:11.48",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Meet",
+      "wa_points": "347"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "09/10/21",
+      "time": "1:05.40",
+      "is_pb": 1,
+      "meet_name": "The National Arena Swimming League London Round 1",
+      "wa_points": "453"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "10/11/18",
+      "time": "1:08.58",
+      "is_pb": 1,
+      "meet_name": "The NASL - London - Rounds 2018 - Div 1 & 2",
+      "wa_points": "393"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "10/12/17",
+      "time": "1:18.02",
+      "is_pb": 1,
+      "meet_name": "Harpenden Last Chance Meet 2017",
+      "wa_points": "267"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "11/03/18",
+      "time": "1:12.00",
+      "is_pb": 1,
+      "meet_name": "Potters Bar Spring Regional Qualifier",
+      "wa_points": "339"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "11/12/22",
+      "time": "1:04.09",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Last Chance County Qualifier",
+      "wa_points": "481"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "12/10/19",
+      "time": "1:08.08",
+      "is_pb": 1,
+      "meet_name": "NASL London Round 1",
+      "wa_points": "402"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "13/11/21",
+      "time": "1:05.45",
+      "is_pb": 0,
+      "meet_name": "The National Arena Swimming League London Round 2",
+      "wa_points": "452"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "16/09/23",
+      "time": "1:03.62",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "492"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "1:05.72",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "447"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "19/11/17",
+      "time": "1:20.36",
+      "is_pb": 1,
+      "meet_name": "CMKSC Autumn Open Meet (Level 3)",
+      "wa_points": "244"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "19/11/22",
+      "time": "1:05.80",
+      "is_pb": 0,
+      "meet_name": "Watford Swimming Club County Qualifier",
+      "wa_points": "445"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "20/01/19",
+      "time": "1:09.60",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "376"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "22/01/23",
+      "time": "1:03.31",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2023",
+      "wa_points": "500"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "26/09/15",
+      "time": "1:40.60",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "124"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "28/11/14",
+      "time": "1:47.56",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "101"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "30/09/17",
+      "time": "1:22.84",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Open Meet 2017",
+      "wa_points": "223"
+    },
+    {
+      "stroke_code": 3,
+      "course": "L",
+      "date": "12/03/22",
+      "time": "2:20.32",
+      "is_pb": 1,
+      "meet_name": "71st ESSA National Inter-Divisional Championships",
+      "wa_points": "511"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "02/12/23",
+      "time": "2:14.54",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "551"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "04/02/23",
+      "time": "2:16.71",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2023",
+      "wa_points": "525"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "05/03/23",
+      "time": "2:17.80",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "512"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "09/01/22",
+      "time": "2:22.22",
+      "is_pb": 1,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "466"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "11/12/22",
+      "time": "2:21.83",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Last Chance County Qualifier",
+      "wa_points": "470"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "12/12/21",
+      "time": "2:23.70",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Last Chance Meet",
+      "wa_points": "452"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "16/03/19",
+      "time": "2:31.40",
+      "is_pb": 1,
+      "meet_name": "Bishops Stortford Spring Open Meet",
+      "wa_points": "386"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "16/09/23",
+      "time": "2:15.92",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "534"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "19/11/17",
+      "time": "3:00.57",
+      "is_pb": 1,
+      "meet_name": "CMKSC Autumn Open Meet (Level 3)",
+      "wa_points": "227"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "19/11/23",
+      "time": "2:16.48",
+      "is_pb": 0,
+      "meet_name": "Watford SC County Qualifier 2023",
+      "wa_points": "528"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "20/11/22",
+      "time": "2:23.29",
+      "is_pb": 0,
+      "meet_name": "Watford Swimming Club County Qualifier",
+      "wa_points": "456"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "21/11/21",
+      "time": "2:25.07",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier",
+      "wa_points": "439"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "30/09/17",
+      "time": "3:05.30",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Open Meet 2017",
+      "wa_points": "210"
+    },
+    {
+      "stroke_code": 4,
+      "course": "L",
+      "date": "13/03/22",
+      "time": "5:02.20",
+      "is_pb": 1,
+      "meet_name": "71st ESSA National Inter-Divisional Championships",
+      "wa_points": "465"
+    },
+    {
+      "stroke_code": 4,
+      "course": "L",
+      "date": "15/02/26",
+      "time": "4:43.49",
+      "is_pb": 1,
+      "meet_name": "BUCS Long Course Championships 2025-26",
+      "wa_points": "563"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "02/12/23",
+      "time": "4:38.85",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "562"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "03/11/24",
+      "time": "4:42.35",
+      "is_pb": 0,
+      "meet_name": "SE East Region Short Course Championships 2024",
+      "wa_points": "542"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "04/02/23",
+      "time": "4:47.16",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2023",
+      "wa_points": "515"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "04/12/21",
+      "time": "5:04.90",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "430"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "05/03/23",
+      "time": "4:46.06",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "521"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "05/10/19",
+      "time": "5:16.24",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Meet",
+      "wa_points": "385"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "05/11/23",
+      "time": "4:41.31",
+      "is_pb": 0,
+      "meet_name": "SE East Region Short Course Championships 2023",
+      "wa_points": "548"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "07/10/23",
+      "time": "4:37.80",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Bryan Thompson Legacy Meet 23",
+      "wa_points": "569"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "10/03/18",
+      "time": "5:44.55",
+      "is_pb": 1,
+      "meet_name": "Potters Bar Spring Regional Qualifier",
+      "wa_points": "298"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "11/12/22",
+      "time": "4:56.76",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Last Chance County Qualifier",
+      "wa_points": "467"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "12/12/21",
+      "time": "5:07.96",
+      "is_pb": 0,
+      "meet_name": "Harpenden SC FINIS Last Chance Meet",
+      "wa_points": "417"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "26/11/23",
+      "time": "4:45.47",
+      "is_pb": 0,
+      "meet_name": "Co St Albans & Watford SCs Joint Club Champs 2023",
+      "wa_points": "524"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "27/01/24",
+      "time": "4:37.55",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "570"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "27/11/22",
+      "time": "5:00.13",
+      "is_pb": 1,
+      "meet_name": "Watford & City of St Albans SCs Joint Club Champs",
+      "wa_points": "451"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "30/01/22",
+      "time": "5:00.37",
+      "is_pb": 1,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "450"
+    },
+    {
+      "stroke_code": 5,
+      "course": "L",
+      "date": "07/03/26",
+      "time": "9:46.14",
+      "is_pb": 1,
+      "meet_name": "NOVA Centurion 2026 National Qualifier",
+      "wa_points": "563"
+    },
+    {
+      "stroke_code": 5,
+      "course": "L",
+      "date": "14/02/26",
+      "time": "9:52.06",
+      "is_pb": 1,
+      "meet_name": "BUCS Long Course Championships 2025-26",
+      "wa_points": "546"
+    },
+    {
+      "stroke_code": 5,
+      "course": "S",
+      "date": "01/11/23",
+      "time": "9:39.60",
+      "is_pb": 1,
+      "meet_name": "Co St Albans & Watford SCs Joint Club Champs 2023",
+      "wa_points": "558"
+    },
+    {
+      "stroke_code": 5,
+      "course": "S",
+      "date": "01/11/24",
+      "time": "9:30.41",
+      "is_pb": 1,
+      "meet_name": "SE East Region Short Course Championships 2024",
+      "wa_points": "586"
+    },
+    {
+      "stroke_code": 5,
+      "course": "S",
+      "date": "12/10/22",
+      "time": "10:49.25",
+      "is_pb": 1,
+      "meet_name": "Watford & City of St Albans SCs Joint Club Champs",
+      "wa_points": "397"
+    },
+    {
+      "stroke_code": 5,
+      "course": "S",
+      "date": "13/01/24",
+      "time": "9:32.09",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "581"
+    },
+    {
+      "stroke_code": 6,
+      "course": "L",
+      "date": "08/03/26",
+      "time": "18:45.80",
+      "is_pb": 1,
+      "meet_name": "NOVA Centurion 2026 National Qualifier",
+      "wa_points": "546"
+    },
+    {
+      "stroke_code": 6,
+      "course": "L",
+      "date": "13/02/26",
+      "time": "18:49.59",
+      "is_pb": 1,
+      "meet_name": "BUCS Long Course Championships 2025-26",
+      "wa_points": "541"
+    },
+    {
+      "stroke_code": 6,
+      "course": "S",
+      "date": "02/11/24",
+      "time": "18:27.23",
+      "is_pb": 0,
+      "meet_name": "SE East Region Short Course Championships 2024",
+      "wa_points": "551"
+    },
+    {
+      "stroke_code": 6,
+      "course": "S",
+      "date": "03/02/24",
+      "time": "18:18.89",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "564"
+    },
+    {
+      "stroke_code": 6,
+      "course": "S",
+      "date": "15/11/23",
+      "time": "19:02.23",
+      "is_pb": 1,
+      "meet_name": "Co St Albans & Watford SCs Joint Club Champs 2023",
+      "wa_points": "502"
+    },
+    {
+      "stroke_code": 6,
+      "course": "S",
+      "date": "16/11/22",
+      "time": "20:29.31",
+      "is_pb": 1,
+      "meet_name": "Watford & City of St Albans SCs Joint Club Champs",
+      "wa_points": "403"
+    },
+    {
+      "stroke_code": 7,
+      "course": "L",
+      "date": "16/03/19",
+      "time": "44.22",
+      "is_pb": 1,
+      "meet_name": "Harpenden Frantic Fifties 2019",
+      "wa_points": "286"
+    },
+    {
+      "stroke_code": 7,
+      "course": "L",
+      "date": "17/03/18",
+      "time": "44.71",
+      "is_pb": 1,
+      "meet_name": "Harpenden Frantic Fifties 2018",
+      "wa_points": "277"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "01/10/17",
+      "time": "48.61",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Open Meet 2017",
+      "wa_points": "198"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "07/10/18",
+      "time": "43.72",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Meet",
+      "wa_points": "273"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "09/12/17",
+      "time": "45.02",
+      "is_pb": 1,
+      "meet_name": "NASL - London Rounds 2017 - Division 1 & 2",
+      "wa_points": "250"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "10/12/17",
+      "time": "46.86",
+      "is_pb": 0,
+      "meet_name": "Harpenden Last Chance Meet 2017",
+      "wa_points": "221"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "11/11/17",
+      "time": "46.46",
+      "is_pb": 1,
+      "meet_name": "NASL - London Rounds 2017 - Division 1 & 2",
+      "wa_points": "227"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "14/10/17",
+      "time": "46.86",
+      "is_pb": 1,
+      "meet_name": "NASL - London Rounds 2017 - Division 1 & 2",
+      "wa_points": "221"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "16/09/23",
+      "time": "40.35",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "347"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "42.19",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "304"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "19/12/20",
+      "time": "43.72",
+      "is_pb": 1,
+      "meet_name": "City of St Albans",
+      "wa_points": "273"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "22/04/17",
+      "time": "51.42",
+      "is_pb": 1,
+      "meet_name": "HSSA St Albans District Primary Trials Gala 2017",
+      "wa_points": "167"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "27/01/18",
+      "time": "43.89",
+      "is_pb": 1,
+      "meet_name": "Hertfordshire County Championships",
+      "wa_points": "270"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "28/06/15",
+      "time": "54.40",
+      "is_pb": 1,
+      "meet_name": "The Terry Davies Alternative Nationals",
+      "wa_points": "141"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "01/10/17",
+      "time": "1:45.10",
+      "is_pb": 0,
+      "meet_name": "Harpenden Legacy Open Meet 2017",
+      "wa_points": "208"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "01/10/23",
+      "time": "1:26.28",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "377"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "04/12/22",
+      "time": "1:34.13",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Winter Meet 2022",
+      "wa_points": "290"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "10/03/18",
+      "time": "1:35.94",
+      "is_pb": 1,
+      "meet_name": "Potters Bar Spring Regional Qualifier",
+      "wa_points": "274"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "10/12/17",
+      "time": "1:42.76",
+      "is_pb": 0,
+      "meet_name": "Harpenden Last Chance Meet 2017",
+      "wa_points": "223"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "17/06/17",
+      "time": "1:42.59",
+      "is_pb": 1,
+      "meet_name": "The Terry Davies Alternative Nationals",
+      "wa_points": "224"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "1:29.58",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "337"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "19/09/15",
+      "time": "2:00.54",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "138"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "21/11/14",
+      "time": "2:07.47",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "117"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "10/12/17",
+      "time": "3:31.90",
+      "is_pb": 1,
+      "meet_name": "Harpenden Last Chance Meet 2017",
+      "wa_points": "244"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "16/09/23",
+      "time": "3:02.73",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "381"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "26/09/15",
+      "time": "4:06.89",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "154"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "27/01/18",
+      "time": "3:24.37",
+      "is_pb": 1,
+      "meet_name": "Hertfordshire County Championships",
+      "wa_points": "272"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "28/06/15",
+      "time": "4:08.30",
+      "is_pb": 1,
+      "meet_name": "The Terry Davies Alternative Nationals",
+      "wa_points": "151"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "28/11/14",
+      "time": "4:15.09",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "140"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "30/09/17",
+      "time": "3:44.58",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Open Meet 2017",
+      "wa_points": "205"
+    },
+    {
+      "stroke_code": 10,
+      "course": "L",
+      "date": "01/05/23",
+      "time": "30.89",
+      "is_pb": 1,
+      "meet_name": "Swim England East Region LC Championships 2023",
+      "wa_points": "494"
+    },
+    {
+      "stroke_code": 10,
+      "course": "L",
+      "date": "08/08/21",
+      "time": "31.35",
+      "is_pb": 1,
+      "meet_name": "British Swimming Festival of Swimming East Region",
+      "wa_points": "473"
+    },
+    {
+      "stroke_code": 10,
+      "course": "L",
+      "date": "16/03/19",
+      "time": "33.18",
+      "is_pb": 1,
+      "meet_name": "Harpenden Frantic Fifties 2019",
+      "wa_points": "399"
+    },
+    {
+      "stroke_code": 10,
+      "course": "L",
+      "date": "17/03/18",
+      "time": "38.61",
+      "is_pb": 1,
+      "meet_name": "Harpenden Frantic Fifties 2018",
+      "wa_points": "253"
+    },
+    {
+      "stroke_code": 10,
+      "course": "L",
+      "date": "26/05/19",
+      "time": "32.85",
+      "is_pb": 1,
+      "meet_name": "Swim England East Region Long Course Champs 2019",
+      "wa_points": "411"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "01/10/17",
+      "time": "42.96",
+      "is_pb": 0,
+      "meet_name": "Harpenden Legacy Open Meet 2017",
+      "wa_points": "173"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "01/10/23",
+      "time": "31.40",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "443"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "01/11/20",
+      "time": "32.70",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC",
+      "wa_points": "392"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "05/03/23",
+      "time": "31.15",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "453"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "05/11/22",
+      "time": "32.30",
+      "is_pb": 0,
+      "meet_name": "SE East Region Short Course Championships 2022",
+      "wa_points": "407"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "07/10/18",
+      "time": "35.69",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Meet",
+      "wa_points": "301"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "10/12/17",
+      "time": "39.60",
+      "is_pb": 1,
+      "meet_name": "Harpenden Last Chance Meet 2017",
+      "wa_points": "220"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "11/12/22",
+      "time": "31.17",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Last Chance County Qualifier",
+      "wa_points": "453"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "14/10/17",
+      "time": "41.05",
+      "is_pb": 1,
+      "meet_name": "NASL - London Rounds 2017 - Division 1 & 2",
+      "wa_points": "198"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "15/01/22",
+      "time": "31.98",
+      "is_pb": 1,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "419"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "15/05/21",
+      "time": "33.03",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Swimming Club",
+      "wa_points": "380"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "17/06/17",
+      "time": "41.08",
+      "is_pb": 1,
+      "meet_name": "The Terry Davies Alternative Nationals",
+      "wa_points": "197"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "32.13",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "413"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "19/11/22",
+      "time": "32.06",
+      "is_pb": 0,
+      "meet_name": "Watford Swimming Club County Qualifier",
+      "wa_points": "416"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "19/12/20",
+      "time": "32.91",
+      "is_pb": 0,
+      "meet_name": "City of St Albans",
+      "wa_points": "384"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "22/04/17",
+      "time": "43.85",
+      "is_pb": 1,
+      "meet_name": "HSSA St Albans District Primary Trials Gala 2017",
+      "wa_points": "162"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "25/09/22",
+      "time": "32.34",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "405"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "26/09/15",
+      "time": "54.59",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "84"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "27/01/19",
+      "time": "33.17",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "375"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "27/01/19",
+      "time": "33.17",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "375"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "27/01/19",
+      "time": "33.72",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "357"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "28/11/14",
+      "time": "57.42",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "72"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "29/01/23",
+      "time": "30.99",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2023",
+      "wa_points": "461"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "29/01/23",
+      "time": "31.50",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2023",
+      "wa_points": "438"
+    },
+    {
+      "stroke_code": 11,
+      "course": "L",
+      "date": "07/08/21",
+      "time": "1:10.16",
+      "is_pb": 1,
+      "meet_name": "British Swimming Festival of Swimming East Region",
+      "wa_points": "471"
+    },
+    {
+      "stroke_code": 11,
+      "course": "L",
+      "date": "27/05/19",
+      "time": "1:14.28",
+      "is_pb": 1,
+      "meet_name": "Swim England East Region Long Course Champs 2019",
+      "wa_points": "397"
+    },
+    {
+      "stroke_code": 11,
+      "course": "L",
+      "date": "30/04/23",
+      "time": "1:08.16",
+      "is_pb": 1,
+      "meet_name": "Swim England East Region LC Championships 2023",
+      "wa_points": "514"
+    },
+    {
+      "stroke_code": 11,
+      "course": "L",
+      "date": "30/04/23",
+      "time": "1:08.36",
+      "is_pb": 0,
+      "meet_name": "Swim England East Region LC Championships 2023",
+      "wa_points": "509"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "01/10/17",
+      "time": "1:42.59",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Open Meet 2017",
+      "wa_points": "135"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "03/12/23",
+      "time": "1:08.87",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "448"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "04/12/22",
+      "time": "1:07.09",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2022",
+      "wa_points": "484"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "05/03/23",
+      "time": "1:09.76",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "431"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "06/11/22",
+      "time": "1:12.24",
+      "is_pb": 0,
+      "meet_name": "SE East Region Short Course Championships 2022",
+      "wa_points": "388"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "07/10/18",
+      "time": "1:20.49",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Meet",
+      "wa_points": "280"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "07/11/21",
+      "time": "1:09.95",
+      "is_pb": 0,
+      "meet_name": "SE East Region Short Course Championships",
+      "wa_points": "427"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "08/01/22",
+      "time": "1:09.67",
+      "is_pb": 0,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "433"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "09/10/21",
+      "time": "1:08.98",
+      "is_pb": 1,
+      "meet_name": "The National Arena Swimming League London Round 1",
+      "wa_points": "446"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "10/03/18",
+      "time": "1:28.30",
+      "is_pb": 1,
+      "meet_name": "Potters Bar Spring Regional Qualifier",
+      "wa_points": "212"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "11/12/21",
+      "time": "1:09.47",
+      "is_pb": 0,
+      "meet_name": "The National Arena Swimming League London Round 3",
+      "wa_points": "436"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "12/11/22",
+      "time": "1:12.63",
+      "is_pb": 0,
+      "meet_name": "National Arena Swimming League-London Rounds 2022",
+      "wa_points": "382"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "13/11/21",
+      "time": "1:09.73",
+      "is_pb": 0,
+      "meet_name": "The National Arena Swimming League London Round 2",
+      "wa_points": "431"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "15/05/21",
+      "time": "1:12.01",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Swimming Club",
+      "wa_points": "392"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "16/09/23",
+      "time": "1:06.53",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "497"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "1:09.18",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "442"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "19/01/19",
+      "time": "1:15.39",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "341"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "19/01/19",
+      "time": "1:15.39",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "341"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "19/01/19",
+      "time": "1:15.97",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "334"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "21/01/23",
+      "time": "1:06.08",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2023",
+      "wa_points": "507"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "21/01/23",
+      "time": "1:06.33",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2023",
+      "wa_points": "501"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "21/11/21",
+      "time": "1:10.29",
+      "is_pb": 0,
+      "meet_name": "Watford SC County Qualifier",
+      "wa_points": "421"
+    },
+    {
+      "stroke_code": 12,
+      "course": "L",
+      "date": "12/03/23",
+      "time": "2:30.07",
+      "is_pb": 1,
+      "meet_name": "72nd ESSA National Inter-Divisional Championships",
+      "wa_points": "534"
+    },
+    {
+      "stroke_code": 12,
+      "course": "L",
+      "date": "29/04/23",
+      "time": "2:27.12",
+      "is_pb": 1,
+      "meet_name": "Swim England East Region LC Championships 2023",
+      "wa_points": "567"
+    },
+    {
+      "stroke_code": 12,
+      "course": "L",
+      "date": "29/04/23",
+      "time": "2:29.36",
+      "is_pb": 0,
+      "meet_name": "Swim England East Region LC Championships 2023",
+      "wa_points": "542"
+    },
+    {
+      "stroke_code": 12,
+      "course": "L",
+      "date": "30/04/22",
+      "time": "2:36.82",
+      "is_pb": 1,
+      "meet_name": "SE East Region Long Course Championships 2022",
+      "wa_points": "468"
+    },
+    {
+      "stroke_code": 12,
+      "course": "L",
+      "date": "30/04/22",
+      "time": "2:39.89",
+      "is_pb": 0,
+      "meet_name": "SE East Region Long Course Championships 2022",
+      "wa_points": "442"
+    },
+    {
+      "stroke_code": 12,
+      "course": "L",
+      "date": "31/07/21",
+      "time": "2:37.44",
+      "is_pb": 1,
+      "meet_name": "British Swimming Festival of Swimming East Region",
+      "wa_points": "463"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "01/10/23",
+      "time": "2:33.59",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "468"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "03/12/23",
+      "time": "2:33.87",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "466"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "04/11/23",
+      "time": "2:32.33",
+      "is_pb": 0,
+      "meet_name": "SE East Region Short Course Championships 2023",
+      "wa_points": "480"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "05/03/23",
+      "time": "2:28.75",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "516"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "05/11/22",
+      "time": "2:45.78",
+      "is_pb": 0,
+      "meet_name": "SE East Region Short Course Championships 2022",
+      "wa_points": "372"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "06/10/18",
+      "time": "3:09.72",
+      "is_pb": 0,
+      "meet_name": "Harpenden Legacy Meet",
+      "wa_points": "248"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "06/11/21",
+      "time": "2:34.70",
+      "is_pb": 1,
+      "meet_name": "SE East Region Short Course Championships",
+      "wa_points": "458"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "16/01/22",
+      "time": "2:34.24",
+      "is_pb": 1,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "462"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "16/01/22",
+      "time": "2:35.73",
+      "is_pb": 0,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "449"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "19/09/15",
+      "time": "5:02.19",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "61"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "19/11/23",
+      "time": "2:40.43",
+      "is_pb": 0,
+      "meet_name": "Watford SC County Qualifier 2023",
+      "wa_points": "411"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "21/09/19",
+      "time": "2:47.20",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Swimming Club Fly Fest",
+      "wa_points": "363"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "21/11/21",
+      "time": "2:36.90",
+      "is_pb": 0,
+      "meet_name": "Watford SC County Qualifier",
+      "wa_points": "439"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "22/09/18",
+      "time": "3:07.23",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 200 Fly Fest",
+      "wa_points": "258"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "23/09/17",
+      "time": "3:55.88",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 200 Fly Fest",
+      "wa_points": "129"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "27/01/19",
+      "time": "2:47.81",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "359"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "28/01/23",
+      "time": "2:24.24",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2023",
+      "wa_points": "566"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "28/01/23",
+      "time": "2:29.00",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2023",
+      "wa_points": "513"
+    },
+    {
+      "stroke_code": 13,
+      "course": "L",
+      "date": "16/03/19",
+      "time": "39.67",
+      "is_pb": 1,
+      "meet_name": "Harpenden Frantic Fifties 2019",
+      "wa_points": "310"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "01/11/20",
+      "time": "39.90",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC",
+      "wa_points": "252"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "10/03/18",
+      "time": "41.91",
+      "is_pb": 1,
+      "meet_name": "Potters Bar Spring Regional Qualifier",
+      "wa_points": "218"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "16/09/23",
+      "time": "34.04",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "407"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "35.78",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "350"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "19/11/17",
+      "time": "44.53",
+      "is_pb": 1,
+      "meet_name": "CMKSC Autumn Open Meet (Level 3)",
+      "wa_points": "181"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "19/12/20",
+      "time": "39.68",
+      "is_pb": 1,
+      "meet_name": "City of St Albans",
+      "wa_points": "257"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "22/04/17",
+      "time": "47.44",
+      "is_pb": 1,
+      "meet_name": "HSSA St Albans District Primary Trials Gala 2017",
+      "wa_points": "150"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "30/09/17",
+      "time": "46.10",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Open Meet 2017",
+      "wa_points": "163"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "01/10/23",
+      "time": "1:16.64",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "350"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "06/10/18",
+      "time": "1:18.92",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Meet",
+      "wa_points": "320"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "10/11/18",
+      "time": "1:19.18",
+      "is_pb": 0,
+      "meet_name": "The NASL - London - Rounds 2018 - Div 1 & 2",
+      "wa_points": "317"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "11/03/18",
+      "time": "1:25.69",
+      "is_pb": 1,
+      "meet_name": "Potters Bar Spring Regional Qualifier",
+      "wa_points": "250"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "12/10/19",
+      "time": "1:19.66",
+      "is_pb": 0,
+      "meet_name": "NASL London Round 1",
+      "wa_points": "311"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "13/10/18",
+      "time": "1:21.03",
+      "is_pb": 0,
+      "meet_name": "The NASL - London - Rounds 2018 - Div 1 & 2",
+      "wa_points": "296"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "17/06/17",
+      "time": "1:40.24",
+      "is_pb": 1,
+      "meet_name": "The Terry Davies Alternative Nationals",
+      "wa_points": "156"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "1:17.21",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "342"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "19/01/19",
+      "time": "1:19.71",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "311"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "30/09/17",
+      "time": "1:38.16",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Open Meet 2017",
+      "wa_points": "166"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "01/10/17",
+      "time": "3:26.53",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Open Meet 2017",
+      "wa_points": "186"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "01/10/23",
+      "time": "2:35.30",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "439"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "07/10/18",
+      "time": "2:54.52",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Meet",
+      "wa_points": "309"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "27/01/19",
+      "time": "2:49.92",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "335"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "01/10/23",
+      "time": "2:40.12",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "438"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "04/12/21",
+      "time": "2:39.00",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "447"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "05/02/23",
+      "time": "2:35.49",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2023",
+      "wa_points": "478"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "06/10/18",
+      "time": "2:51.24",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Meet",
+      "wa_points": "358"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "08/01/22",
+      "time": "2:42.08",
+      "is_pb": 0,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "422"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "11/12/22",
+      "time": "2:36.16",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Last Chance County Qualifier",
+      "wa_points": "472"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "12/12/21",
+      "time": "2:38.43",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Last Chance Meet",
+      "wa_points": "452"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "17/06/17",
+      "time": "3:17.23",
+      "is_pb": 1,
+      "meet_name": "The Terry Davies Alternative Nationals",
+      "wa_points": "234"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "19/01/19",
+      "time": "2:48.49",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "376"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "19/11/22",
+      "time": "2:40.81",
+      "is_pb": 0,
+      "meet_name": "Watford Swimming Club County Qualifier",
+      "wa_points": "432"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "30/09/17",
+      "time": "3:16.00",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Open Meet 2017",
+      "wa_points": "238"
+    },
+    {
+      "stroke_code": 17,
+      "course": "L",
+      "date": "11/03/23",
+      "time": "5:36.88",
+      "is_pb": 1,
+      "meet_name": "72nd ESSA National Inter-Divisional Championships",
+      "wa_points": "479"
+    },
+    {
+      "stroke_code": 17,
+      "course": "L",
+      "date": "12/03/22",
+      "time": "5:44.12",
+      "is_pb": 1,
+      "meet_name": "71st ESSA National Inter-Divisional Championships",
+      "wa_points": "449"
+    },
+    {
+      "stroke_code": 17,
+      "course": "L",
+      "date": "30/04/23",
+      "time": "5:36.81",
+      "is_pb": 1,
+      "meet_name": "Swim England East Region LC Championships 2023",
+      "wa_points": "479"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "02/02/19",
+      "time": "5:52.57",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "380"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "03/12/23",
+      "time": "5:22.29",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "498"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "04/03/23",
+      "time": "5:21.18",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "503"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "04/12/22",
+      "time": "5:31.28",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2022",
+      "wa_points": "458"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "05/02/23",
+      "time": "5:24.87",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2023",
+      "wa_points": "486"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "07/10/18",
+      "time": "5:59.84",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Meet",
+      "wa_points": "357"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "11/03/18",
+      "time": "6:27.32",
+      "is_pb": 1,
+      "meet_name": "Potters Bar Spring Regional Qualifier",
+      "wa_points": "286"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "12/12/21",
+      "time": "5:38.55",
+      "is_pb": 0,
+      "meet_name": "Harpenden SC FINIS Last Chance Meet",
+      "wa_points": "429"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "17/03/19",
+      "time": "5:54.43",
+      "is_pb": 0,
+      "meet_name": "Bishops Stortford Spring Open Meet",
+      "wa_points": "374"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "21/11/21",
+      "time": "5:33.46",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier",
+      "wa_points": "449"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "26/11/23",
+      "time": "5:50.38",
+      "is_pb": 0,
+      "meet_name": "Co St Albans & Watford SCs Joint Club Champs 2023",
+      "wa_points": "387"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "27/11/22",
+      "time": "5:34.66",
+      "is_pb": 0,
+      "meet_name": "Watford & City of St Albans SCs Joint Club Champs",
+      "wa_points": "444"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "30/01/22",
+      "time": "5:33.45",
+      "is_pb": 1,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "449"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "10/12/17",
+      "time": "1:27.27",
+      "is_pb": 1,
+      "meet_name": "Harpenden Last Chance Meet 2017",
+      "wa_points": "251"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "11/12/22",
+      "time": "1:14.86",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Last Chance County Qualifier",
+      "wa_points": "398"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "16/09/23",
+      "time": "1:14.77",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "400"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "1:16.12",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "379"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "19/11/17",
+      "time": "1:29.91",
+      "is_pb": 1,
+      "meet_name": "CMKSC Autumn Open Meet (Level 3)",
+      "wa_points": "230"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "19/12/20",
+      "time": "1:18.69",
+      "is_pb": 1,
+      "meet_name": "City of St Albans",
+      "wa_points": "343"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "29/01/23",
+      "time": "1:14.08",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2023",
+      "wa_points": "411"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "30/09/17",
+      "time": "1:33.26",
+      "is_pb": 1,
+      "meet_name": "Harpenden Legacy Open Meet 2017",
+      "wa_points": "206"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 14,
+        "total_in_ranking": 22,
+        "time": "1:16.64"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "16",
+        "rank": 25,
+        "total_in_ranking": 28,
+        "time": "1:34.13"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 15,
+        "total_in_ranking": 21,
+        "time": "1:26.28"
+      },
+      {
+        "event": "100 Butterfly",
+        "course": "LC",
+        "year": 2023,
+        "age_group": "16",
+        "rank": 4,
+        "total_in_ranking": 6,
+        "time": "1:08.16"
+      },
+      {
+        "event": "100 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 5,
+        "total_in_ranking": 43,
+        "time": "1:09.67"
+      },
+      {
+        "event": "100 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "16",
+        "rank": 3,
+        "total_in_ranking": 22,
+        "time": "1:07.09"
+      },
+      {
+        "event": "100 Butterfly",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "16",
+        "rank": 2,
+        "total_in_ranking": 26,
+        "time": "1:06.08"
+      },
+      {
+        "event": "100 Butterfly",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 3,
+        "total_in_ranking": 18,
+        "time": "1:06.53"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "16",
+        "rank": 13,
+        "total_in_ranking": 56,
+        "time": "1:04.09"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "16",
+        "rank": 11,
+        "total_in_ranking": 59,
+        "time": "1:03.31"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 11,
+        "total_in_ranking": 33,
+        "time": "1:03.01"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "16",
+        "rank": 12,
+        "total_in_ranking": 45,
+        "time": "1:14.86"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "16",
+        "rank": 11,
+        "total_in_ranking": 37,
+        "time": "1:14.08"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 9,
+        "total_in_ranking": 27,
+        "time": "1:14.77"
+      },
+      {
+        "event": "1500 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "16",
+        "rank": 4,
+        "total_in_ranking": 7,
+        "time": "20:29.31"
+      },
+      {
+        "event": "1500 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 3,
+        "total_in_ranking": 4,
+        "time": "19:02.23"
+      },
+      {
+        "event": "1500 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "17",
+        "rank": 3,
+        "total_in_ranking": 7,
+        "time": "18:18.89"
+      },
+      {
+        "event": "1500 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "18",
+        "rank": 2,
+        "total_in_ranking": 4,
+        "time": "18:27.23"
+      },
+      {
+        "event": "200 Backstroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 4,
+        "total_in_ranking": 10,
+        "time": "2:35.30"
+      },
+      {
+        "event": "200 Breaststroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 11,
+        "total_in_ranking": 13,
+        "time": "3:02.73"
+      },
+      {
+        "event": "200 Butterfly",
+        "course": "LC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 2,
+        "total_in_ranking": 7,
+        "time": "2:36.82"
+      },
+      {
+        "event": "200 Butterfly",
+        "course": "LC",
+        "year": 2023,
+        "age_group": "16",
+        "rank": 2,
+        "total_in_ranking": 5,
+        "time": "2:27.12"
+      },
+      {
+        "event": "200 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 1,
+        "total_in_ranking": 12,
+        "time": "2:34.24"
+      },
+      {
+        "event": "200 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "16",
+        "rank": 5,
+        "total_in_ranking": 6,
+        "time": "2:45.78"
+      },
+      {
+        "event": "200 Butterfly",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "16",
+        "rank": 1,
+        "total_in_ranking": 12,
+        "time": "2:24.24"
+      },
+      {
+        "event": "200 Butterfly",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 2,
+        "total_in_ranking": 5,
+        "time": "2:32.33"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "LC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 6,
+        "total_in_ranking": 11,
+        "time": "2:20.32"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 13,
+        "total_in_ranking": 53,
+        "time": "2:22.22"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "16",
+        "rank": 15,
+        "total_in_ranking": 38,
+        "time": "2:21.83"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "16",
+        "rank": 11,
+        "total_in_ranking": 38,
+        "time": "2:16.71"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 5,
+        "total_in_ranking": 18,
+        "time": "2:14.54"
+      },
+      {
+        "event": "200 Individual Medley",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 16,
+        "total_in_ranking": 50,
+        "time": "2:42.08"
+      },
+      {
+        "event": "200 Individual Medley",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "16",
+        "rank": 6,
+        "total_in_ranking": 37,
+        "time": "2:36.16"
+      },
+      {
+        "event": "200 Individual Medley",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "16",
+        "rank": 8,
+        "total_in_ranking": 29,
+        "time": "2:35.49"
+      },
+      {
+        "event": "200 Individual Medley",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 8,
+        "total_in_ranking": 16,
+        "time": "2:40.12"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "LC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 5,
+        "total_in_ranking": 6,
+        "time": "5:02.20"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 12,
+        "total_in_ranking": 38,
+        "time": "5:00.37"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "16",
+        "rank": 8,
+        "total_in_ranking": 23,
+        "time": "4:56.76"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "16",
+        "rank": 7,
+        "total_in_ranking": 22,
+        "time": "4:46.06"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 2,
+        "total_in_ranking": 12,
+        "time": "4:37.80"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "17",
+        "rank": 4,
+        "total_in_ranking": 19,
+        "time": "4:37.55"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "18",
+        "rank": 3,
+        "total_in_ranking": 7,
+        "time": "4:42.35"
+      },
+      {
+        "event": "400 Individual Medley",
+        "course": "LC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 3,
+        "total_in_ranking": 5,
+        "time": "5:44.12"
+      },
+      {
+        "event": "400 Individual Medley",
+        "course": "LC",
+        "year": 2023,
+        "age_group": "16",
+        "rank": 2,
+        "total_in_ranking": 2,
+        "time": "5:36.81"
+      },
+      {
+        "event": "400 Individual Medley",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 2,
+        "total_in_ranking": 8,
+        "time": "5:33.45"
+      },
+      {
+        "event": "400 Individual Medley",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "16",
+        "rank": 2,
+        "total_in_ranking": 7,
+        "time": "5:31.28"
+      },
+      {
+        "event": "400 Individual Medley",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "16",
+        "rank": 1,
+        "total_in_ranking": 10,
+        "time": "5:21.18"
+      },
+      {
+        "event": "400 Individual Medley",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 2,
+        "total_in_ranking": 6,
+        "time": "5:22.29"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 8,
+        "total_in_ranking": 25,
+        "time": "34.04"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 19,
+        "total_in_ranking": 26,
+        "time": "40.35"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "LC",
+        "year": 2023,
+        "age_group": "16",
+        "rank": 5,
+        "total_in_ranking": 17,
+        "time": "30.89"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 13,
+        "total_in_ranking": 83,
+        "time": "31.98"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "16",
+        "rank": 9,
+        "total_in_ranking": 53,
+        "time": "31.17"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "16",
+        "rank": 4,
+        "total_in_ranking": 46,
+        "time": "30.99"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 8,
+        "total_in_ranking": 30,
+        "time": "31.40"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "16",
+        "rank": 21,
+        "total_in_ranking": 59,
+        "time": "29.78"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 11,
+        "total_in_ranking": 33,
+        "time": "29.24"
+      },
+      {
+        "event": "800 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "16",
+        "rank": 8,
+        "total_in_ranking": 14,
+        "time": "10:49.25"
+      },
+      {
+        "event": "800 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "17",
+        "rank": 3,
+        "total_in_ranking": 12,
+        "time": "9:39.60"
+      },
+      {
+        "event": "800 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "17",
+        "rank": 2,
+        "total_in_ranking": 10,
+        "time": "9:32.09"
+      },
+      {
+        "event": "800 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "18",
+        "rank": 1,
+        "total_in_ranking": 5,
+        "time": "9:30.41"
+      }
+    ]
+  }
+}

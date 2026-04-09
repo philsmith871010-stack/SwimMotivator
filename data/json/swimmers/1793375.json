@@ -1,0 +1,285 @@
+{
+  "tiref": 1793375,
+  "name": "Boo Blundell",
+  "yob": 2015,
+  "sex": "F",
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Backstroke",
+      "time": "1:35.27",
+      "converted_time": "1:36.10",
+      "wa_points": 182,
+      "date": "14/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:28.41",
+      "converted_time": "1:29.40",
+      "wa_points": 183,
+      "date": "15/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Backstroke",
+      "time": "3:21.58",
+      "converted_time": "3:23.20",
+      "wa_points": 200,
+      "date": "15/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "47.80",
+      "converted_time": "48.20",
+      "wa_points": 147,
+      "date": "07/12/25",
+      "meet": "Harpenden Last Chance County Qualifier 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "1:02.06",
+      "converted_time": "1:02.60",
+      "wa_points": 95,
+      "date": "15/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "53.65",
+      "converted_time": "54.00",
+      "wa_points": 88,
+      "date": "15/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "40.24",
+      "converted_time": "40.80",
+      "wa_points": 182,
+      "date": "14/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "01/02/26",
+      "time": "42.19",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs",
+      "wa_points": "158"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "01/11/25",
+      "time": "44.58",
+      "is_pb": 1,
+      "meet_name": "Herts Aquatics Open Meet 2025",
+      "wa_points": "134"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "07/12/25",
+      "time": "42.27",
+      "is_pb": 1,
+      "meet_name": "Harpenden Last Chance County Qualifier 2025",
+      "wa_points": "157"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "14/03/26",
+      "time": "40.24",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "182"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "15/03/26",
+      "time": "1:28.41",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "183"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "01/11/25",
+      "time": "1:02.13",
+      "is_pb": 1,
+      "meet_name": "Herts Aquatics Open Meet 2025",
+      "wa_points": "95"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "15/03/26",
+      "time": "1:02.06",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "95"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "15/03/26",
+      "time": "53.65",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "88"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "01/11/25",
+      "time": "48.72",
+      "is_pb": 1,
+      "meet_name": "Herts Aquatics Open Meet 2025",
+      "wa_points": "138"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "07/12/25",
+      "time": "47.80",
+      "is_pb": 1,
+      "meet_name": "Harpenden Last Chance County Qualifier 2025",
+      "wa_points": "147"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "01/02/26",
+      "time": "1:40.79",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs",
+      "wa_points": "153"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "14/03/26",
+      "time": "1:35.27",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "182"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "15/03/26",
+      "time": "3:21.58",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "200"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 20,
+        "total_in_ranking": 41,
+        "time": "1:35.27"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 32,
+        "total_in_ranking": 52,
+        "time": "1:28.41"
+      },
+      {
+        "event": "200 Backstroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 16,
+        "total_in_ranking": 24,
+        "time": "3:21.58"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 113,
+        "total_in_ranking": 203,
+        "time": "47.80"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 172,
+        "total_in_ranking": 203,
+        "time": "1:02.13"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 57,
+        "total_in_ranking": 60,
+        "time": "1:02.06"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 34,
+        "total_in_ranking": 45,
+        "time": "53.65"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 136,
+        "total_in_ranking": 238,
+        "time": "42.27"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 39,
+        "total_in_ranking": 70,
+        "time": "40.24"
+      }
+    ]
+  }
+}

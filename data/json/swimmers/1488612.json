@@ -1,0 +1,403 @@
+{
+  "tiref": 1488612,
+  "name": "Rada Boncheva",
+  "yob": null,
+  "sex": null,
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "1:58.51",
+      "converted_time": "1:59.60",
+      "wa_points": 145,
+      "date": "12/03/22",
+      "meet": "City of St Albans SC Spring Meet 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:32.55",
+      "converted_time": "1:33.50",
+      "wa_points": 160,
+      "date": "13/03/22",
+      "meet": "City of St Albans SC Spring Meet 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "1:45.28",
+      "converted_time": "1:45.30",
+      "wa_points": 143,
+      "date": "04/12/21",
+      "meet": "City of St Albans SC Winter Meet 2021",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Freestyle",
+      "time": "3:20.54",
+      "converted_time": "3:22.30",
+      "wa_points": 166,
+      "date": "12/03/22",
+      "meet": "City of St Albans SC Spring Meet 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "47.31",
+      "converted_time": "47.70",
+      "wa_points": 151,
+      "date": "20/05/22",
+      "meet": "HSSA & StASSA Primary Schools Champs 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "55.03",
+      "converted_time": "55.60",
+      "wa_points": 137,
+      "date": "05/12/21",
+      "meet": "City of St Albans SC Winter Meet 2021",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "47.01",
+      "converted_time": "47.40",
+      "wa_points": 132,
+      "date": "20/05/22",
+      "meet": "HSSA & StASSA Primary Schools Champs 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "39.20",
+      "converted_time": "39.70",
+      "wa_points": 197,
+      "date": "20/05/22",
+      "meet": "HSSA & StASSA Primary Schools Champs 2022",
+      "venue": "St Albans"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "04/12/21",
+      "time": "41.49",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "166"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "11/07/21",
+      "time": "46.57",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Level 4 Club Champs",
+      "wa_points": "117"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "12/03/22",
+      "time": "41.72",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "163"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "45.17",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "129"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "20/05/22",
+      "time": "39.20",
+      "is_pb": 1,
+      "meet_name": "HSSA & StASSA Primary Schools Champs 2022",
+      "wa_points": "197"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "23/10/21",
+      "time": "42.48",
+      "is_pb": 1,
+      "meet_name": "16th Annual Autumn Open Meet",
+      "wa_points": "155"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "25/10/20",
+      "time": "54.08",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Swimming Club",
+      "wa_points": "75"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "05/12/21",
+      "time": "1:35.27",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "146"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "13/03/22",
+      "time": "1:32.55",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "160"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "23/10/21",
+      "time": "1:41.99",
+      "is_pb": 1,
+      "meet_name": "16th Annual Autumn Open Meet",
+      "wa_points": "119"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "12/03/22",
+      "time": "3:20.54",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "166"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "04/07/21",
+      "time": "1:04.70",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Level 4 Club Champs",
+      "wa_points": "84"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "05/12/21",
+      "time": "55.03",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "137"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "58.86",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "111"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "23/10/21",
+      "time": "56.15",
+      "is_pb": 1,
+      "meet_name": "16th Annual Autumn Open Meet",
+      "wa_points": "128"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "12/03/22",
+      "time": "1:58.51",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "145"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "2:12.28",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "104"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "04/07/21",
+      "time": "1:00.58",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Level 4 Club Champs",
+      "wa_points": "61"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "05/12/21",
+      "time": "56.17",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "77"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "12/03/22",
+      "time": "52.24",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "96"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "56.34",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "76"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "20/05/22",
+      "time": "47.01",
+      "is_pb": 1,
+      "meet_name": "HSSA & StASSA Primary Schools Champs 2022",
+      "wa_points": "132"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "04/07/21",
+      "time": "55.84",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Level 4 Club Champs",
+      "wa_points": "92"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "52.25",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "112"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "20/05/22",
+      "time": "47.31",
+      "is_pb": 1,
+      "meet_name": "HSSA & StASSA Primary Schools Champs 2022",
+      "wa_points": "151"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "23/10/21",
+      "time": "50.15",
+      "is_pb": 1,
+      "meet_name": "16th Annual Autumn Open Meet",
+      "wa_points": "127"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "04/12/21",
+      "time": "1:45.28",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "143"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "23/10/21",
+      "time": "1:52.78",
+      "is_pb": 1,
+      "meet_name": "16th Annual Autumn Open Meet",
+      "wa_points": "116"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 35,
+        "total_in_ranking": 60,
+        "time": "1:58.51"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 37,
+        "total_in_ranking": 80,
+        "time": "1:32.55"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 24,
+        "total_in_ranking": 40,
+        "time": "3:20.54"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 49,
+        "total_in_ranking": 119,
+        "time": "47.31"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 25,
+        "total_in_ranking": 69,
+        "time": "47.01"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 39,
+        "total_in_ranking": 150,
+        "time": "39.20"
+      }
+    ]
+  }
+}

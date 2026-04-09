@@ -1,0 +1,330 @@
+{
+  "tiref": 1760991,
+  "name": "Nina Krol",
+  "yob": 2016,
+  "sex": "F",
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "1:52.89",
+      "converted_time": "1:54.00",
+      "wa_points": 168,
+      "date": "15/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:42.68",
+      "converted_time": "1:43.50",
+      "wa_points": 117,
+      "date": "15/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Breaststroke",
+      "time": "4:11.41",
+      "converted_time": "4:13.50",
+      "wa_points": 146,
+      "date": "14/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "51.20",
+      "converted_time": "51.60",
+      "wa_points": 119,
+      "date": "14/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "51.06",
+      "converted_time": "51.70",
+      "wa_points": 171,
+      "date": "30/11/25",
+      "meet": "City of St Albans SC Winter Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "1:05.27",
+      "converted_time": "1:05.60",
+      "wa_points": 49,
+      "date": "20/09/25",
+      "meet": "Co St Albans Autumn Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "42.75",
+      "converted_time": "43.20",
+      "wa_points": 152,
+      "date": "14/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "06/07/25",
+      "time": "51.14",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Club Champs 50s & 25s 2025",
+      "wa_points": "88"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "14/03/26",
+      "time": "42.75",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "152"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "16/06/24",
+      "time": "1:01.29",
+      "is_pb": 1,
+      "meet_name": "ESS Charlie Farnsbarns Invite Junior Meet 2024",
+      "wa_points": "51"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "49.57",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "97"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "15/03/26",
+      "time": "1:42.68",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "117"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "30/11/25",
+      "time": "1:51.41",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "91"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "06/07/25",
+      "time": "54.92",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Club Champs 50s & 25s 2025",
+      "wa_points": "137"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "09/03/25",
+      "time": "54.65",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2025",
+      "wa_points": "139"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "15/03/26",
+      "time": "54.48",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "141"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "53.70",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "147"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "30/11/25",
+      "time": "51.06",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "171"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "09/03/25",
+      "time": "2:00.63",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2025",
+      "wa_points": "138"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "15/03/26",
+      "time": "1:52.89",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "168"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "2:03.31",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "129"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "14/03/26",
+      "time": "4:11.41",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "146"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "29/11/25",
+      "time": "4:37.31",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "109"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "1:05.27",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "49"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "06/07/25",
+      "time": "56.36",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Club Champs 50s & 25s 2025",
+      "wa_points": "89"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "08/03/25",
+      "time": "57.90",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2025",
+      "wa_points": "82"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "14/03/26",
+      "time": "51.20",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "119"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "57.34",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "85"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 23,
+        "total_in_ranking": 40,
+        "time": "1:52.89"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 45,
+        "total_in_ranking": 52,
+        "time": "1:42.68"
+      },
+      {
+        "event": "200 Breaststroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 21,
+        "total_in_ranking": 21,
+        "time": "4:11.41"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 51,
+        "total_in_ranking": 66,
+        "time": "51.20"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 38,
+        "total_in_ranking": 60,
+        "time": "54.48"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 52,
+        "total_in_ranking": 70,
+        "time": "42.75"
+      }
+    ]
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "tiref": 1816782,
+  "name": "Niya Patel",
+  "yob": 2015,
+  "sex": "F",
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "2:16.32",
+      "converted_time": "2:17.20",
+      "wa_points": 95,
+      "date": "15/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:54.62",
+      "converted_time": "1:55.40",
+      "wa_points": 84,
+      "date": "15/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "1:19.40",
+      "converted_time": "1:19.70",
+      "wa_points": 32,
+      "date": "20/09/25",
+      "meet": "Co St Albans Autumn Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "1:01.49",
+      "converted_time": "1:01.80",
+      "wa_points": 51,
+      "date": "20/09/25",
+      "meet": "Co St Albans Autumn Meet 2025",
+      "venue": "St Albans"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "06/07/25",
+      "time": "1:03.36",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Club Champs 50s & 25s 2025",
+      "wa_points": "46"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "1:01.49",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "51"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "15/03/26",
+      "time": "1:54.62",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "84"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "15/03/26",
+      "time": "2:16.32",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "95"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "2:31.35",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "69"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "1:19.40",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "32"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 39,
+        "total_in_ranking": 40,
+        "time": "2:16.32"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "10",
+        "rank": 51,
+        "total_in_ranking": 52,
+        "time": "1:54.62"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1270 @@
+{
+  "tiref": 1629090,
+  "name": "Jack Maple",
+  "yob": 2013,
+  "sex": "M",
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "LC",
+      "stroke": "100 Backstroke",
+      "time": "1:31.12",
+      "converted_time": "1:30.20",
+      "wa_points": 181,
+      "date": "21/06/25",
+      "meet": "Team Luton Summer Long Course Meet 2025",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Backstroke",
+      "time": "1:26.31",
+      "converted_time": "1:27.20",
+      "wa_points": 175,
+      "date": "15/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "LC",
+      "stroke": "100 Breaststroke",
+      "time": "1:52.41",
+      "converted_time": "1:51.30",
+      "wa_points": 129,
+      "date": "23/06/24",
+      "meet": "Team Luton Summer Long Course Meet 2024",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "1:41.18",
+      "converted_time": "1:42.40",
+      "wa_points": 163,
+      "date": "14/06/25",
+      "meet": "Watford SC The Terry Davies Legacy Meet 2025",
+      "venue": "Watford"
+    },
+    {
+      "course": "LC",
+      "stroke": "100 Freestyle",
+      "time": "1:29.16",
+      "converted_time": "1:28.20",
+      "wa_points": 140,
+      "date": "23/06/24",
+      "meet": "Team Luton Summer Long Course Meet 2024",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:22.73",
+      "converted_time": "1:23.70",
+      "wa_points": 159,
+      "date": "27/04/25",
+      "meet": "Harpenden SC Club Champs",
+      "venue": "Harpenden"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "1:29.00",
+      "converted_time": "1:29.00",
+      "wa_points": 169,
+      "date": "05/07/25",
+      "meet": "Putteridge SC End of Season Summer Open 2025",
+      "venue": "Luton"
+    },
+    {
+      "course": "LC",
+      "stroke": "200 Backstroke",
+      "time": "3:08.94",
+      "converted_time": "3:07.20",
+      "wa_points": 207,
+      "date": "22/06/25",
+      "meet": "Team Luton Summer Long Course Meet 2025",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Backstroke",
+      "time": "3:20.30",
+      "converted_time": "3:22.00",
+      "wa_points": 146,
+      "date": "27/04/25",
+      "meet": "Harpenden SC Club Champs",
+      "venue": "Harpenden"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Breaststroke",
+      "time": "3:37.35",
+      "converted_time": "3:39.80",
+      "wa_points": 168,
+      "date": "05/07/25",
+      "meet": "Putteridge SC End of Season Summer Open 2025",
+      "venue": "Luton"
+    },
+    {
+      "course": "LC",
+      "stroke": "200 Freestyle",
+      "time": "2:58.10",
+      "converted_time": "2:56.10",
+      "wa_points": 187,
+      "date": "21/06/25",
+      "meet": "Team Luton Summer Long Course Meet 2025",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Freestyle",
+      "time": "2:53.44",
+      "converted_time": "2:55.40",
+      "wa_points": 183,
+      "date": "04/10/25",
+      "meet": "Harpenden SC Bryan Thompson Legacy Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Individual Medley",
+      "time": "3:17.19",
+      "converted_time": "3:19.20",
+      "wa_points": 168,
+      "date": "15/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "LC",
+      "stroke": "50 Backstroke",
+      "time": "46.81",
+      "converted_time": "46.40",
+      "wa_points": 127,
+      "date": "23/06/24",
+      "meet": "Team Luton Summer Long Course Meet 2024",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "41.60",
+      "converted_time": "42.10",
+      "wa_points": 150,
+      "date": "31/05/25",
+      "meet": "Stevenage SC Development Meet 2025",
+      "venue": "Stevenage"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "48.18",
+      "converted_time": "48.80",
+      "wa_points": 138,
+      "date": "25/04/25",
+      "meet": "HSSA StASSA Primary Schools Champs 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "40.61",
+      "converted_time": "41.10",
+      "wa_points": 144,
+      "date": "14/06/25",
+      "meet": "Watford SC The Terry Davies Legacy Meet 2025",
+      "venue": "Watford"
+    },
+    {
+      "course": "LC",
+      "stroke": "50 Freestyle",
+      "time": "33.80",
+      "converted_time": "33.20",
+      "wa_points": 236,
+      "date": "22/06/25",
+      "meet": "Team Luton Summer Long Course Meet 2025",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "33.71",
+      "converted_time": "34.30",
+      "wa_points": 205,
+      "date": "05/07/25",
+      "meet": "Putteridge SC End of Season Summer Open 2025",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "800 Freestyle",
+      "time": "13:12.02",
+      "converted_time": "13:19.30",
+      "wa_points": 171,
+      "date": "18/07/25",
+      "meet": "Harpenden Long Distance Evening 2025",
+      "venue": "Harpenden"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "L",
+      "date": "22/06/25",
+      "time": "33.80",
+      "is_pb": 1,
+      "meet_name": "Team Luton Summer Long Course Meet 2025",
+      "wa_points": "236"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "02/03/25",
+      "time": "36.81",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs",
+      "wa_points": "158"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "05/07/25",
+      "time": "33.71",
+      "is_pb": 1,
+      "meet_name": "Putteridge SC End of Season Summer Open 2025",
+      "wa_points": "205"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "07/06/24",
+      "time": "36.99",
+      "is_pb": 1,
+      "meet_name": "Herts & St Albans SSA Primary Schools Champs 2024",
+      "wa_points": "155"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "08/10/23",
+      "time": "43.40",
+      "is_pb": 0,
+      "meet_name": "Harpenden SC FINIS Bryan Thompson Legacy Meet 23",
+      "wa_points": "96"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "10/02/24",
+      "time": "39.10",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2024",
+      "wa_points": "131"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "10/09/23",
+      "time": "42.78",
+      "is_pb": 1,
+      "meet_name": "Hertfordshire Aquatics Autumn Open Meet",
+      "wa_points": "100"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "15/03/26",
+      "time": "34.66",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "189"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "16/03/24",
+      "time": "38.64",
+      "is_pb": 1,
+      "meet_name": "Hatfield Regional Qualifier March 2024",
+      "wa_points": "136"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "18/03/23",
+      "time": "43.92",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2023",
+      "wa_points": "93"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "25/04/25",
+      "time": "35.09",
+      "is_pb": 1,
+      "meet_name": "HSSA StASSA Primary Schools Champs 2025",
+      "wa_points": "182"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "31/05/25",
+      "time": "34.35",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Development Meet 2025",
+      "wa_points": "194"
+    },
+    {
+      "stroke_code": 2,
+      "course": "L",
+      "date": "16/07/23",
+      "time": "1:39.59",
+      "is_pb": 1,
+      "meet_name": "Team Luton Summer LC Meet 2023",
+      "wa_points": "101"
+    },
+    {
+      "stroke_code": 2,
+      "course": "L",
+      "date": "23/06/24",
+      "time": "1:29.16",
+      "is_pb": 1,
+      "meet_name": "Team Luton Summer Long Course Meet 2024",
+      "wa_points": "140"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "11/06/23",
+      "time": "1:43.78",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2023",
+      "wa_points": "80"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "27/04/24",
+      "time": "1:33.13",
+      "is_pb": 1,
+      "meet_name": "Stevenage Swimming Club Development Meet 2024",
+      "wa_points": "111"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "27/04/25",
+      "time": "1:22.73",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs",
+      "wa_points": "159"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "28/04/24",
+      "time": "1:30.84",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2024",
+      "wa_points": "120"
+    },
+    {
+      "stroke_code": 3,
+      "course": "L",
+      "date": "21/06/25",
+      "time": "2:58.10",
+      "is_pb": 1,
+      "meet_name": "Team Luton Summer Long Course Meet 2025",
+      "wa_points": "187"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "04/10/25",
+      "time": "2:53.44",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Bryan Thompson Legacy Meet 2025",
+      "wa_points": "183"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "15/03/26",
+      "time": "2:55.17",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "178"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "24/03/24",
+      "time": "3:33.38",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2024",
+      "wa_points": "98"
+    },
+    {
+      "stroke_code": 5,
+      "course": "S",
+      "date": "18/07/25",
+      "time": "13:12.02",
+      "is_pb": 1,
+      "meet_name": "Harpenden Long Distance Evening 2025",
+      "wa_points": "171"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "06/07/24",
+      "time": "50.94",
+      "is_pb": 0,
+      "meet_name": "Stevenage SC Summer Sprint 2024",
+      "wa_points": "117"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "07/06/24",
+      "time": "50.59",
+      "is_pb": 0,
+      "meet_name": "Herts & St Albans SSA Primary Schools Champs 2024",
+      "wa_points": "119"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "08/07/23",
+      "time": "57.49",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint 2023",
+      "wa_points": "81"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "10/02/24",
+      "time": "49.16",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2024",
+      "wa_points": "130"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "11/06/23",
+      "time": "59.54",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2023",
+      "wa_points": "73"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "14/10/23",
+      "time": "55.09",
+      "is_pb": 1,
+      "meet_name": "National Arena Swimming League - London 2023",
+      "wa_points": "92"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "25/04/25",
+      "time": "48.18",
+      "is_pb": 1,
+      "meet_name": "HSSA StASSA Primary Schools Champs 2025",
+      "wa_points": "138"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "27/04/24",
+      "time": "52.44",
+      "is_pb": 0,
+      "meet_name": "Stevenage Swimming Club Development Meet 2024",
+      "wa_points": "107"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "27/04/25",
+      "time": "50.26",
+      "is_pb": 0,
+      "meet_name": "Harpenden SC Club Champs",
+      "wa_points": "122"
+    },
+    {
+      "stroke_code": 8,
+      "course": "L",
+      "date": "16/07/23",
+      "time": "2:07.72",
+      "is_pb": 1,
+      "meet_name": "Team Luton Summer LC Meet 2023",
+      "wa_points": "88"
+    },
+    {
+      "stroke_code": 8,
+      "course": "L",
+      "date": "23/06/24",
+      "time": "1:52.41",
+      "is_pb": 1,
+      "meet_name": "Team Luton Summer Long Course Meet 2024",
+      "wa_points": "129"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "02/03/25",
+      "time": "1:48.26",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs",
+      "wa_points": "133"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "14/06/25",
+      "time": "1:41.18",
+      "is_pb": 1,
+      "meet_name": "Watford SC The Terry Davies Legacy Meet 2025",
+      "wa_points": "163"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "16/03/24",
+      "time": "1:51.68",
+      "is_pb": 1,
+      "meet_name": "Hatfield Regional Qualifier March 2024",
+      "wa_points": "121"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "18/03/23",
+      "time": "2:16.40",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2023",
+      "wa_points": "66"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "24/03/24",
+      "time": "1:54.84",
+      "is_pb": 0,
+      "meet_name": "Harpenden SC Club Champs 2024",
+      "wa_points": "111"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "31/05/25",
+      "time": "1:45.02",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Development Meet 2025",
+      "wa_points": "145"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "04/10/25",
+      "time": "3:38.88",
+      "is_pb": 0,
+      "meet_name": "Harpenden SC Bryan Thompson Legacy Meet 2025",
+      "wa_points": "165"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "05/07/25",
+      "time": "3:37.35",
+      "is_pb": 1,
+      "meet_name": "Putteridge SC End of Season Summer Open 2025",
+      "wa_points": "168"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "28/04/24",
+      "time": "4:04.22",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2024",
+      "wa_points": "119"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "06/07/24",
+      "time": "52.25",
+      "is_pb": 0,
+      "meet_name": "Stevenage SC Summer Sprint 2024",
+      "wa_points": "67"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "07/06/24",
+      "time": "50.06",
+      "is_pb": 0,
+      "meet_name": "Herts & St Albans SSA Primary Schools Champs 2024",
+      "wa_points": "77"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "08/07/23",
+      "time": "58.49",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint 2023",
+      "wa_points": "48"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "10/02/24",
+      "time": "49.42",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2024",
+      "wa_points": "80"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "11/06/23",
+      "time": "1:00.48",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2023",
+      "wa_points": "43"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "14/06/25",
+      "time": "40.61",
+      "is_pb": 1,
+      "meet_name": "Watford SC The Terry Davies Legacy Meet 2025",
+      "wa_points": "144"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "23/11/24",
+      "time": "47.77",
+      "is_pb": 1,
+      "meet_name": "Hitchin SC Open Meet",
+      "wa_points": "88"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "25/04/25",
+      "time": "41.81",
+      "is_pb": 1,
+      "meet_name": "HSSA StASSA Primary Schools Champs 2025",
+      "wa_points": "132"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "27/04/25",
+      "time": "42.28",
+      "is_pb": 0,
+      "meet_name": "Harpenden SC Club Champs",
+      "wa_points": "128"
+    },
+    {
+      "stroke_code": 13,
+      "course": "L",
+      "date": "16/07/23",
+      "time": "51.92",
+      "is_pb": 1,
+      "meet_name": "Team Luton Summer LC Meet 2023",
+      "wa_points": "93"
+    },
+    {
+      "stroke_code": 13,
+      "course": "L",
+      "date": "23/06/24",
+      "time": "46.81",
+      "is_pb": 1,
+      "meet_name": "Team Luton Summer Long Course Meet 2024",
+      "wa_points": "127"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "04/10/25",
+      "time": "42.54",
+      "is_pb": 0,
+      "meet_name": "Harpenden SC Bryan Thompson Legacy Meet 2025",
+      "wa_points": "140"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "07/06/24",
+      "time": "45.89",
+      "is_pb": 1,
+      "meet_name": "Herts & St Albans SSA Primary Schools Champs 2024",
+      "wa_points": "111"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "10/02/24",
+      "time": "46.25",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2024",
+      "wa_points": "109"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "21/05/23",
+      "time": "49.12",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2023",
+      "wa_points": "91"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "25/04/25",
+      "time": "42.41",
+      "is_pb": 1,
+      "meet_name": "HSSA StASSA Primary Schools Champs 2025",
+      "wa_points": "141"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "31/05/25",
+      "time": "41.60",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Development Meet 2025",
+      "wa_points": "150"
+    },
+    {
+      "stroke_code": 14,
+      "course": "L",
+      "date": "21/06/25",
+      "time": "1:31.12",
+      "is_pb": 1,
+      "meet_name": "Team Luton Summer Long Course Meet 2025",
+      "wa_points": "181"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "02/03/25",
+      "time": "1:32.56",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs",
+      "wa_points": "142"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "06/07/24",
+      "time": "1:43.52",
+      "is_pb": 0,
+      "meet_name": "Stevenage SC Summer Sprint 2024",
+      "wa_points": "101"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "14/06/25",
+      "time": "1:29.26",
+      "is_pb": 1,
+      "meet_name": "Watford SC The Terry Davies Legacy Meet 2025",
+      "wa_points": "158"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "15/03/26",
+      "time": "1:26.31",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "175"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "27/04/24",
+      "time": "1:39.27",
+      "is_pb": 1,
+      "meet_name": "Stevenage Swimming Club Development Meet 2024",
+      "wa_points": "115"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "28/04/24",
+      "time": "1:36.19",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2024",
+      "wa_points": "126"
+    },
+    {
+      "stroke_code": 15,
+      "course": "L",
+      "date": "22/06/25",
+      "time": "3:08.94",
+      "is_pb": 1,
+      "meet_name": "Team Luton Summer Long Course Meet 2025",
+      "wa_points": "207"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "10/09/23",
+      "time": "3:58.71",
+      "is_pb": 1,
+      "meet_name": "Hertfordshire Aquatics Autumn Open Meet",
+      "wa_points": "86"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "23/11/24",
+      "time": "3:26.36",
+      "is_pb": 1,
+      "meet_name": "Hitchin SC Open Meet",
+      "wa_points": "134"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "27/04/25",
+      "time": "3:20.30",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs",
+      "wa_points": "146"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "15/03/26",
+      "time": "3:17.19",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "168"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "27/04/25",
+      "time": "3:21.47",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs",
+      "wa_points": "157"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "04/10/25",
+      "time": "1:29.34",
+      "is_pb": 0,
+      "meet_name": "Harpenden SC Bryan Thompson Legacy Meet 2025",
+      "wa_points": "167"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "05/07/25",
+      "time": "1:29.00",
+      "is_pb": 1,
+      "meet_name": "Putteridge SC End of Season Summer Open 2025",
+      "wa_points": "169"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "06/07/24",
+      "time": "1:42.57",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint 2024",
+      "wa_points": "110"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "08/07/23",
+      "time": "1:53.83",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint 2023",
+      "wa_points": "81"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "21/05/23",
+      "time": "1:55.87",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC Club Champs 2023",
+      "wa_points": "76"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "23/11/24",
+      "time": "1:37.52",
+      "is_pb": 1,
+      "meet_name": "Hitchin SC Open Meet",
+      "wa_points": "129"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "31/05/25",
+      "time": "1:29.14",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Development Meet 2025",
+      "wa_points": "168"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Backstroke",
+        "course": "LC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 11,
+        "total_in_ranking": 13,
+        "time": "1:31.12"
+      },
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 25,
+        "total_in_ranking": 69,
+        "time": "1:36.19"
+      },
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 41,
+        "total_in_ranking": 100,
+        "time": "1:29.26"
+      },
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "12",
+        "rank": 30,
+        "total_in_ranking": 41,
+        "time": "1:26.31"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "LC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 5,
+        "total_in_ranking": 9,
+        "time": "1:52.41"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 35,
+        "total_in_ranking": 91,
+        "time": "1:51.68"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 36,
+        "total_in_ranking": 110,
+        "time": "1:41.18"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "LC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 5,
+        "total_in_ranking": 10,
+        "time": "1:29.16"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 50,
+        "total_in_ranking": 103,
+        "time": "1:30.84"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 68,
+        "total_in_ranking": 128,
+        "time": "1:22.73"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 43,
+        "total_in_ranking": 94,
+        "time": "1:42.57"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "11",
+        "rank": 69,
+        "total_in_ranking": 101,
+        "time": "1:37.52"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 42,
+        "total_in_ranking": 124,
+        "time": "1:29.00"
+      },
+      {
+        "event": "200 Backstroke",
+        "course": "LC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 9,
+        "total_in_ranking": 10,
+        "time": "3:08.94"
+      },
+      {
+        "event": "200 Backstroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "11",
+        "rank": 38,
+        "total_in_ranking": 47,
+        "time": "3:26.36"
+      },
+      {
+        "event": "200 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 39,
+        "total_in_ranking": 52,
+        "time": "3:20.30"
+      },
+      {
+        "event": "200 Breaststroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 29,
+        "total_in_ranking": 44,
+        "time": "4:04.22"
+      },
+      {
+        "event": "200 Breaststroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 27,
+        "total_in_ranking": 58,
+        "time": "3:37.35"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "LC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 9,
+        "total_in_ranking": 9,
+        "time": "2:58.10"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 41,
+        "total_in_ranking": 47,
+        "time": "3:33.38"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 35,
+        "total_in_ranking": 72,
+        "time": "2:53.44"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "12",
+        "rank": 25,
+        "total_in_ranking": 31,
+        "time": "2:55.17"
+      },
+      {
+        "event": "200 Individual Medley",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 47,
+        "total_in_ranking": 62,
+        "time": "3:21.47"
+      },
+      {
+        "event": "200 Individual Medley",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "12",
+        "rank": 31,
+        "total_in_ranking": 35,
+        "time": "3:17.19"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "LC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 10,
+        "total_in_ranking": 14,
+        "time": "46.81"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 50,
+        "total_in_ranking": 138,
+        "time": "45.89"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 42,
+        "total_in_ranking": 159,
+        "time": "41.60"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 28,
+        "total_in_ranking": 136,
+        "time": "49.16"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 60,
+        "total_in_ranking": 156,
+        "time": "48.18"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 45,
+        "total_in_ranking": 96,
+        "time": "49.42"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "11",
+        "rank": 70,
+        "total_in_ranking": 105,
+        "time": "47.77"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 37,
+        "total_in_ranking": 120,
+        "time": "40.61"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "LC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 7,
+        "total_in_ranking": 19,
+        "time": "33.80"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 35,
+        "total_in_ranking": 159,
+        "time": "36.99"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 29,
+        "total_in_ranking": 183,
+        "time": "33.71"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "12",
+        "rank": 31,
+        "total_in_ranking": 52,
+        "time": "34.66"
+      },
+      {
+        "event": "800 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 22,
+        "total_in_ranking": 24,
+        "time": "13:12.02"
+      }
+    ]
+  }
+}

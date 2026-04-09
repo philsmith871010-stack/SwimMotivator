@@ -1,0 +1,687 @@
+{
+  "tiref": 1676698,
+  "name": "Jack Ball",
+  "yob": null,
+  "sex": null,
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Backstroke",
+      "time": "1:40.89",
+      "converted_time": "1:41.70",
+      "wa_points": 109,
+      "date": "18/05/24",
+      "meet": "Cheshunt SC May Anniversary Meet 2024",
+      "venue": "Harlow"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "1:57.75",
+      "converted_time": "1:58.80",
+      "wa_points": 103,
+      "date": "22/06/24",
+      "meet": "City of St Albans Summer Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Butterfly",
+      "time": "1:43.40",
+      "converted_time": "1:44.10",
+      "wa_points": 98,
+      "date": "23/11/24",
+      "meet": "Hatfield County Qualifier November 2024",
+      "venue": "Hatfield"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:31.98",
+      "converted_time": "1:32.90",
+      "wa_points": 115,
+      "date": "22/06/24",
+      "meet": "City of St Albans Summer Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "1:44.39",
+      "converted_time": "1:44.40",
+      "wa_points": 105,
+      "date": "22/06/24",
+      "meet": "City of St Albans Summer Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Backstroke",
+      "time": "3:35.19",
+      "converted_time": "3:36.70",
+      "wa_points": 118,
+      "date": "30/11/24",
+      "meet": "City of St Albans SC Winter Open Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Breaststroke",
+      "time": "4:02.04",
+      "converted_time": "4:04.20",
+      "wa_points": 122,
+      "date": "23/11/24",
+      "meet": "Hatfield County Qualifier November 2024",
+      "venue": "Hatfield"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Freestyle",
+      "time": "3:23.62",
+      "converted_time": "3:25.30",
+      "wa_points": 113,
+      "date": "23/11/24",
+      "meet": "Hatfield County Qualifier November 2024",
+      "venue": "Hatfield"
+    },
+    {
+      "course": "SC",
+      "stroke": "400 Freestyle",
+      "time": "7:13.24",
+      "converted_time": "7:16.50",
+      "wa_points": 117,
+      "date": "26/10/24",
+      "meet": "Cheshunt SC 19th Annual Open Meet 2024",
+      "venue": "Harlow"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "48.00",
+      "converted_time": "48.40",
+      "wa_points": 97,
+      "date": "26/10/24",
+      "meet": "Cheshunt SC 19th Annual Open Meet 2024",
+      "venue": "Harlow"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "50.16",
+      "converted_time": "50.80",
+      "wa_points": 123,
+      "date": "30/11/24",
+      "meet": "City of St Albans SC Winter Open Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "46.35",
+      "converted_time": "46.80",
+      "wa_points": 97,
+      "date": "22/06/24",
+      "meet": "City of St Albans Summer Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "39.91",
+      "converted_time": "40.40",
+      "wa_points": 123,
+      "date": "23/11/24",
+      "meet": "Hatfield County Qualifier November 2024",
+      "venue": "Hatfield"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "10/03/24",
+      "time": "43.79",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2024",
+      "wa_points": "93"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "16/06/24",
+      "time": "41.83",
+      "is_pb": 1,
+      "meet_name": "ESS Charlie Farnsbarns Invite Junior Meet 2024",
+      "wa_points": "107"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "18/05/24",
+      "time": "42.83",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC May Anniversary Meet 2024",
+      "wa_points": "100"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "20/05/23",
+      "time": "46.48",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC Anniversary Open Meet 2023",
+      "wa_points": "78"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "48.07",
+      "is_pb": 0,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "70"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "23/11/24",
+      "time": "39.91",
+      "is_pb": 1,
+      "meet_name": "Hatfield County Qualifier November 2024",
+      "wa_points": "123"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "26/10/24",
+      "time": "41.92",
+      "is_pb": 0,
+      "meet_name": "Cheshunt SC 19th Annual Open Meet 2024",
+      "wa_points": "106"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "20/05/23",
+      "time": "1:56.00",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC Anniversary Open Meet 2023",
+      "wa_points": "57"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "21/09/24",
+      "time": "1:39.29",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Autumn Sprint Meet 2024",
+      "wa_points": "92"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "21/10/23",
+      "time": "1:43.84",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC 18th Annual Autumn Open Meet 2023",
+      "wa_points": "80"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "22/06/24",
+      "time": "1:31.98",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Summer Meet 2024",
+      "wa_points": "115"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "1:46.93",
+      "is_pb": 0,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "73"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "25/06/23",
+      "time": "1:45.61",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC End of Season Meet 2023",
+      "wa_points": "76"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "03/12/23",
+      "time": "3:34.59",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "97"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "23/11/24",
+      "time": "3:23.62",
+      "is_pb": 1,
+      "meet_name": "Hatfield County Qualifier November 2024",
+      "wa_points": "113"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "26/10/24",
+      "time": "7:13.24",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC 19th Annual Open Meet 2024",
+      "wa_points": "117"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "09/03/24",
+      "time": "57.46",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2024",
+      "wa_points": "81"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "16/06/24",
+      "time": "56.01",
+      "is_pb": 1,
+      "meet_name": "ESS Charlie Farnsbarns Invite Junior Meet 2024",
+      "wa_points": "88"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "21/09/24",
+      "time": "55.04",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Autumn Sprint Meet 2024",
+      "wa_points": "93"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "21/10/23",
+      "time": "58.05",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC 18th Annual Autumn Open Meet 2023",
+      "wa_points": "79"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "22/06/24",
+      "time": "53.39",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Summer Meet 2024",
+      "wa_points": "102"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "58.56",
+      "is_pb": 1,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "77"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "30/11/24",
+      "time": "50.16",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Open Meet 2024",
+      "wa_points": "123"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "22/06/24",
+      "time": "1:57.75",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Summer Meet 2024",
+      "wa_points": "103"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "23/11/24",
+      "time": "4:02.04",
+      "is_pb": 1,
+      "meet_name": "Hatfield County Qualifier November 2024",
+      "wa_points": "122"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "16/06/24",
+      "time": "51.38",
+      "is_pb": 1,
+      "meet_name": "ESS Charlie Farnsbarns Invite Junior Meet 2024",
+      "wa_points": "71"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "22/06/24",
+      "time": "46.35",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Summer Meet 2024",
+      "wa_points": "97"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "23/11/24",
+      "time": "1:43.40",
+      "is_pb": 1,
+      "meet_name": "Hatfield County Qualifier November 2024",
+      "wa_points": "98"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "26/10/24",
+      "time": "1:50.74",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC 19th Annual Open Meet 2024",
+      "wa_points": "79"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "03/12/23",
+      "time": "54.78",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "65"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "16/06/24",
+      "time": "48.35",
+      "is_pb": 1,
+      "meet_name": "ESS Charlie Farnsbarns Invite Junior Meet 2024",
+      "wa_points": "95"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "18/05/24",
+      "time": "48.79",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC May Anniversary Meet 2024",
+      "wa_points": "93"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "20/05/23",
+      "time": "1:03.05",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC Anniversary Open Meet 2023",
+      "wa_points": "43"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "55.79",
+      "is_pb": 1,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "62"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "24/06/23",
+      "time": "57.34",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC End of Season Meet 2023",
+      "wa_points": "57"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "26/10/24",
+      "time": "48.00",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC 19th Annual Open Meet 2024",
+      "wa_points": "97"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "10/03/24",
+      "time": "1:48.03",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2024",
+      "wa_points": "89"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "18/05/24",
+      "time": "1:40.89",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC May Anniversary Meet 2024",
+      "wa_points": "109"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "21/09/24",
+      "time": "1:47.54",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Autumn Sprint Meet 2024",
+      "wa_points": "90"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "23/11/24",
+      "time": "1:43.09",
+      "is_pb": 0,
+      "meet_name": "Hatfield County Qualifier November 2024",
+      "wa_points": "103"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "09/03/24",
+      "time": "3:46.58",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2024",
+      "wa_points": "101"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "22/06/24",
+      "time": "3:47.96",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Summer Meet 2024",
+      "wa_points": "99"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "30/11/24",
+      "time": "3:35.19",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Open Meet 2024",
+      "wa_points": "118"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "09/03/24",
+      "time": "1:52.53",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2024",
+      "wa_points": "83"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "16/06/24",
+      "time": "1:48.72",
+      "is_pb": 1,
+      "meet_name": "ESS Charlie Farnsbarns Invite Junior Meet 2024",
+      "wa_points": "93"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "21/09/24",
+      "time": "1:46.74",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Autumn Sprint Meet 2024",
+      "wa_points": "98"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "22/06/24",
+      "time": "1:44.39",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Summer Meet 2024",
+      "wa_points": "105"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 46,
+        "total_in_ranking": 69,
+        "time": "1:40.89"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 48,
+        "total_in_ranking": 91,
+        "time": "1:57.75"
+      },
+      {
+        "event": "100 Butterfly",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 16,
+        "total_in_ranking": 21,
+        "time": "1:43.40"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 54,
+        "total_in_ranking": 103,
+        "time": "1:31.98"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 52,
+        "total_in_ranking": 94,
+        "time": "1:44.39"
+      },
+      {
+        "event": "200 Backstroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 23,
+        "total_in_ranking": 29,
+        "time": "3:35.19"
+      },
+      {
+        "event": "200 Breaststroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 26,
+        "total_in_ranking": 44,
+        "time": "4:02.04"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 36,
+        "total_in_ranking": 47,
+        "time": "3:23.62"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 18,
+        "total_in_ranking": 21,
+        "time": "7:13.24"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 77,
+        "total_in_ranking": 138,
+        "time": "48.00"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 37,
+        "total_in_ranking": 136,
+        "time": "50.16"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 34,
+        "total_in_ranking": 96,
+        "time": "46.35"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "10",
+        "rank": 65,
+        "total_in_ranking": 159,
+        "time": "39.91"
+      }
+    ]
+  }
+}

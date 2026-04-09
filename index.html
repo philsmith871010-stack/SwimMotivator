@@ -6,7 +6,7 @@
   <title>SwimMotivator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=9">
 </head>
 <body>
 
@@ -151,9 +151,25 @@
 
       <!-- Event filter + chart -->
       <div class="card">
-        <div class="card-title">
-          Time Progression
-          <select id="histEventFilter" class="inline-select"></select>
+        <div class="card-title">Time Progression</div>
+        <div class="hist-controls">
+          <div class="hist-controls-row">
+            <label class="hist-label">Event</label>
+            <select id="histEventFilter" class="inline-select"></select>
+            <label class="hist-label">Period</label>
+            <select id="histDateRange" class="inline-select">
+              <option value="1">Last Year</option>
+              <option value="2" selected>Last 2 Years</option>
+              <option value="0">All Time</option>
+            </select>
+            <label class="hist-label">Start age</label>
+            <input id="histStartAge" type="number" class="inline-select" style="width:4rem" min="5" max="18" step="0.5" placeholder="Off">
+          </div>
+          <div class="hist-controls-row">
+            <label class="hist-label">Compare</label>
+            <select id="histCompareAdd" class="inline-select"><option value="">Add swimmer...</option></select>
+            <div id="histCompareTags" style="display:flex;gap:0.25rem;flex-wrap:wrap"></div>
+          </div>
         </div>
         <div class="chart-container"><canvas id="timeProgressionChart"></canvas></div>
       </div>
@@ -220,6 +236,6 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
   <script src="js/utils.js?v=7"></script>
   <script src="js/charts.js?v=7"></script>
-  <script src="js/app.js?v=7"></script>
+  <script src="js/app.js?v=19"></script>
 </body>
 </html>

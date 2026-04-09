@@ -1,0 +1,267 @@
+{
+  "tiref": 1498625,
+  "name": "Isabella Claudius",
+  "yob": null,
+  "sex": null,
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "1:49.41",
+      "converted_time": "1:50.60",
+      "wa_points": 185,
+      "date": "23/10/21",
+      "meet": "Team Luton Autumn Short Course Meet 2021",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:36.11",
+      "converted_time": "1:37.00",
+      "wa_points": 142,
+      "date": "24/10/21",
+      "meet": "Team Luton Autumn Short Course Meet 2021",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Breaststroke",
+      "time": "4:01.88",
+      "converted_time": "4:04.10",
+      "wa_points": 164,
+      "date": "23/10/21",
+      "meet": "Team Luton Autumn Short Course Meet 2021",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "47.95",
+      "converted_time": "48.40",
+      "wa_points": 145,
+      "date": "24/10/21",
+      "meet": "Team Luton Autumn Short Course Meet 2021",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "48.73",
+      "converted_time": "49.40",
+      "wa_points": 197,
+      "date": "23/10/21",
+      "meet": "Team Luton Autumn Short Course Meet 2021",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "44.65",
+      "converted_time": "45.10",
+      "wa_points": 154,
+      "date": "24/10/21",
+      "meet": "Team Luton Autumn Short Course Meet 2021",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "38.78",
+      "converted_time": "39.30",
+      "wa_points": 204,
+      "date": "11/07/21",
+      "meet": "City of St Albans Level 4 Club Champs",
+      "venue": "St Albans"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "11/07/21",
+      "time": "38.78",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Level 4 Club Champs",
+      "wa_points": "204"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "15/05/21",
+      "time": "44.47",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Swimming Club",
+      "wa_points": "135"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "41.36",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "168"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "23/10/21",
+      "time": "39.32",
+      "is_pb": 0,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "195"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "25/10/20",
+      "time": "49.03",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Swimming Club",
+      "wa_points": "100"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "1:38.70",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "131"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "24/10/21",
+      "time": "1:36.11",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "142"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "52.35",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "159"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "23/10/21",
+      "time": "48.73",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "197"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "06/03/22",
+      "time": "1:54.73",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier",
+      "wa_points": "160"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "15/05/21",
+      "time": "1:54.63",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Swimming Club",
+      "wa_points": "160"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "1:53.07",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "167"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "23/10/21",
+      "time": "1:49.41",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "185"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "23/10/21",
+      "time": "4:01.88",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "164"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "15/05/21",
+      "time": "54.86",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Swimming Club",
+      "wa_points": "83"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "47.83",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "125"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "24/10/21",
+      "time": "44.65",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "154"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "48.67",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "139"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "24/10/21",
+      "time": "47.95",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "145"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 83,
+        "total_in_ranking": 118,
+        "time": "1:54.73"
+      }
+    ]
+  }
+}

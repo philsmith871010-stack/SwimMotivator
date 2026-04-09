@@ -1,0 +1,193 @@
+{
+  "tiref": 1572884,
+  "name": "Nicole Newman",
+  "yob": null,
+  "sex": null,
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "2:07.31",
+      "converted_time": "2:07.30",
+      "wa_points": 81,
+      "date": "11/07/21",
+      "meet": "City of St Albans Level 4 Club Champs",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "53.15",
+      "converted_time": "53.50",
+      "wa_points": 106,
+      "date": "04/12/21",
+      "meet": "City of St Albans SC Winter Meet 2021",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "49.40",
+      "converted_time": "50.00",
+      "wa_points": 189,
+      "date": "20/05/22",
+      "meet": "HSSA & StASSA Primary Schools Champs 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "59.83",
+      "converted_time": "1:00.10",
+      "wa_points": 64,
+      "date": "05/12/21",
+      "meet": "City of St Albans SC Winter Meet 2021",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "41.71",
+      "converted_time": "42.20",
+      "wa_points": 163,
+      "date": "20/05/22",
+      "meet": "HSSA & StASSA Primary Schools Champs 2022",
+      "venue": "St Albans"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "04/12/21",
+      "time": "44.65",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "133"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "11/07/21",
+      "time": "47.16",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Level 4 Club Champs",
+      "wa_points": "113"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "20/05/22",
+      "time": "41.71",
+      "is_pb": 1,
+      "meet_name": "HSSA & StASSA Primary Schools Champs 2022",
+      "wa_points": "163"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "25/10/20",
+      "time": "54.03",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Swimming Club",
+      "wa_points": "75"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "05/12/21",
+      "time": "51.81",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "164"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "20/05/22",
+      "time": "49.40",
+      "is_pb": 1,
+      "meet_name": "HSSA & StASSA Primary Schools Champs 2022",
+      "wa_points": "189"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "05/12/21",
+      "time": "59.83",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "64"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "20/05/22",
+      "time": "1:03.22",
+      "is_pb": 0,
+      "meet_name": "HSSA & StASSA Primary Schools Champs 2022",
+      "wa_points": "54"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "04/07/21",
+      "time": "56.47",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Level 4 Club Champs",
+      "wa_points": "89"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "04/12/21",
+      "time": "53.15",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "106"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "11/07/21",
+      "time": "2:07.31",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Level 4 Club Champs",
+      "wa_points": "81"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 67,
+        "total_in_ranking": 167,
+        "time": "49.40"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 122,
+        "total_in_ranking": 126,
+        "time": "1:03.22"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 146,
+        "total_in_ranking": 210,
+        "time": "41.71"
+      }
+    ]
+  }
+}

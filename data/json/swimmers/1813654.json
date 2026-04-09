@@ -1,0 +1,213 @@
+{
+  "tiref": 1813654,
+  "name": "Rory Pickering",
+  "yob": null,
+  "sex": null,
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Backstroke",
+      "time": "1:49.03",
+      "converted_time": "1:49.80",
+      "wa_points": 87,
+      "date": "20/09/25",
+      "meet": "Co St Albans Autumn Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:36.48",
+      "converted_time": "1:37.30",
+      "wa_points": 100,
+      "date": "20/09/25",
+      "meet": "Co St Albans Autumn Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "1:55.92",
+      "converted_time": "1:55.90",
+      "wa_points": 76,
+      "date": "20/09/25",
+      "meet": "Co St Albans Autumn Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "48.76",
+      "converted_time": "49.20",
+      "wa_points": 93,
+      "date": "06/07/25",
+      "meet": "Co St Albans Club Champs 50s & 25s 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "59.39",
+      "converted_time": "59.90",
+      "wa_points": 74,
+      "date": "20/09/25",
+      "meet": "Co St Albans Autumn Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "49.78",
+      "converted_time": "50.20",
+      "wa_points": 78,
+      "date": "20/09/25",
+      "meet": "Co St Albans Autumn Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "40.43",
+      "converted_time": "40.90",
+      "wa_points": 119,
+      "date": "06/07/25",
+      "meet": "Co St Albans Club Champs 50s & 25s 2025",
+      "venue": "St Albans"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "06/07/25",
+      "time": "40.43",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Club Champs 50s & 25s 2025",
+      "wa_points": "119"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "1:36.48",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "100"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "59.39",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "74"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "49.78",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "78"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "06/07/25",
+      "time": "48.76",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Club Champs 50s & 25s 2025",
+      "wa_points": "93"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "1:49.03",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "87"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "1:55.92",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "76"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 57,
+        "total_in_ranking": 64,
+        "time": "1:49.03"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 80,
+        "total_in_ranking": 113,
+        "time": "1:36.48"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 93,
+        "total_in_ranking": 104,
+        "time": "1:55.92"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 78,
+        "total_in_ranking": 138,
+        "time": "48.76"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 109,
+        "total_in_ranking": 144,
+        "time": "59.39"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 66,
+        "total_in_ranking": 104,
+        "time": "49.78"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 77,
+        "total_in_ranking": 175,
+        "time": "40.43"
+      }
+    ]
+  }
+}

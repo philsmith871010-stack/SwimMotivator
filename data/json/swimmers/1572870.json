@@ -1,0 +1,110 @@
+{
+  "tiref": 1572870,
+  "name": "Aidan Timmons",
+  "yob": null,
+  "sex": null,
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:43.16",
+      "converted_time": "1:44.00",
+      "wa_points": 82,
+      "date": "12/03/22",
+      "meet": "City of St Albans SC Spring Meet 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "52.19",
+      "converted_time": "52.60",
+      "wa_points": 76,
+      "date": "12/03/22",
+      "meet": "City of St Albans SC Spring Meet 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "41.56",
+      "converted_time": "42.10",
+      "wa_points": 109,
+      "date": "13/03/22",
+      "meet": "City of St Albans SC Spring Meet 2022",
+      "venue": "St Albans"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "13/03/22",
+      "time": "41.56",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "109"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "25/10/20",
+      "time": "58.97",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Swimming Club",
+      "wa_points": "38"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "12/03/22",
+      "time": "1:43.16",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "82"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "12/03/22",
+      "time": "52.19",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "76"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 49,
+        "total_in_ranking": 67,
+        "time": "1:43.16"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 58,
+        "total_in_ranking": 93,
+        "time": "52.19"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 48,
+        "total_in_ranking": 118,
+        "time": "41.56"
+      }
+    ]
+  }
+}

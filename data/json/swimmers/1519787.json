@@ -1,0 +1,603 @@
+{
+  "tiref": 1519787,
+  "name": "Violet Whiting",
+  "yob": null,
+  "sex": null,
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Backstroke",
+      "time": "1:35.66",
+      "converted_time": "1:36.50",
+      "wa_points": 180,
+      "date": "09/07/22",
+      "meet": "Stevenage SC Summer Sprint",
+      "venue": "Stevenage"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "1:45.80",
+      "converted_time": "1:47.00",
+      "wa_points": 204,
+      "date": "17/09/22",
+      "meet": "City of St Albans SC Sprint & Skins Competition",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:26.46",
+      "converted_time": "1:27.40",
+      "wa_points": 196,
+      "date": "17/09/22",
+      "meet": "City of St Albans SC Sprint & Skins Competition",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "1:35.93",
+      "converted_time": "1:35.90",
+      "wa_points": 189,
+      "date": "02/10/22",
+      "meet": "City of St Albans SC Level 4 Club Champs",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Breaststroke",
+      "time": "3:54.96",
+      "converted_time": "3:57.20",
+      "wa_points": 179,
+      "date": "26/06/22",
+      "meet": "Watford SC Terry Davies Alternative Nationals",
+      "venue": "Garston"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Freestyle",
+      "time": "3:10.66",
+      "converted_time": "3:12.50",
+      "wa_points": 193,
+      "date": "29/09/22",
+      "meet": "City of St Albans SC Level 4 Club Champs",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "46.95",
+      "converted_time": "47.40",
+      "wa_points": 155,
+      "date": "20/05/22",
+      "meet": "HSSA & StASSA Primary Schools Champs 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "48.54",
+      "converted_time": "49.20",
+      "wa_points": 199,
+      "date": "02/10/22",
+      "meet": "City of St Albans SC Level 4 Club Champs",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "54.81",
+      "converted_time": "55.20",
+      "wa_points": 83,
+      "date": "05/12/21",
+      "meet": "City of St Albans SC Winter Meet 2021",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "36.73",
+      "converted_time": "37.30",
+      "wa_points": 240,
+      "date": "09/07/22",
+      "meet": "Stevenage SC Summer Sprint",
+      "venue": "Stevenage"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "02/10/22",
+      "time": "36.85",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "237"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "09/07/22",
+      "time": "36.73",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint",
+      "wa_points": "240"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "11/07/21",
+      "time": "45.51",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Level 4 Club Champs",
+      "wa_points": "126"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "17/09/22",
+      "time": "38.25",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Sprint & Skins Competition",
+      "wa_points": "212"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "43.61",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "143"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "20/05/22",
+      "time": "37.87",
+      "is_pb": 1,
+      "meet_name": "HSSA & StASSA Primary Schools Champs 2022",
+      "wa_points": "219"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "25/10/20",
+      "time": "51.93",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Swimming Club",
+      "wa_points": "84"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "05/03/22",
+      "time": "1:27.47",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier",
+      "wa_points": "189"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "05/12/21",
+      "time": "1:33.38",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "155"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "17/09/22",
+      "time": "1:26.46",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Sprint & Skins Competition",
+      "wa_points": "196"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "1:39.90",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "127"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "26/06/22",
+      "time": "1:29.43",
+      "is_pb": 0,
+      "meet_name": "Watford SC Terry Davies Alternative Nationals",
+      "wa_points": "177"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "29/09/22",
+      "time": "3:10.66",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "193"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "02/10/22",
+      "time": "48.54",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "199"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "04/07/21",
+      "time": "56.07",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Level 4 Club Champs",
+      "wa_points": "129"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "09/07/22",
+      "time": "49.23",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint",
+      "wa_points": "191"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "13/03/22",
+      "time": "52.63",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "156"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "17/07/21",
+      "time": "54.54",
+      "is_pb": 1,
+      "meet_name": "Swim England East Region Future Champions Meet",
+      "wa_points": "140"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "17/09/22",
+      "time": "48.55",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Sprint & Skins Competition",
+      "wa_points": "199"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "54.68",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "139"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "20/05/22",
+      "time": "50.17",
+      "is_pb": 1,
+      "meet_name": "HSSA & StASSA Primary Schools Champs 2022",
+      "wa_points": "180"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "23/10/21",
+      "time": "53.57",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "148"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "26/06/22",
+      "time": "51.20",
+      "is_pb": 0,
+      "meet_name": "Watford SC Terry Davies Alternative Nationals",
+      "wa_points": "170"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "05/12/21",
+      "time": "1:57.56",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "149"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "09/07/22",
+      "time": "1:50.91",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint",
+      "wa_points": "177"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "17/09/22",
+      "time": "1:45.80",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Sprint & Skins Competition",
+      "wa_points": "204"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "1:59.29",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "142"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "23/10/21",
+      "time": "1:58.23",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "146"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "29/09/22",
+      "time": "1:46.09",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "203"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "13/03/22",
+      "time": "4:02.97",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "162"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "26/06/22",
+      "time": "3:54.96",
+      "is_pb": 1,
+      "meet_name": "Watford SC Terry Davies Alternative Nationals",
+      "wa_points": "179"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "04/07/21",
+      "time": "55.48",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Level 4 Club Champs",
+      "wa_points": "80"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "05/12/21",
+      "time": "54.81",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2021",
+      "wa_points": "83"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "04/07/21",
+      "time": "53.93",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Level 4 Club Champs",
+      "wa_points": "102"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "05/03/22",
+      "time": "47.31",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier",
+      "wa_points": "151"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "48.21",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "143"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "20/05/22",
+      "time": "46.95",
+      "is_pb": 1,
+      "meet_name": "HSSA & StASSA Primary Schools Champs 2022",
+      "wa_points": "155"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "09/07/22",
+      "time": "1:35.66",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint",
+      "wa_points": "180"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "13/03/22",
+      "time": "1:40.56",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "155"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "02/10/22",
+      "time": "1:35.93",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "189"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "11/07/21",
+      "time": "1:56.07",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Level 4 Club Champs",
+      "wa_points": "107"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 18,
+        "total_in_ranking": 51,
+        "time": "1:35.66"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 22,
+        "total_in_ranking": 60,
+        "time": "1:50.91"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 41,
+        "total_in_ranking": 118,
+        "time": "1:45.80"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 26,
+        "total_in_ranking": 80,
+        "time": "1:27.47"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 76,
+        "total_in_ranking": 154,
+        "time": "1:26.46"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 65,
+        "total_in_ranking": 116,
+        "time": "1:35.93"
+      },
+      {
+        "event": "200 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 13,
+        "total_in_ranking": 27,
+        "time": "3:54.96"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 47,
+        "total_in_ranking": 75,
+        "time": "3:10.66"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 45,
+        "total_in_ranking": 119,
+        "time": "46.95"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 14,
+        "total_in_ranking": 121,
+        "time": "49.23"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 56,
+        "total_in_ranking": 167,
+        "time": "48.54"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 17,
+        "total_in_ranking": 150,
+        "time": "36.73"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 73,
+        "total_in_ranking": 210,
+        "time": "36.85"
+      }
+    ]
+  }
+}

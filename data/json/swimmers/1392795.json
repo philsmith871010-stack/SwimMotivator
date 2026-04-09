@@ -1,0 +1,128 @@
+{
+  "tiref": 1392795,
+  "name": "Harriet Turner",
+  "yob": null,
+  "sex": null,
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "200 Freestyle",
+      "time": "3:51.89",
+      "converted_time": "3:53.40",
+      "wa_points": 107,
+      "date": "12/03/22",
+      "meet": "City of St Albans SC Spring Meet 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "51.08",
+      "converted_time": "51.50",
+      "wa_points": 120,
+      "date": "18/09/21",
+      "meet": "City of St Albans Sprint and Skins Competition",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "44.40",
+      "converted_time": "44.90",
+      "wa_points": 135,
+      "date": "20/05/22",
+      "meet": "HSSA & StASSA Primary Schools Champs 2022",
+      "venue": "St Albans"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "12/03/22",
+      "time": "45.24",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "128"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "48.81",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "102"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "20/05/22",
+      "time": "44.40",
+      "is_pb": 1,
+      "meet_name": "HSSA & StASSA Primary Schools Champs 2022",
+      "wa_points": "135"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "25/10/20",
+      "time": "56.25",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Swimming Club",
+      "wa_points": "66"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "12/03/22",
+      "time": "3:51.89",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "107"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "51.08",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "120"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "20/05/22",
+      "time": "53.35",
+      "is_pb": 0,
+      "meet_name": "HSSA & StASSA Primary Schools Champs 2022",
+      "wa_points": "105"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 95,
+        "total_in_ranking": 119,
+        "time": "53.35"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 97,
+        "total_in_ranking": 150,
+        "time": "44.40"
+      }
+    ]
+  }
+}
