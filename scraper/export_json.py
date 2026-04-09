@@ -9,7 +9,8 @@ from __future__ import annotations
 import json
 import sqlite3
 
-from .config import DB_PATH, JSON_DIR, STROKE_NAMES, COSTA_TIREFS
+from .config import DB_PATH, JSON_DIR, STROKE_NAMES, CLUB_NAME_PATTERN
+from .db import get_club_tirefs
 
 
 def _dict_rows(conn: sqlite3.Connection, sql: str, params: tuple = ()) -> list[dict]:
@@ -46,8 +47,8 @@ def export_per_swimmer(conn: sqlite3.Connection) -> None:
     swimmers_dir = JSON_DIR / "swimmers"
     swimmers_dir.mkdir(parents=True, exist_ok=True)
 
-    tirefs = [str(t) for t in COSTA_TIREFS]
-    # Also include any swimmer in the swimmers table
+    # Get club swimmers from rankings + any in swimmers table
+    tirefs = [str(t) for t in get_club_tirefs(conn, CLUB_NAME_PATTERN)]
     for row in conn.execute("SELECT tiref FROM swimmers").fetchall():
         t = str(row[0])
         if t not in tirefs:
@@ -102,7 +103,7 @@ def export_rankings_by_level(conn: sqlite3.Connection) -> None:
         print("  rankings: no data")
         return
 
-    costa_set = set(str(t) for t in COSTA_TIREFS)
+    costa_set = set(str(t) for t in get_club_tirefs(conn, CLUB_NAME_PATTERN))
 
     for level in ["county", "regional", "national"]:
         rows = _dict_rows(conn, """

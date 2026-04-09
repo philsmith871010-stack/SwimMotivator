@@ -162,6 +162,15 @@ def insert_rankings(conn: sqlite3.Connection, rows: list[dict]) -> None:
           for r in rows])
 
 
+def get_club_tirefs(conn: sqlite3.Connection, club_pattern: str) -> list[int]:
+    """Get unique tirefs from rankings where club name matches pattern."""
+    rows = conn.execute(
+        "SELECT DISTINCT tiref FROM rankings WHERE club LIKE ?",
+        (f"%{club_pattern}%",)
+    ).fetchall()
+    return sorted(int(r[0]) for r in rows)
+
+
 def upsert_clubs(conn: sqlite3.Connection, clubs: list[dict]) -> None:
     conn.executemany("""
         INSERT INTO clubs (club_code, club_name, region, county, country)

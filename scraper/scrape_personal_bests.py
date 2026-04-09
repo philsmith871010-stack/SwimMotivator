@@ -7,7 +7,7 @@ from typing import Any
 
 from bs4 import BeautifulSoup
 
-from .config import BIOG_URL, COSTA_TIREFS, PB_URL
+from .config import BIOG_URL, PB_URL
 from .db import clear_personal_bests, init_db, insert_personal_best, upsert_swimmer
 from .parsers import norm_ws, parse_int_or_none
 from .session import fetch_soup
@@ -118,8 +118,8 @@ def scrape_one(conn, tiref: int) -> None:
         insert_personal_best(conn, tiref=tiref, **row)
 
 
-def scrape_personal_bests(tirefs: list[int] | None = None) -> None:
-    _tirefs = tirefs or COSTA_TIREFS
+def scrape_personal_bests(tirefs: list[int]) -> None:
+    _tirefs = tirefs
     conn = init_db()
     total = len(_tirefs)
     try:
@@ -136,7 +136,19 @@ def scrape_personal_bests(tirefs: list[int] | None = None) -> None:
 
 
 def main() -> None:
-    scrape_personal_bests()
+    # Standalone: derive tirefs from rankings data
+    from .config import CLUB_NAME_PATTERN
+    from .db import get_club_tirefs, init_db
+    conn = init_db()
+    try:
+        tirefs = get_club_tirefs(conn, CLUB_NAME_PATTERN)
+    finally:
+        conn.close()
+    if not tirefs:
+        print("[PB] No club swimmers found in rankings. Run rankings scrape first.")
+        return
+    print(f"[PB] Found {len(tirefs)} club swimmers from rankings")
+    scrape_personal_bests(tirefs=tirefs)
 
 
 if __name__ == "__main__":
