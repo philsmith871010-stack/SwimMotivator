@@ -1,0 +1,257 @@
+{
+  "tiref": 1519684,
+  "name": "Chloe Garcia Guerra",
+  "yob": null,
+  "sex": null,
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Butterfly",
+      "time": "1:58.42",
+      "converted_time": "1:59.10",
+      "wa_points": 88,
+      "date": "11/03/23",
+      "meet": "City of St Albans Spring Meet 2023",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:42.04",
+      "converted_time": "1:42.90",
+      "wa_points": 119,
+      "date": "30/09/22",
+      "meet": "City of St Albans SC Level 4 Club Champs",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "2:00.94",
+      "converted_time": "2:00.90",
+      "wa_points": 94,
+      "date": "09/07/22",
+      "meet": "Stevenage SC Summer Sprint",
+      "venue": "Stevenage"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Individual Medley",
+      "time": "3:48.19",
+      "converted_time": "3:49.90",
+      "wa_points": 151,
+      "date": "03/12/22",
+      "meet": "City of St Albans SC Winter Meet 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "48.91",
+      "converted_time": "49.30",
+      "wa_points": 117,
+      "date": "19/05/23",
+      "meet": "HSSA StASSA Primary Schools Champs 2023",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "41.41",
+      "converted_time": "41.90",
+      "wa_points": 167,
+      "date": "19/05/23",
+      "meet": "HSSA StASSA Primary Schools Champs 2023",
+      "venue": "St Albans"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "01/10/23",
+      "time": "45.00",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "130"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "02/10/22",
+      "time": "44.52",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "134"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "03/12/22",
+      "time": "42.46",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2022",
+      "wa_points": "155"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "09/07/22",
+      "time": "44.45",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint",
+      "wa_points": "135"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "11/03/23",
+      "time": "43.02",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Spring Meet 2023",
+      "wa_points": "149"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "12/03/22",
+      "time": "46.71",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Spring Meet 2022",
+      "wa_points": "116"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "19/05/23",
+      "time": "41.41",
+      "is_pb": 1,
+      "meet_name": "HSSA StASSA Primary Schools Champs 2023",
+      "wa_points": "167"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "25/10/20",
+      "time": "1:07.59",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Swimming Club",
+      "wa_points": "38"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "09/07/22",
+      "time": "1:48.27",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint",
+      "wa_points": "99"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "30/09/22",
+      "time": "1:42.04",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "119"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "09/07/22",
+      "time": "55.52",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint",
+      "wa_points": "80"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "11/03/23",
+      "time": "49.89",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2023",
+      "wa_points": "110"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "19/05/23",
+      "time": "48.91",
+      "is_pb": 1,
+      "meet_name": "HSSA StASSA Primary Schools Champs 2023",
+      "wa_points": "117"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "25/09/22",
+      "time": "52.01",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "97"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "11/03/23",
+      "time": "1:58.42",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2023",
+      "wa_points": "88"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "03/12/22",
+      "time": "3:48.19",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2022",
+      "wa_points": "151"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "09/07/22",
+      "time": "2:00.94",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint",
+      "wa_points": "94"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Butterfly",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "10",
+        "rank": 19,
+        "total_in_ranking": 23,
+        "time": "1:58.42"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "10",
+        "rank": 41,
+        "total_in_ranking": 94,
+        "time": "48.91"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "10",
+        "rank": 84,
+        "total_in_ranking": 181,
+        "time": "41.41"
+      }
+    ]
+  }
+}

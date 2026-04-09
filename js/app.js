@@ -1,69 +1,44 @@
-/* SwimMotivator v5 — Multi-level Dashboard with Tabs */
+/* SwimMotivator v7 — County-focused motivational dashboard */
 
-let CONFIG = {};
-let ALL_PBS = [];
-let ALL_RANKS = [];
-let ALL_COUNTY_RANKS = [];
-let ALL_REGION_RANKS = [];
-let ALL_SQUAD = [];
-let ALL_SWIMMERS = [];  // [{tiref, name, yob}] — built from squad.json
-let HISTORY = {};  // keyed by tiref (string)
-let activeSwimmer = null;  // {tiref, name, yob} — current swimmer object
-let selectedEvent = null;
-let comparators = [];  // [{tiref, name, color}] — max 3
-const COMP_COLORS = ['#69f0ae', '#b388ff', '#ffab40'];
-const BELLA_TIREF = '1373165';
-const AMBER_TIREF = '1479966';
+const STROKE_NAMES = {
+  1: '50 Freestyle', 2: '100 Freestyle', 3: '200 Freestyle', 4: '400 Freestyle',
+  5: '800 Freestyle', 6: '1500 Freestyle', 7: '50 Breaststroke', 8: '100 Breaststroke',
+  9: '200 Breaststroke', 10: '50 Butterfly', 11: '100 Butterfly', 12: '200 Butterfly',
+  13: '50 Backstroke', 14: '100 Backstroke', 15: '200 Backstroke',
+  16: '200 Individual Medley', 17: '400 Individual Medley', 18: '100 Individual Medley',
+};
+
+let ALL_SWIMMERS = [];
+let COUNTY_RANKS = [];
+let currentData = null;
+let activeSwimmer = null;
 
 // ── Init ──────────────────────────────────────────────────
 async function init() {
   try {
     setStatus('Loading data...');
-    [CONFIG, ALL_PBS, ALL_RANKS, ALL_SQUAD, ALL_COUNTY_RANKS, ALL_REGION_RANKS] = await Promise.all([
-      fetchJSON('config.json'),
-      fetchJSON('personal_bests.json'),
-      fetchJSON('ranks.json').catch(() => []),
-      fetchJSON('squad.json').catch(() => []),
+
+    const [swimmers, countyRanks] = await Promise.all([
+      fetchJSON('swimmers.json'),
       fetchJSON('county_ranks.json').catch(() => []),
-      fetchJSON('region_ranks.json').catch(() => []),
     ]);
 
-    // Build unique swimmer list from squad data
-    const swimmerMap = new Map();
-    ALL_SQUAD.forEach(r => {
-      const tid = String(r.tiref);
-      if (!swimmerMap.has(tid)) {
-        swimmerMap.set(tid, { tiref: tid, name: r.swimmer_name || 'Unknown', yob: r.yob });
-      }
-    });
-    ALL_SWIMMERS = [...swimmerMap.values()].sort((a, b) => a.name.localeCompare(b.name));
+    ALL_SWIMMERS = swimmers.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+    COUNTY_RANKS = countyRanks;
 
-    // Default to Bella
-    const defaultSwimmer = ALL_SWIMMERS.find(s => s.tiref === BELLA_TIREF) || ALL_SWIMMERS[0];
-    activeSwimmer = defaultSwimmer;
-
-    // Load history for default swimmer
-    await loadHistory(activeSwimmer.tiref);
-
+    setupTabs();
     setupSwimmerSelect();
-    refresh();
-    setStatus('Ready', true);
+
+    // Default to Isabella Smith, fall back to first swimmer
+    const defaultSwimmer = ALL_SWIMMERS.find(s => s.tiref === 1373165) || ALL_SWIMMERS[0];
+    if (defaultSwimmer) {
+      await selectSwimmer(defaultSwimmer);
+    }
+
+    setStatus(`${ALL_SWIMMERS.length} swimmers loaded`, true);
   } catch (err) {
     setStatus(`Error: ${err.message}`);
     console.error(err);
-  }
-}
-
-async function loadHistory(tiref) {
-  tiref = String(tiref);
-  if (HISTORY[tiref]) return HISTORY[tiref];
-  try {
-    const h = await fetchJSON(`history/${tiref}.json`);
-    HISTORY[tiref] = h;
-    return h;
-  } catch {
-    HISTORY[tiref] = [];
-    return [];
   }
 }
 
@@ -73,57 +48,50 @@ function setStatus(msg, ok = false) {
   el.className = ok ? 'connected' : '';
 }
 
-function getSwimmer() { return activeSwimmer || {}; }
-function getColor() {
-  if (!activeSwimmer) return COLORS.amber;
-  if (String(activeSwimmer.tiref) === BELLA_TIREF) return COLORS.bella;
-  if (String(activeSwimmer.tiref) === AMBER_TIREF) return COLORS.amber;
-  return COLORS.purple;
-}
-function getGlow() {
-  if (!activeSwimmer) return COLORS.amberGlow;
-  if (String(activeSwimmer.tiref) === BELLA_TIREF) return COLORS.bellaGlow;
-  if (String(activeSwimmer.tiref) === AMBER_TIREF) return COLORS.amberGlow;
-  return 'rgba(179, 136, 255, 0.25)';
+// ── Tabs ──────────────────────────────────────────────────
+function setupTabs() {
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const panel = document.getElementById('panel' + btn.dataset.tab.charAt(0).toUpperCase() + btn.dataset.tab.slice(1));
+      if (panel) panel.classList.add('active');
+    });
+  });
 }
 
-// ── Swimmer Select Dropdown ───────────────────────────────
+// ── Swimmer Select ────────────────────────────────────────
 function setupSwimmerSelect() {
   const searchInput = document.getElementById('swimmerSearch');
   const dropdown = document.getElementById('swimmerDropdown');
 
-  updateSearchInputStyle();
-
-  // Build dropdown HTML with search box + swimmer list
   function renderDropdown(filter = '') {
     const lc = filter.toLowerCase();
     const filtered = lc ? ALL_SWIMMERS.filter(s => s.name.toLowerCase().includes(lc)) : ALL_SWIMMERS;
 
-    // Group by YOB
     const groups = {};
     filtered.forEach(s => {
-      const yob = s.yob || '?';
-      if (!groups[yob]) groups[yob] = [];
-      groups[yob].push(s);
+      const key = s.yob || '?';
+      if (!groups[key]) groups[key] = [];
+      groups[key].push(s);
     });
 
     let html = '<input type="text" class="dd-search" id="ddSearchInput" placeholder="Type to filter...">';
-    const yobs = Object.keys(groups).sort((a, b) => Number(a) - Number(b));
-    yobs.forEach(yob => {
+    Object.keys(groups).sort((a, b) => Number(a) - Number(b)).forEach(yob => {
       html += `<div class="dd-group-label">Born ${yob}</div>`;
       groups[yob].forEach(s => {
         const isActive = activeSwimmer && String(s.tiref) === String(activeSwimmer.tiref);
         html += `<div class="dd-item${isActive ? ' active' : ''}" data-tiref="${s.tiref}">
           <span>${s.name}</span>
-          <span class="dd-yob">${s.yob || ''}</span>
+          <span class="dd-yob">${s.sex === 'F' ? 'G' : s.sex === 'M' ? 'B' : ''} ${s.yob || ''}</span>
         </div>`;
       });
     });
 
-    if (!filtered.length) html += '<div style="padding:1rem;color:var(--text-3);font-size:0.8rem;text-align:center">No matches</div>';
+    if (!filtered.length) html += '<div style="padding:1rem;color:var(--text-3);text-align:center">No matches</div>';
     dropdown.innerHTML = html;
 
-    // Wire up search within dropdown
     const ddSearch = document.getElementById('ddSearchInput');
     if (ddSearch) {
       ddSearch.value = filter;
@@ -131,1489 +99,695 @@ function setupSwimmerSelect() {
       ddSearch.addEventListener('input', () => renderDropdown(ddSearch.value));
     }
 
-    // Wire up item clicks
     dropdown.querySelectorAll('.dd-item').forEach(item => {
       item.addEventListener('click', async () => {
         const tiref = item.dataset.tiref;
         const swimmer = ALL_SWIMMERS.find(s => String(s.tiref) === tiref);
         if (swimmer) {
           await selectSwimmer(swimmer);
-          closeDropdown();
+          dropdown.classList.remove('open');
+          searchInput.classList.remove('open');
         }
       });
     });
   }
 
-  function openDropdown() {
-    renderDropdown('');
-    dropdown.classList.add('open');
-    searchInput.classList.add('open');
-  }
-
-  function closeDropdown() {
-    dropdown.classList.remove('open');
-    searchInput.classList.remove('open');
-  }
-
   searchInput.addEventListener('click', (e) => {
     e.stopPropagation();
-    if (dropdown.classList.contains('open')) closeDropdown();
-    else openDropdown();
+    if (dropdown.classList.contains('open')) {
+      dropdown.classList.remove('open');
+      searchInput.classList.remove('open');
+    } else {
+      renderDropdown('');
+      dropdown.classList.add('open');
+      searchInput.classList.add('open');
+    }
   });
 
   dropdown.addEventListener('click', (e) => e.stopPropagation());
-
-  document.addEventListener('click', () => closeDropdown());
+  document.addEventListener('click', () => {
+    dropdown.classList.remove('open');
+    searchInput.classList.remove('open');
+  });
 }
 
 async function selectSwimmer(swimmer) {
   activeSwimmer = swimmer;
-  selectedEvent = null;
-  comparators = [];
+  document.getElementById('swimmerSearch').value = swimmer.name;
+
   setStatus('Loading...');
-  await loadHistory(swimmer.tiref);
-  updateSearchInputStyle();
+  try {
+    const resp = await fetch(`${DATA_BASE}/swimmers/${swimmer.tiref}.json`);
+    currentData = await resp.json();
+  } catch {
+    currentData = { pbs: [], history: [], rankings: { county: [] } };
+  }
+
   refresh();
-  setStatus('Ready', true);
+  setStatus(`${swimmer.name} — ${ALL_SWIMMERS.length} swimmers loaded`, true);
 }
 
-function updateSearchInputStyle() {
-  const input = document.getElementById('swimmerSearch');
-  if (!activeSwimmer) return;
-  input.value = activeSwimmer.name;
-  input.classList.remove('has-bella', 'has-amber', 'has-other');
-  if (String(activeSwimmer.tiref) === BELLA_TIREF) input.classList.add('has-bella');
-  else if (String(activeSwimmer.tiref) === AMBER_TIREF) input.classList.add('has-amber');
-  else input.classList.add('has-other');
-}
-
-// ── Refresh ───────────────────────────────────────────────
+// ── Refresh All Tabs ──────────────────────────────────────
 function refresh() {
-  const swimmer = getSwimmer();
-  const tiref = swimmer.tiref;
-  const history = HISTORY[tiref] || [];
-
-  // Use official PBs if available, otherwise derive from history
-  let pbs = ALL_PBS.filter(r => String(r.tiref) === String(tiref));
-  if (!pbs.length && history.length) {
-    pbs = derivePBsFromHistory(history, tiref, swimmer.name, swimmer.yob);
-  }
-
-  // Merge SC/LC into single events using British Swimming conversion
-  const mergedPBs = mergePBsByCourse(pbs);
-
-  const ranks = ALL_RANKS.filter(r => String(r.tiref) === String(tiref));
-  const mergedRanks = mergeRanksByCourse(ranks);
-  const cur = mergedRanks.filter(r => r.year === 2026);
-  const prev = mergedRanks.filter(r => r.year === 2025);
-
-  updatePBBanner(history);
-  updateHeroStats(mergedPBs, cur, prev, history);
-  updateSeasonSummary(history, mergedRanks, cur, prev);
-  updateRankings(mergedPBs, mergedRanks);
-  if (selectedEvent) {
-    updateProgressChart();
-    updateGoals(mergedRanks, history);
-    updateSquad();
-    updateCompareInfo();
-    updateSwimmerPicker();
-  }
-  updateRankProgression(mergedRanks, mergedPBs);
+  if (!currentData || !activeSwimmer) return;
+  renderDashboard();
+  renderCounty();
+  renderHistory();
+  renderClub();
 }
 
-// Derive PB records from history data (for swimmers without official PB data)
-function derivePBsFromHistory(history, tiref, name, yob) {
-  const strokeNames = CONFIG.stroke_names || {};
-  const courseLabels = { S: 'SC', L: 'LC' };
-  const best = {};
+// ── DASHBOARD TAB ─────────────────────────────────────────
+function renderDashboard() {
+  const d = currentData;
+  const pbs = d.pbs || [];
+  const history = d.history || [];
+  const rankings = (d.rankings && d.rankings.county) || [];
 
-  history.forEach(r => {
-    const strokeName = strokeNames[String(r.stroke_code)];
-    if (!strokeName) return;
-    const course = courseLabels[r.course] || r.course;
-    const key = `${strokeName}|${course}`;
-    const time = parseTimeToSeconds(r.time);
-    if (!time || !Number.isFinite(time)) return;
+  // Hero stats
+  const latestYear = rankings.length ? Math.max(...rankings.map(r => r.year)) : null;
+  const latestRankings = latestYear ? rankings.filter(r => r.year === latestYear) : [];
+  const bestRank = latestRankings.length ? Math.min(...latestRankings.map(r => r.rank).filter(Boolean)) : null;
+  const bestRankEntry = bestRank ? latestRankings.find(r => r.rank === bestRank) : null;
 
-    if (!best[key] || time < parseTimeToSeconds(best[key].time)) {
-      best[key] = {
-        tiref: tiref,
-        course: course,
-        stroke: strokeName,
-        time: r.time,
-        wa_points: parseInt(r.wa_points) || 0,
-        date: r.date,
-        meet: r.meet_name,
-        swimmer_name: name,
-        yob: yob,
-      };
-    }
-  });
+  setText('statBestRank', bestRank ? `#${bestRank}` : '-');
+  setText('statBestRankDetail', bestRankEntry ? `${bestRankEntry.event} ${bestRankEntry.course} (${latestYear})` : '-');
+  const mergedPBs = mergePBsToSC(pbs);
+  setText('statPBCount', mergedPBs.length);
+  const lcOrigin = mergedPBs.filter(p => p.originalCourse === 'LC').length;
+  setText('statPBDetail', lcOrigin ? `${mergedPBs.length - lcOrigin} SC, ${lcOrigin} converted` : `${mergedPBs.length} SC`);
+  setText('statEventsRanked', latestRankings.length);
+  setText('statEventsDetail', latestYear ? `County ${latestYear}` : '-');
+  setText('statTotalSwims', history.length);
+  const events = new Set(history.map(h => `${h.stroke_code}-${h.course}`));
+  setText('statSwimsDetail', `across ${events.size} events`);
 
-  return Object.values(best);
+  // PB Table (all converted to SC equivalent)
+  renderPBTable(mergedPBs);
+
+  // Best Rankings
+  renderBestRankings(latestRankings, latestYear);
 }
 
-// ── PB Celebration Banner ─────────────────────────────────
-function updatePBBanner(history) {
-  const banner = document.getElementById('pbBanner');
-  const pbs = history.filter(r => Number(r.is_pb) === 1).sort(sortByDate);
-  if (!pbs.length) { banner.style.display = 'none'; return; }
-
-  const latest = pbs[pbs.length - 1];
-  const strokeNames = CONFIG.stroke_names || {};
-  const eventName = strokeNames[String(latest.stroke_code)] || 'Event';
-  const courseLabel = latest.course === 'S' ? 'SC' : 'LC';
-
-  // Find previous PB for this stroke/course to calculate drop
-  const sameEvent = pbs.filter(r => r.stroke_code === latest.stroke_code && r.course === latest.course);
-  let dropText = '';
-  if (sameEvent.length >= 2) {
-    const prev = sameEvent[sameEvent.length - 2];
-    const drop = parseTimeToSeconds(prev.time) - parseTimeToSeconds(latest.time);
-    if (drop > 0) dropText = ` — dropped ${drop.toFixed(2)}s`;
-  }
-
-  document.getElementById('pbHeadline').textContent = `NEW PB! ${eventName} ${courseLabel} ${latest.time}`;
-  document.getElementById('pbDetail').textContent = `${latest.meet_name || ''} — ${latest.date || ''}${dropText}`;
-  banner.style.display = 'block';
-}
-
-// ── Hero Stats ────────────────────────────────────────────
-function updateHeroStats(pbs, cur, prev, history) {
-  // Best event
-  const bestPB = pbs.length ? pbs.reduce((a, b) => ((a?.wa_points || 0) > (b?.wa_points || 0) ? a : b), null) : null;
-  if (bestPB) {
-    document.getElementById('statBestEvent').textContent = fmtEvent(bestPB.stroke);
-    const rank = cur.find(r => normaliseEvent(r.event) === normaliseEvent(bestPB.stroke));
-    document.getElementById('statBestRank').textContent = rank?.rank ? `#${rank.rank} in England` : bestPB.time;
-  } else {
-    document.getElementById('statBestEvent').textContent = '-';
-    document.getElementById('statBestRank').textContent = '';
-  }
-
-  // Season PBs
-  const seasonPBs = history.filter(r => Number(r.is_pb) === 1 && isCurrentSeason(r.date));
-  document.getElementById('statPBCount').textContent = seasonPBs.length || '0';
-
-  // PB streak: count consecutive meets ending now that had a PB
-  const meets = [...new Set(history.map(r => r.meet_name).filter(Boolean))];
-  let streak = 0;
-  const meetsByDate = {};
-  history.forEach(r => { if (r.meet_name) meetsByDate[r.meet_name] = r; });
-  const sortedMeets = [...new Set(history.filter(r => r.meet_name).sort(sortByDate).map(r => r.meet_name))];
-  for (let i = sortedMeets.length - 1; i >= 0; i--) {
-    const meetSwims = history.filter(r => r.meet_name === sortedMeets[i]);
-    if (meetSwims.some(r => Number(r.is_pb) === 1)) streak++;
-    else break;
-  }
-  document.getElementById('statPBStreak').textContent = streak > 0 ? `${streak} meet PB streak!` : 'Keep pushing!';
-
-  // Events ranked (or total events if no ranking data)
-  if (cur.length) {
-    document.getElementById('statEventsRanked').textContent = cur.length;
-    const avg = Math.round(cur.reduce((s, r) => s + r.rank, 0) / cur.length);
-    document.getElementById('statAvgRank').textContent = `Avg rank #${avg}`;
-    document.querySelector('.stat-card:nth-child(3) .stat-label').textContent = 'Events Ranked';
-  } else {
-    const eventCount = new Set(pbs.map(p => `${p.stroke}|${p.course}`)).size;
-    document.getElementById('statEventsRanked').textContent = eventCount || '-';
-    document.getElementById('statAvgRank').textContent = eventCount ? 'active events' : '';
-    document.querySelector('.stat-card:nth-child(3) .stat-label').textContent = 'Events Swum';
-  }
-
-  // Ranks improved (or best WA if no ranking data)
-  const trendEl = document.getElementById('statTrend');
-  if (cur.length) {
-    let improved = 0, total = 0;
-    cur.forEach(cr => {
-      const pr = prev.find(p => p.event === cr.event && p.course === cr.course);
-      if (pr) { total++; if (cr.rank < pr.rank) improved++; }
-    });
-    trendEl.textContent = total > 0 ? `${improved}/${total}` : '-';
-    trendEl.className = `stat-value ${improved > total / 2 ? 'green' : 'red'}`;
-    document.getElementById('statTrendDetail').textContent = total > 0 ? 'events improved' : '';
-    document.querySelector('.stat-card:nth-child(4) .stat-label').textContent = 'Ranks Improved';
-  } else {
-    const bestWA = pbs.reduce((max, p) => Math.max(max, p.wa_points || 0), 0);
-    trendEl.textContent = bestWA || '-';
-    trendEl.className = 'stat-value green';
-    document.getElementById('statTrendDetail').textContent = bestWA ? 'best WA points' : '';
-    document.querySelector('.stat-card:nth-child(4) .stat-label').textContent = 'Best WA Points';
-  }
-}
-
-function isCurrentSeason(dateStr) {
-  const d = parseDate(dateStr);
-  if (!d) return false;
-  return d >= new Date(2025, 8, 1); // Sep 2025 onwards = current season
-}
-
-// ── Season Summary ────────────────────────────────────────
-function updateSeasonSummary(history, allRanks, cur, prev) {
-  const container = document.getElementById('seasonSummary');
-  const seasonSwims = history.filter(r => isCurrentSeason(r.date));
-  const seasonPBs = seasonSwims.filter(r => Number(r.is_pb) === 1);
-  const seasonMeets = new Set(seasonSwims.map(r => r.meet_name).filter(Boolean));
-  const pbEvents = new Set(seasonPBs.map(r => r.stroke_code));
-
-  // Biggest rank jump
-  let biggestJump = 0, biggestEvent = '';
-  cur.forEach(cr => {
-    const pr = prev.find(p => p.event === cr.event && p.course === cr.course);
-    if (pr && pr.rank - cr.rank > biggestJump) {
-      biggestJump = pr.rank - cr.rank;
-      biggestEvent = fmtEvent(cr.event, cr.course);
-    }
-  });
-
-  let html = '';
-  html += `<div class="season-chip"><strong>${seasonPBs.length}</strong> PBs across <strong>${pbEvents.size}</strong> events</div>`;
-  html += `<div class="season-chip"><strong>${seasonMeets.size}</strong> meets this season</div>`;
-  if (biggestJump > 0) {
-    html += `<div class="season-chip">Biggest jump: <span class="highlight">&#9650;${biggestJump}</span> ${biggestEvent}</div>`;
-  }
-
-  // Best WA this season
-  const bestWA = seasonSwims.reduce((max, r) => {
-    const wa = parseInt(r.wa_points) || 0;
-    return wa > max.wa ? { wa, r } : max;
-  }, { wa: 0, r: null });
-  if (bestWA.wa > 0) {
-    const evName = CONFIG.stroke_names?.[String(bestWA.r.stroke_code)] || '';
-    html += `<div class="season-chip">Best WA: <strong class="highlight">${bestWA.wa}</strong> ${evName}</div>`;
-  }
-
-  container.innerHTML = html;
-}
-
-// ── Rankings List ─────────────────────────────────────────
-function updateRankings(pbs, ranks) {
-  const container = document.getElementById('rankingsList');
-
-  // pbs are already merged by course from mergePBsByCourse
-  const events = [...pbs]
-    .sort((a, b) => (b.wa_points || 0) - (a.wa_points || 0))
-    .map(pb => {
-      const event = normaliseEvent(pb.stroke);
-      const cr = ranks.find(r => normaliseEvent(r.event) === event && r.year === 2026);
-      const pr = ranks.find(r => normaliseEvent(r.event) === event && r.year === 2025);
-      let move = null, dir = 'same';
-      if (cr?.rank != null && pr?.rank != null) {
-        move = pr.rank - cr.rank;
-        dir = move > 0 ? 'up' : move < 0 ? 'down' : 'same';
-      }
-      return { pb, cr, pr, move, dir };
-    });
-
-  if (!events.length) { container.innerHTML = '<div class="loading">No PB data</div>'; return; }
-  if (!selectedEvent) {
-    selectedEvent = { stroke: events[0].pb.stroke, course: events[0].pb.originalCourse || events[0].pb.course };
-    updateProgressChart(); updateGoals(ranks, HISTORY[getSwimmer().tiref] || []); updateSquad(); updateSwimmerPicker();
-  }
-
-  let html = '';
-  events.forEach(e => {
-    const sel = selectedEvent && normaliseEvent(selectedEvent.stroke) === normaliseEvent(e.pb.stroke);
-    const rank = e.cr?.rank;
-    const bc = rank ? (rank <= 50 ? 'gold' : rank <= 100 ? 'silver' : rank <= 250 ? 'cyan' : 'grey') : 'grey';
-    let moveHtml = '';
-    if (e.move !== null) {
-      const arrow = e.dir === 'up' ? '&#9650;' : e.dir === 'down' ? '&#9660;' : '&#8212;';
-      moveHtml = `<span class="rank-move ${e.dir}">${arrow}${Math.abs(e.move) || ''}</span>`;
-    }
-    const courseBadge = e.pb.converted
-      ? `<span class="course-badge converted" title="Converted from LC ${e.pb.originalTime}">LC*</span>`
-      : `<span class="course-badge">${e.pb.originalCourse || e.pb.course}</span>`;
-    html += `<div class="rank-row${sel ? ' selected' : ''}" onclick="selectEvent('${e.pb.stroke}','${e.pb.originalCourse || e.pb.course}')">
-      <span class="rank-event">${fmtEvent(e.pb.stroke)} ${courseBadge}</span>
-      <span class="rank-time">${e.pb.time}</span>
-      <span class="rank-badge ${bc}">${rank ? '#' + rank : '-'}</span>
-      ${moveHtml}
-    </div>`;
-  });
-  container.innerHTML = html;
-}
-
-function fmtEvent(stroke, course) {
-  const short = stroke.replace('Freestyle', 'Free').replace('Breaststroke', 'Breast')
-    .replace('Butterfly', 'Fly').replace('Backstroke', 'Back')
-    .replace('Individual Medley', 'IM');
-  return short;
-}
-
-/**
- * Merge PBs across SC/LC by converting to SC-equivalent.
- * Returns one entry per event with the fastest SC-equivalent time,
- * keeping track of original course and whether a conversion was applied.
- */
-function mergePBsByCourse(pbs) {
+function mergePBsToSC(pbs) {
   const byEvent = {};
-  pbs.forEach(pb => {
-    const event = normaliseEvent(pb.stroke);
-    const secs = parseTimeToSeconds(pb.time);
-    if (!secs) return;
-    const isLc = pb.course === 'LC' || pb.course === 'L';
-    const scEquiv = isLc ? toScEquivalent(secs, pb.course, event) : secs;
-    if (!scEquiv) return;
-
-    if (!byEvent[event] || scEquiv < byEvent[event].scEquiv) {
-      byEvent[event] = {
-        ...pb,
-        stroke: event,
-        scEquiv,
-        originalCourse: pb.course,
-        converted: isLc,
-        originalTime: pb.time,
-        originalSecs: secs,
-      };
+  pbs.forEach(p => {
+    const secs = parseTimeToSeconds(p.time);
+    const scSecs = p.course === 'LC'
+      ? (p.converted_time ? parseTimeToSeconds(p.converted_time) : toScEquivalent(secs, 'LC', p.stroke))
+      : secs;
+    if (!scSecs) return;
+    const key = p.stroke;
+    if (!byEvent[key] || scSecs < byEvent[key].scSecs) {
+      byEvent[key] = { ...p, scSecs, scTime: formatSeconds(scSecs), originalCourse: p.course };
     }
   });
-  return Object.values(byEvent);
+  return Object.values(byEvent).sort((a, b) => (a.stroke || '').localeCompare(b.stroke || ''));
 }
 
-/**
- * Merge ranks across SC/LC for a given year.
- * For each event, pick the best rank (lowest number).
- */
-function mergeRanksByCourse(ranks) {
-  const byEventYear = {};
-  ranks.forEach(r => {
-    const event = normaliseEvent(r.event);
-    const key = `${event}|${r.year}`;
-    if (!byEventYear[key] || (r.rank != null && (byEventYear[key].rank == null || r.rank < byEventYear[key].rank))) {
-      byEventYear[key] = { ...r, event };
-    }
-  });
-  return Object.values(byEventYear);
-}
-
-function selectEvent(stroke, course) {
-  selectedEvent = { stroke: normaliseEvent(stroke), course };
-  comparators = [];
-  refresh();
-}
-
-// ── Progress Chart with Comparators ──────────────────────
-async function updateProgressChart() {
-  if (!selectedEvent) return;
-  const swimmer = getSwimmer();
-  const history = HISTORY[swimmer.tiref] || [];
-  const courseFilter = document.getElementById('chartCourse').value;
-  const strokeNames = CONFIG.stroke_names || {};
-  let strokeCode = null;
-  for (const [code, name] of Object.entries(strokeNames)) {
-    if (name === selectedEvent.stroke) { strokeCode = code; break; }
+function renderPBTable(pbs) {
+  if (!pbs.length) {
+    document.getElementById('pbTable').innerHTML = '<div class="club-empty-state">No personal bests recorded</div>';
+    return;
   }
-  // Show both courses by default, converting LC to SC equivalent
-  const filterH = (h) => h
-    .filter(r => !strokeCode || String(r.stroke_code) === strokeCode)
-    .filter(r => courseFilter ? r.course === courseFilter : true)
-    .filter(r => r.time && Number.isFinite(parseTimeToSeconds(r.time)))
-    .map(r => {
-      // Convert LC times to SC equivalent for unified chart
-      if (r.course === 'L' && !courseFilter) {
-        const secs = parseTimeToSeconds(r.time);
-        const scSecs = toScEquivalent(secs, 'LC', selectedEvent.stroke);
-        if (scSecs) return { ...r, time: formatSeconds(scSecs), _converted: true, _originalTime: r.time };
+
+  let html = `<h3 style="margin:1rem 0 0.5rem;color:var(--text-2);font-size:0.85rem">SC Equivalent</h3>`;
+  html += `<table class="data-table"><thead><tr>
+    <th>Event</th><th>Time</th><th>WA Pts</th><th>Date</th><th>Meet</th>
+  </tr></thead><tbody>`;
+  pbs.forEach(r => {
+    const badge = r.originalCourse === 'LC'
+      ? ' <span style="font-size:0.65rem;color:var(--accent-2);opacity:0.7;vertical-align:super">LC</span>' : '';
+    html += `<tr>
+      <td>${r.stroke}${badge}</td>
+      <td class="time-cell">${r.scTime || r.time}</td>
+      <td>${r.wa_points || ''}</td>
+      <td>${r.date || ''}</td>
+      <td>${r.meet || ''}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('pbTable').innerHTML = html;
+}
+
+function renderBestRankings(rankings, year) {
+  if (!rankings.length) {
+    document.getElementById('bestRankings').innerHTML = '<div class="club-empty-state">No county rankings found</div>';
+    return;
+  }
+
+  const sorted = [...rankings].sort((a, b) => (a.rank || 999) - (b.rank || 999));
+  let html = `<table class="data-table"><thead><tr>
+    <th>Rank</th><th>Event</th><th>Course</th><th>Age</th><th>Time</th><th>Out of</th>
+  </tr></thead><tbody>`;
+  sorted.forEach(r => {
+    const pct = r.total_in_ranking ? Math.round((r.rank / r.total_in_ranking) * 100) : null;
+    const rankClass = r.rank <= 3 ? 'rank-gold' : r.rank <= 10 ? 'rank-silver' : '';
+    html += `<tr>
+      <td class="${rankClass}"><strong>#${r.rank || '?'}</strong></td>
+      <td>${r.event}</td>
+      <td>${r.course}</td>
+      <td>${r.age_group}</td>
+      <td class="time-cell">${r.time || ''}</td>
+      <td>${r.total_in_ranking || '?'}${pct != null ? ` (top ${pct}%)` : ''}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('bestRankings').innerHTML = html;
+}
+
+// ── COUNTY RANKINGS TAB ───────────────────────────────────
+function renderCounty() {
+  const rankings = (currentData.rankings && currentData.rankings.county) || [];
+  const years = [...new Set(rankings.map(r => r.year))].sort().reverse();
+
+  // Year filter — always default to most recent year
+  const yearSelect = document.getElementById('ctyYearFilter');
+  yearSelect.innerHTML = years.map(y => `<option value="${y}">${y}</option>`).join('');
+  yearSelect.onchange = () => renderCounty();
+
+  const selectedYear = Number(yearSelect.value) || years[0];
+  const yearRankings = rankings.filter(r => r.year === selectedYear);
+  const allYearRankings = rankings;
+
+  // Stats
+  const bestRank = yearRankings.length ? Math.min(...yearRankings.map(r => r.rank).filter(Boolean)) : null;
+  const bestEntry = bestRank ? yearRankings.find(r => r.rank === bestRank) : null;
+  setText('ctyBestRank', bestRank ? `#${bestRank}` : '-');
+  setText('ctyBestRankDetail', bestEntry ? `${bestEntry.event} ${bestEntry.course}` : '-');
+
+  const top10 = yearRankings.filter(r => r.rank && r.rank <= 10);
+  setText('ctyTop10', top10.length);
+  setText('ctyTop10Detail', `in ${selectedYear}`);
+
+  const rankedEntries = yearRankings.filter(r => r.rank);
+  const avgRank = rankedEntries.length ? Math.round(rankedEntries.reduce((s, r) => s + r.rank, 0) / rankedEntries.length) : null;
+  setText('ctyAvgRank', avgRank ? `#${avgRank}` : '-');
+  setText('ctyAvgDetail', `across ${rankedEntries.length} events`);
+
+  // Ranks improved: compare selectedYear vs previous year
+  const prevYearNum = selectedYear - 1;
+  const prevRankings = rankings.filter(r => r.year === prevYearNum);
+  let improved = 0;
+  yearRankings.forEach(yr => {
+    const prev = prevRankings.find(pr => pr.event === yr.event && pr.course === yr.course);
+    if (prev && yr.rank && prev.rank && yr.rank < prev.rank) improved++;
+  });
+  setText('ctyImproved', improved || '-');
+  setText('ctyImprovedDetail', prevRankings.length ? `vs ${prevYearNum}` : 'no prior year');
+
+  // Rankings list
+  const sorted = [...yearRankings].sort((a, b) => (a.rank || 999) - (b.rank || 999));
+  if (!sorted.length) {
+    document.getElementById('countyRankingsList').innerHTML = '<div class="club-empty-state">No rankings for this year</div>';
+  } else {
+    let html = `<table class="data-table"><thead><tr>
+      <th>Rank</th><th>Event</th><th>Course</th><th>Age</th><th>Time</th><th>Total</th><th>vs Last Year</th>
+    </tr></thead><tbody>`;
+    sorted.forEach((r, i) => {
+      const prev = prevRankings.find(pr => pr.event === r.event && pr.course === r.course);
+      let change = '';
+      if (prev && prev.rank && r.rank) {
+        const diff = prev.rank - r.rank;
+        if (diff > 0) change = `<span class="rank-up">+${diff}</span>`;
+        else if (diff < 0) change = `<span class="rank-down">${diff}</span>`;
+        else change = '<span class="rank-same">=</span>';
       }
-      return r;
-    })
-    .sort(sortByDate);
+      const rankClass = r.rank <= 3 ? 'rank-gold' : r.rank <= 10 ? 'rank-silver' : '';
+      const key = `${r.event} ${r.course}`;
+      html += `<tr data-event-key="${key}" style="cursor:pointer"${i === 0 ? ' class="selected-row"' : ''}>
+        <td class="${rankClass}"><strong>#${r.rank || '?'}</strong></td>
+        <td>${r.event}</td><td>${r.course}</td><td>${r.age_group}</td>
+        <td class="time-cell">${r.time || ''}</td>
+        <td>${r.total_in_ranking || '?'}</td>
+        <td>${change}</td>
+      </tr>`;
+    });
+    html += '</tbody></table>';
+    document.getElementById('countyRankingsList').innerHTML = html;
 
-  const myData = filterH(history);
-  const color = getColor();
-
-  // Build main swimmer dataset
-  const datasets = [buildDataset(myData, swimmer.name, color, getGlow(), true)];
-
-  // Add comparator datasets
-  for (const comp of comparators) {
-    const h = await loadHistory(comp.tiref);
-    const cd = filterH(h);
-    datasets.push(buildDataset(cd, comp.name, comp.color, comp.color + '22', false));
+    // Click row to select event for chart
+    const defaultKey = sorted[0] ? `${sorted[0].event} ${sorted[0].course}` : null;
+    document.querySelectorAll('#countyRankingsList tr[data-event-key]').forEach(row => {
+      row.addEventListener('click', () => {
+        document.querySelectorAll('#countyRankingsList tr.selected-row').forEach(r => r.classList.remove('selected-row'));
+        row.classList.add('selected-row');
+        renderRankProgressionChart(allYearRankings, row.dataset.eventKey);
+      });
+    });
   }
 
-  destroyChart('progress');
-  charts.progress = new Chart(document.getElementById('progressChart'), {
+  // Rank progression chart — default to best-ranked event
+  const defaultChartKey = sorted.length ? `${sorted[0].event} ${sorted[0].course}` : null;
+  renderRankProgressionChart(allYearRankings, defaultChartKey);
+
+  // Year-on-year comparison
+  renderYoYComparison(rankings, years);
+}
+
+function renderRankProgressionChart(rankings, selectedKey) {
+  destroyChart('rankProgression');
+  const canvas = document.getElementById('rankProgressionChart');
+  if (!canvas) return;
+
+  // Filter to selected event+course, best rank per year
+  const filtered = selectedKey ? rankings.filter(r => `${r.event} ${r.course}` === selectedKey) : rankings;
+  const bestByYear = {};
+  filtered.forEach(r => {
+    if (!bestByYear[r.year] || r.rank < bestByYear[r.year].rank) bestByYear[r.year] = r;
+  });
+  const entries = Object.values(bestByYear).sort((a, b) => a.year - b.year);
+  if (entries.length < 2) {
+    canvas.parentElement.querySelector('.club-empty-state')?.remove();
+    return;
+  }
+
+  const color = '#00e5ff';
+  const datasets = [{
+    label: selectedKey || 'Rank',
+    data: entries.map(e => ({ x: e.year, y: e.rank })),
+    borderColor: color,
+    backgroundColor: color + '33',
+    tension: 0,
+    pointRadius: 5,
+    borderWidth: 2,
+  }];
+
+  charts['rankProgression'] = new Chart(canvas, {
     type: 'line',
     data: { datasets },
     options: {
-      responsive: true, maintainAspectRatio: false,
+      responsive: true,
+      maintainAspectRatio: false,
       scales: {
-        x: { type: 'time', time: { parser: 'dd/MM/yyyy', unit: 'month', displayFormats: { month: 'MMM yy' } },
-             grid: { color: COLORS.grid }, ticks: { color: COLORS.tick } },
-        y: { reverse: true, grid: { color: COLORS.grid },
-             ticks: { color: COLORS.tick, callback: v => formatSeconds(v) } },
+        y: { reverse: true, title: { display: true, text: 'Rank' }, min: 1 },
+        x: { type: 'linear', title: { display: true, text: 'Year' }, ticks: { stepSize: 1, callback: v => String(v) } },
       },
       plugins: {
-        legend: { display: datasets.length > 1, labels: { usePointStyle: true, pointStyle: 'circle', padding: 12, font: { size: 10 } } },
+        legend: { display: false },
         tooltip: {
           callbacks: {
-            title: ctx => ctx[0]?.dataset.label || '',
+            label: ctx => `${ctx.dataset.label}: #${ctx.parsed.y}`
+          }
+        }
+      }
+    }
+  });
+}
+
+function renderYoYComparison(rankings, years) {
+  const el = document.getElementById('yoyComparison');
+  if (years.length < 2) {
+    el.innerHTML = '<div class="club-empty-state">Need 2+ years of data for comparison</div>';
+    return;
+  }
+
+  const latest = years[0];
+  const prev = years[1];
+  const latestR = rankings.filter(r => r.year === latest);
+  const prevR = rankings.filter(r => r.year === prev);
+
+  let html = `<table class="data-table"><thead><tr>
+    <th>Event</th><th>Course</th><th>${prev}</th><th>${latest}</th><th>Change</th>
+  </tr></thead><tbody>`;
+
+  latestR.sort((a, b) => (a.event || '').localeCompare(b.event || '')).forEach(r => {
+    const p = prevR.find(pr => pr.event === r.event && pr.course === r.course);
+    let change = '';
+    if (p && p.rank && r.rank) {
+      const diff = p.rank - r.rank;
+      if (diff > 0) change = `<span class="rank-up">+${diff} places</span>`;
+      else if (diff < 0) change = `<span class="rank-down">${diff} places</span>`;
+      else change = '<span class="rank-same">Same</span>';
+    } else if (!p) {
+      change = '<span class="rank-new">NEW</span>';
+    }
+    html += `<tr>
+      <td>${r.event}</td><td>${r.course}</td>
+      <td>${p ? '#' + p.rank : '-'}</td>
+      <td><strong>#${r.rank || '?'}</strong></td>
+      <td>${change}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  el.innerHTML = html;
+}
+
+// ── HISTORY TAB ───────────────────────────────────────────
+function renderHistory() {
+  const history = currentData.history || [];
+
+  // Stats
+  const pbSwims = history.filter(h => h.is_pb);
+  const events = new Set(history.map(h => `${h.stroke_code}-${h.course}`));
+  const dates = history.map(h => parseDate(h.date)).filter(Boolean).sort((a, b) => b - a);
+
+  setText('histTotalSwims', history.length);
+  setText('histSwimsDetail', history.length ? '' : 'No history data');
+  setText('histEvents', events.size);
+  setText('histEventsDetail', 'unique event/course combos');
+  setText('histPBs', pbSwims.length);
+  setText('histPBsDetail', history.length ? `${(pbSwims.length / history.length * 100).toFixed(0)}% PB rate` : '');
+
+  const latestDate = dates[0];
+  setText('histLatest', latestDate ? latestDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : '-');
+  setText('histLatestDetail', '');
+
+  // Event filter — reset to "All Events" on swimmer change
+  const eventFilter = document.getElementById('histEventFilter');
+  const eventKeys = [...events].sort((a, b) => {
+    const [sa] = a.split('-');
+    const [sb] = b.split('-');
+    return Number(sa) - Number(sb);
+  });
+
+  eventFilter.innerHTML = eventKeys.map(k => {
+      const [code, course] = k.split('-');
+      const name = STROKE_NAMES[Number(code)] || `Stroke ${code}`;
+      const courseLabel = course === 'S' ? 'SC' : 'LC';
+      return `<option value="${k}">${name} ${courseLabel}</option>`;
+    }).join('');
+
+  // Default to 50 Freestyle SC, fall back to first event
+  const defaultEvent = eventKeys.find(k => k === '1-S') || eventKeys[0] || '';
+  eventFilter.value = defaultEvent;
+
+  const dateRange = document.getElementById('histDateRange');
+  const startAgeInput = document.getElementById('histStartAge');
+  const compareAdd = document.getElementById('histCompareAdd');
+  const compareTags = document.getElementById('histCompareTags');
+  let compareSwimmers = [];
+  let compareCache = {};
+
+  startAgeInput.oninput = () => {
+    const useAge = startAgeInput.value !== '';
+    dateRange.disabled = useAge;
+    dateRange.style.opacity = useAge ? '0.4' : '1';
+    refreshHistory();
+  };
+
+  // Populate compare dropdown with all club swimmers except active
+  function populateCompareDropdown() {
+    compareAdd.innerHTML = '<option value="">Add swimmer...</option>' +
+      ALL_SWIMMERS.filter(s => s.tiref !== activeSwimmer.tiref)
+        .map(s => `<option value="${s.tiref}">${s.name}</option>`).join('');
+  }
+  populateCompareDropdown();
+
+  function renderCompareTags() {
+    compareTags.innerHTML = compareSwimmers.map(s =>
+      `<span style="background:var(--bg-card);border:1px solid var(--border);border-radius:4px;padding:0.15rem 0.4rem;font-size:0.7rem;color:var(--text-2);display:inline-flex;align-items:center;gap:0.25rem">
+        ${s.name}<span data-tiref="${s.tiref}" style="cursor:pointer;color:var(--text-3);font-size:0.8rem">&times;</span>
+      </span>`
+    ).join('');
+    compareTags.querySelectorAll('span[data-tiref]').forEach(x => {
+      x.addEventListener('click', () => {
+        compareSwimmers = compareSwimmers.filter(s => String(s.tiref) !== x.dataset.tiref);
+        renderCompareTags();
+        refreshHistory();
+      });
+    });
+  }
+
+  compareAdd.onchange = async () => {
+    const tiref = compareAdd.value;
+    if (!tiref || compareSwimmers.find(s => String(s.tiref) === tiref)) { compareAdd.value = ''; return; }
+    const swimmer = ALL_SWIMMERS.find(s => String(s.tiref) === tiref);
+    if (!swimmer) return;
+    if (!compareCache[tiref]) {
+      try {
+        const resp = await fetch(`${DATA_BASE}/swimmers/${tiref}.json`);
+        compareCache[tiref] = await resp.json();
+      } catch { compareCache[tiref] = { history: [] }; }
+    }
+    compareSwimmers.push(swimmer);
+    compareAdd.value = '';
+    renderCompareTags();
+    refreshHistory();
+  };
+
+  const refreshHistory = () => {
+    const startAge = startAgeInput.value !== '' ? Number(startAgeInput.value) : null;
+    const useAge = startAge !== null;
+    const years = Number(dateRange.value);
+    const cutoff = (!useAge && years) ? new Date(Date.now() - years * 365.25 * 24 * 60 * 60 * 1000) : null;
+    const filtered = cutoff ? history.filter(h => { const d = parseDate(h.date); return d && d >= cutoff; }) : history;
+    const compData = compareSwimmers.map(s => {
+      const h = (compareCache[s.tiref] && compareCache[s.tiref].history) || [];
+      return { name: s.name, yob: s.yob, history: cutoff ? h.filter(r => { const d = parseDate(r.date); return d && d >= cutoff; }) : h };
+    });
+    renderTimeChart(filtered, eventFilter.value, compData, useAge, startAge);
+    renderHistoryTable(filtered, eventFilter.value);
+  };
+  eventFilter.onchange = refreshHistory;
+  dateRange.onchange = refreshHistory;
+
+  refreshHistory();
+}
+
+function dateToAge(date, yob) {
+  if (!date || !yob) return null;
+  const dob = new Date(yob, 11, 31);
+  return (date.getTime() - dob.getTime()) / (365.25 * 24 * 60 * 60 * 1000);
+}
+
+function renderTimeChart(history, eventKey, compareData, useAge, startAge) {
+  destroyChart('timeProgression');
+  const canvas = document.getElementById('timeProgressionChart');
+  if (!canvas || !eventKey) return;
+
+  const [code, course] = eventKey.split('-');
+  const filtered = history.filter(h => String(h.stroke_code) === code && h.course === course);
+  if (!filtered.length) return;
+
+  const toX = (date, yob) => useAge ? dateToAge(date, yob) : date;
+
+  const entries = filtered
+    .map(h => {
+      const d = parseDate(h.date);
+      const x = toX(d, activeSwimmer.yob);
+      const age = dateToAge(d, activeSwimmer.yob);
+      return { x, y: parseTimeToSeconds(h.time), isPB: h.is_pb, time: h.time, age };
+    })
+    .filter(e => e.x != null && e.y && (!useAge || !startAge || e.age >= startAge))
+    .sort((a, b) => a.x - b.x);
+
+  if (!entries.length) return;
+  const color = '#00e5ff';
+  const hasCompare = compareData && compareData.length > 0;
+
+  // Comparison swimmers behind
+  const compColors = ['#ff4081', '#ffd740', '#69f0ae', '#b388ff', '#ff6e40', '#80cbc4'];
+  const datasets = [];
+
+  if (hasCompare) {
+    compareData.forEach((comp, i) => {
+      const compEntries = comp.history
+        .filter(h => String(h.stroke_code) === code && h.course === course)
+        .map(h => {
+          const d = parseDate(h.date);
+          const x = toX(d, comp.yob);
+          return { x, y: parseTimeToSeconds(h.time), time: h.time, age: dateToAge(d, comp.yob) };
+        })
+        .filter(e => e.x != null && e.y && (!useAge || !startAge || e.age >= startAge))
+        .sort((a, b) => a.x - b.x);
+      if (!compEntries.length) return;
+      const c = compColors[i % compColors.length];
+      datasets.push({
+        label: comp.name,
+        data: compEntries,
+        borderColor: c + '66',
+        backgroundColor: c + '33',
+        pointRadius: 0,
+        tension: 0,
+        showLine: true,
+        borderWidth: 1.5,
+        borderDash: [4, 3],
+        order: 2,
+      });
+    });
+  }
+
+  // Active swimmer on top
+  datasets.push({
+    label: activeSwimmer.name,
+    data: entries,
+    borderColor: color,
+    backgroundColor: entries.map(e => e.isPB ? '#FFD700' : color + '80'),
+    pointRadius: entries.map(e => e.isPB ? 7 : 3),
+    pointStyle: entries.map(e => e.isPB ? 'star' : 'circle'),
+    pointBorderColor: entries.map(e => e.isPB ? '#FFD700' : color),
+    pointBorderWidth: entries.map(e => e.isPB ? 2 : 1),
+    tension: 0,
+    showLine: true,
+    borderWidth: 2,
+    order: 1,
+  });
+
+  const xScale = useAge
+    ? { type: 'linear', title: { display: true, text: 'Age' }, ticks: { callback: v => v.toFixed(1) } }
+    : { type: 'time', time: { unit: 'month' }, title: { display: true, text: 'Date' } };
+
+  charts['timeProgression'] = new Chart(canvas, {
+    type: 'line',
+    data: { datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          reverse: true,
+          title: { display: true, text: 'Time' },
+          ticks: { callback: v => formatSeconds(v) }
+        },
+        x: xScale,
+      },
+      plugins: {
+        legend: { display: hasCompare, labels: { usePointStyle: false, boxWidth: 12, font: { size: 10 } } },
+        tooltip: {
+          callbacks: {
             label: ctx => {
-              const p = ctx.raw;
-              const lines = [`Time: ${formatSeconds(p.y)}`, `Date: ${p.rawDate || ''}`];
-              if (p.meetName) lines.push(`Meet: ${p.meetName}`);
-              if (p.waPoints) lines.push(`WA: ${p.waPoints}`);
-              if (p.isPb) lines.push('PB!');
-              return lines;
-            },
-          },
-        },
-      },
-    },
-  });
-
-  document.getElementById('chartTitle').textContent = `${fmtEvent(selectedEvent.stroke)} — Progress`;
-}
-
-function buildDataset(rows, label, color, glow, showPBs) {
-  const data = rows.map(r => ({
-    x: parseDate(r.date || ''), y: parseTimeToSeconds(r.time),
-    isPb: Number(r.is_pb || 0) === 1, meetName: r.meet_name || '',
-    rawDate: r.date || '', waPoints: r.wa_points,
-  })).filter(p => p.x && Number.isFinite(p.y));
-
-  return {
-    label, data,
-    borderColor: color, backgroundColor: glow,
-    pointBackgroundColor: data.map(p => (showPBs && p.isPb) ? COLORS.gold : color),
-    pointRadius: data.map(p => (showPBs && p.isPb) ? 7 : 3),
-    pointHoverRadius: 8, borderWidth: 2.5, tension: 0.2, spanGaps: true,
-    fill: false,
-  };
-}
-
-// ── Comparator Management ─────────────────────────────────
-function toggleComparator(tiref, name) {
-  const swimmer = getSwimmer();
-  if (String(tiref) === String(swimmer.tiref)) return;
-
-  const idx = comparators.findIndex(c => c.tiref === tiref);
-  if (idx >= 0) {
-    comparators.splice(idx, 1);
-  } else {
-    if (comparators.length >= 3) comparators.shift();
-    const colorIdx = comparators.length;
-    comparators.push({ tiref, name, color: COMP_COLORS[colorIdx % COMP_COLORS.length] });
-  }
-  updateProgressChart();
-  updateSquad();
-  updateCompareInfo();
-  updateSwimmerPicker();
-}
-
-function clearComparators() {
-  comparators = [];
-  updateProgressChart();
-  updateSquad();
-  updateCompareInfo();
-  updateSwimmerPicker();
-}
-
-function updateCompareInfo() {
-  const info = document.getElementById('compareInfo');
-  const chips = document.getElementById('compareChips');
-  if (!comparators.length) { info.style.display = 'none'; return; }
-  info.style.display = 'flex';
-  chips.innerHTML = comparators.map(c =>
-    `<span class="compare-chip"><span class="dot" style="background:${c.color}"></span>${c.name}</span>`
-  ).join('');
-}
-
-// ── Swimmer Picker (below chart) ─────────────────────────
-let pickerOpen = false;
-
-function togglePickerOpen() {
-  pickerOpen = !pickerOpen;
-  document.getElementById('pickerList').classList.toggle('open', pickerOpen);
-  document.getElementById('pickerToggle').classList.toggle('open', pickerOpen);
-}
-
-function updateSwimmerPicker() {
-  const picker = document.getElementById('swimmerPicker');
-  const list = document.getElementById('pickerList');
-  if (!selectedEvent) { picker.style.display = 'none'; return; }
-
-  const swimmer = getSwimmer();
-  const swimmerYob = swimmer.yob;
-  const eventName = selectedEvent.stroke;
-
-  const squadRows = ALL_SQUAD.filter(r => r.event === eventName)
-    .filter(r => r.yob && Math.abs(r.yob - swimmerYob) <= 1)
-    .filter(r => r.best_time && Number.isFinite(parseTimeToSeconds(r.best_time)))
-    .sort((a, b) => parseTimeToSeconds(a.best_time) - parseTimeToSeconds(b.best_time));
-
-  if (!squadRows.length) { picker.style.display = 'none'; return; }
-
-  const targetId = String(swimmer.tiref);
-  const compTirefs = new Set(comparators.map(c => c.tiref));
-
-  let html = '';
-  squadRows.forEach(r => {
-    const tid = String(r.tiref);
-    const isTarget = tid === targetId;
-    const isComp = compTirefs.has(tid);
-    const comp = comparators.find(c => c.tiref === tid);
-    const dotColor = isTarget ? getColor() : comp ? comp.color : 'transparent';
-    const cls = isTarget ? ' is-active' : isComp ? ' is-selected' : '';
-
-    html += `<span class="picker-item${cls}" ${!isTarget ? `onclick="toggleComparator('${tid}','${r.swimmer_name || 'Swimmer'}')"` : ''}>`;
-    if (isComp || isTarget) html += `<span class="picker-dot" style="background:${dotColor}"></span>`;
-    html += `${r.swimmer_name || '-'} <span class="picker-time">${r.best_time}</span></span>`;
-  });
-
-  list.innerHTML = html;
-  picker.style.display = 'block';
-}
-
-// ── Goals with Projections ────────────────────────────────
-function updateGoals(ranks, history) {
-  if (!selectedEvent) return;
-  const container = document.getElementById('goalsContainer');
-  const swimmer = getSwimmer();
-  ranks = ranks || ALL_RANKS.filter(r => String(r.tiref) === String(swimmer.tiref));
-  history = history || HISTORY[swimmer.tiref] || [];
-
-  const rank = ranks.find(r =>
-    String(r.tiref) === String(swimmer.tiref) && r.event === selectedEvent.stroke &&
-    r.course === selectedEvent.course && r.year === 2026);
-
-  // Calculate improvement rate from history
-  const strokeNames = CONFIG.stroke_names || {};
-  let strokeCode = null;
-  for (const [c, n] of Object.entries(strokeNames)) { if (n === selectedEvent.stroke) { strokeCode = c; break; } }
-  const courseMap = { SC: 'S', LC: 'L' };
-  const hCourse = courseMap[selectedEvent.course] || '';
-  const eventHistory = (history || [])
-    .filter(r => String(r.stroke_code) === strokeCode && r.course === hCourse)
-    .filter(r => r.time && Number.isFinite(parseTimeToSeconds(r.time)))
-    .sort(sortByDate);
-
-  // Improvement rate: seconds dropped per month over last 12 months
-  let ratePerMonth = null;
-  if (eventHistory.length >= 2) {
-    const now = new Date();
-    const yearAgo = new Date(now.getFullYear() - 1, now.getMonth(), now.getDate());
-    const recent = eventHistory.filter(r => { const d = parseDate(r.date); return d && d >= yearAgo; });
-    if (recent.length >= 2) {
-      const first = recent[0], last = recent[recent.length - 1];
-      const t1 = parseTimeToSeconds(first.time), t2 = parseTimeToSeconds(last.time);
-      const d1 = parseDate(first.date), d2 = parseDate(last.date);
-      if (t1 && t2 && d1 && d2 && d2 > d1) {
-        const months = (d2 - d1) / (1000 * 60 * 60 * 24 * 30.44);
-        if (months > 0) ratePerMonth = (t1 - t2) / months;
+              const pt = ctx.raw;
+              const prefix = hasCompare ? ctx.dataset.label + ': ' : '';
+              const ageStr = pt.age != null ? ` (age ${pt.age.toFixed(1)})` : '';
+              return `${prefix}${pt.time}${pt.isPB ? ' \u{1F3C5} PB!' : ''}${useAge ? '' : ageStr}`;
+            }
+          }
+        }
       }
     }
+  });
+}
+
+function renderHistoryTable(history, eventKey) {
+  let filtered = history;
+  if (eventKey) {
+    const [code, course] = eventKey.split('-');
+    filtered = history.filter(h => String(h.stroke_code) === code && h.course === course);
   }
 
-  // Get current PB time for this event
-  const pb = ALL_PBS.find(p =>
-    String(p.tiref) === String(swimmer.tiref) && p.stroke === selectedEvent.stroke && p.course === selectedEvent.course);
-  const currentTime = rank ? parseTimeToSeconds(rank.time) : (pb ? parseTimeToSeconds(pb.time) : null);
-
-  if (!currentTime && !eventHistory.length) {
-    container.innerHTML = '<div style="color:var(--text-3);font-size:0.8rem">No data for this event</div>';
+  if (!filtered.length) {
+    document.getElementById('historyTable').innerHTML = '<div class="club-empty-state">No history data</div>';
     return;
   }
 
-  let html = '';
+  // Sort by date descending
+  const sorted = [...filtered].sort((a, b) => {
+    const da = parseDate(a.date);
+    const db = parseDate(b.date);
+    return (db ? db.getTime() : 0) - (da ? da.getTime() : 0);
+  });
 
-  // Show ranking milestones if we have ranking data
-  if (rank) {
-    const milestones = [
-      { label: 'Top 50', target: 50 },
-      { label: 'Top 100', target: 100 },
-      { label: 'Top 200', target: 200 },
-    ].filter(m => m.target < rank.rank);
+  let html = `<table class="data-table"><thead><tr>
+    <th>Date</th><th>Event</th><th>Course</th><th>Time</th><th>WA</th><th>Meet</th><th></th>
+  </tr></thead><tbody>`;
+  sorted.forEach(h => {
+    const name = STROKE_NAMES[h.stroke_code] || `Stroke ${h.stroke_code}`;
+    const courseLabel = h.course === 'S' ? 'SC' : 'LC';
+    const pbBadge = h.is_pb ? '<span class="pb-badge">PB</span>' : '';
+    html += `<tr class="${h.is_pb ? 'pb-row' : ''}">
+      <td>${h.date || ''}</td>
+      <td>${name}</td>
+      <td>${courseLabel}</td>
+      <td class="time-cell">${h.time}</td>
+      <td>${h.wa_points || ''}</td>
+      <td>${h.meet_name || ''}</td>
+      <td>${pbBadge}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('historyTable').innerHTML = html;
+}
 
-    if (!milestones.length) {
-      html += `<div class="goal-row"><span class="goal-achieved">Already top ${rank.rank}!</span></div>`;
-    }
+// ── CLUB TAB ──────────────────────────────────────────────
+function renderClub() {
+  // Stats
+  setText('clubSize', ALL_SWIMMERS.length);
+  const girls = ALL_SWIMMERS.filter(s => s.sex === 'F').length;
+  const boys = ALL_SWIMMERS.filter(s => s.sex === 'M').length;
+  setText('clubSizeDetail', `${girls} girls, ${boys} boys`);
 
-    milestones.forEach(m => {
-      const ratio = m.target / rank.rank;
-      const estTime = currentTime * (0.95 + 0.05 * ratio);
-      const drop = currentTime - estTime;
+  // We'd need all PBs for club stats — skip for now, populate on filter change
+  setText('clubPBs', '-');
+  setText('clubPBsDetail', 'Select an event');
+  setText('clubTopWA', '-');
+  setText('clubTopWADetail', '');
 
-      let projection = '';
-      if (ratePerMonth && ratePerMonth > 0 && drop > 0) {
-        const monthsNeeded = drop / ratePerMonth;
-        const targetDate = new Date();
-        targetDate.setMonth(targetDate.getMonth() + Math.ceil(monthsNeeded));
-        const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-        projection = `~${monthNames[targetDate.getMonth()]} ${targetDate.getFullYear()}`;
-      }
+  const events = new Set(COUNTY_RANKS.map(r => r.event));
+  setText('clubEvents', events.size);
+  setText('clubEventsDetail', 'events in county rankings');
 
-      html += `<div class="goal-row">
-        <span class="goal-label">${m.label} in England</span>
-        <span class="goal-time">~${formatSeconds(estTime)}</span>
-        <span class="goal-drop">drop ${drop.toFixed(2)}s ${projection ? `<span class="goal-date">${projection}</span>` : ''}</span>
-      </div>`;
-    });
-
-    html += `<div class="goal-row">
-      <span class="goal-label">Current: #${rank.rank}</span>
-      <span class="goal-time">${rank.time}</span>
-      <span class="goal-drop">${ratePerMonth ? `improving ${ratePerMonth.toFixed(2)}s/month` : ''}</span>
-  </div>`;
-  } else {
-    // No ranking data — show history-based progression info
-    if (currentTime) {
-      html += `<div class="goal-row">
-        <span class="goal-label">Current PB</span>
-        <span class="goal-time">${formatSeconds(currentTime)}</span>
-        <span class="goal-drop">${ratePerMonth && ratePerMonth > 0 ? `improving ${ratePerMonth.toFixed(2)}s/month` : ''}</span>
-      </div>`;
-    }
-
-    // Total drop from first to last swim
-    if (eventHistory.length >= 2) {
-      const firstTime = parseTimeToSeconds(eventHistory[0].time);
-      const lastTime = parseTimeToSeconds(eventHistory[eventHistory.length - 1].time);
-      if (firstTime && lastTime) {
-        const totalDrop = firstTime - lastTime;
-        html += `<div class="goal-row">
-          <span class="goal-label">Total improvement</span>
-          <span class="goal-time">${formatSeconds(firstTime)} &rarr; ${formatSeconds(lastTime)}</span>
-          <span class="goal-drop">${totalDrop > 0 ? `dropped ${totalDrop.toFixed(2)}s` : ''}</span>
-        </div>`;
-      }
-    }
-
-    // Season PBs in this event
-    const seasonPBs = eventHistory.filter(r => Number(r.is_pb) === 1 && isCurrentSeason(r.date));
-    html += `<div class="goal-row">
-      <span class="goal-label">Swims this event</span>
-      <span class="goal-time">${eventHistory.length} total</span>
-      <span class="goal-drop">${seasonPBs.length ? `${seasonPBs.length} PB${seasonPBs.length > 1 ? 's' : ''} this season` : ''}</span>
-    </div>`;
-
-    // Projected time at current improvement rate
-    if (ratePerMonth && ratePerMonth > 0 && currentTime) {
-      const projectedTime = currentTime - (ratePerMonth * 6);
-      html += `<div class="goal-row">
-        <span class="goal-label">6-month projection</span>
-        <span class="goal-time goal-achieved">${formatSeconds(projectedTime)}</span>
-        <span class="goal-drop"><span class="goal-date">at current rate</span></span>
-      </div>`;
-    }
+  // Event filter options
+  const eventFilter = document.getElementById('clubEventFilter');
+  if (!eventFilter.dataset.populated) {
+    const sorted = [...events].sort();
+    eventFilter.innerHTML = '<option value="">Select Event</option>' +
+      sorted.map(e => `<option value="${e}">${e}</option>`).join('');
+    eventFilter.dataset.populated = 'true';
   }
 
-  container.innerHTML = html;
-}
-
-// ── Club Standings (clickable for comparison) ─────────────
-function updateSquad() {
-  if (!selectedEvent) return;
-  const container = document.getElementById('squadContainer');
-  const titleEl = document.getElementById('clubEventTitle');
-  const swimmer = getSwimmer();
-  const swimmerYob = swimmer.yob;
-
-  titleEl.textContent = `${fmtEvent(selectedEvent.stroke)} (YoB ${swimmerYob - 1}-${swimmerYob + 1})`;
-
-  const eventName = selectedEvent.stroke;
-  let squadRows = ALL_SQUAD.filter(r => r.event === eventName)
-    .filter(r => r.yob && Math.abs(r.yob - swimmerYob) <= 1)
-    .filter(r => r.best_time && Number.isFinite(parseTimeToSeconds(r.best_time)))
-    .sort((a, b) => parseTimeToSeconds(a.best_time) - parseTimeToSeconds(b.best_time));
-
-  if (!squadRows.length) {
-    container.innerHTML = '<div style="color:var(--text-3);font-size:0.8rem;padding:1rem">No club data</div>';
-    return;
-  }
-
-  const targetId = String(swimmer.tiref);
-  const compTirefs = new Set(comparators.map(c => c.tiref));
-
-  let html = '';
-  squadRows.forEach((r, i) => {
-    const pos = i + 1;
-    const tid = String(r.tiref);
-    const isTarget = tid === targetId;
-    const isComp = compTirefs.has(tid);
-    const comp = comparators.find(c => c.tiref === tid);
-    const targetCls = isTarget ? ' is-target' : '';
-    const compCls = isComp ? ' is-compared' : '';
-    const posCls = pos <= 3 ? ` p${pos}` : '';
-    const dotColor = isTarget ? getColor() : comp ? comp.color : 'transparent';
-    const targetStyle = isTarget ? ` style="color:${getColor()}"` : '';
-    const canClick = !isTarget;
-
-    html += `<div class="squad-row${targetCls}${compCls}"${targetStyle} ${canClick ? `onclick="toggleComparator('${tid}','${r.swimmer_name || 'Swimmer'}')"` : ''}>
-      <span class="squad-pos${posCls}">${pos}</span>
-      <span class="squad-color-dot" style="background:${dotColor}"></span>
-      <span class="squad-name">${r.swimmer_name || '-'}</span>
-      <span class="squad-time">${r.best_time}</span>
-    </div>`;
-  });
-
-  container.innerHTML = html;
-}
-
-// ── Rank / WA Progression Chart ──────────────────────────
-function updateRankProgression(ranks, pbs) {
-  const swimmer = getSwimmer();
-  pbs = pbs || ALL_PBS.filter(r => String(r.tiref) === String(swimmer.tiref));
-  const eventMap = new Map();
-  pbs.forEach(pb => {
-    const key = `${pb.stroke}|${pb.course}`;
-    if (!eventMap.has(key) || (pb.wa_points || 0) > (eventMap.get(key).wa_points || 0))
-      eventMap.set(key, pb);
-  });
-  const topEvents = [...eventMap.values()].sort((a, b) => (b.wa_points || 0) - (a.wa_points || 0)).slice(0, 4);
-  const colors = [getColor(), COLORS.gold, COLORS.purple, COLORS.green];
-
-  const hasRanks = ranks.length > 0;
-  const chartTitle = document.querySelector('.chart-short')?.closest('.card')?.querySelector('.card-title');
-
-  if (hasRanks) {
-    // Show rank progression by year
-    if (chartTitle) chartTitle.textContent = 'Rank Progression';
-    const years = [2023, 2024, 2025, 2026];
-    const datasets = topEvents.map((ev, i) => {
-      const data = years.map(y => {
-        const r = ranks.find(rk => rk.event === ev.stroke && rk.course === ev.course && rk.year === y);
-        return r ? { x: y, y: r.rank } : null;
-      }).filter(Boolean);
-      return {
-        label: fmtEvent(ev.stroke, ev.course), data,
-        borderColor: colors[i], backgroundColor: colors[i],
-        pointRadius: 5, pointHoverRadius: 8, borderWidth: 2, tension: 0.3, spanGaps: true,
-      };
-    });
-
-    destroyChart('rankProg');
-    charts.rankProg = new Chart(document.getElementById('rankChart'), {
-      type: 'line', data: { datasets },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        scales: {
-          x: { type: 'linear', min: 2022.5, max: 2026.5,
-               ticks: { stepSize: 1, color: COLORS.tick, callback: v => String(v) },
-               grid: { color: COLORS.grid } },
-          y: { reverse: true, title: { display: true, text: 'National Rank', color: COLORS.tick, font: { size: 10 } },
-               grid: { color: COLORS.grid }, ticks: { color: COLORS.tick } },
-        },
-        plugins: {
-          legend: { labels: { usePointStyle: true, pointStyle: 'circle', padding: 12, font: { size: 10 } } },
-          tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: #${ctx.raw.y} (${ctx.raw.x})` } },
-        },
-      },
-    });
-  } else {
-    // No ranking data — show best WA points over time from history
-    if (chartTitle) chartTitle.textContent = 'Best WA Points Progression';
-    const history = HISTORY[swimmer.tiref] || [];
-    const strokeNames = CONFIG.stroke_names || {};
-    const courseLabels = { S: 'SC', L: 'LC' };
-
-    const datasets = topEvents.map((ev, i) => {
-      let evStrokeCode = null;
-      for (const [code, name] of Object.entries(strokeNames)) {
-        if (name === ev.stroke) { evStrokeCode = code; break; }
-      }
-      const evCourse = ev.course === 'SC' ? 'S' : ev.course === 'LC' ? 'L' : ev.course;
-
-      // Get PB swims for this event over time
-      const pbSwims = history
-        .filter(r => String(r.stroke_code) === evStrokeCode && r.course === evCourse && Number(r.is_pb) === 1)
-        .filter(r => parseInt(r.wa_points) > 0)
-        .sort(sortByDate)
-        .map(r => ({ x: parseDate(r.date), y: parseInt(r.wa_points) }))
-        .filter(p => p.x);
-
-      return {
-        label: fmtEvent(ev.stroke, ev.course), data: pbSwims,
-        borderColor: colors[i], backgroundColor: colors[i],
-        pointRadius: 5, pointHoverRadius: 8, borderWidth: 2, tension: 0.3, spanGaps: true,
-      };
-    }).filter(ds => ds.data.length > 0);
-
-    destroyChart('rankProg');
-    charts.rankProg = new Chart(document.getElementById('rankChart'), {
-      type: 'line', data: { datasets },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        scales: {
-          x: { type: 'time', time: { unit: 'month', displayFormats: { month: 'MMM yy' } },
-               grid: { color: COLORS.grid }, ticks: { color: COLORS.tick } },
-          y: { title: { display: true, text: 'WA Points', color: COLORS.tick, font: { size: 10 } },
-               grid: { color: COLORS.grid }, ticks: { color: COLORS.tick } },
-        },
-        plugins: {
-          legend: { labels: { usePointStyle: true, pointStyle: 'circle', padding: 12, font: { size: 10 } } },
-          tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.raw.y} WA` } },
-        },
-      },
-    });
-  }
-}
-
-// ── Tab Navigation ──────────────────────────────────────
-let activeTab = 'dashboard';
-
-function setupTabs() {
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', () => switchTab(btn.dataset.tab));
-  });
-}
-
-function switchTab(tab) {
-  activeTab = tab;
-
-  // Update tab buttons
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.tab === tab);
-  });
-
-  // Update panels
-  document.querySelectorAll('.tab-panel').forEach(panel => {
-    panel.classList.remove('active');
-  });
-
-  const panelMap = {
-    dashboard: 'panelDashboard',
-    club: 'panelClub',
-    national: 'panelNational',
-    training: 'panelTraining',
-    county: 'panelCounty',
-    region: 'panelRegion',
-  };
-  const panel = document.getElementById(panelMap[tab]);
-  if (panel) panel.classList.add('active');
-
-  // Render tab content
-  if (tab === 'club') renderClubTab();
-  if (tab === 'national') renderNationalTab();
-  if (tab === 'county') renderCountyTab();
-  if (tab === 'region') renderRegionTab();
-  if (tab === 'training' && typeof renderTrainingTab === 'function') renderTrainingTab();
-}
-
-// ── Club Tab ─────────────────────────────────────────────
-let clubInitialized = false;
-
-function initClubFilters() {
-  if (clubInitialized) return;
-  clubInitialized = true;
-
-  const eventSelect = document.getElementById('clubEventFilter');
-  const events = [...new Set(ALL_SQUAD.map(r => r.event))].sort();
-  events.forEach(ev => {
-    const opt = document.createElement('option');
-    opt.value = ev;
-    opt.textContent = ev;
-    eventSelect.appendChild(opt);
-  });
-
-  // Age filter from swimmer YoBs
-  const ageSelect = document.getElementById('clubAgeFilter');
-  const yobs = [...new Set(ALL_SQUAD.map(r => r.yob).filter(Boolean))].sort();
-  yobs.forEach(yob => {
-    const opt = document.createElement('option');
-    opt.value = yob;
-    opt.textContent = `Born ${yob}`;
-    ageSelect.appendChild(opt);
-  });
-
-  // Wire up filter changes
-  ['clubEventFilter', 'clubCourseFilter', 'clubAgeFilter', 'clubSexFilter'].forEach(id => {
-    document.getElementById(id)?.addEventListener('change', renderClubLeaderboard);
-  });
-
-  // Default to first event
-  if (events.length) {
-    eventSelect.value = events[0];
-  }
-}
-
-function renderClubTab() {
-  initClubFilters();
-  renderClubStats();
-  renderClubLeaderboard();
-}
-
-function renderClubStats() {
-  // Unique swimmers
-  const swimmerSet = new Set();
-  ALL_SQUAD.forEach(r => swimmerSet.add(String(r.tiref)));
-  document.getElementById('clubStatSwimmers').textContent = swimmerSet.size;
-
-  // Count by sex
-  const sexCount = {};
-  ALL_SWIMMERS.forEach(s => {
-    // Determine sex from squad data
-    const sq = ALL_SQUAD.find(r => String(r.tiref) === s.tiref);
-    if (sq && sq.sex) sexCount[sq.sex] = (sexCount[sq.sex] || 0) + 1;
-  });
-  const detailParts = [];
-  if (sexCount.F) detailParts.push(`${sexCount.F} girls`);
-  if (sexCount.M) detailParts.push(`${sexCount.M} boys`);
-  document.getElementById('clubStatSwimmersDetail').textContent = detailParts.join(', ') || 'active swimmers';
-
-  // Season PBs across club
-  let totalPBs = 0;
-  let pbSwimmers = new Set();
-  for (const [tiref, history] of Object.entries(HISTORY)) {
-    const seasonPBs = history.filter(r => Number(r.is_pb) === 1 && isCurrentSeason(r.date));
-    totalPBs += seasonPBs.length;
-    if (seasonPBs.length) pbSwimmers.add(tiref);
-  }
-  document.getElementById('clubStatPBs').textContent = totalPBs || '-';
-  document.getElementById('clubStatPBsDetail').textContent = pbSwimmers.size ? `by ${pbSwimmers.size} swimmers` : 'this season';
-
-  // Events covered
-  const eventSet = new Set(ALL_SQUAD.map(r => r.event));
-  document.getElementById('clubStatEvents').textContent = eventSet.size;
-  document.getElementById('clubStatEventsDetail').textContent = 'across all swimmers';
-
-  // Top WA
-  let topWA = 0, topWASwimmer = '';
-  ALL_SQUAD.forEach(r => {
-    if ((r.best_wa || 0) > topWA) {
-      topWA = r.best_wa;
-      topWASwimmer = r.swimmer_name || '';
-    }
-  });
-  document.getElementById('clubStatTopWA').textContent = topWA || '-';
-  document.getElementById('clubStatTopWADetail').textContent = topWASwimmer;
+  eventFilter.onchange = renderClubLeaderboard;
+  document.getElementById('clubCourseFilter').onchange = renderClubLeaderboard;
+  document.getElementById('clubSexFilter').onchange = renderClubLeaderboard;
 }
 
 function renderClubLeaderboard() {
-  const container = document.getElementById('clubLeaderboard');
-  const titleEl = document.getElementById('clubLeaderboardTitle');
   const event = document.getElementById('clubEventFilter').value;
-  const ageFilter = document.getElementById('clubAgeFilter').value;
-  const sexFilter = document.getElementById('clubSexFilter').value;
+  const course = document.getElementById('clubCourseFilter').value;
+  const sex = document.getElementById('clubSexFilter').value;
 
   if (!event) {
-    container.innerHTML = '<div class="club-empty-state">Select an event above to see club rankings</div>';
-    titleEl.textContent = 'Select an event';
-    renderClubChart([]);
+    document.getElementById('clubLeaderboard').innerHTML = '<div class="club-empty-state">Select an event above</div>';
+    document.getElementById('clubLeaderboardTitle').textContent = 'Select an event';
     return;
   }
 
-  let rows = ALL_SQUAD.filter(r => r.event === event);
-  if (ageFilter) rows = rows.filter(r => String(r.yob) === ageFilter);
-  if (sexFilter) {
-    // Need to determine sex - check personal_bests or use swimmer data
-    const sexMap = {};
-    ALL_PBS.forEach(p => { if (p.sex) sexMap[String(p.tiref)] = p.sex; });
-    ALL_SQUAD.forEach(r => { if (r.sex) sexMap[String(r.tiref)] = r.sex; });
-    rows = rows.filter(r => sexMap[String(r.tiref)] === sexFilter);
-  }
+  let filtered = COUNTY_RANKS.filter(r => r.event === event);
+  if (course) filtered = filtered.filter(r => r.course === course);
+  if (sex) filtered = filtered.filter(r => r.sex === sex);
 
-  rows = rows.filter(r => r.best_time && Number.isFinite(parseTimeToSeconds(r.best_time)));
-  rows.sort((a, b) => parseTimeToSeconds(a.best_time) - parseTimeToSeconds(b.best_time));
+  // Get latest year per swimmer (best rank for that year)
+  const bySwimmer = {};
+  filtered.forEach(r => {
+    const key = String(r.tiref);
+    if (!bySwimmer[key] || r.year > bySwimmer[key].year ||
+        (r.year === bySwimmer[key].year && (r.rank || 999) < (bySwimmer[key].rank || 999))) {
+      bySwimmer[key] = r;
+    }
+  });
 
-  const label = event.replace('Freestyle', 'Free').replace('Breaststroke', 'Breast')
-    .replace('Butterfly', 'Fly').replace('Backstroke', 'Back').replace('Individual Medley', 'IM');
-  titleEl.textContent = label + (ageFilter ? ` (Born ${ageFilter})` : ' (All Ages)');
+  const rows = Object.values(bySwimmer).sort((a, b) => (a.rank || 999) - (b.rank || 999));
+  const courseLabel = course || 'All';
+  document.getElementById('clubLeaderboardTitle').textContent = `${event} (${courseLabel})`;
 
   if (!rows.length) {
-    container.innerHTML = '<div class="club-empty-state">No swimmers found for this event</div>';
-    renderClubChart([]);
+    document.getElementById('clubLeaderboard').innerHTML = '<div class="club-empty-state">No data for this combination</div>';
     return;
   }
 
-  const targetId = activeSwimmer ? String(activeSwimmer.tiref) : '';
-
-  let html = '';
-  rows.forEach((r, i) => {
-    const pos = i + 1;
-    const tid = String(r.tiref);
-    const isMe = tid === targetId;
-    const posCls = pos <= 3 ? ` p${pos}` : '';
-    const rowCls = isMe ? ' is-highlighted' : '';
-
-    html += `<div class="club-lb-row${rowCls}" onclick="switchToSwimmerDashboard('${tid}')">
-      <span class="club-lb-pos${posCls}">${pos}</span>
-      <span class="club-lb-name">${r.swimmer_name || '-'}</span>
-      <span class="club-lb-yob">${r.yob || ''}</span>
-      <span class="club-lb-time">${r.best_time}</span>
-      <span class="club-lb-wa">${r.best_wa || '-'}</span>
-    </div>`;
+  let html = `<table class="data-table"><thead><tr>
+    <th>#</th><th>County Rank</th><th>Swimmer</th><th>YOB</th><th>Time</th><th>Year</th>
+  </tr></thead><tbody>`;
+  rows.forEach((r, idx) => {
+    const isMe = activeSwimmer && String(r.tiref) === String(activeSwimmer.tiref);
+    const rowClass = isMe ? 'highlight-row' : '';
+    html += `<tr class="${rowClass}">
+      <td>${idx + 1}</td>
+      <td><strong>#${r.rank || '?'}</strong></td>
+      <td>${r.swimmer_name || '?'}</td>
+      <td>${r.yob || ''}</td>
+      <td class="time-cell">${r.time || ''}</td>
+      <td>${r.year}</td>
+    </tr>`;
   });
-
-  container.innerHTML = html;
-  renderClubChart(rows.slice(0, 5));
+  html += '</tbody></table>';
+  document.getElementById('clubLeaderboard').innerHTML = html;
 }
 
-async function renderClubChart(topRows) {
-  destroyChart('clubTop');
-  const canvas = document.getElementById('clubChart');
-  if (!canvas || !topRows.length) return;
-
-  const chartColors = [COLORS.amber, COLORS.gold, COLORS.purple, COLORS.green, COLORS.bella];
-  const datasets = [];
-
-  for (let i = 0; i < topRows.length; i++) {
-    const r = topRows[i];
-    const tiref = String(r.tiref);
-    const history = await loadHistory(tiref);
-
-    const strokeNames = CONFIG.stroke_names || {};
-    let strokeCode = null;
-    for (const [code, name] of Object.entries(strokeNames)) {
-      if (name === r.event) { strokeCode = code; break; }
-    }
-
-    const eventSwims = history
-      .filter(h => String(h.stroke_code) === strokeCode)
-      .filter(h => h.time && Number.isFinite(parseTimeToSeconds(h.time)))
-      .sort(sortByDate)
-      .map(h => ({
-        x: parseDate(h.date),
-        y: parseTimeToSeconds(h.time),
-      }))
-      .filter(p => p.x);
-
-    if (eventSwims.length) {
-      datasets.push({
-        label: r.swimmer_name || `#${i + 1}`,
-        data: eventSwims,
-        borderColor: chartColors[i],
-        backgroundColor: chartColors[i] + '22',
-        pointRadius: 3,
-        pointHoverRadius: 6,
-        borderWidth: 2,
-        tension: 0.3,
-        spanGaps: true,
-        fill: false,
-      });
-    }
-  }
-
-  if (!datasets.length) return;
-
-  charts.clubTop = new Chart(canvas, {
-    type: 'line',
-    data: { datasets },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      scales: {
-        x: {
-          type: 'time',
-          time: { parser: 'dd/MM/yyyy', unit: 'month', displayFormats: { month: 'MMM yy' } },
-          grid: { color: COLORS.grid }, ticks: { color: COLORS.tick },
-        },
-        y: {
-          reverse: true,
-          grid: { color: COLORS.grid },
-          ticks: { color: COLORS.tick, callback: v => formatSeconds(v) },
-        },
-      },
-      plugins: {
-        legend: { labels: { usePointStyle: true, pointStyle: 'circle', padding: 12, font: { size: 10 } } },
-        tooltip: {
-          callbacks: { label: ctx => `${ctx.dataset.label}: ${formatSeconds(ctx.raw.y)}` },
-        },
-      },
-    },
-  });
+// ── Helpers ───────────────────────────────────────────────
+function setText(id, text) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = text == null ? '-' : text;
 }
 
-function switchToSwimmerDashboard(tiref) {
-  const swimmer = ALL_SWIMMERS.find(s => String(s.tiref) === tiref);
-  if (swimmer) {
-    selectSwimmer(swimmer);
-    switchTab('dashboard');
-  }
-}
-
-// ── National Tab ─────────────────────────────────────────
-function renderNationalTab() {
-  if (!activeSwimmer) return;
-  const swimmer = activeSwimmer;
-  const tiref = String(swimmer.tiref);
-  const rawRanks = ALL_RANKS.filter(r => String(r.tiref) === tiref);
-  const ranks = mergeRanksByCourse(rawRanks);
-  const year = parseInt(document.getElementById('natYearFilter').value) || 2026;
-  const curRanks = ranks.filter(r => r.year === year);
-  const prevRanks = ranks.filter(r => r.year === year - 1);
-
-  document.getElementById('natSwimmerName').textContent = swimmer.name;
-
-  // Stats
-  if (curRanks.length) {
-    const rankedOnly = curRanks.filter(r => r.rank != null);
-    const bestRank = rankedOnly.length ? rankedOnly.reduce((min, r) => r.rank < min.rank ? r : min, rankedOnly[0]) : null;
-    document.getElementById('natStatBestRank').textContent = bestRank ? `#${bestRank.rank}` : '-';
-    document.getElementById('natStatBestRankDetail').textContent =
-      bestRank ? fmtEvent(bestRank.event, bestRank.course) : 'Times recorded';
-
-    document.getElementById('natStatEventsRanked').textContent = rankedOnly.length || curRanks.length;
-    document.getElementById('natStatEventsRankedDetail').textContent = `in ${year}`;
-
-    const avgRank = rankedOnly.length ? Math.round(rankedOnly.reduce((s, r) => s + r.rank, 0) / rankedOnly.length) : null;
-    document.getElementById('natStatAvgRank').textContent = avgRank ? `#${avgRank}` : '-';
-    document.getElementById('natStatAvgRankDetail').textContent = rankedOnly.length ? 'across all events' : '';
-
-    let improved = 0, total = 0;
-    curRanks.forEach(cr => {
-      const pr = prevRanks.find(p => p.event === cr.event && p.course === cr.course);
-      if (pr) { total++; if (cr.rank < pr.rank) improved++; }
-    });
-    document.getElementById('natStatImproved').textContent = total > 0 ? `${improved}/${total}` : '-';
-    document.getElementById('natStatImproved').className =
-      `stat-value ${improved > total / 2 ? 'green' : total > 0 ? 'red' : 'green'}`;
-    document.getElementById('natStatImprovedDetail').textContent =
-      total > 0 ? `vs ${year - 1}` : '';
-  } else {
-    document.getElementById('natStatBestRank').textContent = '-';
-    document.getElementById('natStatBestRankDetail').textContent = 'No ranking data';
-    document.getElementById('natStatEventsRanked').textContent = '-';
-    document.getElementById('natStatEventsRankedDetail').textContent = '';
-    document.getElementById('natStatAvgRank').textContent = '-';
-    document.getElementById('natStatAvgRankDetail').textContent = '';
-    document.getElementById('natStatImproved').textContent = '-';
-    document.getElementById('natStatImprovedDetail').textContent = '';
-  }
-
-  // Rankings list
-  renderNationalRankingsList(curRanks, prevRanks, year);
-
-  // Rank progression chart
-  renderNationalRankChart(ranks);
-
-  // Year-on-year comparison
-  renderNationalYoY(curRanks, prevRanks, year);
-}
-
-function renderNationalRankingsList(curRanks, prevRanks, year) {
-  const container = document.getElementById('nationalRankingsList');
-
-  if (!curRanks.length) {
-    // Try to show PB-based info instead
-    const swimmer = activeSwimmer;
-    const pbs = ALL_PBS.filter(r => String(r.tiref) === String(swimmer.tiref));
-    const history = HISTORY[swimmer.tiref] || [];
-    const derivedPbs = pbs.length ? pbs : derivePBsFromHistory(history, swimmer.tiref, swimmer.name, swimmer.yob);
-
-    if (derivedPbs.length) {
-      let html = '<div style="padding:0.5rem 0.75rem;color:var(--text-3);font-size:0.75rem;margin-bottom:0.5rem">' +
-        'National ranking data will be available after the overnight data load. Showing current PBs:</div>';
-      derivedPbs
-        .sort((a, b) => (b.wa_points || 0) - (a.wa_points || 0))
-        .forEach(pb => {
-          html += `<div class="nat-rank-row">
-            <span class="nat-rank-event">${fmtEvent(pb.stroke, pb.course)}</span>
-            <span class="nat-rank-time">${pb.time}</span>
-            <span class="nat-rank-badge other">${pb.wa_points || '-'} WA</span>
-            <span class="nat-rank-move same"></span>
-          </div>`;
-        });
-      container.innerHTML = html;
-    } else {
-      container.innerHTML = '<div class="club-empty-state">No ranking data available yet.<br>Rankings will populate after the overnight data load.</div>';
-    }
-    return;
-  }
-
-  const sorted = [...curRanks].sort((a, b) => {
-    if (a.rank == null && b.rank == null) return 0;
-    if (a.rank == null) return 1;
-    if (b.rank == null) return -1;
-    return a.rank - b.rank;
-  });
-  let html = '';
-  sorted.forEach(r => {
-    const hasRank = r.rank != null;
-    const badgeCls = !hasRank ? 'other' : r.rank <= 50 ? 'top50' : r.rank <= 100 ? 'top100' :
-      r.rank <= 250 ? 'top250' : r.rank <= 500 ? 'top500' : 'other';
-
-    const prev = prevRanks.find(p => p.event === r.event && p.course === r.course);
-    let moveHtml = '';
-    if (prev && hasRank && prev.rank != null) {
-      const diff = prev.rank - r.rank;
-      const dir = diff > 0 ? 'up' : diff < 0 ? 'down' : 'same';
-      const arrow = dir === 'up' ? '&#9650;' : dir === 'down' ? '&#9660;' : '&#8212;';
-      moveHtml = `<span class="nat-rank-move ${dir}">${arrow}${Math.abs(diff) || ''}</span>`;
-    } else if (!prev) {
-      moveHtml = '<span class="nat-rank-move same">NEW</span>';
-    } else {
-      moveHtml = '<span class="nat-rank-move same">&#8212;</span>';
-    }
-
-    const rankDisplay = hasRank ? `#${r.rank}${r.total_in_ranking ? ' / ' + r.total_in_ranking : ''}` : `${r.total_in_ranking ? r.total_in_ranking + ' swimmers' : 'Ranked'}`;
-
-    html += `<div class="nat-rank-row">
-      <span class="nat-rank-event">${fmtEvent(r.event, r.course)}</span>
-      <span class="nat-rank-time">${r.time}</span>
-      <span class="nat-rank-badge ${badgeCls}">${rankDisplay}</span>
-      ${moveHtml}
-    </div>`;
-  });
-
-  container.innerHTML = html;
-}
-
-function renderNationalRankChart(allRanks) {
-  destroyChart('nationalRank');
-  const canvas = document.getElementById('nationalRankChart');
-  if (!canvas) return;
-
-  // Get top events by best rank
-  const eventBest = {};
-  allRanks.filter(r => r.rank != null).forEach(r => {
-    const key = `${r.event}|${r.course}`;
-    if (!eventBest[key] || r.rank < eventBest[key].rank) eventBest[key] = r;
-  });
-
-  const topEvents = Object.values(eventBest)
-    .sort((a, b) => a.rank - b.rank)
-    .slice(0, 5);
-
-  const chartColors = [COLORS.amber, COLORS.gold, COLORS.purple, COLORS.green, COLORS.bella];
-  const years = [2023, 2024, 2025, 2026];
-
-  const datasets = topEvents.map((ev, i) => {
-    const data = years.map(y => {
-      const r = allRanks.find(rk => rk.event === ev.event && rk.course === ev.course && rk.year === y);
-      return r ? { x: y, y: r.rank } : null;
-    }).filter(Boolean);
-    return {
-      label: fmtEvent(ev.event, ev.course), data,
-      borderColor: chartColors[i], backgroundColor: chartColors[i],
-      pointRadius: 5, pointHoverRadius: 8, borderWidth: 2, tension: 0.3, spanGaps: true,
-    };
-  });
-
-  if (!datasets.length || datasets.every(d => !d.data.length)) {
-    // No chart data
-    return;
-  }
-
-  charts.nationalRank = new Chart(canvas, {
-    type: 'line', data: { datasets },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      scales: {
-        x: { type: 'linear', min: 2022.5, max: 2026.5,
-          ticks: { stepSize: 1, color: COLORS.tick, callback: v => String(v) },
-          grid: { color: COLORS.grid } },
-        y: { reverse: true,
-          title: { display: true, text: 'National Rank', color: COLORS.tick, font: { size: 10 } },
-          grid: { color: COLORS.grid }, ticks: { color: COLORS.tick } },
-      },
-      plugins: {
-        legend: { labels: { usePointStyle: true, pointStyle: 'circle', padding: 12, font: { size: 10 } } },
-        tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: #${ctx.raw.y} (${ctx.raw.x})` } },
-      },
-    },
-  });
-}
-
-function renderNationalYoY(curRanks, prevRanks, year) {
-  const container = document.getElementById('natYoyContainer');
-
-  if (!curRanks.length && !prevRanks.length) {
-    container.innerHTML = '<div class="club-empty-state">Year-on-year data will appear after rankings are loaded</div>';
-    return;
-  }
-
-  // Merge events from both years (already course-merged)
-  const eventKeys = new Set();
-  curRanks.forEach(r => eventKeys.add(normaliseEvent(r.event)));
-  prevRanks.forEach(r => eventKeys.add(normaliseEvent(r.event)));
-
-  let html = `<div class="yoy-row" style="font-weight:600;color:var(--text-3);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.5px">
-    <span>Event</span>
-    <span>${year - 1}</span>
-    <span>${year}</span>
-    <span>Change</span>
-  </div>`;
-
-  [...eventKeys].sort().forEach(event => {
-    const cur = curRanks.find(r => normaliseEvent(r.event) === event);
-    const prev = prevRanks.find(r => normaliseEvent(r.event) === event);
-
-    let changeCls = 'same', changeText = '-';
-    if (cur?.rank != null && prev?.rank != null) {
-      const diff = prev.rank - cur.rank;
-      changeCls = diff > 0 ? 'up' : diff < 0 ? 'down' : 'same';
-      const arrow = diff > 0 ? '\u25B2' : diff < 0 ? '\u25BC' : '\u2014';
-      changeText = `${arrow}${Math.abs(diff) || ''}`;
-    } else if (cur && !prev) {
-      changeText = 'NEW';
-      changeCls = 'up';
-    } else if (!cur && prev) {
-      changeText = '-';
-      changeCls = 'same';
-    }
-
-    html += `<div class="yoy-row">
-      <span class="yoy-event">${fmtEvent(event)}</span>
-      <span class="yoy-prev">${prev?.rank ? '#' + prev.rank : '-'}</span>
-      <span class="yoy-curr">${cur?.rank ? '#' + cur.rank : '-'}</span>
-      <span class="yoy-change ${changeCls}">${changeText}</span>
-    </div>`;
-  });
-
-  container.innerHTML = html;
-}
-
-// ── County Tab ───────────────────────────────────────────
-function renderCountyTab() {
-  renderAreaTab('county', ALL_COUNTY_RANKS, 'Hertfordshire', 10);
-}
-
-// ── Region Tab ───────────────────────────────────────────
-function renderRegionTab() {
-  renderAreaTab('region', ALL_REGION_RANKS, 'East', 25);
-}
-
-/**
- * Shared renderer for county/region tabs.
- * @param {string} prefix - 'county' or 'region'
- * @param {Array} allRanks - ALL_COUNTY_RANKS or ALL_REGION_RANKS
- * @param {string} areaName - 'Hertfordshire' or 'East'
- * @param {number} topN - threshold for "top N" stat
- */
-function renderAreaTab(prefix, allRanks, areaName, topN) {
-  if (!activeSwimmer) return;
-  const tiref = String(activeSwimmer.tiref);
-  const rawRanks = allRanks.filter(r => String(r.tiref) === tiref);
-  const ranks = mergeRanksByCourse(rawRanks);
-  const year = 2026;
-  const curRanks = ranks.filter(r => r.year === year);
-  const prevRanks = ranks.filter(r => r.year === year - 1);
-
-  document.getElementById(`${prefix}SwimmerName`).textContent = activeSwimmer.name;
-
-  // Stats
-  const ranked = curRanks.filter(r => r.rank != null);
-  if (ranked.length) {
-    const best = ranked.reduce((min, r) => r.rank < min.rank ? r : min, ranked[0]);
-    document.getElementById(`${prefix}StatBest`).textContent = `#${best.rank}`;
-    document.getElementById(`${prefix}StatBestDetail`).textContent = fmtEvent(best.event);
-
-    document.getElementById(`${prefix}StatEvents`).textContent = ranked.length;
-    document.getElementById(`${prefix}StatEventsDetail`).textContent = `in ${year}`;
-
-    const topCount = ranked.filter(r => r.rank <= topN).length;
-    document.getElementById(`${prefix}Stat${prefix === 'county' ? 'Top10' : 'Top25'}`).textContent = topCount;
-    document.getElementById(`${prefix}Stat${prefix === 'county' ? 'Top10' : 'Top25'}Detail`).textContent =
-      topCount > 0 ? `in ${areaName}` : '';
-
-    const avg = Math.round(ranked.reduce((s, r) => s + r.rank, 0) / ranked.length);
-    document.getElementById(`${prefix}StatAvg`).textContent = `#${avg}`;
-    document.getElementById(`${prefix}StatAvgDetail`).textContent = 'across events';
-  } else {
-    document.getElementById(`${prefix}StatBest`).textContent = '-';
-    document.getElementById(`${prefix}StatBestDetail`).textContent = curRanks.length ? 'Times recorded' : 'No data yet';
-    document.getElementById(`${prefix}StatEvents`).textContent = curRanks.length || '-';
-    document.getElementById(`${prefix}StatEventsDetail`).textContent = curRanks.length ? `in ${year}` : '';
-    document.getElementById(`${prefix}Stat${prefix === 'county' ? 'Top10' : 'Top25'}`).textContent = '-';
-    document.getElementById(`${prefix}Stat${prefix === 'county' ? 'Top10' : 'Top25'}Detail`).textContent = '';
-    document.getElementById(`${prefix}StatAvg`).textContent = '-';
-    document.getElementById(`${prefix}StatAvgDetail`).textContent = '';
-  }
-
-  // Rankings list
-  const container = document.getElementById(`${prefix}RankingsList`);
-  if (!curRanks.length && !prevRanks.length) {
-    container.innerHTML = `<div class="club-empty-state">${areaName} ranking data will appear after export.<br>Run: python bulk_load.py --step 3</div>`;
-  } else {
-    const sorted = [...curRanks].sort((a, b) => {
-      if (a.rank == null && b.rank == null) return 0;
-      if (a.rank == null) return 1;
-      if (b.rank == null) return -1;
-      return a.rank - b.rank;
-    });
-
-    let html = '';
-    sorted.forEach(r => {
-      const hasRank = r.rank != null;
-      const total = r.total_in_ranking || r.total || 0;
-      const badgeCls = !hasRank ? 'other' :
-        r.rank <= 3 ? 'top50' : r.rank <= 10 ? 'top100' :
-        r.rank <= 25 ? 'top250' : r.rank <= 50 ? 'top500' : 'other';
-
-      const prev = prevRanks.find(p => normaliseEvent(p.event) === normaliseEvent(r.event));
-      let moveHtml = '';
-      if (prev?.rank != null && hasRank) {
-        const diff = prev.rank - r.rank;
-        const dir = diff > 0 ? 'up' : diff < 0 ? 'down' : 'same';
-        const arrow = dir === 'up' ? '&#9650;' : dir === 'down' ? '&#9660;' : '&#8212;';
-        moveHtml = `<span class="nat-rank-move ${dir}">${arrow}${Math.abs(diff) || ''}</span>`;
-      } else if (!prev) {
-        moveHtml = '<span class="nat-rank-move same">NEW</span>';
-      }
-
-      const rankDisplay = hasRank ? `#${r.rank}${total ? ' / ' + total : ''}` : (total ? `${total} swimmers` : '-');
-
-      html += `<div class="nat-rank-row">
-        <span class="nat-rank-event">${fmtEvent(r.event)}</span>
-        <span class="nat-rank-time">${r.time}</span>
-        <span class="nat-rank-badge ${badgeCls}">${rankDisplay}</span>
-        ${moveHtml}
-      </div>`;
-    });
-    container.innerHTML = html;
-  }
-
-  // Rank progression chart
-  renderAreaChart(prefix, ranks);
-}
-
-function renderAreaChart(prefix, allRanks) {
-  const chartId = prefix === 'county' ? 'countyRank' : 'regionRank';
-  destroyChart(chartId);
-  const canvas = document.getElementById(`${prefix}RankChart`);
-  if (!canvas) return;
-
-  const ranked = allRanks.filter(r => r.rank != null);
-  const eventBest = {};
-  ranked.forEach(r => {
-    const key = normaliseEvent(r.event);
-    if (!eventBest[key] || r.rank < eventBest[key].rank) eventBest[key] = r;
-  });
-
-  const topEvents = Object.values(eventBest).sort((a, b) => a.rank - b.rank).slice(0, 5);
-  const chartColors = [COLORS.amber, COLORS.gold, COLORS.purple, COLORS.green, COLORS.bella];
-  const years = [2023, 2024, 2025, 2026];
-
-  const datasets = topEvents.map((ev, i) => {
-    const data = years.map(y => {
-      const r = ranked.find(rk => normaliseEvent(rk.event) === normaliseEvent(ev.event) && rk.year === y);
-      return r ? r.rank : null;
-    });
-    return {
-      label: fmtEvent(ev.event), data,
-      borderColor: chartColors[i % chartColors.length],
-      backgroundColor: chartColors[i % chartColors.length] + '22',
-      tension: 0.3, pointRadius: 4, fill: false,
-    };
-  });
-
-  if (!datasets.length) return;
-
-  charts[chartId] = new Chart(canvas, {
-    type: 'line',
-    data: { labels: years.map(String), datasets },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      scales: {
-        x: { grid: { color: COLORS.grid }, ticks: { color: COLORS.tick } },
-        y: { reverse: true, grid: { color: COLORS.grid },
-             ticks: { color: COLORS.tick, stepSize: 1, callback: v => '#' + v },
-             min: 1 },
-      },
-      plugins: {
-        legend: { labels: { usePointStyle: true, pointStyle: 'circle', padding: 10, font: { size: 10 }, color: '#8892a8' } },
-        tooltip: { callbacks: { label: ctx => `${ctx.dataset.label}: #${ctx.raw}` } },
-      },
-    },
-  });
-}
-
-// ── Event Listeners ──────────────────────────────────────
-document.getElementById('chartCourse')?.addEventListener('change', updateProgressChart);
-document.getElementById('natYearFilter')?.addEventListener('change', renderNationalTab);
-
-// ── Start ────────────────────────────────────────────────
-setupTabs();
+// ── Boot ──────────────────────────────────────────────────
 init();

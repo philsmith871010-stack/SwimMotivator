@@ -1,0 +1,2514 @@
+{
+  "tiref": 1621304,
+  "name": "Gia Soni",
+  "yob": null,
+  "sex": null,
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "LC",
+      "stroke": "100 Backstroke",
+      "time": "1:21.61",
+      "converted_time": "1:20.60",
+      "wa_points": 343,
+      "date": "17/03/24",
+      "meet": "Team Luton March Long Course Meet 2024",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Backstroke",
+      "time": "1:17.19",
+      "converted_time": "1:18.20",
+      "wa_points": 342,
+      "date": "09/03/24",
+      "meet": "City of St Albans Spring Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "1:34.79",
+      "converted_time": "1:36.10",
+      "wa_points": 284,
+      "date": "26/10/24",
+      "meet": "Cheshunt SC 19th Annual Open Meet 2024",
+      "venue": "Harlow"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Butterfly",
+      "time": "1:21.86",
+      "converted_time": "1:22.80",
+      "wa_points": 266,
+      "date": "09/03/24",
+      "meet": "City of St Albans Spring Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "LC",
+      "stroke": "100 Freestyle",
+      "time": "1:12.06",
+      "converted_time": "1:10.90",
+      "wa_points": 369,
+      "date": "16/03/24",
+      "meet": "Team Luton March Long Course Meet 2024",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:09.37",
+      "converted_time": "1:10.60",
+      "wa_points": 380,
+      "date": "02/03/24",
+      "meet": "Watford SC Regional Qualifier 2024",
+      "venue": "Watford"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "1:21.93",
+      "converted_time": "1:21.90",
+      "wa_points": 304,
+      "date": "23/06/24",
+      "meet": "City of St Albans Summer Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "1500 Freestyle",
+      "time": "21:05.45",
+      "converted_time": "21:21.70",
+      "wa_points": 369,
+      "date": "20/11/24",
+      "meet": "Co St Albans & Watford Joint Club Champs 2024",
+      "venue": "Watford"
+    },
+    {
+      "course": "LC",
+      "stroke": "200 Backstroke",
+      "time": "2:54.88",
+      "converted_time": "2:53.00",
+      "wa_points": 349,
+      "date": "11/05/24",
+      "meet": "Swim England East Region LC Championships 2024",
+      "venue": "Norwich"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Backstroke",
+      "time": "2:45.45",
+      "converted_time": "2:47.50",
+      "wa_points": 363,
+      "date": "10/03/24",
+      "meet": "City of St Albans Spring Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Breaststroke",
+      "time": "3:24.91",
+      "converted_time": "3:27.50",
+      "wa_points": 270,
+      "date": "22/06/24",
+      "meet": "City of St Albans Summer Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Freestyle",
+      "time": "2:28.55",
+      "converted_time": "2:30.90",
+      "wa_points": 409,
+      "date": "30/11/24",
+      "meet": "City of St Albans SC Winter Open Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Individual Medley",
+      "time": "2:53.50",
+      "converted_time": "2:55.80",
+      "wa_points": 344,
+      "date": "15/06/24",
+      "meet": "Watford Terry Davies Legacy Meet 2024",
+      "venue": "Watford"
+    },
+    {
+      "course": "SC",
+      "stroke": "400 Freestyle",
+      "time": "5:17.03",
+      "converted_time": "5:21.40",
+      "wa_points": 383,
+      "date": "10/11/24",
+      "meet": "Co St Albans Long Distance Club Champs 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "400 Individual Medley",
+      "time": "6:10.83",
+      "converted_time": "6:15.50",
+      "wa_points": 326,
+      "date": "02/03/24",
+      "meet": "Watford SC Regional Qualifier 2024",
+      "venue": "Watford"
+    },
+    {
+      "course": "LC",
+      "stroke": "50 Backstroke",
+      "time": "37.53",
+      "converted_time": "37.00",
+      "wa_points": 366,
+      "date": "16/03/24",
+      "meet": "Team Luton March Long Course Meet 2024",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "36.02",
+      "converted_time": "36.60",
+      "wa_points": 343,
+      "date": "02/03/24",
+      "meet": "Watford SC Regional Qualifier 2024",
+      "venue": "Watford"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "42.22",
+      "converted_time": "43.00",
+      "wa_points": 303,
+      "date": "10/03/24",
+      "meet": "City of St Albans Spring Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "34.34",
+      "converted_time": "34.90",
+      "wa_points": 338,
+      "date": "03/03/24",
+      "meet": "Watford SC Regional Qualifier 2024",
+      "venue": "Watford"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "32.08",
+      "converted_time": "32.70",
+      "wa_points": 360,
+      "date": "22/06/24",
+      "meet": "City of St Albans Summer Meet 2024",
+      "venue": "St Albans"
+    },
+    {
+      "course": "LC",
+      "stroke": "800 Freestyle",
+      "time": "11:24.38",
+      "converted_time": "11:15.90",
+      "wa_points": 353,
+      "date": "16/03/24",
+      "meet": "Team Luton March Long Course Meet 2024",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "800 Freestyle",
+      "time": "10:51.72",
+      "converted_time": "11:00.50",
+      "wa_points": 393,
+      "date": "06/11/24",
+      "meet": "Co St Albans & Watford Joint Club Champs 2024",
+      "venue": "Watford"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "01/07/23",
+      "time": "34.38",
+      "is_pb": 0,
+      "meet_name": "Putteridge SC End of Season Summer SC Open 2023",
+      "wa_points": "292"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "01/10/23",
+      "time": "33.27",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "323"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "02/12/23",
+      "time": "32.31",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "352"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "03/03/24",
+      "time": "32.29",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2024",
+      "wa_points": "353"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "03/07/22",
+      "time": "40.64",
+      "is_pb": 0,
+      "meet_name": "Barnet Copthall SC Summer Invitational Meet",
+      "wa_points": "177"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "05/03/23",
+      "time": "35.13",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "274"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "12/06/22",
+      "time": "40.14",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC Kate Lack Trophy Meet",
+      "wa_points": "183"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "13/11/22",
+      "time": "39.95",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC County Qualifier Meet 1",
+      "wa_points": "186"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "14/11/21",
+      "time": "47.85",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall County Qualifier &Development Meet",
+      "wa_points": "108"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "16/06/24",
+      "time": "32.32",
+      "is_pb": 0,
+      "meet_name": "Watford Terry Davies Legacy Meet 2024",
+      "wa_points": "352"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "19/11/23",
+      "time": "33.17",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier 2023",
+      "wa_points": "326"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "22/06/24",
+      "time": "32.08",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Summer Meet 2024",
+      "wa_points": "360"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "33.57",
+      "is_pb": 1,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "314"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "25/06/23",
+      "time": "33.78",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC End of Season Meet 2023",
+      "wa_points": "308"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "27/01/24",
+      "time": "32.98",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "331"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "30/11/24",
+      "time": "32.57",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Winter Open Meet 2024",
+      "wa_points": "344"
+    },
+    {
+      "stroke_code": 2,
+      "course": "L",
+      "date": "16/03/24",
+      "time": "1:12.06",
+      "is_pb": 1,
+      "meet_name": "Team Luton March Long Course Meet 2024",
+      "wa_points": "369"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "02/03/24",
+      "time": "1:09.37",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2024",
+      "wa_points": "380"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "03/07/22",
+      "time": "1:36.83",
+      "is_pb": 0,
+      "meet_name": "Barnet Copthall SC Summer Invitational Meet",
+      "wa_points": "139"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "04/03/23",
+      "time": "1:21.01",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "238"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "08/12/24",
+      "time": "1:13.16",
+      "is_pb": 0,
+      "meet_name": "Team Luton 2024 Winter Development Meet",
+      "wa_points": "324"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "12/06/22",
+      "time": "1:36.75",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC Kate Lack Trophy Meet",
+      "wa_points": "140"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "16/06/24",
+      "time": "1:11.45",
+      "is_pb": 0,
+      "meet_name": "Watford Terry Davies Legacy Meet 2024",
+      "wa_points": "347"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "16/09/23",
+      "time": "1:14.13",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "311"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "18/11/23",
+      "time": "1:11.42",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier 2023",
+      "wa_points": "348"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "20/01/24",
+      "time": "1:11.22",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "351"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "20/10/24",
+      "time": "1:10.09",
+      "is_pb": 0,
+      "meet_name": "Cambridge Grand Prix 2024",
+      "wa_points": "368"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "20/11/22",
+      "time": "1:26.63",
+      "is_pb": 1,
+      "meet_name": "County Qualifier and Development Meet 2",
+      "wa_points": "195"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "21/09/24",
+      "time": "1:10.56",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Autumn Sprint Meet 2024",
+      "wa_points": "361"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "1:16.06",
+      "is_pb": 0,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "288"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "24/06/23",
+      "time": "1:16.26",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC End of Season Meet 2023",
+      "wa_points": "286"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "26/10/24",
+      "time": "1:10.82",
+      "is_pb": 0,
+      "meet_name": "Cheshunt SC 19th Annual Open Meet 2024",
+      "wa_points": "357"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "02/12/23",
+      "time": "2:39.31",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "331"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "03/03/24",
+      "time": "2:34.35",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2024",
+      "wa_points": "365"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "08/12/24",
+      "time": "2:33.14",
+      "is_pb": 0,
+      "meet_name": "Team Luton 2024 Winter Development Meet",
+      "wa_points": "373"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "11/03/23",
+      "time": "2:59.67",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2023",
+      "wa_points": "231"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "15/06/24",
+      "time": "2:30.91",
+      "is_pb": 1,
+      "meet_name": "Watford Terry Davies Legacy Meet 2024",
+      "wa_points": "390"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "16/09/23",
+      "time": "2:42.03",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "315"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "20/11/22",
+      "time": "3:03.19",
+      "is_pb": 1,
+      "meet_name": "County Qualifier and Development Meet 2",
+      "wa_points": "218"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "24/06/23",
+      "time": "2:49.64",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC End of Season Meet 2023",
+      "wa_points": "274"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "30/11/24",
+      "time": "2:28.55",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Open Meet 2024",
+      "wa_points": "409"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "03/03/24",
+      "time": "5:27.58",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2024",
+      "wa_points": "347"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "08/10/23",
+      "time": "5:39.26",
+      "is_pb": 1,
+      "meet_name": "Hatfield SC Regional Qualifier Oct 2023",
+      "wa_points": "312"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "08/12/24",
+      "time": "5:26.37",
+      "is_pb": 0,
+      "meet_name": "Team Luton 2024 Winter Development Meet",
+      "wa_points": "351"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "10/11/24",
+      "time": "5:17.03",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Long Distance Club Champs 2024",
+      "wa_points": "383"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "11/03/23",
+      "time": "6:17.96",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2023",
+      "wa_points": "226"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "13/11/22",
+      "time": "6:29.70",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC County Qualifier Meet 1",
+      "wa_points": "206"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "26/10/24",
+      "time": "5:22.87",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC 19th Annual Open Meet 2024",
+      "wa_points": "362"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "26/11/23",
+      "time": "5:38.42",
+      "is_pb": 1,
+      "meet_name": "Co St Albans & Watford SCs Joint Club Champs 2023",
+      "wa_points": "314"
+    },
+    {
+      "stroke_code": 5,
+      "course": "L",
+      "date": "16/03/24",
+      "time": "11:24.38",
+      "is_pb": 1,
+      "meet_name": "Team Luton March Long Course Meet 2024",
+      "wa_points": "353"
+    },
+    {
+      "stroke_code": 5,
+      "course": "S",
+      "date": "01/11/23",
+      "time": "11:30.88",
+      "is_pb": 1,
+      "meet_name": "Co St Albans & Watford SCs Joint Club Champs 2023",
+      "wa_points": "329"
+    },
+    {
+      "stroke_code": 5,
+      "course": "S",
+      "date": "06/11/24",
+      "time": "10:51.72",
+      "is_pb": 1,
+      "meet_name": "Co St Albans & Watford Joint Club Champs 2024",
+      "wa_points": "393"
+    },
+    {
+      "stroke_code": 5,
+      "course": "S",
+      "date": "25/11/23",
+      "time": "11:35.80",
+      "is_pb": 0,
+      "meet_name": "Basildon & Phoenix 800m County/Regional Qualifier",
+      "wa_points": "323"
+    },
+    {
+      "stroke_code": 6,
+      "course": "S",
+      "date": "03/02/24",
+      "time": "21:29.96",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "349"
+    },
+    {
+      "stroke_code": 6,
+      "course": "S",
+      "date": "15/11/23",
+      "time": "21:34.69",
+      "is_pb": 1,
+      "meet_name": "Co St Albans & Watford SCs Joint Club Champs 2023",
+      "wa_points": "345"
+    },
+    {
+      "stroke_code": 6,
+      "course": "S",
+      "date": "20/11/24",
+      "time": "21:05.45",
+      "is_pb": 1,
+      "meet_name": "Co St Albans & Watford Joint Club Champs 2024",
+      "wa_points": "369"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "01/12/24",
+      "time": "42.88",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Winter Open Meet 2024",
+      "wa_points": "289"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "02/03/24",
+      "time": "42.85",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2024",
+      "wa_points": "290"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "03/07/22",
+      "time": "53.98",
+      "is_pb": 0,
+      "meet_name": "Barnet Copthall SC Summer Invitational Meet",
+      "wa_points": "145"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "04/03/23",
+      "time": "49.84",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "184"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "10/03/24",
+      "time": "42.22",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2024",
+      "wa_points": "303"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "12/06/22",
+      "time": "53.49",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC Kate Lack Trophy Meet",
+      "wa_points": "149"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "13/11/22",
+      "time": "52.76",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC County Qualifier Meet 1",
+      "wa_points": "155"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "14/11/21",
+      "time": "1:03.26",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall County Qualifier &Development Meet",
+      "wa_points": "90"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "16/06/24",
+      "time": "43.32",
+      "is_pb": 0,
+      "meet_name": "Watford Terry Davies Legacy Meet 2024",
+      "wa_points": "280"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "19/11/23",
+      "time": "43.47",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier 2023",
+      "wa_points": "277"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "23/06/24",
+      "time": "43.53",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Summer Meet 2024",
+      "wa_points": "276"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "44.73",
+      "is_pb": 1,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "255"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "24/06/23",
+      "time": "44.87",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC End of Season Meet 2023",
+      "wa_points": "252"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "28/01/24",
+      "time": "43.23",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "282"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "03/12/23",
+      "time": "1:37.53",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "261"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "05/03/23",
+      "time": "1:45.83",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "204"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "08/10/23",
+      "time": "1:39.17",
+      "is_pb": 0,
+      "meet_name": "Hatfield SC Regional Qualifier Oct 2023",
+      "wa_points": "248"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "10/03/24",
+      "time": "1:35.60",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Spring Meet 2024",
+      "wa_points": "277"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "11/12/22",
+      "time": "1:47.95",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Last Chance County Qualifier",
+      "wa_points": "192"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "12/06/22",
+      "time": "2:03.04",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC Kate Lack Trophy Meet",
+      "wa_points": "130"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "18/11/23",
+      "time": "1:35.43",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier 2023",
+      "wa_points": "279"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "20/11/22",
+      "time": "1:51.86",
+      "is_pb": 1,
+      "meet_name": "County Qualifier and Development Meet 2",
+      "wa_points": "173"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "21/01/24",
+      "time": "1:38.30",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "255"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "21/09/24",
+      "time": "1:36.49",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Autumn Sprint Meet 2024",
+      "wa_points": "269"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "1:38.96",
+      "is_pb": 1,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "250"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "25/06/23",
+      "time": "1:42.27",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC End of Season Meet 2023",
+      "wa_points": "226"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "26/10/24",
+      "time": "1:34.79",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC 19th Annual Open Meet 2024",
+      "wa_points": "284"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "02/12/23",
+      "time": "3:26.14",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "265"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "07/10/23",
+      "time": "3:28.30",
+      "is_pb": 1,
+      "meet_name": "Hatfield SC Regional Qualifier Oct 2023",
+      "wa_points": "257"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "12/03/23",
+      "time": "3:45.38",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2023",
+      "wa_points": "203"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "12/06/22",
+      "time": "4:16.97",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC Kate Lack Trophy Meet",
+      "wa_points": "137"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "19/11/23",
+      "time": "3:27.74",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier 2023",
+      "wa_points": "259"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "20/01/24",
+      "time": "3:25.21",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "269"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "20/11/22",
+      "time": "3:53.39",
+      "is_pb": 1,
+      "meet_name": "County Qualifier and Development Meet 2",
+      "wa_points": "182"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "22/06/24",
+      "time": "3:24.91",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Summer Meet 2024",
+      "wa_points": "270"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "23/11/24",
+      "time": "3:29.70",
+      "is_pb": 0,
+      "meet_name": "Hatfield County Qualifier November 2024",
+      "wa_points": "252"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "25/06/23",
+      "time": "3:34.36",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC End of Season Meet 2023",
+      "wa_points": "236"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "30/11/24",
+      "time": "3:29.04",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Winter Open Meet 2024",
+      "wa_points": "254"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "01/12/24",
+      "time": "35.04",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Winter Open Meet 2024",
+      "wa_points": "318"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "03/03/24",
+      "time": "34.34",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2024",
+      "wa_points": "338"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "03/07/22",
+      "time": "47.23",
+      "is_pb": 0,
+      "meet_name": "Barnet Copthall SC Summer Invitational Meet",
+      "wa_points": "130"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "03/12/23",
+      "time": "37.58",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "258"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "05/03/23",
+      "time": "39.78",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "217"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "08/10/23",
+      "time": "38.38",
+      "is_pb": 0,
+      "meet_name": "Hatfield SC Regional Qualifier Oct 2023",
+      "wa_points": "242"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "10/03/24",
+      "time": "35.26",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Spring Meet 2024",
+      "wa_points": "312"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "11/03/23",
+      "time": "40.33",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Spring Meet 2023",
+      "wa_points": "209"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "11/12/22",
+      "time": "39.94",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Last Chance County Qualifier",
+      "wa_points": "215"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "12/06/22",
+      "time": "44.84",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC Kate Lack Trophy Meet",
+      "wa_points": "152"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "13/11/22",
+      "time": "41.68",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC County Qualifier Meet 1",
+      "wa_points": "189"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "18/11/23",
+      "time": "36.21",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier 2023",
+      "wa_points": "288"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "20/10/24",
+      "time": "34.92",
+      "is_pb": 0,
+      "meet_name": "Cambridge Grand Prix 2024",
+      "wa_points": "322"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "23/06/24",
+      "time": "34.67",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Summer Meet 2024",
+      "wa_points": "329"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "37.39",
+      "is_pb": 1,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "262"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "28/01/24",
+      "time": "36.98",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "271"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "29/01/23",
+      "time": "39.91",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2023",
+      "wa_points": "215"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "03/07/22",
+      "time": "1:50.99",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC Summer Invitational Meet",
+      "wa_points": "107"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "05/03/23",
+      "time": "1:39.84",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "147"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "09/03/24",
+      "time": "1:21.86",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2024",
+      "wa_points": "266"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "11/12/22",
+      "time": "1:38.34",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Last Chance County Qualifier",
+      "wa_points": "153"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "16/09/23",
+      "time": "1:29.77",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "202"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "21/09/24",
+      "time": "1:22.62",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Autumn Sprint Meet 2024",
+      "wa_points": "259"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "22/06/24",
+      "time": "1:25.14",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Summer Meet 2024",
+      "wa_points": "237"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "1:27.81",
+      "is_pb": 1,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "216"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "25/06/23",
+      "time": "1:36.18",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC End of Season Meet 2023",
+      "wa_points": "164"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "30/11/24",
+      "time": "1:28.04",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Winter Open Meet 2024",
+      "wa_points": "214"
+    },
+    {
+      "stroke_code": 13,
+      "course": "L",
+      "date": "16/03/24",
+      "time": "37.53",
+      "is_pb": 1,
+      "meet_name": "Team Luton March Long Course Meet 2024",
+      "wa_points": "366"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "02/03/24",
+      "time": "36.02",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2024",
+      "wa_points": "343"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "03/07/22",
+      "time": "46.05",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC Summer Invitational Meet",
+      "wa_points": "164"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "04/03/23",
+      "time": "41.32",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "227"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "09/03/24",
+      "time": "36.31",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Spring Meet 2024",
+      "wa_points": "335"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "12/03/23",
+      "time": "42.57",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Spring Meet 2023",
+      "wa_points": "208"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "12/06/22",
+      "time": "47.23",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC Kate Lack Trophy Meet",
+      "wa_points": "152"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "13/11/22",
+      "time": "44.24",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC County Qualifier Meet 1",
+      "wa_points": "185"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "14/11/21",
+      "time": "53.37",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall County Qualifier &Development Meet",
+      "wa_points": "105"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "15/06/24",
+      "time": "37.31",
+      "is_pb": 0,
+      "meet_name": "Watford Terry Davies Legacy Meet 2024",
+      "wa_points": "309"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "19/11/23",
+      "time": "37.62",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier 2023",
+      "wa_points": "301"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "20/10/24",
+      "time": "36.87",
+      "is_pb": 0,
+      "meet_name": "Cambridge Grand Prix 2024",
+      "wa_points": "320"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "38.21",
+      "is_pb": 1,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "287"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "27/01/24",
+      "time": "37.10",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "314"
+    },
+    {
+      "stroke_code": 14,
+      "course": "L",
+      "date": "17/03/24",
+      "time": "1:21.61",
+      "is_pb": 1,
+      "meet_name": "Team Luton March Long Course Meet 2024",
+      "wa_points": "343"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "01/10/23",
+      "time": "1:23.87",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "267"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "03/07/22",
+      "time": "1:44.15",
+      "is_pb": 0,
+      "meet_name": "Barnet Copthall SC Summer Invitational Meet",
+      "wa_points": "139"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "07/10/23",
+      "time": "1:21.52",
+      "is_pb": 1,
+      "meet_name": "Hatfield SC Regional Qualifier Oct 2023",
+      "wa_points": "290"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "08/12/24",
+      "time": "1:23.57",
+      "is_pb": 0,
+      "meet_name": "Team Luton 2024 Winter Development Meet",
+      "wa_points": "270"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "09/03/24",
+      "time": "1:17.19",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2024",
+      "wa_points": "342"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "12/03/23",
+      "time": "1:37.67",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2023",
+      "wa_points": "169"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "12/06/22",
+      "time": "1:41.90",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC Kate Lack Trophy Meet",
+      "wa_points": "148"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "15/06/24",
+      "time": "1:20.65",
+      "is_pb": 0,
+      "meet_name": "Watford Terry Davies Legacy Meet 2024",
+      "wa_points": "300"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "19/10/24",
+      "time": "1:23.09",
+      "is_pb": 0,
+      "meet_name": "Cambridge Grand Prix 2024",
+      "wa_points": "274"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "21/01/24",
+      "time": "1:18.47",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "326"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "21/01/24",
+      "time": "1:18.88",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "321"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "21/09/24",
+      "time": "1:19.70",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Autumn Sprint Meet 2024",
+      "wa_points": "311"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "24/06/23",
+      "time": "1:26.93",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC End of Season Meet 2023",
+      "wa_points": "239"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "26/10/24",
+      "time": "1:22.69",
+      "is_pb": 0,
+      "meet_name": "Cheshunt SC 19th Annual Open Meet 2024",
+      "wa_points": "278"
+    },
+    {
+      "stroke_code": 15,
+      "course": "L",
+      "date": "11/05/24",
+      "time": "2:54.88",
+      "is_pb": 1,
+      "meet_name": "Swim England East Region LC Championships 2024",
+      "wa_points": "349"
+    },
+    {
+      "stroke_code": 15,
+      "course": "L",
+      "date": "16/03/24",
+      "time": "2:56.77",
+      "is_pb": 1,
+      "meet_name": "Team Luton March Long Course Meet 2024",
+      "wa_points": "338"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "01/10/23",
+      "time": "2:58.09",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "291"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "03/12/23",
+      "time": "2:57.42",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "294"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "08/10/23",
+      "time": "2:55.00",
+      "is_pb": 1,
+      "meet_name": "Hatfield SC Regional Qualifier Oct 2023",
+      "wa_points": "306"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "08/12/24",
+      "time": "2:52.72",
+      "is_pb": 0,
+      "meet_name": "Team Luton 2024 Winter Development Meet",
+      "wa_points": "319"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "10/03/24",
+      "time": "2:45.45",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2024",
+      "wa_points": "363"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "16/06/24",
+      "time": "2:52.90",
+      "is_pb": 0,
+      "meet_name": "Watford Terry Davies Legacy Meet 2024",
+      "wa_points": "318"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "19/10/24",
+      "time": "2:52.24",
+      "is_pb": 0,
+      "meet_name": "Cambridge Grand Prix 2024",
+      "wa_points": "321"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "20/01/24",
+      "time": "2:45.99",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "359"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "02/12/23",
+      "time": "3:00.06",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "308"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "08/10/23",
+      "time": "3:01.42",
+      "is_pb": 1,
+      "meet_name": "Hatfield SC Regional Qualifier Oct 2023",
+      "wa_points": "301"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "08/12/24",
+      "time": "3:02.38",
+      "is_pb": 0,
+      "meet_name": "Team Luton 2024 Winter Development Meet",
+      "wa_points": "296"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "09/03/24",
+      "time": "2:55.61",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2024",
+      "wa_points": "332"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "12/03/23",
+      "time": "3:20.15",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2023",
+      "wa_points": "224"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "13/11/22",
+      "time": "3:25.99",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC County Qualifier Meet 1",
+      "wa_points": "205"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "15/06/24",
+      "time": "2:53.50",
+      "is_pb": 1,
+      "meet_name": "Watford Terry Davies Legacy Meet 2024",
+      "wa_points": "344"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "24/06/23",
+      "time": "3:11.20",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC End of Season Meet 2023",
+      "wa_points": "257"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "27/01/24",
+      "time": "2:57.99",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "319"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "02/03/24",
+      "time": "6:10.83",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier 2024",
+      "wa_points": "326"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "03/12/23",
+      "time": "6:11.46",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Winter Meet 2023",
+      "wa_points": "325"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "10/11/24",
+      "time": "6:15.28",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Long Distance Club Champs 2024",
+      "wa_points": "315"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "13/11/22",
+      "time": "7:17.64",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC County Qualifier Meet 1",
+      "wa_points": "198"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "23/11/24",
+      "time": "6:19.93",
+      "is_pb": 0,
+      "meet_name": "Hatfield County Qualifier November 2024",
+      "wa_points": "304"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "26/11/23",
+      "time": "6:38.93",
+      "is_pb": 1,
+      "meet_name": "Co St Albans & Watford SCs Joint Club Champs 2023",
+      "wa_points": "262"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "28/01/24",
+      "time": "6:13.59",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "319"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "01/07/23",
+      "time": "1:26.59",
+      "is_pb": 1,
+      "meet_name": "Putteridge SC End of Season Summer SC Open 2023",
+      "wa_points": "257"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "03/07/22",
+      "time": "1:36.72",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall SC Summer Invitational Meet",
+      "wa_points": "184"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "08/12/24",
+      "time": "1:26.78",
+      "is_pb": 0,
+      "meet_name": "Team Luton 2024 Winter Development Meet",
+      "wa_points": "256"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "11/12/22",
+      "time": "1:33.76",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Last Chance County Qualifier",
+      "wa_points": "203"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "16/09/23",
+      "time": "1:25.17",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "270"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "18/11/23",
+      "time": "1:22.43",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier 2023",
+      "wa_points": "298"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "20/11/22",
+      "time": "1:36.19",
+      "is_pb": 1,
+      "meet_name": "County Qualifier and Development Meet 2",
+      "wa_points": "188"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "21/01/24",
+      "time": "1:22.02",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "303"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "21/01/24",
+      "time": "1:22.98",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2024",
+      "wa_points": "292"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "21/09/24",
+      "time": "1:23.76",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Autumn Sprint Meet 2024",
+      "wa_points": "284"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "23/06/24",
+      "time": "1:21.93",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Summer Meet 2024",
+      "wa_points": "304"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "24/06/23",
+      "time": "1:27.43",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC End of Season Meet 2023",
+      "wa_points": "250"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "26/10/24",
+      "time": "1:22.77",
+      "is_pb": 0,
+      "meet_name": "Cheshunt SC 19th Annual Open Meet 2024",
+      "wa_points": "295"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Backstroke",
+        "course": "LC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 7,
+        "total_in_ranking": 11,
+        "time": "1:21.61"
+      },
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 27,
+        "total_in_ranking": 51,
+        "time": "1:41.90"
+      },
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 9,
+        "total_in_ranking": 97,
+        "time": "1:21.52"
+      },
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 10,
+        "total_in_ranking": 105,
+        "time": "1:17.19"
+      },
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "13",
+        "rank": 64,
+        "total_in_ranking": 115,
+        "time": "1:23.57"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 27,
+        "total_in_ranking": 60,
+        "time": "1:51.86"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 53,
+        "total_in_ranking": 118,
+        "time": "1:47.95"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 12,
+        "total_in_ranking": 104,
+        "time": "1:35.43"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 42,
+        "total_in_ranking": 115,
+        "time": "1:34.79"
+      },
+      {
+        "event": "100 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 5,
+        "total_in_ranking": 10,
+        "time": "1:50.99"
+      },
+      {
+        "event": "100 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 20,
+        "total_in_ranking": 42,
+        "time": "1:38.34"
+      },
+      {
+        "event": "100 Butterfly",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 8,
+        "total_in_ranking": 38,
+        "time": "1:27.81"
+      },
+      {
+        "event": "100 Butterfly",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 12,
+        "total_in_ranking": 52,
+        "time": "1:21.86"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "LC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 7,
+        "total_in_ranking": 24,
+        "time": "1:12.06"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 24,
+        "total_in_ranking": 80,
+        "time": "1:26.63"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 5,
+        "total_in_ranking": 144,
+        "time": "1:11.42"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 19,
+        "total_in_ranking": 159,
+        "time": "1:09.37"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "13",
+        "rank": 76,
+        "total_in_ranking": 161,
+        "time": "1:13.16"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 16,
+        "total_in_ranking": 64,
+        "time": "1:36.19"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 51,
+        "total_in_ranking": 116,
+        "time": "1:33.76"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 8,
+        "total_in_ranking": 120,
+        "time": "1:22.43"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 29,
+        "total_in_ranking": 147,
+        "time": "1:21.93"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "13",
+        "rank": 83,
+        "total_in_ranking": 130,
+        "time": "1:26.78"
+      },
+      {
+        "event": "1500 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 2,
+        "total_in_ranking": 3,
+        "time": "21:34.69"
+      },
+      {
+        "event": "1500 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 7,
+        "total_in_ranking": 14,
+        "time": "21:05.45"
+      },
+      {
+        "event": "200 Backstroke",
+        "course": "LC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 9,
+        "total_in_ranking": 10,
+        "time": "2:54.88"
+      },
+      {
+        "event": "200 Backstroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 9,
+        "total_in_ranking": 49,
+        "time": "2:55.00"
+      },
+      {
+        "event": "200 Backstroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 8,
+        "total_in_ranking": 63,
+        "time": "2:45.45"
+      },
+      {
+        "event": "200 Backstroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "13",
+        "rank": 32,
+        "total_in_ranking": 62,
+        "time": "2:52.72"
+      },
+      {
+        "event": "200 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 11,
+        "total_in_ranking": 27,
+        "time": "3:53.39"
+      },
+      {
+        "event": "200 Breaststroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 10,
+        "total_in_ranking": 49,
+        "time": "3:26.14"
+      },
+      {
+        "event": "200 Breaststroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 31,
+        "total_in_ranking": 66,
+        "time": "3:24.91"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 12,
+        "total_in_ranking": 40,
+        "time": "3:03.19"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 7,
+        "total_in_ranking": 85,
+        "time": "2:39.31"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 9,
+        "total_in_ranking": 108,
+        "time": "2:28.55"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "13",
+        "rank": 42,
+        "total_in_ranking": 103,
+        "time": "2:33.14"
+      },
+      {
+        "event": "200 Individual Medley",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 7,
+        "total_in_ranking": 16,
+        "time": "3:25.99"
+      },
+      {
+        "event": "200 Individual Medley",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 8,
+        "total_in_ranking": 49,
+        "time": "3:00.06"
+      },
+      {
+        "event": "200 Individual Medley",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 11,
+        "total_in_ranking": 77,
+        "time": "2:53.50"
+      },
+      {
+        "event": "200 Individual Medley",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "13",
+        "rank": 57,
+        "total_in_ranking": 89,
+        "time": "3:02.38"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 6,
+        "total_in_ranking": 17,
+        "time": "6:29.70"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 7,
+        "total_in_ranking": 29,
+        "time": "5:38.42"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 12,
+        "total_in_ranking": 50,
+        "time": "5:17.03"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "13",
+        "rank": 28,
+        "total_in_ranking": 55,
+        "time": "5:26.37"
+      },
+      {
+        "event": "400 Individual Medley",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 2,
+        "total_in_ranking": 3,
+        "time": "7:17.64"
+      },
+      {
+        "event": "400 Individual Medley",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 5,
+        "total_in_ranking": 12,
+        "time": "6:11.46"
+      },
+      {
+        "event": "400 Individual Medley",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 13,
+        "total_in_ranking": 21,
+        "time": "6:10.83"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "LC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 9,
+        "total_in_ranking": 30,
+        "time": "37.53"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 26,
+        "total_in_ranking": 119,
+        "time": "44.24"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 8,
+        "total_in_ranking": 164,
+        "time": "37.62"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 12,
+        "total_in_ranking": 161,
+        "time": "36.02"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 38,
+        "total_in_ranking": 121,
+        "time": "52.76"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 17,
+        "total_in_ranking": 161,
+        "time": "43.47"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 28,
+        "total_in_ranking": 163,
+        "time": "42.22"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 7,
+        "total_in_ranking": 69,
+        "time": "41.68"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "11",
+        "rank": 27,
+        "total_in_ranking": 126,
+        "time": "39.94"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 8,
+        "total_in_ranking": 115,
+        "time": "36.21"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 10,
+        "total_in_ranking": 147,
+        "time": "34.34"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "10",
+        "rank": 40,
+        "total_in_ranking": 150,
+        "time": "39.95"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 8,
+        "total_in_ranking": 191,
+        "time": "32.31"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 26,
+        "total_in_ranking": 198,
+        "time": "32.08"
+      },
+      {
+        "event": "800 Freestyle",
+        "course": "LC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 2,
+        "total_in_ranking": 4,
+        "time": "11:24.38"
+      },
+      {
+        "event": "800 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "11",
+        "rank": 3,
+        "total_in_ranking": 15,
+        "time": "11:30.88"
+      },
+      {
+        "event": "800 Freestyle",
+        "course": "SC",
+        "year": 2024,
+        "age_group": "12",
+        "rank": 8,
+        "total_in_ranking": 40,
+        "time": "10:51.72"
+      }
+    ]
+  }
+}

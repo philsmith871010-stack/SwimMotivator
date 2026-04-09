@@ -1,0 +1,540 @@
+{
+  "tiref": 1706070,
+  "name": "Pippa Cordery",
+  "yob": 2014,
+  "sex": "F",
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Backstroke",
+      "time": "1:40.10",
+      "converted_time": "1:40.90",
+      "wa_points": 157,
+      "date": "14/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "2:11.24",
+      "converted_time": "2:12.20",
+      "wa_points": 107,
+      "date": "09/03/25",
+      "meet": "City of St Albans Spring Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:38.54",
+      "converted_time": "1:39.40",
+      "wa_points": 132,
+      "date": "17/05/25",
+      "meet": "Cheshunt SC May Anniversary Meet 2025",
+      "venue": "Harlow"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "2:04.78",
+      "converted_time": "2:04.80",
+      "wa_points": 86,
+      "date": "12/01/25",
+      "meet": "Barnet Copthall Winter Invitational Meet 2025",
+      "venue": "Hendon, London"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Freestyle",
+      "time": "3:06.53",
+      "converted_time": "3:08.40",
+      "wa_points": 206,
+      "date": "14/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "400 Freestyle",
+      "time": "6:32.04",
+      "converted_time": "6:35.60",
+      "wa_points": 202,
+      "date": "07/12/25",
+      "meet": "Co St Albans & Verulam Joint Club Champs 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "46.75",
+      "converted_time": "47.20",
+      "wa_points": 157,
+      "date": "25/10/25",
+      "meet": "Cheshunt SC 20th Annual Open Meet 2025",
+      "venue": "Harlow"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "58.19",
+      "converted_time": "58.70",
+      "wa_points": 115,
+      "date": "17/05/25",
+      "meet": "Cheshunt SC May Anniversary Meet 2025",
+      "venue": "Harlow"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "55.00",
+      "converted_time": "55.30",
+      "wa_points": 82,
+      "date": "17/05/25",
+      "meet": "Cheshunt SC May Anniversary Meet 2025",
+      "venue": "Harlow"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "41.42",
+      "converted_time": "41.90",
+      "wa_points": 167,
+      "date": "14/03/26",
+      "meet": "City of St Albans Spring Meet 2026",
+      "venue": "St Albans"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "01/10/23",
+      "time": "1:08.15",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Club Champs 2023",
+      "wa_points": "37"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "06/07/25",
+      "time": "43.94",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Club Champs 50s & 25s 2025",
+      "wa_points": "140"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "12/01/25",
+      "time": "50.91",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall Winter Invitational Meet 2025",
+      "wa_points": "90"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "14/03/26",
+      "time": "41.42",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "167"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "21/06/25",
+      "time": "48.89",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Summer Meet 2025",
+      "wa_points": "101"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "22/06/24",
+      "time": "51.69",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Summer Meet 2024",
+      "wa_points": "86"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "25/10/25",
+      "time": "41.60",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC 20th Annual Open Meet 2025",
+      "wa_points": "165"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "26/10/24",
+      "time": "52.99",
+      "is_pb": 0,
+      "meet_name": "Cheshunt SC 19th Annual Open Meet 2024",
+      "wa_points": "79"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "29/11/25",
+      "time": "42.37",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "156"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "01/12/24",
+      "time": "1:48.20",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Winter Open Meet 2024",
+      "wa_points": "100"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "09/03/25",
+      "time": "1:42.79",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2025",
+      "wa_points": "116"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "17/05/25",
+      "time": "1:38.54",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC May Anniversary Meet 2025",
+      "wa_points": "132"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "24/11/24",
+      "time": "1:47.99",
+      "is_pb": 1,
+      "meet_name": "Hatfield County Qualifier November 2024",
+      "wa_points": "100"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "14/03/26",
+      "time": "3:06.53",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "206"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "21/06/25",
+      "time": "3:41.73",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Summer Meet 2025",
+      "wa_points": "123"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "29/11/25",
+      "time": "3:08.80",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "199"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "07/12/25",
+      "time": "6:32.04",
+      "is_pb": 1,
+      "meet_name": "Co St Albans & Verulam Joint Club Champs 2025",
+      "wa_points": "202"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "10/11/24",
+      "time": "8:08.18",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Long Distance Club Champs 2024",
+      "wa_points": "104"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "17/05/25",
+      "time": "58.19",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC May Anniversary Meet 2025",
+      "wa_points": "115"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "24/11/24",
+      "time": "1:02.20",
+      "is_pb": 1,
+      "meet_name": "Hatfield County Qualifier November 2024",
+      "wa_points": "94"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "01/12/24",
+      "time": "2:14.99",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Open Meet 2024",
+      "wa_points": "98"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "09/03/25",
+      "time": "2:11.24",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2025",
+      "wa_points": "107"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "26/10/24",
+      "time": "2:15.26",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC 19th Annual Open Meet 2024",
+      "wa_points": "97"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "06/07/25",
+      "time": "57.80",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Club Champs 50s & 25s 2025",
+      "wa_points": "71"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "09/03/25",
+      "time": "58.60",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2025",
+      "wa_points": "68"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "17/05/25",
+      "time": "55.00",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC May Anniversary Meet 2025",
+      "wa_points": "82"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "06/07/25",
+      "time": "55.29",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Club Champs 50s & 25s 2025",
+      "wa_points": "95"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "12/01/25",
+      "time": "1:00.37",
+      "is_pb": 0,
+      "meet_name": "Barnet Copthall Winter Invitational Meet 2025",
+      "wa_points": "72"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "25/10/25",
+      "time": "46.75",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC 20th Annual Open Meet 2025",
+      "wa_points": "157"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "26/10/24",
+      "time": "54.61",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC 19th Annual Open Meet 2024",
+      "wa_points": "98"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "14/03/26",
+      "time": "1:40.10",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2026",
+      "wa_points": "157"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "21/06/25",
+      "time": "1:53.03",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Summer Meet 2025",
+      "wa_points": "109"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "29/11/25",
+      "time": "1:41.01",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "152"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "12/01/25",
+      "time": "2:04.78",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall Winter Invitational Meet 2025",
+      "wa_points": "86"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 63,
+        "total_in_ranking": 112,
+        "time": "1:41.01"
+      },
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "11",
+        "rank": 45,
+        "total_in_ranking": 56,
+        "time": "1:40.10"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 114,
+        "total_in_ranking": 129,
+        "time": "2:11.24"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 119,
+        "total_in_ranking": 161,
+        "time": "1:38.54"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 130,
+        "total_in_ranking": 134,
+        "time": "2:04.78"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 41,
+        "total_in_ranking": 81,
+        "time": "3:08.80"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "11",
+        "rank": 35,
+        "total_in_ranking": 42,
+        "time": "3:06.53"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 21,
+        "total_in_ranking": 36,
+        "time": "6:32.04"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 95,
+        "total_in_ranking": 203,
+        "time": "46.75"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 144,
+        "total_in_ranking": 203,
+        "time": "58.19"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 110,
+        "total_in_ranking": 149,
+        "time": "55.00"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 126,
+        "total_in_ranking": 238,
+        "time": "41.60"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "11",
+        "rank": 69,
+        "total_in_ranking": 85,
+        "time": "41.42"
+      }
+    ]
+  }
+}

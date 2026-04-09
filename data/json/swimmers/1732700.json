@@ -1,0 +1,875 @@
+{
+  "tiref": 1732700,
+  "name": "Veronika Hrickova",
+  "yob": 2014,
+  "sex": "F",
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Backstroke",
+      "time": "1:36.99",
+      "converted_time": "1:37.80",
+      "wa_points": 172,
+      "date": "29/11/25",
+      "meet": "City of St Albans SC Winter Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "1:58.57",
+      "converted_time": "1:59.60",
+      "wa_points": 145,
+      "date": "30/11/25",
+      "meet": "City of St Albans SC Winter Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:19.28",
+      "converted_time": "1:20.30",
+      "wa_points": 254,
+      "date": "07/03/26",
+      "meet": "Watford SC Regional Qualifier Open Meet",
+      "venue": "Watford"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "1:42.06",
+      "converted_time": "1:42.10",
+      "wa_points": 157,
+      "date": "25/10/25",
+      "meet": "Cheshunt SC 20th Annual Open Meet 2025",
+      "venue": "Harlow"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Backstroke",
+      "time": "3:13.25",
+      "converted_time": "3:15.00",
+      "wa_points": 227,
+      "date": "08/03/26",
+      "meet": "Watford SC Regional Qualifier Open Meet",
+      "venue": "Watford"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Freestyle",
+      "time": "2:51.45",
+      "converted_time": "2:53.50",
+      "wa_points": 266,
+      "date": "29/11/25",
+      "meet": "City of St Albans SC Winter Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Individual Medley",
+      "time": "3:35.12",
+      "converted_time": "3:37.00",
+      "wa_points": 180,
+      "date": "29/11/25",
+      "meet": "City of St Albans SC Winter Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "400 Freestyle",
+      "time": "5:56.36",
+      "converted_time": "6:00.30",
+      "wa_points": 269,
+      "date": "08/03/26",
+      "meet": "Watford SC Regional Qualifier Open Meet",
+      "venue": "Watford"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "43.58",
+      "converted_time": "44.00",
+      "wa_points": 194,
+      "date": "25/10/25",
+      "meet": "Cheshunt SC 20th Annual Open Meet 2025",
+      "venue": "Harlow"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "55.43",
+      "converted_time": "56.00",
+      "wa_points": 134,
+      "date": "30/11/25",
+      "meet": "City of St Albans SC Winter Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "49.71",
+      "converted_time": "50.10",
+      "wa_points": 111,
+      "date": "06/07/25",
+      "meet": "Co St Albans Club Champs 50s & 25s 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "37.24",
+      "converted_time": "37.80",
+      "wa_points": 230,
+      "date": "18/10/25",
+      "meet": "JESENNE M-VSO 2025",
+      "venue": "Slovakia"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "06/07/25",
+      "time": "43.19",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Club Champs 50s & 25s 2025",
+      "wa_points": "147"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "08/03/26",
+      "time": "38.07",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier Open Meet",
+      "wa_points": "215"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "08/06/25",
+      "time": "42.86",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall Summer Invitational Meet 2025",
+      "wa_points": "151"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "14/06/25",
+      "time": "43.26",
+      "is_pb": 0,
+      "meet_name": "ESS Junior Invitational Meet 2025",
+      "wa_points": "146"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "15/11/25",
+      "time": "37.46",
+      "is_pb": 0,
+      "meet_name": "Putteridge SC Winter Short Course Open 2025",
+      "wa_points": "226"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "18/10/25",
+      "time": "37.24",
+      "is_pb": 1,
+      "meet_name": "JESENNE M-VSO 2025",
+      "wa_points": "230"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "38.98",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "200"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "21/06/25",
+      "time": "41.43",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Summer Meet 2025",
+      "wa_points": "167"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "22/11/25",
+      "time": "37.69",
+      "is_pb": 0,
+      "meet_name": "Hitchin Open Meet 2025",
+      "wa_points": "222"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "25/10/25",
+      "time": "37.67",
+      "is_pb": 0,
+      "meet_name": "Cheshunt SC 20th Annual Open Meet 2025",
+      "wa_points": "222"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "29/11/25",
+      "time": "39.19",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "197"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "07/03/26",
+      "time": "1:19.28",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier Open Meet",
+      "wa_points": "254"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "08/06/25",
+      "time": "1:36.61",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall Summer Invitational Meet 2025",
+      "wa_points": "140"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "15/11/25",
+      "time": "1:23.10",
+      "is_pb": 1,
+      "meet_name": "Putteridge SC Winter Short Course Open 2025",
+      "wa_points": "221"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "18/10/25",
+      "time": "1:23.72",
+      "is_pb": 1,
+      "meet_name": "JESENNE M-VSO 2025",
+      "wa_points": "216"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "1:27.98",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "186"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "22/06/25",
+      "time": "1:28.63",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Summer Meet 2025",
+      "wa_points": "182"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "22/11/25",
+      "time": "1:21.68",
+      "is_pb": 1,
+      "meet_name": "Hitchin Open Meet 2025",
+      "wa_points": "232"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "25/10/25",
+      "time": "1:26.02",
+      "is_pb": 0,
+      "meet_name": "Cheshunt SC 20th Annual Open Meet 2025",
+      "wa_points": "199"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "30/11/25",
+      "time": "1:20.59",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "242"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "08/03/26",
+      "time": "2:52.74",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier Open Meet",
+      "wa_points": "260"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "22/11/25",
+      "time": "2:51.56",
+      "is_pb": 1,
+      "meet_name": "Hitchin Open Meet 2025",
+      "wa_points": "265"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "29/11/25",
+      "time": "2:51.45",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "266"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "07/12/25",
+      "time": "6:06.52",
+      "is_pb": 1,
+      "meet_name": "Co St Albans & Verulam Joint Club Champs 2025",
+      "wa_points": "247"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "08/03/26",
+      "time": "5:56.36",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier Open Meet",
+      "wa_points": "269"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "06/07/25",
+      "time": "58.81",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Club Champs 50s & 25s 2025",
+      "wa_points": "112"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "14/06/25",
+      "time": "58.56",
+      "is_pb": 1,
+      "meet_name": "ESS Junior Invitational Meet 2025",
+      "wa_points": "113"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "30/11/25",
+      "time": "55.43",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "134"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "18/10/25",
+      "time": "1:59.86",
+      "is_pb": 1,
+      "meet_name": "JESENNE M-VSO 2025",
+      "wa_points": "140"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "30/11/25",
+      "time": "1:58.57",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "145"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "06/07/25",
+      "time": "49.71",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Club Champs 50s & 25s 2025",
+      "wa_points": "111"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "14/06/25",
+      "time": "52.30",
+      "is_pb": 1,
+      "meet_name": "ESS Junior Invitational Meet 2025",
+      "wa_points": "95"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "50.55",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "106"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "22/06/25",
+      "time": "55.86",
+      "is_pb": 0,
+      "meet_name": "Co St Albans Summer Meet 2025",
+      "wa_points": "78"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "25/10/25",
+      "time": "51.26",
+      "is_pb": 0,
+      "meet_name": "Cheshunt SC 20th Annual Open Meet 2025",
+      "wa_points": "101"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "06/07/25",
+      "time": "47.65",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Club Champs 50s & 25s 2025",
+      "wa_points": "148"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "07/03/26",
+      "time": "44.92",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier Open Meet",
+      "wa_points": "177"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "08/06/25",
+      "time": "50.33",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall Summer Invitational Meet 2025",
+      "wa_points": "125"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "14/06/25",
+      "time": "50.95",
+      "is_pb": 0,
+      "meet_name": "ESS Junior Invitational Meet 2025",
+      "wa_points": "121"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "15/11/25",
+      "time": "43.63",
+      "is_pb": 0,
+      "meet_name": "Putteridge SC Winter Short Course Open 2025",
+      "wa_points": "193"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "44.70",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "179"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "23/11/25",
+      "time": "45.03",
+      "is_pb": 0,
+      "meet_name": "Hitchin Open Meet 2025",
+      "wa_points": "175"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "25/10/25",
+      "time": "43.58",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC 20th Annual Open Meet 2025",
+      "wa_points": "194"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "1:39.01",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "162"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "22/11/25",
+      "time": "1:38.62",
+      "is_pb": 1,
+      "meet_name": "Hitchin Open Meet 2025",
+      "wa_points": "164"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "25/10/25",
+      "time": "1:40.09",
+      "is_pb": 0,
+      "meet_name": "Cheshunt SC 20th Annual Open Meet 2025",
+      "wa_points": "157"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "29/11/25",
+      "time": "1:36.99",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "172"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "08/03/26",
+      "time": "3:13.25",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier Open Meet",
+      "wa_points": "227"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "18/10/25",
+      "time": "3:26.70",
+      "is_pb": 1,
+      "meet_name": "JESENNE M-VSO 2025",
+      "wa_points": "186"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "30/11/25",
+      "time": "3:19.34",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "207"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "29/11/25",
+      "time": "3:35.12",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "180"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "08/06/25",
+      "time": "1:50.63",
+      "is_pb": 1,
+      "meet_name": "Barnet Copthall Summer Invitational Meet 2025",
+      "wa_points": "123"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "14/06/25",
+      "time": "1:51.35",
+      "is_pb": 0,
+      "meet_name": "ESS Junior Invitational Meet 2025",
+      "wa_points": "121"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "18/10/25",
+      "time": "1:42.56",
+      "is_pb": 1,
+      "meet_name": "JESENNE M-VSO 2025",
+      "wa_points": "155"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "20/09/25",
+      "time": "1:44.17",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Autumn Meet 2025",
+      "wa_points": "148"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "22/06/25",
+      "time": "1:48.26",
+      "is_pb": 1,
+      "meet_name": "Co St Albans Summer Meet 2025",
+      "wa_points": "131"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "25/10/25",
+      "time": "1:42.06",
+      "is_pb": 1,
+      "meet_name": "Cheshunt SC 20th Annual Open Meet 2025",
+      "wa_points": "157"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 51,
+        "total_in_ranking": 112,
+        "time": "1:39.01"
+      },
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 92,
+        "total_in_ranking": 124,
+        "time": "1:36.99"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 119,
+        "total_in_ranking": 141,
+        "time": "1:58.57"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 65,
+        "total_in_ranking": 161,
+        "time": "1:27.98"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 69,
+        "total_in_ranking": 166,
+        "time": "1:20.59"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "11",
+        "rank": 33,
+        "total_in_ranking": 66,
+        "time": "1:19.28"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 86,
+        "total_in_ranking": 134,
+        "time": "1:44.17"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 113,
+        "total_in_ranking": 145,
+        "time": "1:42.06"
+      },
+      {
+        "event": "200 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 56,
+        "total_in_ranking": 73,
+        "time": "3:19.34"
+      },
+      {
+        "event": "200 Backstroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "11",
+        "rank": 27,
+        "total_in_ranking": 29,
+        "time": "3:13.25"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 46,
+        "total_in_ranking": 107,
+        "time": "2:51.45"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "11",
+        "rank": 26,
+        "total_in_ranking": 42,
+        "time": "2:52.74"
+      },
+      {
+        "event": "200 Individual Medley",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 74,
+        "total_in_ranking": 85,
+        "time": "3:35.12"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 38,
+        "total_in_ranking": 62,
+        "time": "6:06.52"
+      },
+      {
+        "event": "400 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "11",
+        "rank": 18,
+        "total_in_ranking": 27,
+        "time": "5:56.36"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 56,
+        "total_in_ranking": 203,
+        "time": "44.70"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 94,
+        "total_in_ranking": 177,
+        "time": "43.58"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "11",
+        "rank": 48,
+        "total_in_ranking": 68,
+        "time": "44.92"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 146,
+        "total_in_ranking": 203,
+        "time": "58.56"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 153,
+        "total_in_ranking": 193,
+        "time": "55.43"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 72,
+        "total_in_ranking": 149,
+        "time": "49.71"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 119,
+        "total_in_ranking": 147,
+        "time": "51.26"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "10",
+        "rank": 75,
+        "total_in_ranking": 238,
+        "time": "38.98"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "11",
+        "rank": 111,
+        "total_in_ranking": 216,
+        "time": "37.24"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "11",
+        "rank": 54,
+        "total_in_ranking": 85,
+        "time": "38.07"
+      }
+    ]
+  }
+}

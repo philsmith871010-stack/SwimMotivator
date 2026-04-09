@@ -1,0 +1,558 @@
+{
+  "tiref": 1830972,
+  "name": "Takomerwa Katandula",
+  "yob": 2011,
+  "sex": "M",
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "LC",
+      "stroke": "100 Freestyle",
+      "time": "1:00.37",
+      "converted_time": "59.00",
+      "wa_points": 454,
+      "date": "29/03/26",
+      "meet": "London Legacy Swimming Meet 2026 (Long Course)",
+      "venue": "London"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "58.40",
+      "converted_time": "59.80",
+      "wa_points": 452,
+      "date": "29/11/25",
+      "meet": "City of St Albans SC Winter Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "1:07.33",
+      "converted_time": "1:07.30",
+      "wa_points": 392,
+      "date": "29/11/25",
+      "meet": "City of St Albans SC Winter Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "30.67",
+      "converted_time": "31.30",
+      "wa_points": 374,
+      "date": "08/03/26",
+      "meet": "Watford SC Regional Qualifier Open Meet",
+      "venue": "Watford"
+    },
+    {
+      "course": "LC",
+      "stroke": "50 Breaststroke",
+      "time": "34.49",
+      "converted_time": "33.60",
+      "wa_points": 425,
+      "date": "29/03/26",
+      "meet": "London Legacy Swimming Meet 2026 (Long Course)",
+      "venue": "London"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "33.90",
+      "converted_time": "34.80",
+      "wa_points": 398,
+      "date": "29/11/25",
+      "meet": "City of St Albans SC Winter Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "LC",
+      "stroke": "50 Butterfly",
+      "time": "28.88",
+      "converted_time": "28.20",
+      "wa_points": 458,
+      "date": "30/03/26",
+      "meet": "London Legacy Swimming Meet 2026 (Long Course)",
+      "venue": "London"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "28.43",
+      "converted_time": "29.10",
+      "wa_points": 421,
+      "date": "29/11/25",
+      "meet": "City of St Albans SC Winter Meet 2025",
+      "venue": "St Albans"
+    },
+    {
+      "course": "LC",
+      "stroke": "50 Freestyle",
+      "time": "26.43",
+      "converted_time": "25.60",
+      "wa_points": 495,
+      "date": "28/03/26",
+      "meet": "London Legacy Swimming Meet 2026 (Long Course)",
+      "venue": "London"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "26.39",
+      "converted_time": "27.20",
+      "wa_points": 428,
+      "date": "07/03/26",
+      "meet": "Watford SC Regional Qualifier Open Meet",
+      "venue": "Watford"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "L",
+      "date": "28/03/26",
+      "time": "26.43",
+      "is_pb": 1,
+      "meet_name": "London Legacy Swimming Meet 2026 (Long Course)",
+      "wa_points": "495"
+    },
+    {
+      "stroke_code": 1,
+      "course": "L",
+      "date": "28/03/26",
+      "time": "26.46",
+      "is_pb": 0,
+      "meet_name": "London Legacy Swimming Meet 2026 (Long Course)",
+      "wa_points": "493"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "07/03/26",
+      "time": "26.39",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier Open Meet",
+      "wa_points": "428"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "25/01/26",
+      "time": "26.43",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2026",
+      "wa_points": "426"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "25/01/26",
+      "time": "26.49",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2026",
+      "wa_points": "423"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "30/11/25",
+      "time": "27.03",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "399"
+    },
+    {
+      "stroke_code": 2,
+      "course": "L",
+      "date": "29/03/26",
+      "time": "1:00.37",
+      "is_pb": 1,
+      "meet_name": "London Legacy Swimming Meet 2026 (Long Course)",
+      "wa_points": "454"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "08/03/26",
+      "time": "59.77",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier Open Meet",
+      "wa_points": "422"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "18/01/26",
+      "time": "1:00.27",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2026",
+      "wa_points": "411"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "18/01/26",
+      "time": "1:00.81",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2026",
+      "wa_points": "400"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "29/11/25",
+      "time": "58.40",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "452"
+    },
+    {
+      "stroke_code": 7,
+      "course": "L",
+      "date": "29/03/26",
+      "time": "34.49",
+      "is_pb": 1,
+      "meet_name": "London Legacy Swimming Meet 2026 (Long Course)",
+      "wa_points": "425"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "08/03/26",
+      "time": "35.66",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier Open Meet",
+      "wa_points": "342"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "24/01/26",
+      "time": "34.11",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2026",
+      "wa_points": "391"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "24/01/26",
+      "time": "34.42",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2026",
+      "wa_points": "380"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "29/11/25",
+      "time": "33.90",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "398"
+    },
+    {
+      "stroke_code": 10,
+      "course": "L",
+      "date": "30/03/26",
+      "time": "28.88",
+      "is_pb": 1,
+      "meet_name": "London Legacy Swimming Meet 2026 (Long Course)",
+      "wa_points": "458"
+    },
+    {
+      "stroke_code": 10,
+      "course": "L",
+      "date": "30/03/26",
+      "time": "29.45",
+      "is_pb": 0,
+      "meet_name": "London Legacy Swimming Meet 2026 (Long Course)",
+      "wa_points": "432"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "07/03/26",
+      "time": "29.72",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier Open Meet",
+      "wa_points": "369"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "24/01/26",
+      "time": "28.67",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2026",
+      "wa_points": "411"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "24/01/26",
+      "time": "29.24",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2026",
+      "wa_points": "387"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "29/11/25",
+      "time": "28.43",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "421"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "08/03/26",
+      "time": "30.67",
+      "is_pb": 1,
+      "meet_name": "Watford SC Regional Qualifier Open Meet",
+      "wa_points": "374"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "24/01/26",
+      "time": "31.44",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Championships 2026",
+      "wa_points": "347"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "30/11/25",
+      "time": "32.32",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "320"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "25/01/26",
+      "time": "1:11.55",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2026",
+      "wa_points": "326"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "25/01/26",
+      "time": "1:12.40",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Championships 2026",
+      "wa_points": "315"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "29/11/25",
+      "time": "1:07.33",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2025",
+      "wa_points": "392"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Freestyle",
+        "course": "LC",
+        "year": 2026,
+        "age_group": "15",
+        "rank": 4,
+        "total_in_ranking": 10,
+        "time": "1:00.37"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "14",
+        "rank": 9,
+        "total_in_ranking": 103,
+        "time": "58.40"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "14",
+        "rank": 11,
+        "total_in_ranking": 30,
+        "time": "1:00.27"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "15",
+        "rank": 12,
+        "total_in_ranking": 20,
+        "time": "59.77"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "14",
+        "rank": 6,
+        "total_in_ranking": 93,
+        "time": "1:07.33"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "14",
+        "rank": 10,
+        "total_in_ranking": 25,
+        "time": "1:11.55"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "14",
+        "rank": 15,
+        "total_in_ranking": 87,
+        "time": "32.32"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "14",
+        "rank": 5,
+        "total_in_ranking": 23,
+        "time": "31.44"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "15",
+        "rank": 4,
+        "total_in_ranking": 16,
+        "time": "30.67"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "LC",
+        "year": 2026,
+        "age_group": "15",
+        "rank": 3,
+        "total_in_ranking": 7,
+        "time": "34.49"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "14",
+        "rank": 8,
+        "total_in_ranking": 94,
+        "time": "33.90"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "14",
+        "rank": 4,
+        "total_in_ranking": 27,
+        "time": "34.11"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "15",
+        "rank": 12,
+        "total_in_ranking": 18,
+        "time": "35.66"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "LC",
+        "year": 2026,
+        "age_group": "15",
+        "rank": 3,
+        "total_in_ranking": 12,
+        "time": "28.88"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "14",
+        "rank": 2,
+        "total_in_ranking": 94,
+        "time": "28.43"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "14",
+        "rank": 3,
+        "total_in_ranking": 30,
+        "time": "28.67"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "15",
+        "rank": 6,
+        "total_in_ranking": 14,
+        "time": "29.72"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "LC",
+        "year": 2026,
+        "age_group": "15",
+        "rank": 4,
+        "total_in_ranking": 16,
+        "time": "26.43"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2025,
+        "age_group": "14",
+        "rank": 13,
+        "total_in_ranking": 118,
+        "time": "27.03"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "14",
+        "rank": 4,
+        "total_in_ranking": 33,
+        "time": "26.43"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2026,
+        "age_group": "15",
+        "rank": 5,
+        "total_in_ranking": 24,
+        "time": "26.39"
+      }
+    ]
+  }
+}

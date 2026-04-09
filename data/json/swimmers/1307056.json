@@ -1,0 +1,2428 @@
+{
+  "tiref": 1307056,
+  "name": "George Ball",
+  "yob": null,
+  "sex": null,
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Backstroke",
+      "time": "1:12.17",
+      "converted_time": "1:13.30",
+      "wa_points": 300,
+      "date": "21/11/21",
+      "meet": "Watford SC County Qualifier",
+      "venue": "Garston"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "1:16.36",
+      "converted_time": "1:18.00",
+      "wa_points": 379,
+      "date": "25/06/22",
+      "meet": "Watford SC Terry Davies Alternative Nationals",
+      "venue": "Garston"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Butterfly",
+      "time": "1:17.59",
+      "converted_time": "1:18.60",
+      "wa_points": 232,
+      "date": "21/11/21",
+      "meet": "Watford SC County Qualifier",
+      "venue": "Garston"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:03.49",
+      "converted_time": "1:04.80",
+      "wa_points": 352,
+      "date": "23/10/21",
+      "meet": "Team Luton Autumn Short Course Meet 2021",
+      "venue": "Luton"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "1:11.52",
+      "converted_time": "1:11.50",
+      "wa_points": 327,
+      "date": "16/01/22",
+      "meet": "Swim England Hertfordshire County Championships",
+      "venue": "Borehamwood"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Backstroke",
+      "time": "2:46.22",
+      "converted_time": "2:48.20",
+      "wa_points": 256,
+      "date": "07/03/20",
+      "meet": "Maxwell & TeamUnify March Meet",
+      "venue": "Aylesbury"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Breaststroke",
+      "time": "2:57.45",
+      "converted_time": "3:00.40",
+      "wa_points": 310,
+      "date": "28/09/22",
+      "meet": "City of St Albans SC Level 4 Club Champs",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Butterfly",
+      "time": "3:40.87",
+      "converted_time": "3:42.30",
+      "wa_points": 113,
+      "date": "20/10/19",
+      "meet": "Hemel Hempstead 106th Birthday Open",
+      "venue": "Hemel Hempstead"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Freestyle",
+      "time": "2:22.77",
+      "converted_time": "2:25.20",
+      "wa_points": 329,
+      "date": "29/09/22",
+      "meet": "City of St Albans SC Level 4 Club Champs",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Individual Medley",
+      "time": "2:44.93",
+      "converted_time": "2:47.30",
+      "wa_points": 287,
+      "date": "03/10/21",
+      "meet": "Harpenden SC FINIS Legacy Meet",
+      "venue": "Westminster Lodge"
+    },
+    {
+      "course": "SC",
+      "stroke": "400 Freestyle",
+      "time": "6:11.48",
+      "converted_time": "6:15.30",
+      "wa_points": 186,
+      "date": "11/11/18",
+      "meet": "Watford & Hemel Hempstead SC Joint Club Champs",
+      "venue": "Hemel Hempstead"
+    },
+    {
+      "course": "SC",
+      "stroke": "400 Individual Medley",
+      "time": "6:57.21",
+      "converted_time": "7:01.40",
+      "wa_points": 178,
+      "date": "11/11/18",
+      "meet": "Watford & Hemel Hempstead SC Joint Club Champs",
+      "venue": "Hemel Hempstead"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "33.41",
+      "converted_time": "34.00",
+      "wa_points": 289,
+      "date": "21/11/21",
+      "meet": "Watford SC County Qualifier",
+      "venue": "Garston"
+    },
+    {
+      "course": "LC",
+      "stroke": "50 Breaststroke",
+      "time": "35.23",
+      "converted_time": "34.30",
+      "wa_points": 399,
+      "date": "01/05/22",
+      "meet": "SE East Region Long Course Championships 2022",
+      "venue": "Norwich"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "34.86",
+      "converted_time": "35.70",
+      "wa_points": 366,
+      "date": "21/11/21",
+      "meet": "Watford SC County Qualifier",
+      "venue": "Garston"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "31.89",
+      "converted_time": "32.50",
+      "wa_points": 298,
+      "date": "25/06/22",
+      "meet": "Watford SC Terry Davies Alternative Nationals",
+      "venue": "Garston"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "27.48",
+      "converted_time": "28.20",
+      "wa_points": 379,
+      "date": "24/10/21",
+      "meet": "Team Luton Autumn Short Course Meet 2021",
+      "venue": "Luton"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "02/10/22",
+      "time": "27.90",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "362"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "02/12/18",
+      "time": "33.29",
+      "is_pb": 1,
+      "meet_name": "City Of St Albans Open Meet Winter 2018",
+      "wa_points": "213"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "03/10/21",
+      "time": "29.24",
+      "is_pb": 0,
+      "meet_name": "Harpenden SC FINIS Legacy Meet",
+      "wa_points": "315"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "03/12/17",
+      "time": "40.20",
+      "is_pb": 1,
+      "meet_name": "Open Winter Meet 2017",
+      "wa_points": "121"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "05/03/22",
+      "time": "27.63",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier",
+      "wa_points": "373"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "06/10/18",
+      "time": "37.09",
+      "is_pb": 1,
+      "meet_name": "HHSC Birthday Open",
+      "wa_points": "154"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "07/03/20",
+      "time": "30.97",
+      "is_pb": 1,
+      "meet_name": "Maxwell & TeamUnify March Meet",
+      "wa_points": "265"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "08/01/22",
+      "time": "28.22",
+      "is_pb": 0,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "350"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "08/12/18",
+      "time": "32.87",
+      "is_pb": 1,
+      "meet_name": "The NASL - London - Rounds 2018 - Div 1 & 2",
+      "wa_points": "221"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "08/12/19",
+      "time": "32.75",
+      "is_pb": 0,
+      "meet_name": "Team Luton Winter Development Meet",
+      "wa_points": "224"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "09/02/20",
+      "time": "32.18",
+      "is_pb": 0,
+      "meet_name": "Alan Doyle Memorial Meet",
+      "wa_points": "236"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "09/02/20",
+      "time": "32.20",
+      "is_pb": 0,
+      "meet_name": "Alan Doyle Memorial Meet",
+      "wa_points": "236"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "09/12/17",
+      "time": "38.75",
+      "is_pb": 1,
+      "meet_name": "NASL - London Rounds 2017 - Division 1 & 2",
+      "wa_points": "135"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "09/12/18",
+      "time": "33.64",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Alan Doyle Memorial Sprint Meet",
+      "wa_points": "207"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "12/06/16",
+      "time": "43.76",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "94"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "16/06/19",
+      "time": "32.45",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships 2019",
+      "wa_points": "230"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "17/06/21",
+      "time": "28.00",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempsted",
+      "wa_points": "358"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "17/11/19",
+      "time": "32.01",
+      "is_pb": 0,
+      "meet_name": "Watford November 2019 County Qualifier",
+      "wa_points": "240"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "18/01/20",
+      "time": "31.80",
+      "is_pb": 1,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "245"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "18/03/17",
+      "time": "42.64",
+      "is_pb": 1,
+      "meet_name": "Bishops Stortford Spring Regional Qualifier",
+      "wa_points": "101"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "18/11/18",
+      "time": "34.18",
+      "is_pb": 1,
+      "meet_name": "Watford November 2018 County Qualifier",
+      "wa_points": "197"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "19/12/20",
+      "time": "29.22",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead",
+      "wa_points": "315"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "21/05/17",
+      "time": "43.21",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Spring Development Meet",
+      "wa_points": "97"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "21/06/17",
+      "time": "44.11",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "91"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "21/11/21",
+      "time": "27.82",
+      "is_pb": 0,
+      "meet_name": "Watford SC County Qualifier",
+      "wa_points": "366"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "22/05/16",
+      "time": "43.17",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 5th Spring Development Meet",
+      "wa_points": "97"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "24/10/21",
+      "time": "27.48",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "379"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "26/01/19",
+      "time": "32.54",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "228"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "29/09/19",
+      "time": "31.85",
+      "is_pb": 1,
+      "meet_name": "Team Luton September Open Meet",
+      "wa_points": "243"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "01/12/18",
+      "time": "1:19.69",
+      "is_pb": 1,
+      "meet_name": "City Of St Albans Open Meet Winter 2018",
+      "wa_points": "178"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "02/07/17",
+      "time": "1:36.27",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "101"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "02/12/17",
+      "time": "1:34.87",
+      "is_pb": 1,
+      "meet_name": "Open Winter Meet 2017",
+      "wa_points": "105"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "03/10/21",
+      "time": "1:06.88",
+      "is_pb": 0,
+      "meet_name": "Harpenden SC FINIS Legacy Meet",
+      "wa_points": "301"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "07/10/18",
+      "time": "1:24.01",
+      "is_pb": 1,
+      "meet_name": "HHSC Birthday Open",
+      "wa_points": "152"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "08/10/17",
+      "time": "1:38.19",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Birthday Open",
+      "wa_points": "95"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "08/12/19",
+      "time": "1:15.56",
+      "is_pb": 0,
+      "meet_name": "Team Luton Winter Development Meet",
+      "wa_points": "208"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "09/01/22",
+      "time": "1:03.68",
+      "is_pb": 0,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "349"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "13/06/16",
+      "time": "1:43.26",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "81"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "16/06/19",
+      "time": "1:15.12",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Club Championships 2019",
+      "wa_points": "212"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "16/11/19",
+      "time": "1:13.94",
+      "is_pb": 0,
+      "meet_name": "Watford November 2019 County Qualifier",
+      "wa_points": "223"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "17/06/21",
+      "time": "1:05.84",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempsted",
+      "wa_points": "315"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "17/11/18",
+      "time": "1:21.42",
+      "is_pb": 1,
+      "meet_name": "Watford November 2018 County Qualifier",
+      "wa_points": "167"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "18/03/17",
+      "time": "1:39.79",
+      "is_pb": 1,
+      "meet_name": "Bishops Stortford Spring Regional Qualifier",
+      "wa_points": "90"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "20/01/19",
+      "time": "1:14.11",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "221"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "20/05/18",
+      "time": "1:25.11",
+      "is_pb": 1,
+      "meet_name": "HHSC Spring Development Meet",
+      "wa_points": "146"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "20/10/19",
+      "time": "1:21.34",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead 106th Birthday Open",
+      "wa_points": "167"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "21/05/17",
+      "time": "1:36.85",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Spring Development Meet",
+      "wa_points": "99"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "22/05/16",
+      "time": "1:44.58",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 5th Spring Development Meet",
+      "wa_points": "78"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "23/10/21",
+      "time": "1:03.49",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "352"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "28/09/19",
+      "time": "1:13.52",
+      "is_pb": 1,
+      "meet_name": "Team Luton September Open Meet",
+      "wa_points": "226"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "06/10/18",
+      "time": "2:59.27",
+      "is_pb": 1,
+      "meet_name": "HHSC Birthday Open",
+      "wa_points": "166"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "18/03/18",
+      "time": "3:02.67",
+      "is_pb": 1,
+      "meet_name": "Borough of Harrow Regional Qualifier Meet 2018",
+      "wa_points": "157"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "18/05/19",
+      "time": "2:50.61",
+      "is_pb": 1,
+      "meet_name": "HHSC Spring Development Meet",
+      "wa_points": "193"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "29/09/19",
+      "time": "2:49.14",
+      "is_pb": 1,
+      "meet_name": "Team Luton September Open Meet",
+      "wa_points": "198"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "29/09/22",
+      "time": "2:22.77",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "329"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "02/12/17",
+      "time": "7:01.40",
+      "is_pb": 1,
+      "meet_name": "Open Winter Meet 2017",
+      "wa_points": "127"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "11/11/18",
+      "time": "6:11.48",
+      "is_pb": 1,
+      "meet_name": "Watford & Hemel Hempstead SC Joint Club Champs",
+      "wa_points": "186"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "13/11/16",
+      "time": "7:25.22",
+      "is_pb": 1,
+      "meet_name": "Watford & Hemel Hempstead Club Champs",
+      "wa_points": "108"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "19/06/18",
+      "time": "6:40.71",
+      "is_pb": 1,
+      "meet_name": "HHSC Club Championships",
+      "wa_points": "148"
+    },
+    {
+      "stroke_code": 4,
+      "course": "S",
+      "date": "19/11/17",
+      "time": "7:16.85",
+      "is_pb": 1,
+      "meet_name": "Watford & Hemel Hempstead Joint Club Champs",
+      "wa_points": "114"
+    },
+    {
+      "stroke_code": 7,
+      "course": "L",
+      "date": "01/05/22",
+      "time": "35.23",
+      "is_pb": 1,
+      "meet_name": "SE East Region Long Course Championships 2022",
+      "wa_points": "399"
+    },
+    {
+      "stroke_code": 7,
+      "course": "L",
+      "date": "15/03/20",
+      "time": "39.51",
+      "is_pb": 1,
+      "meet_name": "Putteridge Spring Long Course National Qualifier",
+      "wa_points": "283"
+    },
+    {
+      "stroke_code": 7,
+      "course": "L",
+      "date": "19/03/22",
+      "time": "36.27",
+      "is_pb": 1,
+      "meet_name": "Team Luton March Long Course Meet 2022",
+      "wa_points": "366"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "02/10/22",
+      "time": "35.73",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "340"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "06/03/22",
+      "time": "35.16",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier",
+      "wa_points": "357"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "07/10/18",
+      "time": "50.53",
+      "is_pb": 1,
+      "meet_name": "HHSC Birthday Open",
+      "wa_points": "120"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "08/03/20",
+      "time": "38.64",
+      "is_pb": 1,
+      "meet_name": "Maxwell & TeamUnify March Meet",
+      "wa_points": "269"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "08/10/17",
+      "time": "59.56",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Birthday Open",
+      "wa_points": "73"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "08/12/19",
+      "time": "42.30",
+      "is_pb": 1,
+      "meet_name": "Team Luton Winter Development Meet",
+      "wa_points": "205"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "09/02/20",
+      "time": "41.19",
+      "is_pb": 0,
+      "meet_name": "Alan Doyle Memorial Meet",
+      "wa_points": "222"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "09/02/20",
+      "time": "41.38",
+      "is_pb": 0,
+      "meet_name": "Alan Doyle Memorial Meet",
+      "wa_points": "219"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "09/12/18",
+      "time": "48.47",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Alan Doyle Memorial Sprint Meet",
+      "wa_points": "136"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "13/06/16",
+      "time": "1:03.24",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "61"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "15/01/22",
+      "time": "35.88",
+      "is_pb": 0,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "336"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "17/06/19",
+      "time": "46.79",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships 2019",
+      "wa_points": "151"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "17/11/19",
+      "time": "43.26",
+      "is_pb": 1,
+      "meet_name": "Watford November 2019 County Qualifier",
+      "wa_points": "191"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "18/01/20",
+      "time": "39.72",
+      "is_pb": 1,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "247"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "18/03/17",
+      "time": "1:00.39",
+      "is_pb": 1,
+      "meet_name": "Bishops Stortford Spring Regional Qualifier",
+      "wa_points": "70"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "18/03/18",
+      "time": "52.41",
+      "is_pb": 1,
+      "meet_name": "Borough of Harrow Regional Qualifier Meet 2018",
+      "wa_points": "107"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "19/12/20",
+      "time": "37.29",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead",
+      "wa_points": "299"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "20/05/18",
+      "time": "54.05",
+      "is_pb": 0,
+      "meet_name": "HHSC Spring Development Meet",
+      "wa_points": "98"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "20/06/18",
+      "time": "53.16",
+      "is_pb": 0,
+      "meet_name": "HHSC Club Championships",
+      "wa_points": "103"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "20/10/19",
+      "time": "43.73",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 106th Birthday Open",
+      "wa_points": "185"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "21/05/17",
+      "time": "59.87",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Spring Development Meet",
+      "wa_points": "72"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "21/06/17",
+      "time": "1:02.49",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "63"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "21/11/21",
+      "time": "34.86",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier",
+      "wa_points": "366"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "22/05/16",
+      "time": "1:04.24",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 5th Spring Development Meet",
+      "wa_points": "58"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "24/10/21",
+      "time": "34.98",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "362"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "01/12/18",
+      "time": "1:46.69",
+      "is_pb": 1,
+      "meet_name": "City Of St Albans Open Meet Winter 2018",
+      "wa_points": "139"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "03/12/17",
+      "time": "2:01.42",
+      "is_pb": 1,
+      "meet_name": "Open Winter Meet 2017",
+      "wa_points": "94"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "06/10/18",
+      "time": "1:54.56",
+      "is_pb": 1,
+      "meet_name": "HHSC Birthday Open",
+      "wa_points": "112"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "07/03/20",
+      "time": "1:32.99",
+      "is_pb": 1,
+      "meet_name": "Maxwell & TeamUnify March Meet",
+      "wa_points": "210"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "09/12/21",
+      "time": "1:20.53",
+      "is_pb": 1,
+      "meet_name": "The National Arena Swimming League London Round 3",
+      "wa_points": "323"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "12/06/16",
+      "time": "2:14.93",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "68"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "13/11/21",
+      "time": "1:22.42",
+      "is_pb": 0,
+      "meet_name": "The National Arena Swimming League London Round 2",
+      "wa_points": "301"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "15/01/22",
+      "time": "1:20.89",
+      "is_pb": 0,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "319"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "16/06/19",
+      "time": "1:42.40",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships 2019",
+      "wa_points": "157"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "18/05/19",
+      "time": "1:49.27",
+      "is_pb": 0,
+      "meet_name": "HHSC Spring Development Meet",
+      "wa_points": "129"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "21/05/16",
+      "time": "2:16.02",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 5th Spring Development Meet",
+      "wa_points": "67"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "21/06/17",
+      "time": "2:16.04",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "67"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "24/10/21",
+      "time": "1:22.21",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "304"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "25/06/22",
+      "time": "1:16.36",
+      "is_pb": 1,
+      "meet_name": "Watford SC Terry Davies Alternative Nationals",
+      "wa_points": "379"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "29/09/22",
+      "time": "1:18.01",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "355"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "08/10/17",
+      "time": "4:26.94",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Birthday Open",
+      "wa_points": "91"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "16/10/16",
+      "time": "4:45.28",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 103rd Birthday Open",
+      "wa_points": "74"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "17/11/19",
+      "time": "3:30.67",
+      "is_pb": 0,
+      "meet_name": "Watford November 2019 County Qualifier",
+      "wa_points": "185"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "18/06/19",
+      "time": "3:49.93",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships 2019",
+      "wa_points": "142"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "20/10/19",
+      "time": "3:28.89",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 106th Birthday Open",
+      "wa_points": "190"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "22/06/18",
+      "time": "4:27.18",
+      "is_pb": 0,
+      "meet_name": "HHSC Club Championships",
+      "wa_points": "90"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "24/10/21",
+      "time": "3:04.47",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "276"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "26/06/16",
+      "time": "4:50.98",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "70"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "28/09/22",
+      "time": "2:57.45",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "310"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "01/12/18",
+      "time": "40.24",
+      "is_pb": 1,
+      "meet_name": "City Of St Albans Open Meet Winter 2018",
+      "wa_points": "148"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "02/07/17",
+      "time": "54.34",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "60"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "03/10/21",
+      "time": "33.54",
+      "is_pb": 0,
+      "meet_name": "Harpenden SC FINIS Legacy Meet",
+      "wa_points": "256"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "03/12/17",
+      "time": "48.91",
+      "is_pb": 1,
+      "meet_name": "Open Winter Meet 2017",
+      "wa_points": "82"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "07/10/18",
+      "time": "44.98",
+      "is_pb": 1,
+      "meet_name": "HHSC Birthday Open",
+      "wa_points": "106"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "08/10/17",
+      "time": "54.41",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Birthday Open",
+      "wa_points": "60"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "08/12/19",
+      "time": "37.87",
+      "is_pb": 0,
+      "meet_name": "Team Luton Winter Development Meet",
+      "wa_points": "178"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "09/02/20",
+      "time": "36.87",
+      "is_pb": 1,
+      "meet_name": "Alan Doyle Memorial Meet",
+      "wa_points": "193"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "09/02/20",
+      "time": "37.73",
+      "is_pb": 0,
+      "meet_name": "Alan Doyle Memorial Meet",
+      "wa_points": "180"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "09/12/18",
+      "time": "39.89",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Alan Doyle Memorial Sprint Meet",
+      "wa_points": "152"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "16/10/16",
+      "time": "58.54",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 103rd Birthday Open",
+      "wa_points": "48"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "16/11/19",
+      "time": "37.46",
+      "is_pb": 1,
+      "meet_name": "Watford November 2019 County Qualifier",
+      "wa_points": "184"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "17/06/21",
+      "time": "32.97",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempsted",
+      "wa_points": "270"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "17/11/18",
+      "time": "41.32",
+      "is_pb": 1,
+      "meet_name": "Watford November 2018 County Qualifier",
+      "wa_points": "137"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "18/06/19",
+      "time": "39.25",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships 2019",
+      "wa_points": "160"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "20/05/17",
+      "time": "54.91",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Spring Development Meet",
+      "wa_points": "58"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "20/10/19",
+      "time": "37.55",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 106th Birthday Open",
+      "wa_points": "183"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "22/06/18",
+      "time": "46.26",
+      "is_pb": 1,
+      "meet_name": "HHSC Club Championships",
+      "wa_points": "97"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "23/10/21",
+      "time": "32.92",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2021",
+      "wa_points": "271"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "25/06/22",
+      "time": "31.89",
+      "is_pb": 1,
+      "meet_name": "Watford SC Terry Davies Alternative Nationals",
+      "wa_points": "298"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "26/06/16",
+      "time": "1:01.93",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "40"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "27/01/19",
+      "time": "39.69",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "154"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "28/09/19",
+      "time": "38.99",
+      "is_pb": 1,
+      "meet_name": "Team Luton September Open Meet",
+      "wa_points": "163"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "29/01/22",
+      "time": "34.02",
+      "is_pb": 0,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "246"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "06/10/18",
+      "time": "1:51.74",
+      "is_pb": 0,
+      "meet_name": "HHSC Birthday Open",
+      "wa_points": "77"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "08/03/20",
+      "time": "1:23.58",
+      "is_pb": 1,
+      "meet_name": "Maxwell & TeamUnify March Meet",
+      "wa_points": "186"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "13/11/21",
+      "time": "1:19.39",
+      "is_pb": 1,
+      "meet_name": "The National Arena Swimming League London Round 2",
+      "wa_points": "217"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "20/05/18",
+      "time": "1:49.87",
+      "is_pb": 1,
+      "meet_name": "HHSC Spring Development Meet",
+      "wa_points": "81"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "21/05/17",
+      "time": "2:16.35",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Spring Development Meet",
+      "wa_points": "42"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "21/06/17",
+      "time": "2:17.78",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "41"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "21/11/21",
+      "time": "1:17.59",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier",
+      "wa_points": "232"
+    },
+    {
+      "stroke_code": 11,
+      "course": "S",
+      "date": "28/09/19",
+      "time": "1:31.98",
+      "is_pb": 1,
+      "meet_name": "Team Luton September Open Meet",
+      "wa_points": "139"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "07/10/18",
+      "time": "3:53.84",
+      "is_pb": 1,
+      "meet_name": "HHSC Birthday Open",
+      "wa_points": "95"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "20/10/19",
+      "time": "3:40.87",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 106th Birthday Open",
+      "wa_points": "113"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "22/09/18",
+      "time": "4:00.08",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 200 Fly Fest",
+      "wa_points": "88"
+    },
+    {
+      "stroke_code": 12,
+      "course": "S",
+      "date": "27/01/19",
+      "time": "3:48.20",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "102"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "06/10/18",
+      "time": "43.83",
+      "is_pb": 0,
+      "meet_name": "HHSC Birthday Open",
+      "wa_points": "128"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "08/12/19",
+      "time": "38.28",
+      "is_pb": 1,
+      "meet_name": "Team Luton Winter Development Meet",
+      "wa_points": "192"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "09/02/20",
+      "time": "38.00",
+      "is_pb": 1,
+      "meet_name": "Alan Doyle Memorial Meet",
+      "wa_points": "196"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "09/02/20",
+      "time": "39.30",
+      "is_pb": 0,
+      "meet_name": "Alan Doyle Memorial Meet",
+      "wa_points": "178"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "09/12/18",
+      "time": "40.64",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Alan Doyle Memorial Sprint Meet",
+      "wa_points": "161"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "10/03/18",
+      "time": "42.78",
+      "is_pb": 1,
+      "meet_name": "TeamUnify & Maxwell Alternative to Counties",
+      "wa_points": "138"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "10/03/18",
+      "time": "43.43",
+      "is_pb": 0,
+      "meet_name": "TeamUnify & Maxwell Alternative to Counties",
+      "wa_points": "131"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "17/11/19",
+      "time": "38.36",
+      "is_pb": 1,
+      "meet_name": "Watford November 2019 County Qualifier",
+      "wa_points": "191"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "18/11/18",
+      "time": "41.41",
+      "is_pb": 1,
+      "meet_name": "Watford November 2018 County Qualifier",
+      "wa_points": "152"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "20/10/18",
+      "time": "42.04",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2018",
+      "wa_points": "145"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "21/05/16",
+      "time": "52.15",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 5th Spring Development Meet",
+      "wa_points": "76"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "21/11/21",
+      "time": "33.41",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier",
+      "wa_points": "289"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "26/01/19",
+      "time": "39.09",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "180"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "28/09/19",
+      "time": "38.48",
+      "is_pb": 1,
+      "meet_name": "Team Luton September Open Meet",
+      "wa_points": "189"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "29/09/18",
+      "time": "42.88",
+      "is_pb": 0,
+      "meet_name": "Team Luton September Short Course Meet 2018",
+      "wa_points": "137"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "02/07/17",
+      "time": "1:45.28",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "96"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "02/12/17",
+      "time": "1:44.55",
+      "is_pb": 0,
+      "meet_name": "Open Winter Meet 2017",
+      "wa_points": "98"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "02/12/18",
+      "time": "1:23.20",
+      "is_pb": 1,
+      "meet_name": "City Of St Albans Open Meet Winter 2018",
+      "wa_points": "196"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "03/10/21",
+      "time": "1:15.50",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Legacy Meet",
+      "wa_points": "262"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "07/10/18",
+      "time": "1:33.14",
+      "is_pb": 0,
+      "meet_name": "HHSC Birthday Open",
+      "wa_points": "139"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "08/10/17",
+      "time": "1:44.07",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Birthday Open",
+      "wa_points": "100"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "08/12/19",
+      "time": "1:20.13",
+      "is_pb": 1,
+      "meet_name": "Team Luton Winter Development Meet",
+      "wa_points": "219"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "12/10/19",
+      "time": "1:22.77",
+      "is_pb": 0,
+      "meet_name": "NASL London Round 1",
+      "wa_points": "199"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "14/12/19",
+      "time": "1:21.16",
+      "is_pb": 0,
+      "meet_name": "NASL London Round 3",
+      "wa_points": "211"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "16/10/16",
+      "time": "1:55.73",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 103rd Birthday Open",
+      "wa_points": "72"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "17/06/21",
+      "time": "1:27.00",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempsted",
+      "wa_points": "171"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "17/11/19",
+      "time": "1:21.47",
+      "is_pb": 1,
+      "meet_name": "Watford November 2019 County Qualifier",
+      "wa_points": "208"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "18/06/19",
+      "time": "1:24.66",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Club Championships 2019",
+      "wa_points": "186"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "19/01/19",
+      "time": "1:23.23",
+      "is_pb": 0,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "195"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "20/10/18",
+      "time": "1:28.82",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2018",
+      "wa_points": "161"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "20/10/19",
+      "time": "1:23.85",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead 106th Birthday Open",
+      "wa_points": "191"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "21/05/17",
+      "time": "1:45.63",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Spring Development Meet",
+      "wa_points": "95"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "21/11/21",
+      "time": "1:12.17",
+      "is_pb": 1,
+      "meet_name": "Watford SC County Qualifier",
+      "wa_points": "300"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "22/06/18",
+      "time": "1:37.65",
+      "is_pb": 1,
+      "meet_name": "HHSC Club Championships",
+      "wa_points": "121"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "25/06/22",
+      "time": "1:14.11",
+      "is_pb": 0,
+      "meet_name": "Watford SC Terry Davies Alternative Nationals",
+      "wa_points": "277"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "26/06/16",
+      "time": "1:56.11",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "72"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "28/09/19",
+      "time": "1:22.17",
+      "is_pb": 1,
+      "meet_name": "Team Luton September Open Meet",
+      "wa_points": "203"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "28/09/22",
+      "time": "1:13.97",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "278"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "29/09/18",
+      "time": "1:30.74",
+      "is_pb": 1,
+      "meet_name": "Team Luton September Short Course Meet 2018",
+      "wa_points": "151"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "07/03/20",
+      "time": "2:46.22",
+      "is_pb": 1,
+      "meet_name": "Maxwell & TeamUnify March Meet",
+      "wa_points": "256"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "07/10/18",
+      "time": "3:15.14",
+      "is_pb": 0,
+      "meet_name": "HHSC Birthday Open",
+      "wa_points": "158"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "08/12/19",
+      "time": "2:53.28",
+      "is_pb": 0,
+      "meet_name": "Team Luton Winter Development Meet",
+      "wa_points": "226"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "10/03/18",
+      "time": "3:16.40",
+      "is_pb": 1,
+      "meet_name": "TeamUnify & Maxwell Alternative to Counties",
+      "wa_points": "155"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "13/06/16",
+      "time": "3:49.51",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "97"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "16/11/19",
+      "time": "2:51.51",
+      "is_pb": 0,
+      "meet_name": "Watford November 2019 County Qualifier",
+      "wa_points": "233"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "16/12/18",
+      "time": "3:01.50",
+      "is_pb": 1,
+      "meet_name": "Hatfield Xmas Meet Meet 2018",
+      "wa_points": "197"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "17/06/19",
+      "time": "2:58.13",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Club Championships 2019",
+      "wa_points": "208"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "17/11/18",
+      "time": "3:02.81",
+      "is_pb": 1,
+      "meet_name": "Watford November 2018 County Qualifier",
+      "wa_points": "192"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "18/03/17",
+      "time": "3:47.52",
+      "is_pb": 1,
+      "meet_name": "Bishops Stortford Spring Regional Qualifier",
+      "wa_points": "100"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "20/06/18",
+      "time": "3:16.89",
+      "is_pb": 0,
+      "meet_name": "HHSC Club Championships",
+      "wa_points": "154"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "20/10/18",
+      "time": "3:07.30",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2018",
+      "wa_points": "179"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "21/05/17",
+      "time": "3:47.63",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Spring Development Meet",
+      "wa_points": "99"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "21/06/17",
+      "time": "3:39.10",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships",
+      "wa_points": "112"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "27/01/19",
+      "time": "2:53.95",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "223"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "28/09/19",
+      "time": "2:50.98",
+      "is_pb": 1,
+      "meet_name": "Team Luton September Open Meet",
+      "wa_points": "235"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "29/09/18",
+      "time": "3:11.76",
+      "is_pb": 1,
+      "meet_name": "Team Luton September Short Course Meet 2018",
+      "wa_points": "167"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "02/12/17",
+      "time": "3:49.06",
+      "is_pb": 1,
+      "meet_name": "Open Winter Meet 2017",
+      "wa_points": "107"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "02/12/18",
+      "time": "3:21.90",
+      "is_pb": 0,
+      "meet_name": "City Of St Albans Open Meet Winter 2018",
+      "wa_points": "156"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "03/10/21",
+      "time": "2:44.93",
+      "is_pb": 1,
+      "meet_name": "Harpenden SC FINIS Legacy Meet",
+      "wa_points": "287"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "06/10/18",
+      "time": "3:26.83",
+      "is_pb": 1,
+      "meet_name": "HHSC Birthday Open",
+      "wa_points": "145"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "15/10/16",
+      "time": "4:05.34",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 103rd Birthday Open",
+      "wa_points": "87"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "16/06/19",
+      "time": "3:08.08",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Club Championships 2019",
+      "wa_points": "194"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "17/11/18",
+      "time": "3:20.68",
+      "is_pb": 1,
+      "meet_name": "Watford November 2018 County Qualifier",
+      "wa_points": "159"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "18/03/18",
+      "time": "3:30.47",
+      "is_pb": 1,
+      "meet_name": "Borough of Harrow Regional Qualifier Meet 2018",
+      "wa_points": "138"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "18/05/19",
+      "time": "3:10.57",
+      "is_pb": 1,
+      "meet_name": "HHSC Spring Development Meet",
+      "wa_points": "186"
+    },
+    {
+      "stroke_code": 16,
+      "course": "S",
+      "date": "29/09/19",
+      "time": "3:02.62",
+      "is_pb": 1,
+      "meet_name": "Team Luton September Open Meet",
+      "wa_points": "211"
+    },
+    {
+      "stroke_code": 17,
+      "course": "S",
+      "date": "11/11/18",
+      "time": "6:57.21",
+      "is_pb": 1,
+      "meet_name": "Watford & Hemel Hempstead SC Joint Club Champs",
+      "wa_points": "178"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "02/10/22",
+      "time": "1:12.04",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "320"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "07/03/20",
+      "time": "1:19.43",
+      "is_pb": 1,
+      "meet_name": "Maxwell & TeamUnify March Meet",
+      "wa_points": "238"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "07/10/18",
+      "time": "1:37.61",
+      "is_pb": 0,
+      "meet_name": "HHSC Birthday Open",
+      "wa_points": "128"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "08/10/17",
+      "time": "1:50.98",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Birthday Open",
+      "wa_points": "87"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "09/02/20",
+      "time": "1:22.56",
+      "is_pb": 1,
+      "meet_name": "Alan Doyle Memorial Meet",
+      "wa_points": "212"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "09/12/18",
+      "time": "1:27.41",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Alan Doyle Memorial Sprint Meet",
+      "wa_points": "179"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "10/03/18",
+      "time": "1:35.75",
+      "is_pb": 1,
+      "meet_name": "TeamUnify & Maxwell Alternative to Counties",
+      "wa_points": "136"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "10/03/18",
+      "time": "1:36.92",
+      "is_pb": 0,
+      "meet_name": "TeamUnify & Maxwell Alternative to Counties",
+      "wa_points": "131"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "16/01/22",
+      "time": "1:11.52",
+      "is_pb": 1,
+      "meet_name": "Swim England Hertfordshire County Championships",
+      "wa_points": "327"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "16/10/16",
+      "time": "1:56.67",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 103rd Birthday Open",
+      "wa_points": "75"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "16/11/19",
+      "time": "1:25.14",
+      "is_pb": 1,
+      "meet_name": "Watford November 2019 County Qualifier",
+      "wa_points": "193"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "17/06/19",
+      "time": "1:26.97",
+      "is_pb": 0,
+      "meet_name": "Hemel Hempstead Club Championships 2019",
+      "wa_points": "181"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "19/12/20",
+      "time": "1:16.67",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead",
+      "wa_points": "265"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "20/05/17",
+      "time": "1:48.94",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead Spring Development Meet",
+      "wa_points": "92"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "20/06/18",
+      "time": "1:35.47",
+      "is_pb": 1,
+      "meet_name": "HHSC Club Championships",
+      "wa_points": "137"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "20/10/19",
+      "time": "1:25.38",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 106th Birthday Open",
+      "wa_points": "192"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "21/05/16",
+      "time": "1:59.44",
+      "is_pb": 1,
+      "meet_name": "Hemel Hempstead 5th Spring Development Meet",
+      "wa_points": "70"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "27/01/19",
+      "time": "1:26.22",
+      "is_pb": 1,
+      "meet_name": "SE Hertfordshire County Champs & Age Group Comp",
+      "wa_points": "186"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Backstroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 35,
+        "total_in_ranking": 55,
+        "time": "1:13.97"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "14",
+        "rank": 19,
+        "total_in_ranking": 69,
+        "time": "1:20.89"
+      },
+      {
+        "event": "100 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 17,
+        "total_in_ranking": 52,
+        "time": "1:16.36"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "14",
+        "rank": 43,
+        "total_in_ranking": 89,
+        "time": "1:03.68"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "14",
+        "rank": 23,
+        "total_in_ranking": 71,
+        "time": "1:11.52"
+      },
+      {
+        "event": "100 Individual Medley",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 26,
+        "total_in_ranking": 49,
+        "time": "1:12.04"
+      },
+      {
+        "event": "200 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 21,
+        "total_in_ranking": 26,
+        "time": "2:57.45"
+      },
+      {
+        "event": "200 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 36,
+        "total_in_ranking": 43,
+        "time": "2:22.77"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "LC",
+        "year": 2022,
+        "age_group": "14",
+        "rank": 8,
+        "total_in_ranking": 22,
+        "time": "36.27"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "LC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 12,
+        "total_in_ranking": 19,
+        "time": "35.23"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "14",
+        "rank": 13,
+        "total_in_ranking": 75,
+        "time": "35.16"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 21,
+        "total_in_ranking": 61,
+        "time": "35.73"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "14",
+        "rank": 47,
+        "total_in_ranking": 73,
+        "time": "34.02"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 37,
+        "total_in_ranking": 64,
+        "time": "31.89"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "14",
+        "rank": 21,
+        "total_in_ranking": 101,
+        "time": "27.63"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "15",
+        "rank": 33,
+        "total_in_ranking": 81,
+        "time": "27.90"
+      }
+    ]
+  }
+}

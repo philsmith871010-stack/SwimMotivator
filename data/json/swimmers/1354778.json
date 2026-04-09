@@ -1,0 +1,711 @@
+{
+  "tiref": 1354778,
+  "name": "Rebekah Tembra",
+  "yob": null,
+  "sex": "F",
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Backstroke",
+      "time": "1:27.99",
+      "converted_time": "1:28.90",
+      "wa_points": 231,
+      "date": "10/10/21",
+      "meet": "Hatfield Club Championships 2021",
+      "venue": "Hatfield"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "2:07.31",
+      "converted_time": "2:08.30",
+      "wa_points": 117,
+      "date": "24/11/19",
+      "meet": "Hatfield Club Championships 2019",
+      "venue": "Hatfield"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Freestyle",
+      "time": "1:16.07",
+      "converted_time": "1:17.20",
+      "wa_points": 288,
+      "date": "17/09/22",
+      "meet": "City of St Albans SC Sprint & Skins Competition",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "1:54.27",
+      "converted_time": "1:54.30",
+      "wa_points": 112,
+      "date": "18/05/19",
+      "meet": "Cheshunt Anniversary Open Meet",
+      "venue": "Harlow"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Backstroke",
+      "time": "3:15.13",
+      "converted_time": "3:16.80",
+      "wa_points": 221,
+      "date": "17/10/21",
+      "meet": "Hatfield Club Championships 2021",
+      "venue": "Hatfield"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Freestyle",
+      "time": "2:55.97",
+      "converted_time": "2:57.90",
+      "wa_points": 246,
+      "date": "10/10/21",
+      "meet": "Hatfield Club Championships 2021",
+      "venue": "Hatfield"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "38.80",
+      "converted_time": "39.30",
+      "wa_points": 274,
+      "date": "18/09/21",
+      "meet": "City of St Albans Sprint and Skins Competition",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "58.82",
+      "converted_time": "59.40",
+      "wa_points": 112,
+      "date": "22/09/19",
+      "meet": "Hatfield Club Championships 2019",
+      "venue": "Hatfield"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "41.41",
+      "converted_time": "41.90",
+      "wa_points": 193,
+      "date": "23/09/23",
+      "meet": "Co St Albans SC Sprint & Skins Competition 2023",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "33.22",
+      "converted_time": "33.80",
+      "wa_points": 324,
+      "date": "17/09/22",
+      "meet": "City of St Albans SC Sprint & Skins Competition",
+      "venue": "St Albans"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "01/10/17",
+      "time": "54.80",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships",
+      "wa_points": "72"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "10/03/18",
+      "time": "53.31",
+      "is_pb": 1,
+      "meet_name": "CoStA Spring Open Meet 2018",
+      "wa_points": "78"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "17/03/19",
+      "time": "40.31",
+      "is_pb": 1,
+      "meet_name": "Bishops Stortford Spring Open Meet",
+      "wa_points": "181"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "17/09/22",
+      "time": "33.22",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Sprint & Skins Competition",
+      "wa_points": "324"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "17/10/21",
+      "time": "35.38",
+      "is_pb": 0,
+      "meet_name": "Hatfield Club Championships 2021",
+      "wa_points": "268"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "17/11/18",
+      "time": "46.14",
+      "is_pb": 0,
+      "meet_name": "Hatfield County Qualifier Meet 2018",
+      "wa_points": "121"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "18/03/18",
+      "time": "47.19",
+      "is_pb": 1,
+      "meet_name": "Bishops Stortford Spring Open Meet",
+      "wa_points": "113"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "34.22",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "296"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "19/05/18",
+      "time": "44.93",
+      "is_pb": 1,
+      "meet_name": "Cheshunt Anniversary Open Meet",
+      "wa_points": "131"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "20/10/18",
+      "time": "41.04",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2018",
+      "wa_points": "172"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "23/09/18",
+      "time": "43.40",
+      "is_pb": 1,
+      "meet_name": "COSC County Qualifier",
+      "wa_points": "145"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "33.31",
+      "is_pb": 0,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "321"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "24/11/19",
+      "time": "39.85",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2019",
+      "wa_points": "188"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "01/12/19",
+      "time": "1:25.82",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Winter Open Meet",
+      "wa_points": "200"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "13/10/19",
+      "time": "1:30.37",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2019",
+      "wa_points": "171"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "17/03/19",
+      "time": "1:36.99",
+      "is_pb": 1,
+      "meet_name": "Bishops Stortford Spring Open Meet",
+      "wa_points": "139"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "17/09/22",
+      "time": "1:16.07",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Sprint & Skins Competition",
+      "wa_points": "288"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "1:20.13",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "246"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "1:22.47",
+      "is_pb": 0,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "226"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "24/10/21",
+      "time": "1:17.35",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championship 2021",
+      "wa_points": "274"
+    },
+    {
+      "stroke_code": 2,
+      "course": "S",
+      "date": "28/10/18",
+      "time": "1:43.74",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2018",
+      "wa_points": "113"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "10/10/21",
+      "time": "2:55.97",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2021",
+      "wa_points": "246"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "11/11/18",
+      "time": "3:43.97",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2018",
+      "wa_points": "119"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "16/03/19",
+      "time": "3:34.11",
+      "is_pb": 1,
+      "meet_name": "Bishops Stortford Spring Open Meet",
+      "wa_points": "136"
+    },
+    {
+      "stroke_code": 3,
+      "course": "S",
+      "date": "22/09/19",
+      "time": "3:37.33",
+      "is_pb": 0,
+      "meet_name": "Hatfield Club Championships 2019",
+      "wa_points": "130"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "18/05/19",
+      "time": "59.22",
+      "is_pb": 1,
+      "meet_name": "Cheshunt Anniversary Open Meet",
+      "wa_points": "109"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "18/11/18",
+      "time": "59.95",
+      "is_pb": 0,
+      "meet_name": "Hatfield County Qualifier Meet 2018",
+      "wa_points": "105"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "19/05/18",
+      "time": "59.83",
+      "is_pb": 1,
+      "meet_name": "Cheshunt Anniversary Open Meet",
+      "wa_points": "106"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "22/09/18",
+      "time": "1:00.60",
+      "is_pb": 0,
+      "meet_name": "COSC County Qualifier",
+      "wa_points": "102"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "22/09/19",
+      "time": "58.82",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2019",
+      "wa_points": "112"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "24/09/17",
+      "time": "1:13.65",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2017",
+      "wa_points": "57"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "01/12/19",
+      "time": "2:14.45",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Winter Open Meet",
+      "wa_points": "99"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "24/11/19",
+      "time": "2:07.31",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2019",
+      "wa_points": "117"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "28/10/18",
+      "time": "2:13.97",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2018",
+      "wa_points": "100"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "22/09/19",
+      "time": "58.44",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2019",
+      "wa_points": "68"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "41.41",
+      "is_pb": 1,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "193"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "13/10/19",
+      "time": "46.74",
+      "is_pb": 0,
+      "meet_name": "Hatfield Club Championships 2019",
+      "wa_points": "157"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "16/03/19",
+      "time": "44.55",
+      "is_pb": 1,
+      "meet_name": "Bishops Stortford Spring Open Meet",
+      "wa_points": "181"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "17/03/18",
+      "time": "52.83",
+      "is_pb": 1,
+      "meet_name": "Bishops Stortford Spring Open Meet",
+      "wa_points": "108"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "17/09/22",
+      "time": "39.00",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Sprint & Skins Competition",
+      "wa_points": "270"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "38.80",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "274"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "18/11/18",
+      "time": "49.10",
+      "is_pb": 0,
+      "meet_name": "Hatfield County Qualifier Meet 2018",
+      "wa_points": "135"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "19/05/18",
+      "time": "49.16",
+      "is_pb": 1,
+      "meet_name": "Cheshunt Anniversary Open Meet",
+      "wa_points": "135"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "21/10/18",
+      "time": "46.45",
+      "is_pb": 1,
+      "meet_name": "Team Luton Autumn Short Course Meet 2018",
+      "wa_points": "160"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "23/09/18",
+      "time": "47.62",
+      "is_pb": 1,
+      "meet_name": "COSC County Qualifier",
+      "wa_points": "148"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "23/09/23",
+      "time": "39.39",
+      "is_pb": 0,
+      "meet_name": "Co St Albans SC Sprint & Skins Competition 2023",
+      "wa_points": "262"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "24/10/21",
+      "time": "39.99",
+      "is_pb": 0,
+      "meet_name": "Hatfield Club Championship 2021",
+      "wa_points": "251"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "28/10/18",
+      "time": "52.80",
+      "is_pb": 0,
+      "meet_name": "Hatfield Club Championships 2018",
+      "wa_points": "109"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "30/11/19",
+      "time": "42.38",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Winter Open Meet",
+      "wa_points": "210"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "10/10/21",
+      "time": "1:27.99",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2021",
+      "wa_points": "231"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "16/03/19",
+      "time": "1:46.31",
+      "is_pb": 1,
+      "meet_name": "Bishops Stortford Spring Open Meet",
+      "wa_points": "131"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "17/11/18",
+      "time": "1:47.47",
+      "is_pb": 1,
+      "meet_name": "Hatfield County Qualifier Meet 2018",
+      "wa_points": "126"
+    },
+    {
+      "stroke_code": 14,
+      "course": "S",
+      "date": "18/09/21",
+      "time": "1:29.16",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Sprint and Skins Competition",
+      "wa_points": "222"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "17/10/21",
+      "time": "3:15.13",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2021",
+      "wa_points": "221"
+    },
+    {
+      "stroke_code": 15,
+      "course": "S",
+      "date": "24/11/19",
+      "time": "3:34.75",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2019",
+      "wa_points": "166"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "18/05/19",
+      "time": "1:54.27",
+      "is_pb": 1,
+      "meet_name": "Cheshunt Anniversary Open Meet",
+      "wa_points": "112"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "18/11/18",
+      "time": "1:56.91",
+      "is_pb": 0,
+      "meet_name": "Hatfield County Qualifier Meet 2018",
+      "wa_points": "104"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "22/09/19",
+      "time": "1:55.83",
+      "is_pb": 0,
+      "meet_name": "Hatfield Club Championships 2019",
+      "wa_points": "107"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "28/10/18",
+      "time": "1:55.89",
+      "is_pb": 1,
+      "meet_name": "Hatfield Club Championships 2018",
+      "wa_points": "107"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "14",
+        "rank": 101,
+        "total_in_ranking": 129,
+        "time": "1:16.07"
+      },
+      {
+        "event": "100 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "15",
+        "rank": 96,
+        "total_in_ranking": 100,
+        "time": "1:22.47"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "14",
+        "rank": 81,
+        "total_in_ranking": 113,
+        "time": "39.00"
+      },
+      {
+        "event": "50 Backstroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "15",
+        "rank": 70,
+        "total_in_ranking": 82,
+        "time": "39.39"
+      },
+      {
+        "event": "50 Butterfly",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "15",
+        "rank": 74,
+        "total_in_ranking": 78,
+        "time": "41.41"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2022,
+        "age_group": "14",
+        "rank": 94,
+        "total_in_ranking": 152,
+        "time": "33.22"
+      },
+      {
+        "event": "50 Freestyle",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "15",
+        "rank": 86,
+        "total_in_ranking": 106,
+        "time": "33.31"
+      }
+    ]
+  }
+}

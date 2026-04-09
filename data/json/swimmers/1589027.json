@@ -1,0 +1,240 @@
+{
+  "tiref": 1589027,
+  "name": "Noah Swainsbury",
+  "yob": null,
+  "sex": null,
+  "club": "City of St Albans SC",
+  "pbs": [
+    {
+      "course": "SC",
+      "stroke": "100 Breaststroke",
+      "time": "2:05.92",
+      "converted_time": "2:06.90",
+      "wa_points": 84,
+      "date": "03/12/22",
+      "meet": "City of St Albans SC Winter Meet 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "100 Individual Medley",
+      "time": "1:54.84",
+      "converted_time": "1:54.80",
+      "wa_points": 79,
+      "date": "04/12/22",
+      "meet": "City of St Albans SC Winter Meet 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "200 Breaststroke",
+      "time": "4:18.83",
+      "converted_time": "4:20.90",
+      "wa_points": 100,
+      "date": "11/03/23",
+      "meet": "City of St Albans Spring Meet 2023",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Backstroke",
+      "time": "58.46",
+      "converted_time": "58.80",
+      "wa_points": 54,
+      "date": "25/09/22",
+      "meet": "City of St Albans SC Level 4 Club Champs",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Breaststroke",
+      "time": "55.16",
+      "converted_time": "55.70",
+      "wa_points": 92,
+      "date": "03/12/22",
+      "meet": "City of St Albans SC Winter Meet 2022",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Butterfly",
+      "time": "1:01.02",
+      "converted_time": "1:01.30",
+      "wa_points": 42,
+      "date": "25/09/22",
+      "meet": "City of St Albans SC Level 4 Club Champs",
+      "venue": "St Albans"
+    },
+    {
+      "course": "SC",
+      "stroke": "50 Freestyle",
+      "time": "53.02",
+      "converted_time": "53.40",
+      "wa_points": 52,
+      "date": "17/09/22",
+      "meet": "City of St Albans SC Sprint & Skins Competition",
+      "venue": "St Albans"
+    }
+  ],
+  "history": [
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "02/10/22",
+      "time": "53.16",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "52"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "09/07/22",
+      "time": "55.30",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint",
+      "wa_points": "46"
+    },
+    {
+      "stroke_code": 1,
+      "course": "S",
+      "date": "17/09/22",
+      "time": "53.02",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Sprint & Skins Competition",
+      "wa_points": "52"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "03/12/22",
+      "time": "55.16",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2022",
+      "wa_points": "92"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "05/03/23",
+      "time": "56.30",
+      "is_pb": 0,
+      "meet_name": "Watford SC Regional Qualifier 2023",
+      "wa_points": "87"
+    },
+    {
+      "stroke_code": 7,
+      "course": "S",
+      "date": "11/03/23",
+      "time": "57.34",
+      "is_pb": 0,
+      "meet_name": "City of St Albans Spring Meet 2023",
+      "wa_points": "82"
+    },
+    {
+      "stroke_code": 8,
+      "course": "S",
+      "date": "03/12/22",
+      "time": "2:05.92",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2022",
+      "wa_points": "84"
+    },
+    {
+      "stroke_code": 9,
+      "course": "S",
+      "date": "11/03/23",
+      "time": "4:18.83",
+      "is_pb": 1,
+      "meet_name": "City of St Albans Spring Meet 2023",
+      "wa_points": "100"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "03/12/22",
+      "time": "1:01.93",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Winter Meet 2022",
+      "wa_points": "40"
+    },
+    {
+      "stroke_code": 10,
+      "course": "S",
+      "date": "25/09/22",
+      "time": "1:01.02",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "42"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "09/07/22",
+      "time": "59.02",
+      "is_pb": 1,
+      "meet_name": "Stevenage SC Summer Sprint",
+      "wa_points": "52"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "17/09/22",
+      "time": "1:03.77",
+      "is_pb": 0,
+      "meet_name": "City of St Albans SC Sprint & Skins Competition",
+      "wa_points": "41"
+    },
+    {
+      "stroke_code": 13,
+      "course": "S",
+      "date": "25/09/22",
+      "time": "58.46",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "54"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "02/10/22",
+      "time": "2:10.57",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Level 4 Club Champs",
+      "wa_points": "53"
+    },
+    {
+      "stroke_code": 18,
+      "course": "S",
+      "date": "04/12/22",
+      "time": "1:54.84",
+      "is_pb": 1,
+      "meet_name": "City of St Albans SC Winter Meet 2022",
+      "wa_points": "79"
+    }
+  ],
+  "rankings": {
+    "national": [],
+    "regional": [],
+    "county": [
+      {
+        "event": "200 Breaststroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "10",
+        "rank": 31,
+        "total_in_ranking": 35,
+        "time": "4:18.83"
+      },
+      {
+        "event": "50 Breaststroke",
+        "course": "SC",
+        "year": 2023,
+        "age_group": "10",
+        "rank": 76,
+        "total_in_ranking": 123,
+        "time": "56.30"
+      }
+    ]
+  }
+}
