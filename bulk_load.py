@@ -216,18 +216,16 @@ Examples:
         if args.step is None or args.step == 1:
             step1_clubs()
 
-        # Step 2: Rankings — this discovers all swimmers
-        if args.step is None or args.step == 2:
-            if args.test:
-                step2_rankings(years=[2025, 2026])
-            else:
-                step2_rankings()
-
-        # Derive club swimmers from rankings (or use test set)
+        # Step 2: Rankings — discovers all swimmers dynamically
+        # In test mode, skip rankings entirely (we already know the test swimmers)
         if args.test:
             club_tirefs = TEST_TIREFS
-            print(f"\n[Test mode] Using {len(club_tirefs)} test swimmers")
+            print(f"\n[Test mode] Skipping rankings, using {len(club_tirefs)} test swimmers")
         else:
+            if args.step is None or args.step == 2:
+                step2_rankings()
+
+            # Derive club swimmers from rankings
             club_tirefs = _get_club_tirefs()
             if club_tirefs:
                 print(f"\n[Squad] Found {len(club_tirefs)} swimmers matching "
