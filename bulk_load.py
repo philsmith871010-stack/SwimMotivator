@@ -31,7 +31,7 @@ import sqlite3
 import sys
 import time
 
-from scraper.config import DB_PATH, CLUB_NAME_PATTERN, RANKING_YEARS, TEST_TIREFS
+from scraper.config import DB_PATH, CLUB_NAME_PATTERN, RANKING_YEARS, SQUAD_MIN_YEAR, TEST_TIREFS
 
 
 def show_status():
@@ -86,11 +86,15 @@ def show_status():
 
         # Club swimmers derived from rankings
         try:
-            club_count = conn.execute(
+            all_count = conn.execute(
                 "SELECT COUNT(DISTINCT tiref) FROM rankings WHERE club LIKE ?",
                 (f"%{CLUB_NAME_PATTERN}%",)
             ).fetchone()[0]
-            print(f"Club swimmers:  {club_count:>10,} (matching '{CLUB_NAME_PATTERN}')")
+            active_count = conn.execute(
+                "SELECT COUNT(DISTINCT tiref) FROM rankings WHERE club LIKE ? AND year >= ?",
+                (f"%{CLUB_NAME_PATTERN}%", SQUAD_MIN_YEAR)
+            ).fetchone()[0]
+            print(f"Club swimmers:  {active_count:>10,} active ({SQUAD_MIN_YEAR}+), {all_count} all-time")
         except sqlite3.OperationalError:
             pass
 
@@ -110,11 +114,11 @@ def show_status():
 
 
 def _get_club_tirefs() -> list[int]:
-    """Derive club swimmers from rankings data."""
+    """Derive active club swimmers from rankings data."""
     from scraper.db import get_club_tirefs, init_db
     conn = init_db()
     try:
-        tirefs = get_club_tirefs(conn, CLUB_NAME_PATTERN)
+        tirefs = get_club_tirefs(conn, CLUB_NAME_PATTERN, min_year=SQUAD_MIN_YEAR)
     finally:
         conn.close()
     return tirefs
@@ -228,8 +232,8 @@ Examples:
             # Derive club swimmers from rankings
             club_tirefs = _get_club_tirefs()
             if club_tirefs:
-                print(f"\n[Squad] Found {len(club_tirefs)} swimmers matching "
-                      f"'{CLUB_NAME_PATTERN}' in rankings")
+                print(f"\n[Squad] Found {len(club_tirefs)} active swimmers matching "
+                      f"'{CLUB_NAME_PATTERN}' (rankings {SQUAD_MIN_YEAR}+)")
             else:
                 print(f"\n[Squad] No swimmers found matching '{CLUB_NAME_PATTERN}'.")
                 print("  Run step 2 (rankings) first to populate the database.")

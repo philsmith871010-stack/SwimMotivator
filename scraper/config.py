@@ -19,6 +19,7 @@ REQUEST_TIMEOUT = 30
 
 # Club configuration — swimmers derived dynamically from rankings data
 CLUB_NAME_PATTERN = "St Albans"  # Matches club names containing this in rankings
+SQUAD_MIN_YEAR = 2025  # Only include swimmers with rankings in this year or later
 
 # Test swimmers (for quick testing with --test)
 BELLA_TIREF = 1373165

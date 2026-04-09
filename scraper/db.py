@@ -162,12 +162,22 @@ def insert_rankings(conn: sqlite3.Connection, rows: list[dict]) -> None:
           for r in rows])
 
 
-def get_club_tirefs(conn: sqlite3.Connection, club_pattern: str) -> list[int]:
-    """Get unique tirefs from rankings where club name matches pattern."""
-    rows = conn.execute(
-        "SELECT DISTINCT tiref FROM rankings WHERE club LIKE ?",
-        (f"%{club_pattern}%",)
-    ).fetchall()
+def get_club_tirefs(conn: sqlite3.Connection, club_pattern: str,
+                    min_year: int | None = None) -> list[int]:
+    """Get unique tirefs from rankings where club name matches pattern.
+
+    If min_year is set, only include swimmers with rankings in that year or later.
+    """
+    if min_year:
+        rows = conn.execute(
+            "SELECT DISTINCT tiref FROM rankings WHERE club LIKE ? AND year >= ?",
+            (f"%{club_pattern}%", min_year)
+        ).fetchall()
+    else:
+        rows = conn.execute(
+            "SELECT DISTINCT tiref FROM rankings WHERE club LIKE ?",
+            (f"%{club_pattern}%",)
+        ).fetchall()
     return sorted(int(r[0]) for r in rows)
 
 
