@@ -13,6 +13,9 @@ from .parsers import norm_ws, parse_int_or_none
 from .session import fetch_soup
 
 SWIMMER_LINE_RE = re.compile(r"^(.+?)\s*-\s*\(\s*(\d+)\s*\)\s*-\s*(.+)$", re.DOTALL)
+VALID_STROKE_RE = re.compile(
+    r"^\d+m?\s+(Freestyle|Backstroke|Breaststroke|Butterfly|Individual Medley)$", re.I
+)
 
 
 def parse_swimmer_header(soup: BeautifulSoup, tiref: int) -> tuple[str, str]:
@@ -39,6 +42,8 @@ def parse_pb_table(table, course: str) -> list[dict[str, Any]]:
             continue
         stroke = norm_ws(cells[0].get_text(" ", strip=True))
         if stroke.lower() == "stroke":
+            continue
+        if not VALID_STROKE_RE.match(stroke):
             continue
         time_val = norm_ws(cells[1].get_text(" ", strip=True))
         converted = norm_ws(cells[2].get_text(" ", strip=True))
@@ -113,11 +118,12 @@ def scrape_one(conn, tiref: int) -> None:
         insert_personal_best(conn, tiref=tiref, **row)
 
 
-def main() -> None:
+def scrape_personal_bests(tirefs: list[int] | None = None) -> None:
+    _tirefs = tirefs or COSTA_TIREFS
     conn = init_db()
-    total = len(COSTA_TIREFS)
+    total = len(_tirefs)
     try:
-        for i, tiref in enumerate(COSTA_TIREFS, start=1):
+        for i, tiref in enumerate(_tirefs, start=1):
             print(f"[PB] Swimmer {i}/{total} (tiref {tiref})...")
             try:
                 scrape_one(conn, tiref)
@@ -127,6 +133,10 @@ def main() -> None:
                 print(f"  Error: {e}")
     finally:
         conn.close()
+
+
+def main() -> None:
+    scrape_personal_bests()
 
 
 if __name__ == "__main__":

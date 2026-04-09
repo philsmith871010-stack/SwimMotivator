@@ -105,14 +105,13 @@ def step1_clubs():
 
 
 def step2_pbs(tirefs=None):
+    _tirefs = tirefs or COSTA_TIREFS
     print("\n" + "=" * 60)
     print("STEP 2: Personal Bests")
-    print(f"  {len(tirefs or COSTA_TIREFS)} swimmers")
+    print(f"  {len(_tirefs)} swimmers")
     print("=" * 60)
-    from scraper.scrape_personal_bests import main as pbs_main
-    # The PB scraper uses COSTA_TIREFS by default
-    # For test mode, we'd need to modify it — for now just run default
-    pbs_main()
+    from scraper.scrape_personal_bests import scrape_personal_bests
+    scrape_personal_bests(tirefs=_tirefs)
 
 
 def step3_history(tirefs=None):
